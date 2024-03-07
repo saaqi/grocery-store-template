@@ -1,6 +1,6 @@
 
 // css
-import "../css/main.scss";
+import "../css/bs-static.scss";
 import "../css/style.scss";
 // BOX Icons
 import "boxicons/css/boxicons.min.css";
