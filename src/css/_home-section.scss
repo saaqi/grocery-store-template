@@ -1,0 +1,20 @@
+#home {
+  .container-bg {
+    background-image: url(/images/hero-graphic-960.webp);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    width: 100%;
+  }
+  .container-overlay {
+    display: grid;
+    place-items: center;
+    min-height: 100svh;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #home .container-overlay {
+    background-color: rgba(v.$warning,0.7);
+  }
+}

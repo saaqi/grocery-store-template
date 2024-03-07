@@ -1,0 +1,16 @@
+/* Import Variables */
+@use "./variables" as v;
+
+
+// Import base styling
+@import "./base";
+
+// Import navigation styles
+@import "./navigation";
+
+// Import Sections
+
+@import "./home-section";
+@import "./products";
+@import "./yearlysale";
+@import "./contactus";

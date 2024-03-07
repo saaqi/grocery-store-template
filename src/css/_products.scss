@@ -1,0 +1,43 @@
+h3.card-title {
+   margin: 0;
+}
+
+.product-store .product-card .cart-concern {
+    bottom: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-out;
+    opacity: 0;
+}
+.product-store .product-card:hover .cart-concern {
+    bottom: 90px;
+    opacity: 1;
+}
+.product-card .cart-concern .bx {
+    width: 16px;
+    height: 16px;
+    margin-left: 9px;
+}
+.product-card .card-body span {
+    font-size: 1.5em;
+}
+
+.product-store .product-card ul li:hover {
+  transform: scale(1.2);
+  transition: all ease-in-out 0.2s;
+}
+
+@media only screen and (max-width: 992px) {
+  .swiper-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+@media only screen and (max-width: 540px) {
+  .swiper-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

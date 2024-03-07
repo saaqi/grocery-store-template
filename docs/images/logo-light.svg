@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 737.08 907.54">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #114232;
+      }
+
+      .cls-3 {
+        fill: #87a922;
+      }
+
+      .cls-4 {
+        fill: #fcdc2a;
+      }
+    </style>
+  </defs>
+  <g id="Logo_Dark" data-name="Logo Dark">
+    <g id="Box_BG" data-name="Box BG">
+      <g id="Handles">
+        <path class="cls-1" d="M389.91,211.28c-7.23-47.76-49.15-82.65-96.23-81.2-44.99,1.38-83.53,35.61-90.39,81.2h28.02c6.04-30.61,32.37-53.06,62.82-54.09,32.05-1.08,60.93,21.82,67.34,54.09h28.44Z"/>
+        <path class="cls-1" d="M389.91,81.25C382.68,33.49,340.75-1.4,293.68.04c-44.99,1.38-83.53,35.61-90.39,81.2h28.02c6.04-30.61,32.37-53.06,62.82-54.09,32.05-1.08,60.93,21.82,67.34,54.09h28.44Z"/>
+      </g>
+      <g>
+        <rect class="cls-1" x="483.68" y="400.74" width="36.2" height="36.2"/>
+        <rect class="cls-1" x="519.88" y="509.34" width="36.2" height="36.2"/>
+        <rect class="cls-1" x="375.08" y="617.94" width="72.4" height="72.4"/>
+        <rect class="cls-1" x="375.08" y="762.74" width="72.4" height="72.4"/>
+        <rect class="cls-1" x="519.88" y="617.94" width="72.4" height="72.4"/>
+        <rect class="cls-1" x="302.68" y="834.87" width="72.4" height="72.4"/>
+        <rect class="cls-1" x="230.28" y="690.34" width="72.4" height="72.4"/>
+        <path class="cls-1" d="M540.63,186.05v-95.16H52.77v95.44L0,219.73v687.81h230.28v-72.4h72.4v-72.4h-144.8v-72.4h72.4v-72.4h144.8v-72.4h72.4v-72.4h-36.2v36.2h-36.2v-36.2h-72.4v36.2h36.2v36.2h-36.2v-36.2h-36.2v-36.2h36.2v-72.4h-72.4v-72.4h36.2v-36.2h36.2v108.6h72.4v-72.4h72.24v-108.6h-107.99v36.2h-36.65v-36.2H40.42l91.51-58.95-45.47-45.47h421.61l-45.19,45.19,88.42,59.23h-67.78v36.2h72.4v36.2h-36.2v72.4h36.2v-36.2h36.36v-108.6l-51.65-33.68ZM121.68,473.14h108.6v72.4h-72.4v-36.2h-36.2v-36.2ZM121.68,617.94v36.2h-36.2v-36.2h36.2Z"/>
+      </g>
+    </g>
+    <g id="Light_Boxes" data-name="Light Boxes">
+      <rect class="cls-4" x="447.32" y="219.73" width="36.2" height="36.2"/>
+      <rect class="cls-4" x="519.72" y="255.93" width="36.2" height="36.2"/>
+      <rect class="cls-4" x="230.28" y="328.34" width="72.4" height="72.4"/>
+      <rect class="cls-4" x="375.08" y="400.74" width="72.4" height="72.4"/>
+      <rect class="cls-4" x="519.88" y="400.74" width="72.4" height="72.4"/>
+      <rect class="cls-4" x="266.48" y="473.14" width="36.2" height="36.2"/>
+      <rect class="cls-4" x="157.88" y="473.14" width="72.4" height="72.4"/>
+      <rect class="cls-4" x="375.08" y="545.54" width="72.4" height="72.4"/>
+      <rect class="cls-4" x="592.28" y="617.94" width="72.4" height="72.4"/>
+      <rect class="cls-4" x="447.48" y="690.34" width="72.4" height="72.4"/>
+      <rect class="cls-4" x="519.88" y="762.67" width="72.4" height="72.4"/>
+      <rect class="cls-4" x="664.68" y="762.74" width="36.2" height="36.2"/>
+      <rect class="cls-4" x="302.68" y="762.74" width="72.4" height="72.4"/>
+      <rect class="cls-4" x="157.88" y="690.34" width="72.4" height="72.4"/>
+    </g>
+    <g id="Mid_Boxes" data-name="Mid Boxes">
+      <rect class="cls-3" x="302.68" y="219.73" width="36.2" height="36.2"/>
+      <rect class="cls-3" x="121.68" y="473.14" width="36.2" height="36.2"/>
+      <rect class="cls-3" x="519.88" y="545.54" width="72.4" height="72.4"/>
+      <rect class="cls-3" x="302.68" y="617.94" width="72.4" height="72.4"/>
+      <rect class="cls-3" x="375.08" y="834.87" width="72.4" height="72.4"/>
+      <rect class="cls-3" x="592.28" y="690.34" width="72.4" height="72.4"/>
+      <rect class="cls-3" x="266.48" y="292.13" width="36.2" height="36.2"/>
+    </g>
+    <g id="Dark_Boxes" data-name="Dark Boxes">
+      <rect class="cls-2" x="447.32" y="255.93" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="375.08" y="328.34" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="302.68" y="400.74" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="447.48" y="473.14" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="375.08" y="473.14" width="36.2" height="36.2"/>
+      <rect class="cls-2" x="302.68" y="509.34" width="36.2" height="36.2"/>
+      <rect class="cls-2" x="85.48" y="617.94" width="36.2" height="36.2"/>
+      <rect class="cls-2" x="230.28" y="617.94" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="447.48" y="617.94" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="375.08" y="690.34" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="519.88" y="690.34" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="664.68" y="617.94" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="230.28" y="835.14" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="447.48" y="834.87" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="592.28" y="835.07" width="36.2" height="36.2"/>
+      <rect class="cls-2" x="592.28" y="545.54" width="72.4" height="72.4"/>
+      <rect class="cls-2" x="592.28" y="328.34" width="72.4" height="72.4"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+.site-header {
+  z-index: 10;
+}
+
+.navbar-nav .nav-item a.nav-link.active,
+.navbar-nav .nav-item a.nav-link:hover {
+  color: v.$primary;
+}
+
+.dark .site-header {
+  background-color: v.$info;
+
+  .navbar-nav .nav-item a.nav-link.active,
+  .navbar-nav .nav-item a.nav-link:hover {
+    // color: #fff;
+    transition: none;
+  }
+}
+
+/*------------ Offcanvas -------------- */
+#header-nav .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+#header-nav .offcanvas-end {
+  width: 500px;
+}

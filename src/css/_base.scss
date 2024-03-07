@@ -1,0 +1,67 @@
+
+section {
+  &.py-5 {
+    padding-top: calc( 3rem + 72px) !important;
+  }
+}
+
+
+////////////
+/*Top Link*/
+body.dark a.top-link {
+  opacity: 1;
+  transition: all ease-in-out 0.3s;
+  visibility: visible;
+}
+a.top-link {
+  bottom: 10px;
+  opacity: 0;
+  position: fixed;
+  right: 10px;
+  transition: all ease-in-out 0.3s;
+  visibility: hidden;
+  z-index: 4;
+}
+
+// BUTTONS ---------------------------
+.btn {
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3), 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  padding: .75rem 1.5rem;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.1s;
+  letter-spacing: 1px;
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+    transform: translateY(0.5px);
+  }
+
+  &:active {
+    box-shadow: none;
+    text-shadow: none;
+    transform: translateY(2px);
+  }
+}
+
+[class*="btn-"]:not([class*="btn-outline-"]) {
+  border: 0;
+}
+
+[class*="btn-outline-"] {
+  box-shadow: none;
+  transform: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.social-button {
+  letter-spacing: 0;
+
+}
