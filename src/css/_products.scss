@@ -30,6 +30,12 @@ h3.card-title {
   transition: all ease-in-out 0.2s;
 }
 
+.sale-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 @media only screen and (max-width: 992px) {
   .swiper-wrapper {
     grid-template-columns: repeat(2, 1fr);

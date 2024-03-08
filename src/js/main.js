@@ -20,6 +20,10 @@ import { ScrollSpy } from "bootstrap";
 // import { Toast } from "bootstrap";
 // import { Tooltip } from "bootstrap";
 
+
+// Setup Products Data
+import "./products.js";
+
 // Setup Glide.js
 import "./glide.js";
 

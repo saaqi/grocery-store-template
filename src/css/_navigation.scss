@@ -1,5 +1,10 @@
 .site-header {
   z-index: 10;
+  transition: v.$transition;
+}
+
+.dark .site-header {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .navbar-nav .nav-item a.nav-link.active,
