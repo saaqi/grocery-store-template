@@ -1,20 +1,35 @@
 #home {
-  .container-bg {
-    background-image: url(/images/hero-graphic-960.webp);
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: contain;
-    width: 100%;
-  }
-  .container-overlay {
+  .container {
     display: grid;
     place-items: center;
     min-height: 100svh;
+    grid-template-columns: 1fr;
+    padding-top: 76px;
+    padding-bottom: 1.5rem;
+  }
+  .graphic-col > img {
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 992px) {
-  #home .container-overlay {
-    background-color: rgba(v.$warning,0.7);
+  .text-col {
+    grid-column: span 1 / 1;
+    grid-row: span 1 / 1;
+    z-index: 2;
+  }
+  .graphic-col {
+    grid-column: span 1 / 1;
+    grid-row: span 1 / 1;
+    opacity: 0.2;
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  #home {
+    .container {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
