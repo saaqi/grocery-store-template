@@ -34,3 +34,6 @@ const navigationLinks = navLinks.map((nl) => {
 
 const navLinkElements = document.getElementById("navbar");
 if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");
+
+const footerNavLinkElements = document.querySelector(".menu-list");
+if (footerNavLinkElements) footerNavLinkElements.innerHTML = navigationLinks.join("");
