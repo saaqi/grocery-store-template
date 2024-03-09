@@ -9,18 +9,11 @@
 
 .navbar-nav .nav-item a.nav-link.active,
 .navbar-nav .nav-item a.nav-link:hover {
-  color: v.$primary;
+  color: v.$primary !important;
+  text-shadow: 1px 1px 2px rgba(v.$primary,0.3);
+  // text-decoration: underline;
 }
 
-.dark .site-header {
-  background-color: v.$info;
-
-  .navbar-nav .nav-item a.nav-link.active,
-  .navbar-nav .nav-item a.nav-link:hover {
-    // color: #fff;
-    transition: none;
-  }
-}
 
 /*------------ Offcanvas -------------- */
 #header-nav .navbar-toggler:focus {

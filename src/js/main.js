@@ -14,6 +14,12 @@ import "bootstrap/js/dist/scrollspy.js";
 // Setup Products Data
 import "./product-cards.js";
 
+// Setup Navigation
+import "./navigation.js";
+
+// Setup Social Link
+import "./social-links.js";
+
 // Setup Glide.js
 import "./glide.js";
 
