@@ -1,0 +1,10 @@
+.product-store .product-card ul li:hover {
+  transform: scale(1.2);
+  transition: all ease-in-out 0.2s;
+}
+
+.sale-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
