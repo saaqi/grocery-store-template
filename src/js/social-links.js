@@ -58,3 +58,9 @@ const heroSocial = document.querySelectorAll("ul.social-links-hero > li > a");
 heroSocial.forEach((e) => {
   e.classList.add(`link-primary`, `fs-4`);
 })
+
+// Custom Styles
+const footerSocial = document.querySelectorAll("ul.social-links-footer > li > a");
+footerSocial.forEach((e) => {
+  e.classList.add(`link-primary`, `fs-4`);
+});
