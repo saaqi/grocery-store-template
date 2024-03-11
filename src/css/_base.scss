@@ -1,10 +1,8 @@
-
 section {
   &.py-5 {
-    padding-top: calc( 3rem + 72px) !important;
+    padding-top: calc(3rem + 72px) !important;
   }
 }
-
 
 ////////////
 /*Top Link*/
@@ -13,6 +11,7 @@ body.dark a.top-link {
   transition: all ease-in-out 0.3s;
   visibility: visible;
 }
+
 a.top-link {
   bottom: 10px;
   opacity: 0;
@@ -73,12 +72,13 @@ a.top-link {
 }
 
 /* Section Heading Titles */
-.section-heading  {
+.section-heading {
   position: relative;
   text-align: center;
   text-transform: uppercase;
   padding-bottom: 5px;
 }
+
 .section-heading::before {
   width: 28px;
   height: 5px;
@@ -90,6 +90,7 @@ a.top-link {
   margin-left: -14px;
   background-color: v.$primary;
 }
+
 .section-heading::after {
   width: 100px;
   height: 1px;

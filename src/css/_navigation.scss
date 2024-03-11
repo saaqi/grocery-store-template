@@ -4,16 +4,15 @@
 }
 
 .dark .site-header {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-nav .nav-item a.nav-link.active,
 .navbar-nav .nav-item a.nav-link:hover {
   color: v.$primary !important;
-  text-shadow: 1px 1px 2px rgba(v.$primary,0.3);
+  text-shadow: 1px 1px 2px rgba(v.$primary, 0.3);
   // text-decoration: underline;
 }
-
 
 /*------------ Offcanvas -------------- */
 #header-nav .navbar-toggler:focus {

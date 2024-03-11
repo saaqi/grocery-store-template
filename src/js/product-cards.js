@@ -90,7 +90,7 @@ const generateProductCard = (prods) => {
     return button;
   };
 
-  const output = `<div class="p-2 col-sm-6 col-lg-3">
+  const output = `<div class="p-2 col-6 col-lg-3">
   <div class="product-card card shadow-sm h-100">
     <div class="image-holder">
       <img src="${img}" alt="${title}" class="img-fluid card-img-top" />
