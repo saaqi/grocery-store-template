@@ -29,14 +29,16 @@ const generateProductCard = (prods) => {
       return roundedPercentage + "% OFF";
     };
 
-    let amount = `<div class="w-100 text-end mb-2">
-        <span class="item-price h-100 rounded bg-primary text-bg-primary px-2 py-1 fw-semibold">€${price}</span>
+    let amount =
+      `<div class="sale-price w-100 d-flex justify-content-end mb-2 mt-auto">
+        <span class="item-price rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-semibold">€${price}</span>
       </div>`;
     if (prods.sale) {
-      amount = `<div class="sale-price w-100 d-flex justify-content-between mb-2">
-        <span class="item-price rounded bg-info text-bg-info px-2 py-1 text-decoration-line-through fw-semibold">€${price}</span>
+      amount =
+      `<div class="sale-price w-100 d-flex justify-content-between align-items-center mb-2 mt-auto">
+        <span class="item-price rounded bg-info text-bg-info px-2 py-1 text-decoration-line-through fs-5 fw-semibold">€${price}</span>
         <span class="percentae fw-medium">${percent()}</span>
-        <span class="item-price rounded bg-primary text-bg-primary px-2 py-1 fw-medium">€${sale}</span>
+        <span class="item-price rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>
       </div>`;
     }
     return amount;
@@ -78,7 +80,8 @@ const generateProductCard = (prods) => {
           <i class="bx bx-cart"></i> Book Now!
         </a>`;
     if (prods.desc) {
-      button = `<div class="btn-group w-100">
+      button =
+      `<div class="btn-group w-100">
         <a href="#" class="btn btn-primary">
           <i class="bx bx-cart"></i> Book Now!
         </a>
@@ -90,25 +93,22 @@ const generateProductCard = (prods) => {
     return button;
   };
 
-  const output = `<div class="p-2 col-6 col-lg-3">
-  <div class="product-card card shadow-sm h-100">
-    <div class="image-holder">
-      <img src="${img}" alt="${title}" class="img-fluid card-img-top" />
-    </div>
-    <div class="card-body d-flex flex-wrap gap-3 align-items-baseline">
-      <div class="d-flex w-100 justify-content-between flex-wrap gap-3">
-        <h3 class="card-title fs-5 text-uppercase mb-0">${title}</h3>
-        <div class="short-description text-wrap">${s_desc}</div>
+  const output =
+    `<div class="p-2 col-6 col-lg-3">
+      <div class="product-card card shadow-sm h-100">
+        <div class="image-holder">
+          <img src="${img}" alt="${title}" class="img-fluid card-img-top" />
+        </div>
+        <div class="card-body d-flex flex-column gap-2">
+          <h3 class="card-title fs-5 text-uppercase mb-0">${title}</h3>
+          <div class="short-description text-wrap">${s_desc}</div>
+            ${rate()}
+            ${detailsButton()}
+        </div>
+        ${sale_indicator}
       </div>
-      <div class="mt-auto w-100">
-        ${rate()}
-        ${detailsButton()}
-      </div>
-    </div>
-    ${sale_indicator}
-  </div>
-  ${detailsBox()}
-</div>`;
+      ${detailsBox()}
+    </div>`;
   return output;
 };
 

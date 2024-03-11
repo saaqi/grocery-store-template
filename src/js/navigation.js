@@ -1,3 +1,7 @@
+// --- Import only the required components.
+import "bootstrap/js/dist/offcanvas.js";
+import "bootstrap/js/dist/scrollspy.js";
+
 // Setup Navigation Links
 const navLinks = [
   {
