@@ -7,9 +7,11 @@ import "boxicons/css/boxicons.min.css";
 
 
 // --- Import only the required components.
-import "bootstrap/js/dist/modal.js";
 import "bootstrap/js/dist/offcanvas.js";
 import "bootstrap/js/dist/scrollspy.js";
+// Import Bootstrap Modal
+import "./modal.js";
+
 
 // Setup Products Data
 import "./product-cards.js";

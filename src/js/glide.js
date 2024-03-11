@@ -6,7 +6,7 @@ import Glide from "@glidejs/glide";
 // new Glide(".glide").mount();
 var glide = new Glide(".glide", {
   type: "carousel",
-  perView: 3,
+  perView: 4,
   // gap: 10,
   swipeThreshold: 40,
   dragThreshold: 60,
@@ -15,11 +15,11 @@ var glide = new Glide(".glide", {
   peek: 20,
   breakpoints: {
     992: {
+      perView: 2,
+    },
+    768: {
       perView: 1,
     },
-    // 768: {
-    //   perView: 1,
-    // },
   },
 });
 glide.mount();

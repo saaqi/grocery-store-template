@@ -44,6 +44,12 @@ a.top-link {
   }
 }
 
+.btn-group {
+  .btn {
+    padding: 0.75rem 0rem;
+  }
+}
+
 [class*="btn-"]:not([class*="btn-outline-"]) {
   border: 0;
 }
@@ -64,4 +70,34 @@ a.top-link {
 .social-button {
   letter-spacing: 0;
 
+}
+
+/* Section Heading Titles */
+.section-heading  {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.section-heading::before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: v.$primary;
+}
+.section-heading::after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: v.$primary;
 }

@@ -63,24 +63,26 @@
     <!-- Home Section Start -->
     <section id="home" class="section home bg-warning text-bg-warning">
       <div class="container">
-        <div class="text-col text-center text-lg-start">
-          <div class="lead fw-medium pb-1">Welcome to</div>
-          <h1 class="text-uppercase fw-bold">Sadiq Super Store</h1>
-          <h2 class="h5">Explore the unexpected at Sadiq Super Store! Your go-to spot in Belgium for an electric mix of everyday must-haves and delightfully odd treasures. Embrace the unique shopping experience today!</h2>
-          <ul class="social-links social-links-hero list-unstyled d-flex flex-wrap gap-4 my-4 justify-content-center justify-content-lg-start m-0">
-            <!-- Insert with JS -->
-          </ul>
-          <a href="#" class="btn btn-primary text-uppercase">Shop Now!</a>
-        </div>
-        <div class="graphic-col">
-          <picture>
-            <source media="(max-width: 576px)" srcset="./images/hero/hero-image@576x.webp" type="image/webp">
-            <source media="(max-width: 768px)" srcset="./images/hero/hero-image@768x.webp" type="image/webp">
-            <source media="(max-width: 992px)" srcset="./images/hero/hero-image@992x.webp" type="image/webp">
-            <source media="(max-width: 1400px)" srcset="./images/hero/hero-image@1400x.webp" type="image/webp">
-            <source media="(min-width: 1401px)" srcset="./images/hero/hero-image.svg" type="image/svg+xml">
-            <img class="img-fluid" src="./images/hero-image.svg" alt="Hero Graphic">
-          </picture>
+        <div class="row flex-wrap-reverse">
+          <div class="text-col col-lg-6 text-center text-lg-start mt-5 mt-lg-0">
+            <div class="lead fw-medium pb-1">Welcome to</div>
+            <h1 class="text-uppercase fw-bold">Sadiq Super Store</h1>
+            <h2 class="h5">Explore the unexpected at Sadiq Super Store! Your go-to spot in Belgium for an electric mix of everyday must-haves and delightfully odd treasures. Embrace the unique shopping experience today!</h2>
+            <ul class="social-links social-links-hero list-unstyled d-flex flex-wrap gap-4 my-4 justify-content-center justify-content-lg-start m-0">
+              <!-- Insert with JS -->
+            </ul>
+            <a href="#" class="btn btn-primary text-uppercase">Shop Now!</a>
+          </div>
+          <div class="graphic-col col-lg-6">
+            <picture>
+              <source media="(max-width: 576px)" srcset="./images/hero/hero-image@576x.webp" type="image/webp">
+              <source media="(max-width: 768px)" srcset="./images/hero/hero-image@768x.webp" type="image/webp">
+              <source media="(max-width: 992px)" srcset="./images/hero/hero-image@992x.webp" type="image/webp">
+              <source media="(max-width: 1400px)" srcset="./images/hero/hero-image@1400x.webp" type="image/webp">
+              <source media="(min-width: 1401px)" srcset="./images/hero/hero-image.svg" type="image/svg+xml">
+              <img class="img-fluid" src="./images/hero-image.svg" alt="Hero Graphic">
+            </picture>
+          </div>
         </div>
       </div>
     </section>
@@ -88,16 +90,18 @@
 
     <!-- New Arrivals Section Start -->
     <section id="arrivals" class="section arrivals bg-light text-bg-light">
-      <div class="container">
-        <div id="new-arrivals" class="row py-5"></div>
+      <div class="container py-5">
+        <h2 class="section-heading">New Arrivals!</h2>
+        <div id="new-arrivals" class="row"></div>
       </div>
     </section>
     <!-- New Arrivals Section End -->
 
     <!-- Featured Section Start -->
-    <section id="featured" class="section featured bg-light text-bg-light">
-      <div class="container">
-        <div id="featured-items" class="row py-5"></div>
+    <section id="featured" class="section featured bg-light-subtle text-bg-light">
+      <div class="container py-5">
+        <h2 class="section-heading">Featured Products!</h2>
+        <div id="featured-items" class="row"></div>
       </div>
     </section>
     <!-- Featured Section End -->
@@ -114,32 +118,8 @@
 
           <div class="glide">
             <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                <li class="glide__slide">
-                  <div class="product-card card shadow-sm">
-                    <div class="image-holder">
-                      <img src="images/product-item1.webp" alt="product-item" class="img-fluid">
-                    </div>
-                    <div class="card-body d-flex flex-wrap gap-3 align-items-baseline">
-                      <div class="d-flex w-100 justify-content-between flex-wrap gap-3">
-                        <div class="d-flex justify-content-between align-items-center w-100">
-                          <h3 class="card-title fs-5 text-uppercase"><a href="#">ART. NO: DT- 78612</a></h3>
-                          <div class="item-price text-light fs-6 rounded bg-dark px-2">$100</div>
-                        </div>
-                        <ul class="list-unstyled d-flex justify-content-between fs-3 w-100">
-                          <li class="text-dark"><i class='bx bxs-circle'></i></li>
-                          <li class="text-danger"><i class='bx bxs-circle'></i></li>
-                          <li class="text-info"><i class='bx bxs-circle'></i></li>
-                          <li class="text-primary"><i class='bx bxs-circle'></i></li>
-                          <li class="text-secondary"><i class='bx bxs-circle'></i></li>
-                        </ul>
-                      </div>
-                      <a href="#" class="btn btn-primary text-uppercase w-100"><i class="bx bx-cart"></i> Buy Now!</a>
-                      <button type="button" class="btn btn-outline-dark text-uppercase w-100" data-bs-toggle="modal" data-bs-target="#product_78612">
-                        <i class="bx bx-info-circle"></i> Details !</button>
-                    </div>
-                  </div>
-                </li>
+              <ul id="home-glide-products" class="glide__slides">
+                <li class="glide__slide"></li>
               </ul>
               <div class="glide__arrows text-center mt-3 d-flex justify-content-around " data-glide-el="controls">
                 <button class="glide__arrow glide__arrow--left text-dark p-1 border-dark" data-glide-dir="<">
