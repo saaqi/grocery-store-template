@@ -39,7 +39,7 @@ const socialLinks = socialMediaLinks.map((sl) => {
   const link_class = sl.link_class ? sl.link_class : ``;
 
   const output =
-  `<li><a class="${link_class}" href="${link}" title="${title}!" target="_blank" rel="nofollow">
+  `<li><a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">
     <i class="pe-4 bx ${icon}"></i>
   </a></li>`;
 
@@ -52,15 +52,3 @@ if (socialLinkElements)
   socialLinkElements.forEach((e) => {
     e.innerHTML = socialLinks.join("");
   });
-
-// Custom Styles
-const heroSocial = document.querySelectorAll("ul.social-links-hero > li > a");
-heroSocial.forEach((e) => {
-  e.classList.add(`link-primary`, `fs-4`);
-})
-
-// Custom Styles
-const footerSocial = document.querySelectorAll("ul.social-links-footer > li > a");
-footerSocial.forEach((e) => {
-  e.classList.add(`link-primary`, `fs-4`);
-});

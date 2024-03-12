@@ -21,3 +21,31 @@ if (featuredProdsElement) featuredProdsElement.innerHTML = featuredProdsReturn.j
 const home_glide_products = products.filter((prods) => prods.featured).map(generateProductCards);
 const homeGlideProdsElement = document.getElementById("home-glide-products");
 if (homeGlideProdsElement) homeGlideProdsElement.innerHTML = home_glide_products.join("");
+
+
+
+// Glide.js
+import "@glidejs/glide/dist/css/glide.core.min.css";
+import "@glidejs/glide/dist/css/glide.theme.min.css";
+
+import Glide from "@glidejs/glide";
+// new Glide(".glide").mount();
+var glide = new Glide(".glide", {
+  type: "carousel",
+  perView: 3,
+  // gap: 10,
+  swipeThreshold: 40,
+  dragThreshold: 60,
+  animationDuration: 250,
+  focusAt: "center",
+  peek: 20,
+  breakpoints: {
+    992: {
+      perView: 1,
+    },
+    // 768: {
+    //   perView: 1,
+    // },
+  },
+});
+glide.mount();

@@ -11,7 +11,7 @@ const generateProductCards = (prods) => {
   const img = prods.img ? prods.img : ``;
   const id = prods.id ? prods.id : ``;
   const sale_indicator = prods.sale
-    ? `<i class='bx bxs-discount sale-indicator p-2 fs-5 bg-info text-bg-info rounded-circle text-center'></i>`
+    ? `<i class='bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm'></i>`
     : ``;
   const rate = () => {
     const percent = () => {
@@ -88,7 +88,7 @@ const generateProductCards = (prods) => {
           <img src="${img}" alt="${title}" class="img-fluid card-img-top" />
         </div>
         <div class="card-body d-flex flex-column gap-2">
-          <h3 class="card-title fs-5 text-uppercase mb-0">${title}</h3>
+          <h3 class="card-title fs-5 text-uppercase text-wrap mb-0">${title}</h3>
           <div class="short-description text-wrap">${s_desc}</div>
             ${rate()}
             ${detailsButton()}
