@@ -1,9 +1,26 @@
 
 // css
-import "../css/bs-static.scss";
-import "../css/main.scss";
+import "../scss/bs-static.scss";
+import "../scss/main.scss";
 // BOX Icons
 import "boxicons/css/boxicons.min.css";
+
+// Import Navigation
+import "./navigation.js";
+
+/* ## Add dark claass to the header and top link
+--------------------------------------------- */
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= 100) {
+    document.querySelector("body").classList.add("dark");
+  } else {
+    document.querySelector("body").classList.remove("dark");
+  }
+});
+
+// Add Current Year to the footer
+document.getElementById("curr_year").innerHTML = new Date().getFullYear();
+
 
 // preloader
 import "./hidepreloader.js";

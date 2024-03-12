@@ -37,36 +37,33 @@
   <!-- Navigation -->
   <header id="header" class="site-header bg-warning text-bg-warning position-fixed w-100">
     <div class="container">
-      <div class="row d-flex align-items-center">
-        <div class="col-12">
-          <nav id="header-nav" class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#header">
-              <img src="images/logo.svg" class="logo" alt="Logo" height="50">
-            </a>
-            <button class="navbar-toggler p-1 btn btn-outline-primary" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="bx bx-menu-alt-right display-5"></i>
+      <nav id="header-nav" class="navbar navbar-expand-lg d-flex justify-content-between align-items-center">
+        <!-- <div class="ship d-lg-none">Call!</div> -->
+        <a class="navbar-brand" href="#header">
+          <img src="images/logo.svg" class="logo" alt="Logo" height="50">
+        </a>
+        <button class="navbar-toggler p-1 btn btn-outline-primary" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bx bx-menu-alt-right display-5"></i>
+        </button>
+        <div class="offcanvas offcanvas-end bg-warning" tabindex="-1" id="bdNavbar">
+          <div class="offcanvas-header px-4 pb-0 justify-content-between align-items-start">
+            <ul class="social-links social-links-top fs-3 mt-3 d-flex flex-wrap gap-2 gap-md-3 list-unstyled">
+              <!-- Insert with JS -->
+            </ul>
+            <button type="button" class="btn btn-outline-primary p-0 lh-1 mt-3" data-bs-dismiss="offcanvas"
+              aria-label="Close" data-bs-target="#bdNavbar">
+              <i class="bx bx-x display-4"></i>
             </button>
-            <div class="offcanvas offcanvas-end bg-warning" tabindex="-1" id="bdNavbar">
-              <div class="offcanvas-header px-4 pb-0 justify-content-between align-items-start">
-                <ul class="social-links social-links-top fs-3 mt-3 d-flex flex-wrap gap-2 gap-md-3 list-unstyled">
-                  <!-- Insert with JS -->
-                </ul>
-                <button type="button" class="btn btn-outline-primary p-0 lh-1 mt-3" data-bs-dismiss="offcanvas"
-                  aria-label="Close" data-bs-target="#bdNavbar">
-                  <i class="bx bx-x display-4"></i>
-                </button>
-              </div>
-              <div class="offcanvas-body">
-                <ul id="navbar"
-                  class="navbar-nav text-uppercase justify-content-end gap-1 gap-lg-2 fs-6 ps-5 p-lg-0 flex-grow-1 fw-bold">
-                  <!-- Insert with JS -->
-                </ul>
-              </div>
-            </div>
-          </nav>
+          </div>
+          <div class="offcanvas-body">
+            <ul id="navbar"
+              class="navbar-nav text-uppercase justify-content-end gap-1 gap-lg-2 fs-6 ps-5 p-lg-0 flex-grow-1 fw-bold">
+              <!-- Insert with JS -->
+            </ul>
+          </div>
         </div>
-      </div>
+      </nav>
     </div>
   </header>
 
@@ -260,11 +257,9 @@
     </div>
   </footer>
 
-  <script type="module" src="./src/js/product-cards.js"></script>
-  <script type="module" src="./src/js/navigation.js"></script>
+  <script type="module" src="./src/js/home-product-cards.js"></script>
   <script type="module" src="./src/js/social-links.js"></script>
   <script type="module" src="./src/js/glide.js"></script>
-  <script type="module" src="./src/js/interact.js"></script>
   <script type="module" src="./src/js/contactus.js"></script>
   <script type="module" src="./src/js/main.js"></script>
 </body>

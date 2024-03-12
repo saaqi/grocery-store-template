@@ -9,10 +9,10 @@ const fresh = [
     price: 23,
     sale: 20,
     featured: true,
-    added: 20240311,
+    added: 20240312,
   },
   {
-    title: `Fresh Vegatable`,
+    title: `Fresh Vegetables`,
     s_desc: `All Kinds of Fresh Vegetables.`,
     // desc: `We Have all kinds of fresh begetables like, cucumber, bitter gourd and lady fingers.`,
     cat: `Fresh Produce`,
