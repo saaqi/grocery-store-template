@@ -26,7 +26,7 @@ const generateProductCards = (prods) => {
     const justifyContent = prods.sale ? `between` : `end`;
 
     let amount =
-      `<div class="sale-price w-100 d-flex justify-content-${justifyContent} align-items-center mb-2 mt-auto">
+      `<div class="sale-price d-flex justify-content-${justifyContent} align-items-center mb-2 mt-auto gap-1 text-center">
         <span class="item-price-regular rounded ${regularPriceStyles} px-2 py-1 fs-5 fw-semibold">€${price}</span>
         ${salePercent}
         ${salePrice}
@@ -67,14 +67,14 @@ const generateProductCards = (prods) => {
     return ``;
   };
 
-  const detailsButton = () => {
+  const buttons = () => {
 
     const infoButton = prods.desc ?
       `<button type="button" class="btn btn-secondary text-nowrap" data-bs-toggle="modal" data-bs-target="#${id}">
           <i class="bx bx-info-circle"></i>
         </button>` : ``;
     const button =
-      `<div class="btn-group w-100">
+      `<div class="btn-group">
         <a href="#" class="btn btn-primary"><i class="bx bx-cart"></i> Book Now!</a>
         ${infoButton}
       </div>`;
@@ -82,7 +82,7 @@ const generateProductCards = (prods) => {
   };
 
   const output =
-    `<div class="p-2 col-sm-6 col-lg-3">
+    `<li>
       <div class="product-card card shadow-sm h-100">
         <div class="image-holder">
           <img src="${img}" alt="${title}" class="img-fluid card-img-top" />
@@ -91,12 +91,12 @@ const generateProductCards = (prods) => {
           <h3 class="card-title fs-5 text-uppercase text-wrap mb-0">${title}</h3>
           <div class="short-description text-wrap">${s_desc}</div>
             ${rate()}
-            ${detailsButton()}
+            ${buttons()}
         </div>
         ${sale_indicator}
       </div>
       ${detailsBox()}
-    </div>`;
+    </li>`;
   return output;
 };
 export default generateProductCards;

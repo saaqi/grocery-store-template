@@ -7,18 +7,26 @@ import cigs from "./prduct_categories/cigs.js";
 const products = [...beverages, ...fresh, ...cigs];
 products.sort((a, b) => (b.added) - (a.added));
 
-// First 4 products
+// New Arrivals First 4 products
 const firstFourProdsReturn = products.slice(0, 4).map(generateProductCards);
-const arrivalProdsElement = document.getElementById("new-arrivals");
-if (arrivalProdsElement) arrivalProdsElement.innerHTML = firstFourProdsReturn.join("");
+const arrivalProdsParent = document.getElementById("new-arrivals");
+if (arrivalProdsParent) arrivalProdsParent.innerHTML = firstFourProdsReturn.join("");
+const arrivalProdsElements = document.querySelectorAll("#new-arrivals > li");
+arrivalProdsElements.forEach((e) => {
+  e.classList.add('col-sm-6', 'col-md-4', 'col-lg-3');
+});
 
 // Featured products
 const featuredProdsReturn = products.filter((prods) => prods.featured).map(generateProductCards);
-const featuredProdsElement = document.getElementById("featured-items");
-if (featuredProdsElement) featuredProdsElement.innerHTML = featuredProdsReturn.join("");
+const featuredProdsParent = document.getElementById("featured-items");
+if (featuredProdsParent) featuredProdsParent.innerHTML = featuredProdsReturn.join("");
+const featuredProdsElements = document.querySelectorAll("#featured-items > li");
+featuredProdsElements.forEach((e) => {
+  e.classList.add('col-sm-6', 'col-md-4', 'col-lg-3');
+})
 
 // Home Glide products
-const home_glide_products = products.filter((prods) => prods.featured).map(generateProductCards);
+const home_glide_products = products.map(generateProductCards);
 const homeGlideProdsElement = document.getElementById("home-glide-products");
 if (homeGlideProdsElement) homeGlideProdsElement.innerHTML = home_glide_products.join("");
 
@@ -28,24 +36,26 @@ if (homeGlideProdsElement) homeGlideProdsElement.innerHTML = home_glide_products
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 
+const glideProductsElements = document.querySelectorAll("#home-glide-products > li");
+glideProductsElements.forEach((e) => {
+  e.classList.add("glide__slide", "h-auto");
+})
+
 import Glide from "@glidejs/glide";
-// new Glide(".glide").mount();
-var glide = new Glide(".glide", {
+new Glide(".home-glide", {
   type: "carousel",
-  perView: 3,
-  // gap: 10,
+  perView: 5,
   swipeThreshold: 40,
   dragThreshold: 60,
   animationDuration: 250,
-  focusAt: "center",
   peek: 20,
   breakpoints: {
-    992: {
+    1200: {
+      perView: 3,
+    },
+    768: {
       perView: 1,
     },
-    // 768: {
-    //   perView: 1,
-    // },
   },
-});
-glide.mount();
+}).mount();
+

@@ -101,7 +101,7 @@
   <section id="arrivals" class="section arrivals bg-light text-bg-light">
     <div class="container py-5">
       <h2 class="section-heading">New Arrivals!</h2>
-      <div id="new-arrivals" class="row"></div>
+      <ul id="new-arrivals" class="row list-unstyled g-2"></ul>
     </div>
   </section>
   <!-- New Arrivals Section End -->
@@ -110,37 +110,39 @@
   <section id="featured" class="section featured bg-light-subtle text-bg-light">
     <div class="container py-5">
       <h2 class="section-heading">Featured Products!</h2>
-      <div id="featured-items" class="row"></div>
+      <ul id="featured-items" class="row list-unstyled g-2"></ul>
     </div>
   </section>
   <!-- Featured Section End -->
 
-  <section id="mobile-products" class="product-store position-relative bg-light py-5">
+  <section id="all-products" class="product-store position-relative bg-light py-5">
     <div class="container">
-      <div class="row">
-        <div class="display-header d-flex justify-content-between pb-3">
-          <h2 class="text-dark text-uppercase">Our Products</h2>
-          <div class="btn-right">
-            <a href="#" class="btn btn-info text-uppercase"><i class='bx bx-map'></i> Go to Shop</a>
-          </div>
-        </div>
 
-        <div class="glide">
+      <div class="display-header d-flex justify-content-between pb-3">
+        <h2 class="text-dark text-uppercase">Our Products</h2>
+        <div class="btn-right">
+          <a href="#" class="btn btn-info text-uppercase"><i class='bx bx-map'></i> Go to Shop</a>
+        </div>
+      </div>
+
+      <div class="prducts-slider-containers position-relative my-4">
+        <div class="home-glide">
           <div class="glide__track" data-glide-el="track">
-            <ul id="home-glide-products" class="glide__slides">
-              <li class="glide__slide"></li>
-            </ul>
-            <div class="glide__arrows text-center mt-3 d-flex justify-content-around " data-glide-el="controls">
-              <button class="glide__arrow glide__arrow--left p-1 border-light rounded-circle bg-primary text-bg-primary" data-glide-dir="<">
+            <ul id="home-glide-products" class="glide__slides list-unstyled"></ul>
+            <div class="glide__arrows text-center d-flex justify-content-around" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left p-1 border-light rounded-circle bg-primary text-bg-primary"
+                data-glide-dir="<">
                 <i class='bx bxs-chevron-left-circle fs-3'></i>
               </button>`
-              <button class="glide__arrow glide__arrow--right p-1 border-light rounded-circle bg-primary text-bg-primary" data-glide-dir=">">
+              <button class="glide__arrow glide__arrow--right p-1 border-light rounded-circle bg-primary text-bg-primary"
+                data-glide-dir=">">
                 <i class='bx bxs-chevron-right-circle fs-3'></i>
               </button>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
