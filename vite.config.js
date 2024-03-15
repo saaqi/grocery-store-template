@@ -10,8 +10,8 @@ const hidePreloader = () => {
     name: "hide-preloader",
     transformIndexHtml(html) {
       return html.replace(
-        `<link rel="stylesheet" href="./src/css/preloader.css">`,
-        `<!-- <link rel="stylesheet" href="./src/css/preloader.css"> -->`
+        `<link rel="stylesheet" href="./src/scss/preloader.css">`,
+        `<!-- <link rel="stylesheet" href="./src/scss/preloader.css"> -->`
       );
     }
   }
@@ -34,5 +34,11 @@ export default defineConfig({
   },
   build: {
     outDir: "./docs",
+    minify: 'terser',
+    terserOptions: {
+      format: {
+        comments: false,
+      },
+    },
   },
 });
