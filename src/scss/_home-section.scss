@@ -1,9 +1,8 @@
 #home {
+  min-height: 100svh;
+
   .container {
-    display: grid;
-    place-items: center;
-    min-height: 100svh;
-    padding-top: 76px;
-    padding-bottom: 3rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }

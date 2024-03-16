@@ -12,26 +12,10 @@ const generateProductCards = (prods) => {
   const id = prods.id ? prods.id : ``;
 
 
-  const rate = () => {
-    const percent = () => {
-      const percentage = ((prods.price - prods.sale) / prods.price) * 100;
-      const roundedPercentage = Math.ceil(percentage);
-      return roundedPercentage + "% OFF";
-    };
-
-    const regularPriceStyles = prods.sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`;
-    const salePrice = prods.sale ? `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium ">€${sale}</span>` : ``;
-    const salePercent = prods.sale ? `<span class="percent fw-medium">${percent()}</span>` : ``;
-    const justifyContent = prods.sale ? `between` : `end`;
-
-    let amount =
-      `<div class="sale-price d-flex justify-content-${justifyContent} align-items-center mb-2 mt-auto gap-1 text-center">`+
-        `<span span class="item-price-regular rounded ${regularPriceStyles} px-2 py-1 fs-5 fw-semibold" >€${ price }</span >`+
-        `${salePercent}`+
-        `${salePrice}`+
-      `</div>`
-
-    return amount;
+  const percent = () => {
+    const percentage = ((prods.price - prods.sale) / prods.price) * 100;
+    const roundedPercentage = Math.ceil(percentage) + "% OFF";
+    return roundedPercentage;
   };
 
   const output =
@@ -44,8 +28,13 @@ const generateProductCards = (prods) => {
         `<div class="card-body d-flex flex-column gap-2">`+
           `<h4 class="card-title fs-5 mb-0">${title}</h4>`+
           `<div class="short-description">${s_desc}</div>`+
-          `${rate()}`+
-          `<div class="btn-group w-100">` +
+          `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
+            `<span span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price}</span >`+
+            `${sale ?
+            `<span class="percent fw-medium">${percent()}</span>` +
+            `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>` : ''}`+
+          `</div>`+
+          `<div class="btn-group w-100">`+
             `<a href="#" class="btn btn-primary"><i class="bx bx-cart"></i> Book Now!</a>`+
             `${desc ?
               `<button type="button" class="btn btn-secondary text-nowrap" data-bs-toggle="modal" data-bs-target="#${id}">`+
@@ -60,12 +49,14 @@ const generateProductCards = (prods) => {
       `${desc ?
       `<div class="modal fade" id="${id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">`+
         `<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">`+
-          `<div class="modal-content">`+
-            `<div class="modal-header d-flex justify-content-between align-items-center">`+
-              `<h4 class="modal-title" id="staticBackdropLabel">${title}</h4>`+
-              `<button type="button" class="btn btn-outline-danger p-0 lh-1" data-bs-dismiss="modal" aria-label="Close">`+
-                `<i class="bx bx-x fs-1"></i>`+
-              `</button>`+
+          `<div class="modal-content">` +
+            `<div class="modal-header py-2 shadow border-bottom border-primary-subtle">`+
+              `<div class="d-flex justify-content-between w-100">`+
+                `<ul class="social-links list-unstyled d-flex flex-wrap align-items-end"></ul>`+
+                `<button type="button" class="btn btn-outline-danger p-0 lh-1" data-bs-dismiss="modal" aria-label="Close">`+
+                  `<i class="bx bx-x fs-1"></i>`+
+                `</button>`+
+              `</div>`+
             `</div>`+
             `<div class="modal-body">`+
               `<div class="container-fluid">`+
@@ -74,7 +65,12 @@ const generateProductCards = (prods) => {
                   `<div class="col-md-8">`+
                     `<h4>${title}</h4>`+
                     `<p class="card-text my-3">${desc}</p>`+
-                    `<div class="my-3">${rate()}</div>`+
+                    `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
+                      `<span span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
+                        : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price}</span >`+
+                      `${sale ? `<span class="percent fw-medium">${percent()}</span>`+
+                      `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>` : ''}` +
+                    `</div>` +
                   `</div>`+
                 `</div>`+
               `</div>`+
