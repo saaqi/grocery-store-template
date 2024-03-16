@@ -49,9 +49,8 @@ module.exports = {
 
     IN_PRODUCTION && require("autoprefixer"),
 
-    IN_PRODUCTION &&
-      require("cssnano")({
-        preset: ["default", { discardComments: { removeAll: true } }],
-      }),
+    IN_PRODUCTION && require("cssnano")({
+      preset: ["default", { discardComments: { removeAll: true } }],
+    }),
   ],
 };
