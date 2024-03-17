@@ -5,9 +5,6 @@ import "../scss/main.scss";
 // BOX Icons
 import "boxicons/css/boxicons.min.css";
 
-// Import Navigation
-import "./navigation.js";
-
 /* ## Add dark claass to the header and top link
 --------------------------------------------- */
 window.addEventListener("scroll", () => {

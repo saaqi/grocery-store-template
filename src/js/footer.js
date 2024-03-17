@@ -16,12 +16,3 @@ const footerQuickLinks = navLinks.map((nl) => {
 
 const navLinkElements = document.getElementById("footer-nav");
 if (navLinkElements) navLinkElements.innerHTML = footerQuickLinks.join("");
-
-// NATIVE JAVASCRIPT WAY
-document.querySelectorAll('#footer-nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView();
-    });
-});
