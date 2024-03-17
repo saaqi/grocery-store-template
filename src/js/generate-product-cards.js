@@ -50,7 +50,7 @@ const generateProductCards = (prods) => {
       `<div class="modal fade" id="${id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">`+
         `<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">`+
           `<div class="modal-content">` +
-            `<div class="modal-header py-2 shadow border-bottom border-primary-subtle">`+
+            `<div class="modal-header py-2 shadow-sm">`+
               `<div class="d-flex justify-content-between w-100">`+
                 `<ul class="social-links list-unstyled d-flex flex-wrap align-items-end"></ul>`+
                 `<button type="button" class="btn btn-outline-danger p-0 lh-1" data-bs-dismiss="modal" aria-label="Close">`+

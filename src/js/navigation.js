@@ -2,26 +2,9 @@
 import "bootstrap/js/dist/offcanvas.js";
 import "bootstrap/js/dist/scrollspy.js";
 
-// Setup Navigation Links
-const navLinks = [
-  {
-    link: "#home",
-    text: "Home",
-  },
-  {
-    link: "#arrivals",
-    text: "New Arrivals",
-  },
-  {
-    link: "#featured",
-    text: "Featured!",
-  },
-  {
-    link: "#contact",
-    text: "Contact Us!",
-  },
-];
+import navLinks from "./data/nav-links";
 
+// Setup Navigation Links
 const navigationLinks = navLinks.map((nl) => {
   const link = nl.link ? nl.link : "";
   const text = nl.text ? nl.text : "";
@@ -32,12 +15,8 @@ const navigationLinks = navLinks.map((nl) => {
         `${text}`+
       `</a>`+
     `</li>`;
-
   return output;
 });
 
 const navLinkElements = document.getElementById("navbar");
 if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");
-
-const footerNavLinkElements = document.querySelector(".menu-list");
-if (footerNavLinkElements) footerNavLinkElements.innerHTML = navigationLinks.join("");

@@ -1,8 +1,8 @@
 import generateProductCards from "./generate-product-cards.js";
 
-import beverages from "./prduct_categories/beverages.js";
-import fresh from "./prduct_categories/fresh.js";
-import cigs from "./prduct_categories/cigs.js";
+import beverages from "./data/beverages.js";
+import fresh from "./data/fresh.js";
+import cigs from "./data/cigs.js";
 
 const products = [...beverages, ...fresh, ...cigs];
 products.sort((a, b) => (b.added) - (a.added));
