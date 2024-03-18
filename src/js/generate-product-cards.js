@@ -1,4 +1,9 @@
-import "./modal.js";
+import "bootstrap/js/dist/modal.js";
+// Include the classes added by Bootstrap Modal to keep them from purging on build from stylesheet ;)
+const keepStyles = document.querySelectorAll(
+  ".modal-backdrop, .fad, .show, .modal-open"
+);
+
 
 const generateProductCards = (prods) => {
 
@@ -52,7 +57,7 @@ const generateProductCards = (prods) => {
           `<div class="modal-content">` +
             `<div class="modal-header py-2 shadow-sm bg-warning text-bg-warning">`+
               `<div class="d-flex justify-content-between w-100">`+
-                `<ul class="social-links list-unstyled d-flex flex-wrap align-items-end"></ul>`+
+                `<ul class="social-links modal-header-social-link list-unstyled d-flex flex-wrap align-items-end"></ul>`+
                 `<button type="button" class="btn btn-outline-danger p-0 lh-1" data-bs-dismiss="modal" aria-label="Close">`+
                   `<i class="bx bx-x fs-1"></i>`+
                 `</button>`+

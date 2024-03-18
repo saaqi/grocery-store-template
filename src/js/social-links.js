@@ -39,8 +39,8 @@ const socialLinks = socialMediaLinks.map((sl) => {
   const link_class = sl.link_class ? sl.link_class : ``;
 
   const output =
-    `<li>`+
-      `<a class="${link_class} fs-3 lh-1" href="${link}" title="${title}!" target="_blank" rel="nofollow">`+
+    `<li class="lh-1">`+
+      `<a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">`+
         `<i class="pe-4 bx ${icon}"></i>`+
       `</a>`+
     `</li>`;
