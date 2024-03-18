@@ -82,21 +82,20 @@
             <a href="#" class="btn btn-primary text-uppercase">Shop Now!</a>
           </div>
           <div class="graphic-col col-lg-6 text-center text-lg-end">
+            <picture>
+              <source media="(max-width: 576px)" srcset="./images/hero/hero-image@576x.webp" type="image/webp">
+              <source media="(max-width: 768px)" srcset="./images/hero/hero-image@768x.webp" type="image/webp">
+              <source media="(max-width: 992px)" srcset="./images/hero/hero-image@992x.webp" type="image/webp">
+              <source media="(max-width: 1200px)" srcset="./images/hero/hero-image@1200x.webp" type="image/webp">
+              <source media="(min-width: 1201px)" srcset="./images/hero/hero-image.svg" type="image/svg+xml">
+              <img class="img-fluid hero-image" src="./images/hero/hero-image.svg" alt="Basket full of Groceries">
+            </picture>
             <img class="img-fluid hero-image" src="./images/hero/hero-image.svg" alt="Basket full of Groceries">
           </div>
         </div>
       </div>
     </section>
     <!-- Home Section End -->
-
-    <!-- New Arrivals Section Start -->
-    <section id="arrivals" class="section arrivals">
-      <div class="container py-5">
-        <h2 class="section-heading">New Arrivals!</h2>
-        <ul id="new-arrivals" class="row list-unstyled g-2"></ul>
-      </div>
-    </section>
-    <!-- New Arrivals Section End -->
 
     <!-- Featured Section Start -->
     <section id="featured" class="section featrued">
@@ -106,6 +105,15 @@
       </div>
     </section>
     <!-- Featured Section End -->
+
+    <!-- New Arrivals Section Start -->
+    <section id="arrivals" class="section arrivals">
+      <div class="container py-5">
+        <h2 class="section-heading">New Arrivals!</h2>
+        <ul id="new-arrivals" class="row list-unstyled g-2"></ul>
+      </div>
+    </section>
+    <!-- New Arrivals Section End -->
 
     <!-- Shop Section Start -->
     <section id="shop" class="section product-store position-relative">
@@ -135,8 +143,8 @@
     </section>
     <!-- Shop Section End -->
 
-    <!-- Weekly Sale Section Start -->
-    <section id="weaklysale" class="section position-relative overflow-hidden">
+    <!-- Sale Section Start -->
+    <section id="sale" class="section position-relative overflow-hidden">
       <div class="container py-5">
         <div class="row d-flex flex-lg-row-reverse overlay align-items-center py-5">
           <div class="graphic-col col-lg-6 mb-5 mb-lg-0">
@@ -145,8 +153,8 @@
               <source media="(max-width: 768px)" srcset="./images/hero/sale-image@768x.webp" type="image/webp">
               <source media="(max-width: 992px)" srcset="./images/hero/sale-image@992x.webp" type="image/webp">
               <source media="(max-width: 1200px)" srcset="./images/hero/sale-image@1200x.webp" type="image/webp">
-              <source media="(min-width: 1401px)" srcset="./images/hero/sale-image.svg" type="image/svg+xml">
-              <img class="img-fluid" src="./images/hero/sale-image.svg" alt="Sale Section Graphic" loading="lazy">
+              <source media="(min-width: 1201px)" srcset="./images/hero/sale-image.svg" type="image/svg+xml">
+              <img class="img-fluid" src="./images/hero/sale-image.svg" alt="Limited Time Sale Deals" loading="lazy">
             </picture>
           </div>
           <div class="text-col col-lg-6">
@@ -157,7 +165,7 @@
         </div>
       </div>
     </section>
-    <!-- Weekly Sale Section End -->
+    <!-- Sale Section End -->
 
     <!-- Contact Section Start -->
     <section id="contact" class="section bg-dark">

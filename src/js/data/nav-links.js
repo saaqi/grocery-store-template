@@ -4,20 +4,20 @@ const navLinks = [
     text: "Home",
   },
   {
+    link: "#featured",
+    text: "Featured",
+  },
+  {
     link: "#arrivals",
     text: "New Arrivals",
   },
   {
-    link: "#featured",
-    text: "Featured!",
-  },
-  {
     link: "#shop",
-    text: "Shop!",
+    text: "Shop",
   },
   {
-    link: "#weaklysale",
-    text: "Weekly Sale!",
+    link: "#sale",
+    text: "Sale",
   },
   {
     link: "#contact",
