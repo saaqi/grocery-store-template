@@ -10,9 +10,9 @@ const navigationLinks = navLinks.map((nl) => {
 
   const output =
     `<li class="nav-item">` +
-    `<a class="nav-link link-dark" href="${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
-    `${text}` +
-    `</a>` +
+      `<a class="nav-link link-dark" href="${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
+      `${text}` +
+      `</a>` +
     `</li>`;
   return output;
 });
@@ -29,9 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
   function highlightNavLink() {
-    let scrollPosition = window.scrollY;
-
     sections.forEach(section => {
+      const scrollPosition = window.scrollY;
       const top = section.offsetTop - 77;
       const bottom = top + section.offsetHeight;
 

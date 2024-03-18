@@ -1,10 +1,7 @@
-const title = `Sadiq Super Store`;
-const tagline = `Unearth the Extraodinary!`;
-
-const orgTitle = `${title} | ${tagline}`;
-
-window.addEventListener("scroll", () => {
-  // Define the sections and their corresponding titles
+document.addEventListener("DOMContentLoaded", function () {
+  const title = `Sadiq Super Store`;
+  const tagline = `Unearth the Extraodinary!`;
+  const orgTitle = `${title} | ${tagline}`;
   const sections = [
     {
       id: "home",
@@ -28,20 +25,38 @@ window.addEventListener("scroll", () => {
     },
     {
       id: "contact",
-      title: `Contct Us! | ${title}`,
+      title: `Contact Us! | ${title}`,
     },
   ];
 
-  // Loop through each section to check if it's in view
-  sections.forEach((section) => {
-    const sectionElement = document.getElementById(section.id);
-    if (
-      sectionElement &&
-      window.scrollY + 77 >= sectionElement.offsetTop &&
-      window.scrollY <= sectionElement.offsetTop + sectionElement.offsetHeight
-    ) {
-      // Update the title if the section is in view
-      document.title = section.title;
-    }
-  });
+  let currentSection = null;
+
+  function updateTitles() {
+    sections.forEach((section) => {
+      const sectionElement = document.getElementById(section.id);
+      if (
+        sectionElement &&
+        window.scrollY + 77 >= sectionElement.offsetTop &&
+        window.scrollY <= sectionElement.offsetTop + sectionElement.offsetHeight
+      ) {
+        // Update the title only if the section has changed
+        if (currentSection !== section.id) {
+          currentSection = section.id;
+          document.title = section.title;
+        }
+      }
+    });
+  }
+
+  let debounceTimer;
+  const DEBOUNCE_DELAY = 300;
+
+  function debounceUpdateTitles() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(updateTitles, DEBOUNCE_DELAY);
+  }
+
+  window.addEventListener('load', updateTitles);
+  window.addEventListener('scroll', debounceUpdateTitles);
+  window.addEventListener('resize', debounceUpdateTitles);
 });
