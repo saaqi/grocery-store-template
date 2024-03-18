@@ -11,5 +11,11 @@ const beverages = [
     featured: true,
     added: 20240311,
   },
-];
+].map((item, index) => {
+  return {
+    ...item,
+    id: `beverage-0${index}`,
+    cat: `Beverages`,
+  };
+});
 export default beverages;

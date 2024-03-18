@@ -10,11 +10,11 @@ const generateProductCards = (prods) => {
   const title = prods.title ? prods.title : ``;
   const s_desc = prods.s_desc ? prods.s_desc : ``;
   const desc = prods.desc ? prods.desc : ``;
-  // const cat = prods.cat ? prods.cat : ``;
   const price = prods.price ? prods.price : ``;
   const sale = prods.sale ? prods.sale : ``;
   const img = prods.img ? prods.img : ``;
   const id = prods.id ? prods.id : ``;
+  // const cat = prods.cat ? prods.cat : ``;
 
 
   const percent = () => {
@@ -34,7 +34,7 @@ const generateProductCards = (prods) => {
           `<h4 class="card-title fs-5 mb-0">${title}</h4>`+
           `<div class="short-description">${s_desc}</div>`+
           `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
-            `<span span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price}</span >`+
+            `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price}</span >`+
             `${sale ?
             `<span class="percent fw-medium">${percent()}</span>` +
             `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>` : ''}`+
@@ -52,7 +52,7 @@ const generateProductCards = (prods) => {
 
       // Modal Info Box
       `${desc ?
-      `<div class="modal fade" id="${id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">`+
+      `<div class="modal fade" id="${id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="${id}Label" aria-hidden="true">`+
         `<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">`+
           `<div class="modal-content">` +
             `<div class="modal-header py-2 shadow-sm bg-warning text-bg-warning">`+
@@ -68,10 +68,10 @@ const generateProductCards = (prods) => {
                 `<div class="row">`+
                   `<img src="${img}" alt="${title}" class="col-md-4 img-fluid mb-3 p-0 rounded shadow-sm" loading="lazy">`+
                   `<div class="col-md-8">`+
-                    `<h4>${title}</h4>`+
+                    `<h4 id="${id}Label">${title}</h4>`+
                     `<p class="card-text my-3">${desc}</p>`+
                     `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
-                      `<span span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
+                      `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
                         : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price}</span >`+
                       `${sale ? `<span class="percent fw-medium">${percent()}</span>`+
                       `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>` : ''}` +
