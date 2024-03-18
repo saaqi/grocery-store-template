@@ -48,10 +48,10 @@
         </button>
         <div class="offcanvas offcanvas-end bg-warning" tabindex="-1" id="bdNavbar">
           <div class="offcanvas-header px-4 pb-0 justify-content-between align-items-start">
-            <ul class="social-links social-links-top fs-3 mt-3 d-flex flex-wrap gap-2 gap-md-3 list-unstyled">
+            <ul class="social-links social-links-top fs-3 mt-3 d-flex flex-wrap gap-2 gap-md-3 list-unstyled ">
               <!-- Insert with JS -->
             </ul>
-            <button type="button" class="btn btn-outline-primary p-0 lh-1 mt-3" data-bs-dismiss="offcanvas"
+            <button type="button" class="btn btn-outline-primary p-0 lh-1 mt-2" data-bs-dismiss="offcanvas"
               aria-label="Close" data-bs-target="#bdNavbar">
               <i class="bx bx-x display-4"></i>
             </button>
@@ -114,7 +114,8 @@
     </section>
     <!-- Featured Section End -->
 
-    <section id="all-products" class="section product-store position-relative">
+    <!-- Shop Section Start -->
+    <section id="shop" class="section product-store position-relative">
       <div class="container py-5">
         <div class="display-header d-flex justify-content-between pb-3">
           <h2 class="text-dark text-uppercase">Our Products</h2>
@@ -139,23 +140,33 @@
         </div>
       </div>
     </section>
+    <!-- Shop Section End -->
 
-    <section id="yearlysale" class="section position-relative overflow-hidden">
-      <div class="container-bg">
-        <div class="container-overlay">
-          <div class="container yearlysale py-5">
-            <div class="row d-flex flex-row-reverse overlay align-items-center py-5">
-              <div class="col-md-6 py-5">
-                <h2 class="fs-3 text-uppercase mb-2">10% off</h2>
-                <h3 class="display-4 text-uppercase mb-3">New year sale</h3>
-                <a href="#" class="btn btn-dark text-uppercase btn-rounded-none">Shop Product</a>
-              </div>
-            </div>
+    <!-- Weekly Sale Section Start -->
+    <section id="weaklysale" class="section position-relative overflow-hidden">
+      <div class="container py-5">
+        <div class="row d-flex flex-lg-row-reverse overlay align-items-center py-5">
+          <div class="graphic-col col-lg-6 mb-5 mb-lg-0">
+            <picture>
+              <source media="(max-width: 576px)" srcset="./images/hero/hero-image@576x.webp" type="image/webp">
+              <source media="(max-width: 768px)" srcset="./images/hero/hero-image@768x.webp" type="image/webp">
+              <source media="(max-width: 992px)" srcset="./images/hero/hero-image@992x.webp" type="image/webp">
+              <source media="(max-width: 1400px)" srcset="./images/hero/hero-image@1400x.webp" type="image/webp">
+              <source media="(min-width: 1401px)" srcset="./images/hero/hero-image.svg" type="image/svg+xml">
+              <img class="img-fluid" src="./images/hero-image.svg" alt="Hero Graphic">
+            </picture>
+          </div>
+          <div class="text-col col-lg-6">
+            <h2 class="fs-3 text-uppercase mb-2">Buy one Get one Free!</h2>
+            <h3 class="display-4 text-uppercase mb-3">Weekly Sale is now Live!</h3>
+            <a href="#" class="btn btn-dark text-uppercase btn-rounded-none">Shop Product</a>
           </div>
         </div>
       </div>
     </section>
+    <!-- Weekly Sale Section End -->
 
+    <!-- Contact Section Start -->
     <section id="contact" class="section bg-dark">
       <div class="container py-5">
         <div class="row py-5">
@@ -190,6 +201,7 @@
         </div>
       </div>
     </section>
+    <!-- Contact Section End -->
   </main>
 
   <footer id="footer" class="overflow-hidden pt-5 bg-secondary-subtle text-bg-seondary">
@@ -252,12 +264,12 @@
         class='btn btn-outline-secondary p-2 rounded-pill bx bxs-to-top'></i></a>
   </footer>
 
+  <script type="module" src="./src/js/update-titles.js"></script>
   <script type="module" src="./src/js/navigation.js"></script>
   <script type="module" src="./src/js/home-product-cards.js"></script>
   <script type="module" src="./src/js/social-links.js"></script>
   <script type="module" src="./src/js/contactus.js"></script>
   <script type="module" src="./src/js/footer.js"></script>
-  <script type="module" src="./src/js/link-scroll.js"></script>
   <script type="module" src="./src/js/main.js"></script>
 </body>
 

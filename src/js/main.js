@@ -18,6 +18,8 @@ window.addEventListener("scroll", () => {
 // Add Current Year to the footer
 document.getElementById("curr_year").innerHTML = new Date().getFullYear();
 
+// Link section scrolling
+import "./link-scroll.js";
 
 // preloader
 import "./hidepreloader.js";

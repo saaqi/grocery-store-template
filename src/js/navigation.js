@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let scrollPosition = window.scrollY;
 
     sections.forEach(section => {
-      const top = section.offsetTop - 76;
+      const top = section.offsetTop - 77;
       const bottom = top + section.offsetHeight;
 
       if (scrollPosition >= top && scrollPosition < bottom) {
@@ -47,6 +47,26 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+  window.addEventListener('load', highlightNavLink);
   window.addEventListener('scroll', highlightNavLink);
   window.addEventListener('resize', highlightNavLink);
+});
+
+
+
+// Hide Navigation on right swipe
+document.addEventListener("DOMContentLoaded", function () {
+  const offcanvasBody = document.querySelector('.offcanvas-body');
+  const closeButton = document.querySelector('[data-bs-dismiss="offcanvas"]');
+  let startX;
+  offcanvasBody.addEventListener('touchstart', function (e) {
+    startX = e.touches[0].clientX;
+  });
+  offcanvasBody.addEventListener('touchend', function (e) {
+    const endX = e.changedTouches[0].clientX;
+    const deltaX = endX - startX;
+    if (deltaX > 50) {
+      closeButton.click();
+    }
+  });
 });
