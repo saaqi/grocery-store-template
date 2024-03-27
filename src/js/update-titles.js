@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: `Shop | ${title}`,
     },
     {
-      id: "weaklysale",
+      id: "sale",
       title: `Weekly Sale | ${title}`,
     },
     {
@@ -34,16 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateTitles() {
     sections.forEach((section) => {
       const sectionElement = document.getElementById(section.id);
-      if (
-        sectionElement &&
-        window.scrollY + 77 >= sectionElement.offsetTop &&
-        window.scrollY <= sectionElement.offsetTop + sectionElement.offsetHeight
-      ) {
+      const scrollPosition = window.scrollY;
+      const top = sectionElement.offsetTop - 77;
+      const bottom = top + sectionElement.offsetHeight;
+      if (sectionElement && scrollPosition >= top && scrollPosition < bottom && currentSection !== section.id) {
         // Update the title only if the section has changed
-        if (currentSection !== section.id) {
-          currentSection = section.id;
-          document.title = section.title;
-        }
+        currentSection = section.id;
+        document.title = section.title;
       }
     });
   }
