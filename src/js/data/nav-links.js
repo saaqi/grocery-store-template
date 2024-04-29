@@ -14,6 +14,20 @@ const navLinks = [
   {
     link: "#shop",
     text: "Shop",
+    subcategories: [
+      {
+        link: "#fresh-produce",
+        text: "Fresh Produce",
+      },
+      {
+        link: "#beverages",
+        text: "Beverages",
+      },
+      {
+        link: "#meats",
+        text: "Meats",
+      },
+    ],
   },
   {
     link: "#sale",

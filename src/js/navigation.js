@@ -1,24 +1,43 @@
 // --- Import only the required components.
 import "bootstrap/js/dist/offcanvas.js";
+import "bootstrap/js/dist/dropdown.js";
 
 import navLinks from "./data/nav-links";
 
 // Setup Navigation Links
 const navigationLinks = navLinks.map((nl) => {
-  const link = nl.link ? nl.link : "";
-  const text = nl.text ? nl.text : "";
+  const {
+    text = '',
+    link = '',
+    subcategories = [] // Add default value for subcategories
+  } = nl;
 
-  const output =
+  // If there are subcategories, generate a dropdown menu
+  const output = subcategories.length > 0 ?
+    `<li class="nav-item dropdown">` +
+      `<a class="nav-link link-dark dropdown-toggle" href="${link}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">` +
+        `${text}` +
+      `</a>` +
+      `<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">` +
+        // Map over subcategories to generate dropdown items
+        subcategories.map((subcategory) =>
+          `<li><a class="dropdown-item text-bg-secondar" href="${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">${subcategory.text}</a></li>`
+        ).join("") +
+      `</ul>` +
+    `</li>` :
+    // If there are no subcategories, generate a regular navigation link
     `<li class="nav-item">` +
       `<a class="nav-link link-dark" href="${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
-      `${text}` +
+        `${text}` +
       `</a>` +
     `</li>`;
+
   return output;
 });
 
 const navLinkElements = document.getElementById("navbar");
 if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");
+
 
 
 
