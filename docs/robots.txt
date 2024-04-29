@@ -1,8 +1,0 @@
-User-agent: *
-
-Disallow: 
-Disallow: /cgi-bin/
-Disallow: /src/
-Disallow: /purgecss.config.js
-
-Sitemap: https://dtagmor.com/sitemap.xml

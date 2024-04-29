@@ -9,7 +9,8 @@ export default function generateGlideCards(data, parent) {
   const products = [...data];
   products.sort((a, b) => (b.added) - (a.added));
 
-  document.getElementById(parent).innerHTML =
+  const parentSelector = document.getElementById(parent);
+  if (parentSelector) parentSelector.innerHTML =
     `<div class="${parent}">`+
       `<div class="glide__track" data-glide-el="track">`+
         `<ul id="${parent}-products" class="glide__slides list-unstyled"></ul>`+
@@ -34,6 +35,7 @@ export default function generateGlideCards(data, parent) {
     e.classList.add("glide__slide", "h-auto");
   })
 
+  if (parentSelector)
   new Glide(`.${parent}`, {
     type: "carousel",
     perView: 5,
