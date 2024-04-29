@@ -1,10 +1,10 @@
 import generateProductCards from "./generate-product-cards.js";
 
-import beverages from "./data/beverages.js";
-import fresh from "./data/fresh.js";
-import cigs from "./data/cigs.js";
+import fresh_fruit from "./data/fresh_fruit.js";
+// import cigs from "./data/cigs.js";
 
-const products = [...beverages, ...fresh, ...cigs];
+// const products = [...fresh_fruit, ...cigs];
+const products = [...fresh_fruit];
 products.sort((a, b) => (b.added) - (a.added));
 
 // New Arrivals First 4 products

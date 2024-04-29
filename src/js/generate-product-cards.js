@@ -6,25 +6,27 @@ const keepStyles = document.querySelectorAll(
 
 
 const generateProductCards = (prods) => {
+  // Destructure properties from prods with default values to avoid errors
+  const {
+    title = '',
+    s_desc = '',
+    desc = '',
+    price = '',
+    sale = '',
+    img = '',
+    id = '',
+    stock = ''
+  } = prods;
 
-  const title = prods.title ? prods.title : ``;
-  const s_desc = prods.s_desc ? prods.s_desc : ``;
-  const desc = prods.desc ? prods.desc : ``;
-  const price = prods.price ? prods.price : ``;
-  const sale = prods.sale ? prods.sale : ``;
-  const img = prods.img ? prods.img : ``;
-  const id = prods.id ? prods.id : ``;
-  // const cat = prods.cat ? prods.cat : ``;
-
-
+  // Calculate percentage discount
   const percent = () => {
     const percentage = ((prods.price - prods.sale) / prods.price) * 100;
     const roundedPercentage = Math.ceil(percentage) + "% OFF";
     return roundedPercentage;
   };
 
+  // Generate HTML output
   const output =
-    // Product Card
     `<li>`+
       `<div class="product-card card shadow-sm h-100">`+
         `<div class="image-holder">`+
@@ -34,17 +36,19 @@ const generateProductCards = (prods) => {
           `<h4 class="card-title fs-5 mb-0">${title}</h4>`+
           `<div class="short-description">${s_desc}</div>`+
           `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
-            `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price}</span >`+
+          `${stock ?
+            `${price ? `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price}</span >` : ``}`+
             `${sale ?
             `<span class="percent fw-medium">${percent()}</span>` +
-            `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>` : ''}`+
+            `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>` : ''}`
+          : '<span class="text-muted">Out of Stock</span"></span>'}`+
           `</div>`+
           `<div class="btn-group w-100">`+
             `<a href="#" class="btn btn-primary"><i class="bx bx-cart"></i> Book Now!</a>`+
             `${desc ?
               `<button type="button" class="btn btn-secondary text-nowrap" data-bs-toggle="modal" data-bs-target="#${id}">`+
                 `<i class="bx bx-info-circle"></i>`+
-              `</button>` : ``}`+
+              `</button>` : ''}`+
           `</div>`+
         `</div>`+
         `${sale ? `<i class='bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm'></i>` : ``}`+
@@ -66,13 +70,13 @@ const generateProductCards = (prods) => {
             `<div class="modal-body">`+
               `<div class="container-fluid">`+
                 `<div class="row">`+
-                  `<img src="${img}" alt="${title}" class="col-md-4 img-fluid mb-3 p-0 rounded shadow-sm" loading="lazy">`+
+                  `<img src="${img}" alt="${title}" class="col-md-4 h-100 img-fluid mb-3 p-0 rounded shadow-sm" loading="lazy">`+
                   `<div class="col-md-8">`+
                     `<h4 id="${id}Label">${title}</h4>`+
                     `<p class="card-text my-3">${desc}</p>`+
                     `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
-                      `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
-                        : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price}</span >`+
+                      `${price ? `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
+                        : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price}</span > ` : ``}`+
                       `${sale ? `<span class="percent fw-medium">${percent()}</span>`+
                       `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>` : ''}` +
                     `</div>` +
