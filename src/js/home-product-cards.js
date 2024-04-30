@@ -1,5 +1,4 @@
 import generateProductCards from "./functions/generate-product-cards.js";
-import generateGlideCards from "./functions/generate-glide-cards.js";
 import fresh_fruit from "./data/fresh_fruit.js";
 import fresh_vegetables from "./data/fresh_vegetables.js";
 
@@ -24,6 +23,20 @@ featuredProdsElements.forEach((e) => {
   e.classList.add('col-sm-6', 'col-md-4', 'col-lg-3');
 });
 
-// Generate Glide Cards
-generateGlideCards(fresh_fruit, 'fruit-shop');
-generateGlideCards(fresh_vegetables, 'vegetable-shop');
+
+// Fresh Fruits
+const freshFruitOutput = fresh_fruit.map(generateProductCards);
+const fruitShopParent = document.getElementById("fruit-shop");
+if (fruitShopParent) fruitShopParent.innerHTML = freshFruitOutput.join("");
+const fruitShopElements = document.querySelectorAll("#fruit-shop > li");
+fruitShopElements.forEach((e) => {
+  e.classList.add('col-6', 'col-md-4', 'col-lg-3');
+});
+// Fresh Vegetables
+const freshVegetablesOutput = fresh_vegetables.map(generateProductCards);
+const vegetableShopParent = document.getElementById("vegetable-shop");
+if (vegetableShopParent) vegetableShopParent.innerHTML = freshVegetablesOutput.join("");
+const vegetableShopElements = document.querySelectorAll("#vegetable-shop > li");
+vegetableShopElements.forEach((e) => {
+  e.classList.add('col-6', 'col-md-4', 'col-lg-3');
+});

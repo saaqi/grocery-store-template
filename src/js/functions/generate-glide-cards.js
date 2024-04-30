@@ -1,8 +1,8 @@
+import Glide from "@glidejs/glide";
 import generateProductCards from "./generate-product-cards.js";
 
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
-import Glide from "@glidejs/glide";
 
 export default function generateGlideCards(data, parent) {
 
