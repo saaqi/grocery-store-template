@@ -47,7 +47,7 @@ form.addEventListener("submit", function (event) {
   const nameInput = document.getElementById("contact-form-name");
   const emailInput = document.getElementById("contact-form-email");
   const messageInput = document.getElementById("contact-form-message");
-  const receiveEmail = "sadiqsuperstore@gmail.com";
+  const receiveEmail = "fazaldinsons@gmail.com";
   const emailButton = document.querySelector("button.form-submit-button");
 
   // Compose email message

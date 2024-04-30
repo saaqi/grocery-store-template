@@ -9,25 +9,26 @@ const navigationLinks = navLinks.map((nl) => {
   const {
     text = '',
     link = '',
+    linkClass = '',
     subcategories = [] // Add default value for subcategories
   } = nl;
 
   // If there are subcategories, generate a dropdown menu
   const output = subcategories.length > 0 ?
     `<li class="nav-item dropdown">` +
-      `<a class="nav-link link-dark dropdown-toggle" href="${link}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">` +
+      `<a class="nav-link link-dark dropdown-toggle ${linkClass}" scroll="${link}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">` +
         `${text}` +
       `</a>` +
       `<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">` +
         // Map over subcategories to generate dropdown items
         subcategories.map((subcategory) =>
-          `<li><a class="dropdown-item text-bg-secondar" href="${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">${subcategory.text}</a></li>`
+          `<li><a class="dropdown-item fw-medium ${linkClass}" href="${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">${subcategory.text}</a></li>`
         ).join("") +
       `</ul>` +
     `</li>` :
     // If there are no subcategories, generate a regular navigation link
     `<li class="nav-item">` +
-      `<a class="nav-link link-dark" href="${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
+    `<a class="nav-link link-dark ${linkClass}" scroll="${link}" href="${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
         `${text}` +
       `</a>` +
     `</li>`;
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (scrollPosition >= top && scrollPosition < bottom) {
         const id = section.getAttribute('id');
         navLinks.forEach(link => {
-          if (link.getAttribute('href').slice(1) === id) {
+          if (link.getAttribute('scroll').slice(1) === id) {
             link.classList.add('active');
           } else {
             link.classList.remove('active');

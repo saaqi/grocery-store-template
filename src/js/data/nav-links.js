@@ -2,40 +2,44 @@ const navLinks = [
   {
     link: "#home",
     text: "Home",
+    linkClass: 'home',
   },
   {
     link: "#featured",
     text: "Featured",
+    linkClass: 'featured',
   },
   {
     link: "#arrivals",
     text: "New Arrivals",
+    linkClass: 'arrivals',
   },
   {
-    link: "#shop",
+    // link: "#shop",
     text: "Shop",
+    linkClass: 'Shop',
     subcategories: [
       {
-        link: "#fresh-produce",
-        text: "Fresh Produce",
+        link: "#fruit-shop-heading",
+        text: "Fresh Fruits",
+        linkClass: 'fruit-shop',
       },
       {
-        link: "#beverages",
-        text: "Beverages",
-      },
-      {
-        link: "#meats",
-        text: "Meats",
+        link: "#vegetable-shop-heading",
+        text: "Fresh Vegetables",
+        linkClass: 'vegetable-shop',
       },
     ],
   },
   {
     link: "#sale",
     text: "Sale",
+    linkClass: 'sale',
   },
   {
     link: "#contact",
     text: "Contact Us!",
+    linkClass: 'contact',
   },
 ];
 

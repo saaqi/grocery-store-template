@@ -84,7 +84,7 @@ const fruits = [
     stock: true,
     // price: 8,
     // sale: 0,
-    featured: true,
+    // featured: true,
     added: 20240429,
   },
   {

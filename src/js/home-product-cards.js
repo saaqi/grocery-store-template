@@ -1,8 +1,9 @@
 import generateProductCards from "./functions/generate-product-cards.js";
 import generateGlideCards from "./functions/generate-glide-cards.js";
 import fresh_fruit from "./data/fresh_fruit.js";
+import fresh_vegetables from "./data/fresh_vegetables.js";
 
-const products = [...fresh_fruit];
+const products = [...fresh_fruit, ...fresh_vegetables];
 products.sort((a, b) => (b.added) - (a.added));
 
 // New Arrivals First 4 products
@@ -25,3 +26,4 @@ featuredProdsElements.forEach((e) => {
 
 // Generate Glide Cards
 generateGlideCards(fresh_fruit, 'fruit-shop');
+generateGlideCards(fresh_vegetables, 'vegetable-shop');
