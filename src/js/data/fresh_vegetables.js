@@ -1,4 +1,4 @@
-const vegetables = [
+const fresh_vegetables = [
   {
     title: "Aloe Vera Fresh",
     s_desc: "Discover the purest form of nature's healing with our fresh Aloe Vera products.",
@@ -52,7 +52,7 @@ const vegetables = [
     // price: 8,
     // sale: 0,
     // featured: true,
-    added: 20240430,
+    added: 20240501,
   },
   {
     title: "Bottle Gourd",
@@ -314,4 +314,4 @@ const vegetables = [
     cat: "Fresh Vegetables",
   };
 });
-export default vegetables;
+export default fresh_vegetables;

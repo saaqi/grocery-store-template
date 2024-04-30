@@ -1,4 +1,4 @@
-const fruits = [
+const fresh_fruits = [
   {
     title: "Apples",
     s_desc: "Fresh and juicy apples - nature's perfect snack!",
@@ -62,7 +62,7 @@ const fruits = [
     stock: true,
     // price: 8,
     // sale: 0,
-    featured: true,
+    // featured: true,
     added: 20240429,
   },
   {
@@ -73,7 +73,7 @@ const fruits = [
     stock: true,
     // price: 8,
     // sale: 0,
-    featured: true,
+    // featured: true,
     added: 20240429,
   },
   {
@@ -96,7 +96,7 @@ const fruits = [
     // price: 8,
     // sale: 0,
     // featured: true,
-    added: 20240429,
+    added: 20240501,
   },
 ].map((item, index) => {
   return {
@@ -105,4 +105,4 @@ const fruits = [
     cat: "Fresh Fruits",
   };
 });
-export default fruits;
+export default fresh_fruits;

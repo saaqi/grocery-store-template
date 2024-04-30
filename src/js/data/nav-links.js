@@ -15,7 +15,7 @@ const navLinks = [
     linkClass: 'arrivals',
   },
   {
-    // link: "#shop",
+    link: "#shop",
     text: "Shop",
     linkClass: 'Shop',
     subcategories: [
