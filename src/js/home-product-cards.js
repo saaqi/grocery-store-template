@@ -1,8 +1,9 @@
 import generateProductCards from "./functions/generate-product-cards.js";
 import fresh_fruit from "./data/fresh_fruit.js";
 import fresh_vegetables from "./data/fresh_vegetables.js";
+import meats from "./data/frozen_meats.js";
 
-const products = [...fresh_fruit, ...fresh_vegetables];
+const products = [...fresh_fruit, ...fresh_vegetables, ...meats];
 products.sort((a, b) => (b.added) - (a.added));
 
 // New Arrivals First 4 products
@@ -38,5 +39,13 @@ const vegetableShopParent = document.getElementById("vegetable-shop");
 if (vegetableShopParent) vegetableShopParent.innerHTML = freshVegetablesOutput.join("");
 const vegetableShopElements = document.querySelectorAll("#vegetable-shop > li");
 vegetableShopElements.forEach((e) => {
+  e.classList.add('col-6', 'col-md-4', 'col-lg-3');
+});
+// Frozen Meats
+const frozenMeatsOutput = meats.map(generateProductCards);
+const frozenMeatsShopParent = document.getElementById("frozen-meats-shop");
+if (frozenMeatsShopParent) frozenMeatsShopParent.innerHTML = frozenMeatsOutput.join("");
+const frozenMeatsShopElements = document.querySelectorAll("#frozen-meats-shop > li");
+frozenMeatsShopElements.forEach((e) => {
   e.classList.add('col-6', 'col-md-4', 'col-lg-3');
 });

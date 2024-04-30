@@ -29,6 +29,11 @@ const navLinks = [
         text: "Fresh Vegetables",
         linkClass: 'vegetable-shop',
       },
+      {
+        link: "#frozen-meats-shop-heading",
+        text: "Frozen Meats",
+        linkClass: 'frozen-meats-shop',
+      },
     ],
   },
   {

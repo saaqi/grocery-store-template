@@ -15,7 +15,9 @@ const generateProductCards = (prods) => {
     sale = '',
     img = '',
     id = '',
-    stock = ''
+    stock = '',
+    uom = '',
+    quantity = ''
   } = prods;
 
   // Calculate percentage discount
@@ -33,7 +35,7 @@ const generateProductCards = (prods) => {
           `<img src="${img}" alt="${title}" class="img-fluid card-img-top" loading="lazy">`+
         `</div>`+
         `<div class="card-body d-flex flex-column gap-2">`+
-          `<h4 class="card-title fs-5 mb-0">${title}</h4>`+
+          `<h4 class="card-title fs-5 mb-0">${title} - ${quantity} ${uom}</h4>`+
           `<div class="short-description">${s_desc}</div>`+
           `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
           `${stock ?
@@ -74,7 +76,7 @@ const generateProductCards = (prods) => {
                 `<div class="row">`+
                   `<img src="${img}" alt="${title}" class="col-md-4 h-100 img-fluid mb-3 p-0 rounded shadow-sm" loading="lazy">`+
                   `<div class="col-md-8">`+
-                    `<h4 id="${id}Label">${title}</h4>`+
+                    `<h4 id="${id}Label">${title} - ${quantity} ${uom}</h4>`+
                     `<p class="card-text my-3">${desc}</p>`+
                     `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
                       `${price ? `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
