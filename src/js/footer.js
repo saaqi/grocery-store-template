@@ -4,13 +4,14 @@ import nav_links from "./data/nav_links";
 const footerQuickLinks = nav_links.map((nl) => {
   const {
     text = '',
-    link = ''
+    link = '',
+    icon = ''
   } = nl;
 
   const output =
     `<li class="nav-item mb-2">` +
       `<a class="nav-link link-dark fw-medium" href="${link}">` +
-        `${text}` +
+        `${icon ? icon + ' ' : ''}${text}` +
       `</a>` +
     `</li>`;
   return output;
