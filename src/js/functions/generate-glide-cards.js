@@ -38,6 +38,7 @@ export default function generateGlideCards(data, parent) {
   if (parentSelector)
   new Glide(`.${parent}`, {
     type: "carousel",
+    startAt: 0,
     perView: 5,
     swipeThreshold: 40,
     dragThreshold: 60,

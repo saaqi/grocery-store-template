@@ -1,9 +1,7 @@
-import generateProductCards from "./generate-product-cards.js";
-
+import generateProductCards from "./functions/generate-product-cards.js";
+import generateGlideCards from "./functions/generate-glide-cards.js";
 import fresh_fruit from "./data/fresh_fruit.js";
-// import cigs from "./data/cigs.js";
 
-// const products = [...fresh_fruit, ...cigs];
 const products = [...fresh_fruit];
 products.sort((a, b) => (b.added) - (a.added));
 
@@ -23,4 +21,7 @@ if (featuredProdsParent) featuredProdsParent.innerHTML = featuredProdsReturn.joi
 const featuredProdsElements = document.querySelectorAll("#featured-items > li");
 featuredProdsElements.forEach((e) => {
   e.classList.add('col-sm-6', 'col-md-4', 'col-lg-3');
-})
+});
+
+// Generate Glide Cards
+generateGlideCards(fresh_fruit, 'fruit-shop');
