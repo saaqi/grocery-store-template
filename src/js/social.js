@@ -12,7 +12,7 @@ const socialLinks = socialMediaLinks.map((sl) => {
   const output =
     `<li class="lh-1">`+
       `<a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">`+
-        `<i class="pe-4 bx ${icon}"></i>`+
+        `<i class="bx ${icon}"></i>`+
       `</a>`+
     `</li>`;
 
