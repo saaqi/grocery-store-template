@@ -44,7 +44,9 @@ const generateProductCards = (prods) => {
           : '<span class="text-muted">Out of Stock</span"></span>'}`+
           `</div>`+
           `<div class="btn-group w-100">`+
-            `<a href="https://wa.me/+32493338881" class="btn btn-primary" target="_blank"><i class="bx bx-cart"></i> Book Now!</a>`+
+            `<a href="https://wa.me/+32493338881" class="btn btn-primary text-nowrap" target="_blank">`+
+              `<i class='bx bxl-whatsapp'></i>`+
+            `</a>`+
             `${desc ?
               `<button type="button" class="btn btn-secondary text-nowrap" data-bs-toggle="modal" data-bs-target="#${id}">`+
                 `<i class="bx bx-info-circle"></i>`+
