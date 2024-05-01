@@ -55,7 +55,7 @@ a.top-link {
 
 .btn-group {
   .btn {
-    padding: .5rem;
+    // padding: .5rem;
     transform: none;
     font-size: 1.2rem;
     line-height: 0;
@@ -110,7 +110,7 @@ a.top-link {
   display: block;
   content: "";
   position: relative;
-  margin-top: 25px;
+  margin-top: 1rem;
   left: 50%;
   margin-left: -50px;
   background-color: v.$primary;

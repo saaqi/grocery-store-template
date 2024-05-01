@@ -53,13 +53,13 @@ document.querySelectorAll('.main-nav a[href^="#"]').forEach(anchor => {
     document.querySelector(target).scrollIntoView();
 
     // Update URL hash without triggering page reload
-    // history.pushState(null, null, target);
+    history.pushState(null, null, target);
   });
 });
 
 
 // Setup Scroll Spy
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 

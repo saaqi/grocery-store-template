@@ -105,7 +105,7 @@
     <section id="featured" class="section featrued">
       <div class="container py-5">
         <h2 class="section-heading">Featured Products!</h2>
-        <ul id="featured-items" class="row list-unstyled g-2"></ul>
+        <ul id="featured-items" class="row list-unstyled g-2"><!-- Insert with JS --></ul>
       </div>
     </section>
     <!-- Featured Section End -->
@@ -114,7 +114,7 @@
     <section id="arrivals" class="section arrivals">
       <div class="container py-5">
         <h2 class="section-heading">New Arrivals!</h2>
-        <ul id="new-arrivals" class="row list-unstyled g-2"></ul>
+        <ul id="new-arrivals" class="row list-unstyled g-2"><!-- Insert with JS --></ul>
       </div>
     </section>
     <!-- New Arrivals Section End -->
@@ -122,18 +122,18 @@
     <!-- Shop Section Start -->
     <section id="shop" class="section product-store">
       <div class="container py-5">
-        <!-- <div class="display-header d-flex justify-content-between pb-3">
+        <div class="display-header d-flex justify-content-between pb-3">
           <h2 class="text-dark text-uppercase">Our Products</h2>
           <div class="btn-right">
             <a href="#" class="btn btn-info text-uppercase"><i class='bx bx-map'></i> Go to Shop</a>
           </div>
-        </div> -->
-        <h2 id="fruit-shop-heading" class="pt-4 text-center">Fresh Fruits</h2>
-        <ul id="fruit-shop" class="my-4 list-unstyled row g-2"></ul>
-        <h2 id="vegetable-shop-heading" class="pt-4 text-center">Fresh Vegetables</h2>
-        <ul id="vegetable-shop" class="my-4 list-unstyled row g-2"></ul>
-        <h2 id="frozen-meats-shop-heading" class="pt-4 text-center">Frozen Meats</h2>
-        <ul id="frozen-meats-shop" class="my-4 list-unstyled row g-2"></ul>
+        </div>
+        <h2 id="fruit-shop-heading" class="section-heading">Fresh Fruits</h2>
+        <ul id="fruit-shop" class="my-4 list-unstyled row g-2"><!-- Insert with JS --></ul>
+        <h2 id="vegetable-shop-heading" class="section-heading mt-5">Fresh Vegetables</h2>
+        <ul id="vegetable-shop" class="my-4 list-unstyled row g-2"><!-- Insert with JS --></ul>
+        <h2 id="frozen-meats-shop-heading" class="section-heading mt-5">Frozen Meats</h2>
+        <ul id="frozen-meats-shop" class="my-4 list-unstyled row g-2"><!-- Insert with JS --></ul>
       </div>
     </section>
     <!-- Shop Section End -->
@@ -153,9 +153,9 @@
             </picture>
           </div>
           <div class="text-col col-lg-6">
-            <h2 class="fs-3 text-uppercase mb-2">Buy one Get one Free!</h2>
+            <!-- <h2 class="fs-3 text-uppercase mb-2">Buy one Get one Free!</h2> -->
             <h3 class="display-4 text-uppercase mb-3">Weekly Sale is now Live!</h3>
-            <a href="#" class="btn btn-dark text-uppercase btn-rounded-none">Shop Product</a>
+            <a href="https://maps.app.goo.gl/7DvDtoe2L5U6awqu6" class="btn btn-primary" target="">Come Visit Us!</a>
           </div>
         </div>
       </div>
@@ -163,12 +163,53 @@
     <!-- Sale Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="section bg-dark">
+    <section id="contact" class="section bg-dark text-bg-dark">
       <div class="container py-5">
         <div class="row py-5">
-          <div class="subscribe-content d-flex flex-wrap justify-content-center align-items-center">
-            <div class="col-lg-6 col-12"></div>
-            <div class="col-lg-6 col-12 text-bg-dark">
+          <div class="col-lg-6 working-hours border-primary mb-4 mb-lg-0">
+            <div class="business-hours fs-5 mb-3 fw-medium" id="business-hours">
+              <p><i class='bx bxs-calendar'></i> <span id="storestatus" class="storestatus"></span></p>
+            </div>
+            <table class="table table-info table-striped table-hover">
+              <thead class="thead">
+                <tr>
+                  <th><i class='bx bxs-calendar-event'></i> Day</th>
+                  <th><i class='bx bxs-time'></i> Hours ( EST/UTC-4 )</th>
+                </tr>
+              </thead>
+              <tbody class="">
+                <tr>
+                  <td>Monday</td>
+                  <td>08:00 AM - 07:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>08:00 AM - 07:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>08:00 AM - 07:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>08:00 AM - 07:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>08:00 AM - 07:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>08:00 AM - 07:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>09:00 AM - 05:00 PM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-6">
               <h2>Contact Us!</h2>
               <p>Have something in mind? Please don't hesitate to ask us!</p>
               <div class="contact-form" id="contact-form">
@@ -192,7 +233,6 @@
                     Send us an E-Mail</button>
                 </form>
               </div>
-            </div>
           </div>
         </div>
       </div>
