@@ -44,6 +44,10 @@ const navigationLinks = nav_links.map((nl) => {
 const navLinkElements = document.getElementById("navbar");
 if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");
 
+// Navigatoin Shop Link Customization
+// const shopLink = document.querySelector(".Shop");
+// shopLink.classList.add("btn", 'btn-outline-secondary', 'py-2', 'w-auto');
+
 
 // Scroll to target sections on click
 document.querySelectorAll('.main-nav a[href^="#"]').forEach(anchor => {

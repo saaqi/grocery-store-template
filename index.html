@@ -38,7 +38,9 @@
   <header id="header" class="site-header bg-warning text-bg-warning position-fixed w-100">
     <div class="container">
       <nav id="header-nav" class="navbar navbar-expand-lg d-flex justify-content-between align-items-center">
-        <!-- <div class="ship d-lg-none">Call!</div> -->
+        <a class="d-block d-lg-none rounded btn btn-outline-primary p-2 lh-1" href="#shop">
+          <i class='bx bxs-store display-6'></i>
+        </a>
         <a class="navbar-brand" href="#header">
           <img src="images/logo.svg" class="logo" alt="Logo" height="50">
         </a>
@@ -79,12 +81,14 @@
             <ul id="hero-social-links" class="social-links social-links-hero list-unstyled d-flex flex-wrap my-4 gap-5 justify-content-around justify-content-lg-start">
               <!-- Insert with JS -->
             </ul>
-            <a href="https://maps.app.goo.gl/7DvDtoe2L5U6awqu6" class="btn btn-primary me-2" target="_blank">
-              <i class='bx bxs-map-alt'></i> Visit Us!
-            </a>
-            <a href="tel:+32493338881" class="btn btn-info">
-              <i class='bx bxs-phone-call'></i> Call Us!
-            </a>
+            <div class="d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center">
+              <a href="https://maps.app.goo.gl/7DvDtoe2L5U6awqu6" class="btn btn-primary" target="_blank">
+                <i class='bx bxs-map-alt'></i> Visit Us!
+              </a>
+              <a href="tel:+32493338881" class="btn btn-info">
+                <i class='bx bxs-phone-call'></i> Call Us!
+              </a>
+            </div>
           </div>
           <div class="graphic-col col-lg-6 text-center text-lg-end">
             <picture>
@@ -122,7 +126,7 @@
     <!-- Shop Section Start -->
     <section id="shop" class="section product-store">
       <div class="container py-5">
-        <div class="display-header d-flex justify-content-between pb-3">
+        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-sm-between align-items-center pb-5">
           <h2 class="text-dark text-uppercase">Our Products</h2>
           <div class="btn-right">
             <a href="#" class="btn btn-info text-uppercase"><i class='bx bx-map'></i> Go to Shop</a>
@@ -169,7 +173,7 @@
         <div class="row py-5">
           <div class="col-lg-6 working-hours border-primary mb-4 mb-lg-0">
             <p>Have something in mind? Please don't hesitate to ask us!</p>
-            <ul id="contact-us-list" class="list-unstyled d-flex mb-3 flex-wrap gap-5 justify-content-between justify-content-sm-start"></ul>
+            <ul id="contact-us-list" class="list-unstyled d-flex mb-3 flex-wrap gap-5 justify-content-around justify-content-lg-start"></ul>
             <div class="business-hours fs-5 mb-3 fw-medium" id="business-hours">
               <p><i class='bx bxs-calendar'></i> <span id="storestatus" class="storestatus"></span></p>
             </div>
@@ -256,7 +260,7 @@
           <h5 class="pb-2">Contact Us:</h5>
           <p>Do you have any queries or suggestions? Send us an E-Mail at <a href="mailto:fazaldinsons@gmail.com">fazaldinsons@gmail.com</a></p>
           <p>or Just give us a call. <a href="https://wa.me/+32493338881" target="_blank">+32 493 33 88 81</a></p>
-          <ul id="footer-social-links" class="social-links social-links-footer d-flex flex-wrap justify-content-between mt-4 list-unstyled d-flex">
+          <ul id="footer-social-links" class="social-links social-links-footer d-flex flex-wrap justify-content-around mt-4 list-unstyled">
             <!-- Insert with JS -->
           </ul>
         </div>
