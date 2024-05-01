@@ -29,7 +29,7 @@ const generateProductCards = (prods) => {
 
   // Generate HTML output
   const output =
-    `<li>`+
+    `<li class="col-6 col-md-4 col-lg-3">`+
       `<div class="product-card card shadow-sm h-100">`+
         `<div class="image-holder">`+
           `<img src="${img}" alt="${title}" class="img-fluid card-img-top" loading="lazy">`+
