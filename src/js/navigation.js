@@ -23,7 +23,11 @@ const navigationLinks = nav_links.map((nl) => {
       `<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">` +
         // Map over subcategories to generate dropdown items
         subcategories.map((subcategory) =>
-          `<li><a class="dropdown-item fw-medium ${linkClass}" href="${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">${subcategory.icon ? subcategory.icon + ' ' : ''}${subcategory.text}</a></li>`
+          `<li class="nav-item">` +
+            `<a class="dropdown-item fw-medium ${linkClass}" href="${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
+              `${subcategory.icon ? subcategory.icon + ' ' : ''}${subcategory.text}` +
+            `</a>` +
+          `</li>`
         ).join("") +
       `</ul>` +
     `</li>` :
@@ -42,7 +46,7 @@ if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");
 
 
 // Scroll to target sections on click
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[scroll-spy-target^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
     const target = this.getAttribute('href');

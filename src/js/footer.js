@@ -10,7 +10,7 @@ const footerQuickLinks = nav_links.map((nl) => {
 
   const output =
     `<li class="nav-item mb-2">` +
-      `<a class="nav-link link-dark fw-medium" href="${link}">` +
+      `<a class="nav-link link-dark fw-bold" href="${link}">` +
         `${icon ? icon + ' ' : ''}${text}` +
       `</a>` +
     `</li>`;
