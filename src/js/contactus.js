@@ -1,5 +1,10 @@
+// Setup Conact Us Links
+import { attachSocialLinksById } from "./functions/attachSocialLinks.js";
+attachSocialLinksById("contact-us-list");
+
+
 function storeStatus() {
-  const timeZone = "America/New_York";
+  const timeZone = "Europe/Brussels";
   const now = new Date();
   const localTime = new Date(
     now.toLocaleString("en-US", {
@@ -23,23 +28,30 @@ function storeStatus() {
     timeZone,
     weekday: "long",
   });
-  const isOpeningHours =
-    (dayOfWeek === "Sunday" && hours >= 9 && hours < 17) ||
-    (dayOfWeek !== "Sunday" && hours >= 8 && hours < 19);
+  // const isOpeningHours =
+  const openingHours = {
+    Monday: [9, 20],
+    Tuesday: [9, 20],
+    Wednesday: [9, 20],
+    Saturday: [9, 20],
+    Sunday: [9, 20],
+    Friday: [9, 21],
+  };
+  const [startHour, endHour] = openingHours[dayOfWeek] || [];
+  const isOpeningHours = startHour <= hours && hours < endHour;
 
   const outputTime = isOpeningHours
-    ? '<span class="open text-success fw-bold">Open</span> come on down'
-    : '<span class="closed text-danger fw-bold">Closed</span> see you tomorrow :)';
+    ? '<span class="open text-primary fw-bold">Open</span> come on down.'
+    : '<span class="closed text-danger-emphasis fw-bold">Closed</span> see you tomorrow 🙂';
 
   return `${outputDay}, We are ${outputTime}`;
 }
 
-function updateStatusRealtime() {
-  document.getElementById("storestatus").innerHTML =
-    `${storeStatus()}`;
-}
 updateStatusRealtime();
 setInterval(updateStatusRealtime, 15000);
+function updateStatusRealtime() {
+  document.getElementById("storestatus").innerHTML = `${storeStatus()}`;
+}
 
 
 

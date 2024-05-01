@@ -5,6 +5,10 @@ import "../scss/main.scss";
 // BOX Icons
 import "boxicons/css/boxicons.min.css";
 
+// Product Cards Modals Social Links
+import { attachSocialLinksByClass } from "./functions/attachSocialLinks";
+attachSocialLinksByClass('.modal-header-social-links');
+
 /* ## Add dark claass to the header and top link
 --------------------------------------------- */
 window.addEventListener("scroll", () => {

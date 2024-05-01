@@ -1,6 +1,10 @@
-import nav_links from "./data/nav_links";
+// Attach social links
+import { attachSocialLinksById } from "./functions/attachSocialLinks";
+attachSocialLinksById('footer-social-links');
+
 
 // Setup Navigation Links
+import nav_links from "./data/nav_links";
 const footerQuickLinks = nav_links.map((nl) => {
   const {
     text = '',

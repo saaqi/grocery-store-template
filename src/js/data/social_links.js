@@ -1,4 +1,4 @@
-const socialMediaLinks = [
+const social_links = [
   {
     link: `https://maps.app.goo.gl/7DvDtoe2L5U6awqu6`,
     title: `Visit Us Now!`,
@@ -6,7 +6,7 @@ const socialMediaLinks = [
     icon: `bx-map-alt`,
   },
   {
-    link: `mailto:fazaldinsons@gmail.com?subject=Hi,&nbsp;Saqib&nbsp;Let's&nbsp;talk!`,
+    link: `mailto:fazaldinsons@gmail.com?subject=Hi,&nbsp;Sadiq Supper Store&nbsp;Let's&nbsp;talk!`,
     title: `Send us an E-Mail!`,
     link_class: `email-link`,
     icon: `bxl-gmail`,
@@ -31,4 +31,4 @@ const socialMediaLinks = [
   // },
 ]
 
-export default socialMediaLinks;
+export default social_links;
