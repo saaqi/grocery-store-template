@@ -41,7 +41,17 @@ const navLinkElements = document.getElementById("navbar");
 if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");
 
 
+// Scroll to target sections on click
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = this.getAttribute('href');
+    document.querySelector(target).scrollIntoView();
 
+    // Update URL hash without triggering page reload
+    // history.pushState(null, null, target);
+  });
+});
 
 
 // Setup Scroll Spy

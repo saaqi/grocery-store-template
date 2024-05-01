@@ -191,7 +191,7 @@ const frozen_meats = [
     quantity: 1,
     price: 7.5,
     // sale: 0,
-    // featured: true,
+    featured: true,
     added: 20240430,
   },
   {

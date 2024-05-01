@@ -29,8 +29,8 @@ const fresh_fruits = [
     stock: true,
     // price: 8,
     // sale: 0,
-    // featured: true,
-    added: 20240429,
+    featured: true,
+    added: 20240501,
   },
   {
     title: "Guava",
@@ -52,7 +52,7 @@ const fresh_fruits = [
     // price: 8,
     // sale: 0,
     featured: true,
-    added: 20240429,
+    added: 20240430,
   },
   {
     title: "Oranges",
@@ -63,7 +63,7 @@ const fresh_fruits = [
     // price: 8,
     // sale: 0,
     // featured: true,
-    added: 20240429,
+    added: 20240502,
   },
   {
     title: "Papaya",

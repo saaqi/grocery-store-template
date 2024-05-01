@@ -1,5 +1,5 @@
 import Glide from "@glidejs/glide";
-import generateProductCards from "./generate-product-cards.js";
+import generateProductCards from "./generateProductCards.js";
 
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
