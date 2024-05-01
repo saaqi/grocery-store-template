@@ -46,7 +46,7 @@ if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");
 
 
 // Scroll to target sections on click
-document.querySelectorAll('a[scroll-spy-target^="#"]').forEach(anchor => {
+document.querySelectorAll('.main-nav a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
     const target = this.getAttribute('href');
