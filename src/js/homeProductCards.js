@@ -1,4 +1,7 @@
+import "bootstrap/js/dist/collapse.js";
+
 import attachProducts from "./functions/attachProductsCards.js";
+import shop_categories from "./data/shop_categories.js";
 import fresh_fruits from "./data/fresh_fruits.js";
 import fresh_vegetables from "./data/fresh_vegetables.js";
 import frozen_meats from "./data/frozen_meats.js";
@@ -39,7 +42,8 @@ attachProducts(products.filter((prods) => prods.featured).slice(0, 8), "featured
 // });
 
 
-
+// Insert Shop Categories
+shop_categories("shopAccordian");
 
 // Attach the 'fresh_fruits' products to the HTML element with the id 'fruit-shop'.
 attachProducts(fresh_fruits, "fruit-shop");

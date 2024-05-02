@@ -7,9 +7,11 @@ html {
   align-items: center;
   place-content: center;
 }
+
 .section:nth-child(even) {
   background-color: v.$even-bg;
 }
+
 .section:nth-child(odd) {
   background-color: v.$odd-bg;
 }
@@ -82,6 +84,18 @@ a.top-link {
 .social-button {
   letter-spacing: 0;
 
+}
+
+
+// Accordians
+.accordion-button {
+  &[aria-expanded="true"] {
+    background-color: v.$warning;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
 }
 
 /* Section Heading Titles */
