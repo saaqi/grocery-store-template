@@ -57,3 +57,12 @@ attachProducts(frozen_meats, "frozen-meats-shop");
 
 // Attach the 'frozen_seafood' products to the HTML element with the id 'frozen-meats-shop'.
 attachProducts(frozen_seafood, "frozen-seafood-shop");
+
+// Fix the accordian scroll issue
+document.querySelectorAll('.accordion-item').forEach((item) => {
+  item.addEventListener('shown.bs.collapse', () => {
+    const scrollOffset = item.offsetTop - 76;
+    window.scrollTo(0, scrollOffset);
+  });
+});
+
