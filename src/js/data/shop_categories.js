@@ -17,6 +17,12 @@ const shopCats = [
     title: 'Frozen Meats:',
     shopId: 'frozen-meats-shop',
   },
+  {
+    category: 'frozen-seafood-shop-heading',
+    number: 'collapseFour',
+    title: 'Frozen Sea Food:',
+    shopId: 'frozen-seafood-shop',
+  },
 ]
 
 function generateShopCats(cats) {

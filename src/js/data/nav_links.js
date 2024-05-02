@@ -41,6 +41,12 @@ const nav_links = [
         linkClass: 'frozen-meats-shop',
         icon: "<i class='bx bxs-purchase-tag'></i>",
       },
+      {
+        link: "#frozen-seafood-shop-heading",
+        text: "Frozen Sea Food",
+        linkClass: 'frozen-seafood-shop',
+        icon: "<i class='bx bxs-purchase-tag'></i>",
+      },
     ],
   },
   {

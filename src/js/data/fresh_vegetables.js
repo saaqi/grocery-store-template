@@ -161,7 +161,7 @@ const fresh_vegetables = [
     stock: true,
     // price: 8,
     // sale: 0,
-    featured: true,
+    // featured: true,
     added: 20240430,
   },
   {
@@ -260,7 +260,7 @@ const fresh_vegetables = [
     stock: true,
     // price: 8,
     // sale: 0,
-    featured: true,
+    // featured: true,
     added: 20240430
   },
   {

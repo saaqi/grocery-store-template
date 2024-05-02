@@ -5,11 +5,12 @@ import shop_categories from "./data/shop_categories.js";
 import fresh_fruits from "./data/fresh_fruits.js";
 import fresh_vegetables from "./data/fresh_vegetables.js";
 import frozen_meats from "./data/frozen_meats.js";
+import frozen_seafood from "./data/frozen_seafood.js";
 
 
 
 // Combine all products from different categories into one array
-const products = [...fresh_fruits, ...fresh_vegetables, ...frozen_meats];
+const products = [...fresh_fruits, ...fresh_vegetables, ...frozen_meats, ...frozen_seafood];
 
 // Sort the products array by the 'added' property in descending order
 products.sort((a, b) => (b.added) - (a.added));
@@ -54,3 +55,5 @@ attachProducts(fresh_vegetables, "vegetable-shop");
 // Attach the 'frozen_meats' products to the HTML element with the id 'frozen-meats-shop'.
 attachProducts(frozen_meats, "frozen-meats-shop");
 
+// Attach the 'frozen_seafood' products to the HTML element with the id 'frozen-meats-shop'.
+attachProducts(frozen_seafood, "frozen-seafood-shop");
