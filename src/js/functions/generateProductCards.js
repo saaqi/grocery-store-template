@@ -35,7 +35,8 @@ const generateProductCards = (prods) => {
           `<img src="${img}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy">`+
         `</div>`+
         `<div class="card-body d-flex flex-column gap-2">`+
-          `<h4 class="card-title fs-5 mb-0">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>`+
+          `<h4 class="card-title fs-5 mb-0">${title}</h4>`+
+          `<div class="card-qauntity mb-0">${quantity ? ` ${quantity} ${uom}` : ''}</div>`+
           `<div class="short-description">${s_desc}</div>`+
           `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
           `${stock ?

@@ -23,7 +23,7 @@ const navigationLinks = nav_links.map((nl) => {
         // Map over subcategories to generate dropdown items
         subcategories.map((subcategory) =>
           `<li class="nav-item">` +
-            `<a class="dropdown-item fw-medium ${subcategory.link}" href="#${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
+            `<a class="dropdown-item fw-medium shop-link ${subcategory.link}" href="#${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
               `${subcategory.icon ? subcategory.icon + ' ' : ''}${subcategory.text}` +
             `</a>` +
           `</li>`
@@ -105,5 +105,31 @@ document.addEventListener("DOMContentLoaded", function () {
     if (deltaX > 50) {
       closeButton.click();
     }
+  });
+});
+
+
+
+// Expand Shop accordians corresponding to the navigation link
+document.addEventListener('DOMContentLoaded', function () {
+  const shopLinks = document.querySelectorAll("#navbar > li.nav-item.dropdown a.shop-link");
+  shopLinks.forEach(link => {
+    const target = link.getAttribute('href');
+    const targetButton = document.querySelector(target + ' .accordion-button');
+    const targetBody = document.querySelector(target + ' .accordion-collapse');
+    // const otherButton = document.querySelectorAll('.accordion-button');
+    // const otherBody = document.querySelectorAll('.accordion-collapse');
+    link.addEventListener('click', () => {
+      // otherButton.forEach(i => {
+      //   if(i) i.classList.add('collapsed');
+      //   if(i) i.setAttribute('aria-expanded', 'false');
+      // });
+      // otherBody.forEach(i => {
+      //   if (i) i.classList.remove('show');
+      // });
+      if (targetButton) targetButton.classList.remove('collapsed');
+      if (targetButton) targetButton.setAttribute('aria-expanded', 'true');
+      if (targetBody) targetBody.classList.add('show');
+    });
   });
 });
