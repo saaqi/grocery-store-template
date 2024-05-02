@@ -41,8 +41,8 @@ function storeStatus() {
   const isOpeningHours = startHour <= hours && hours < endHour;
 
   const outputTime = isOpeningHours
-    ? '<span class="open text-primary fw-bold">Open</span> come on down.'
-    : '<span class="closed text-danger-emphasis fw-bold">Closed</span> see you tomorrow 🙂';
+    ? '<span class="open text-primary fw-bold">Open</span> come on down 🙂'
+    : '<span class="closed text-danger-emphasis fw-bold">Closed</span> see you tomorrow 😴';
 
   return `${outputDay}, We are ${outputTime}`;
 }
