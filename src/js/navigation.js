@@ -117,12 +117,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const target = link.getAttribute('href');
     const targetButton = document.querySelector(target + ' .accordion-button');
     const targetBody = document.querySelector(target + ' .accordion-collapse');
-    // const otherButton = document.querySelectorAll('.accordion-button');
-    // const otherBody = document.querySelectorAll('.accordion-collapse');
+
+    // const otherButtons = Array.from(document.querySelectorAll('.accordion-button')).filter(button => button !== targetButton);
+    // const otherBody = Array.from(document.querySelectorAll('.accordion-collapse')).filter(button => button !== targetBody);
     link.addEventListener('click', () => {
-      // otherButton.forEach(i => {
-      //   if(i) i.classList.add('collapsed');
-      //   if(i) i.setAttribute('aria-expanded', 'false');
+      // otherButtons.forEach(i => {
+      //   if (i) i.classList.add('collapsed');
+      //   if (i) i.setAttribute('aria-expanded', 'false');
       // });
       // otherBody.forEach(i => {
       //   if (i) i.classList.remove('show');
