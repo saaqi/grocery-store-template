@@ -9,7 +9,6 @@ const navigationLinks = nav_links.map((nl) => {
   const {
     text = '',
     link = '',
-    linkClass = '',
     icon = '',
     subcategories = [] // Add default value for subcategories
   } = nl;
@@ -17,14 +16,14 @@ const navigationLinks = nav_links.map((nl) => {
   // If there are subcategories, generate a dropdown menu
   const output = subcategories.length > 0 ?
     `<li class="nav-item dropdown">` +
-      `<a class="nav-link link-dark dropdown-toggle ${linkClass}" scroll-spy-target="${link}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">` +
+      `<a class="nav-link link-dark dropdown-toggle ${link}" scroll-spy-target="#${link}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">` +
         `${icon ? icon + ' ' : ''}${text}` +
       `</a>` +
       `<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">` +
         // Map over subcategories to generate dropdown items
         subcategories.map((subcategory) =>
           `<li class="nav-item">` +
-            `<a class="dropdown-item fw-medium ${linkClass}" href="${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
+            `<a class="dropdown-item fw-medium ${subcategory.link}" href="#${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
               `${subcategory.icon ? subcategory.icon + ' ' : ''}${subcategory.text}` +
             `</a>` +
           `</li>`
@@ -33,7 +32,7 @@ const navigationLinks = nav_links.map((nl) => {
     `</li>` :
     // If there are no subcategories, generate a regular navigation link
     `<li class="nav-item">` +
-    `<a class="nav-link link-dark ${linkClass}" scroll-spy-target="${link}" href="${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
+    `<a class="nav-link link-dark ${link}" scroll-spy-target="#${link}" href="#${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
         `${icon ? icon + ' ' : ''}${text}` +
       `</a>` +
     `</li>`;

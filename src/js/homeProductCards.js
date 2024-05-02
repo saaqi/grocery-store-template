@@ -66,3 +66,21 @@ document.querySelectorAll('.accordion-item').forEach((item) => {
   });
 });
 
+
+
+
+
+
+
+
+// const navAccButton = document.querySelectorAll("#navbar > li.nav-item.dropdown > a");
+// const selector = navAccButton.getAttribute("href");
+// console.log(selector)
+// navAccButton.forEach((button) => button.addEventListener("click", () => {
+//   // const collapseElement = document.querySelector('#' + selector + ' .accordion-collapse');
+//   // collapseElement.classList.add("show");
+//   // button.setAttribute("aria-expanded", "true");
+// }));
+
+
+// <li class="nav-item dropdown"><a class="nav-link link-dark dropdown-toggle shop show" scroll-spy-target="#shop" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true"><i class="bx bxs-store"></i> Shop</a><ul class="dropdown-menu bg-secondary show" aria-labelledby="navbarDropdown" data-bs-popper="static"><li class="nav-item"><a class="dropdown-item fw-medium fruit-shop-heading" href="#fruit-shop-heading" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar"><i class="bx bxs-purchase-tag"></i> Fresh Fruits</a></li><li class="nav-item"><a class="dropdown-item fw-medium vegetable-shop-heading" href="#vegetable-shop-heading" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar"><i class="bx bxs-purchase-tag"></i> Fresh Vegetables</a></li><li class="nav-item"><a class="dropdown-item fw-medium frozen-meats-shop-heading" href="#frozen-meats-shop-heading" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar"><i class="bx bxs-purchase-tag"></i> Frozen Meats</a></li><li class="nav-item"><a class="dropdown-item fw-medium frozen-seafood-shop-heading" href="#frozen-seafood-shop-heading" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar"><i class="bx bxs-purchase-tag"></i> Frozen Sea Food</a></li></ul></li>
