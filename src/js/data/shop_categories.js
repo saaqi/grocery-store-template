@@ -1,35 +1,35 @@
 const shopCats = [
   {
     category: 'fruit-shop',
-    number: 'collapseOne',
     title: 'Fresh Fruits',
     shopId: 'fresh_fruits',
   },
   {
     category: 'vegetable-shop',
-    number: 'collapseTwo',
     title: 'Fresh Vegetables',
     shopId: 'fresh_vegetables',
   },
   {
     category: 'frozen-meats-shop',
-    number: 'collapseThree',
     title: 'Frozen Meats',
     shopId: 'frozen_meats',
   },
   {
     category: 'frozen-seafood-shop',
-    number: 'collapseFour',
     title: 'Frozen Sea Food',
     shopId: 'frozen_seafood',
   },
   {
     category: 'frozen-vegetables-shop',
-    number: 'collapseFive',
     title: 'Frozen Vegetables',
     shopId: 'frozen_vegetables',
   },
-]
+].map((item, index) => {
+  return {
+    ...item,
+    number: `shop-${index}`,
+  };
+});
 
 function generateShopCats(cats) {
 
