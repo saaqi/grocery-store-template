@@ -204,7 +204,7 @@ const frozen_seafood = [
     quantity: 0.80,
     price: 5.20,
     // sale: 0,
-    featured: true,
+    // featured: true,
     added: 20240430,
   },
   {

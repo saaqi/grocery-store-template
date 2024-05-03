@@ -7,11 +7,19 @@ import fresh_vegetables from "./data/fresh_vegetables.js";
 import frozen_meats from "./data/frozen_meats.js";
 import frozen_seafood from "./data/frozen_seafood.js";
 import frozen_vegetables from "./data/frozen_vegetables.js";
+import crown_foods from "./data/crown_foods.js";
 
 
 
 // Combine all products from different categories into one array
-const products = [...fresh_fruits, ...fresh_vegetables, ...frozen_meats, ...frozen_seafood, ...frozen_vegetables];
+const products = [
+  ...fresh_fruits,
+  ...fresh_vegetables,
+  ...frozen_meats,
+  ...frozen_seafood,
+  ...frozen_vegetables,
+  ...crown_foods,
+];
 
 // Sort the products array by the 'added' property in descending order
 products.sort((a, b) => (b.added) - (a.added));
@@ -49,6 +57,7 @@ attachProducts(fresh_vegetables, "fresh_vegetables");
 attachProducts(frozen_meats, "frozen_meats");
 attachProducts(frozen_seafood, "frozen_seafood");
 attachProducts(frozen_vegetables, "frozen_vegetables");
+attachProducts(crown_foods, "crown_foods");
 
 // Fix the accordian scroll issue
 document.querySelectorAll('.accordion-item').forEach((item) => {

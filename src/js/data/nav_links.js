@@ -44,6 +44,11 @@ const nav_links = [
         text: "Frozen Vegetables",
         icon: "<i class='bx bxs-purchase-tag'></i>",
       },
+      {
+        link: "frozen-crown-foods-shop",
+        text: "Crown Frozen Foods",
+        icon: "<i class='bx bxs-purchase-tag'></i>",
+      },
     ],
   },
   {

@@ -24,6 +24,11 @@ const shopCats = [
     title: 'Frozen Vegetables',
     shopId: 'frozen_vegetables',
   },
+  {
+    category: 'frozen-crown-foods-shop',
+    title: 'Crown Frozen Foods',
+    shopId: 'crown_foods',
+  },
 ].map((item, index) => {
   return {
     ...item,
