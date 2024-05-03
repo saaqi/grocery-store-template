@@ -46,17 +46,14 @@ attachProducts(products.filter((prods) => prods.featured).slice(0, 8), "featured
 // Insert Shop Categories
 shop_categories("shopAccordian");
 
-// Attach the 'fresh_fruits' products to the HTML element with the id 'fruit-shop'.
-attachProducts(fresh_fruits, "fruit_shop");
+// Attach the shops data to their respective categories
+attachProducts(fresh_fruits, "fresh_fruits");
+attachProducts(fresh_vegetables, "fresh_vegetables");
+attachProducts(frozen_meats, "frozen_meats");
+attachProducts(frozen_seafood, "frozen_seafood");
 
-// Attach the 'fresh_vegetables' products to the HTML element with the id 'vegetable-shop'.
-attachProducts(fresh_vegetables, "vegetable_shop");
 
-// Attach the 'frozen_meats' products to the HTML element with the id 'frozen-meats-shop'.
-attachProducts(frozen_meats, "frozen_meats_shop");
 
-// Attach the 'frozen_seafood' products to the HTML element with the id 'frozen-meats-shop'.
-attachProducts(frozen_seafood, "frozen_seafood_shop");
 
 // Fix the accordian scroll issue
 document.querySelectorAll('.accordion-item').forEach((item) => {

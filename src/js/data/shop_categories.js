@@ -3,25 +3,25 @@ const shopCats = [
     category: 'fruit-shop-heading',
     number: 'collapseOne',
     title: 'Fresh Fruits:',
-    shopId: 'fruit_shop',
+    shopId: 'fresh_fruits',
   },
   {
     category: 'vegetable-shop-heading',
     number: 'collapseTwo',
     title: 'Fresh Vegetables:',
-    shopId: 'vegetable_shop',
+    shopId: 'fresh_vegetables',
   },
   {
     category: 'frozen-meats-shop-heading',
     number: 'collapseThree',
     title: 'Frozen Meats:',
-    shopId: 'frozen_meats_shop',
+    shopId: 'frozen_meats',
   },
   {
     category: 'frozen-seafood-shop-heading',
     number: 'collapseFour',
     title: 'Frozen Sea Food:',
-    shopId: 'frozen_seafood_shop',
+    shopId: 'frozen_seafood',
   },
 ]
 
