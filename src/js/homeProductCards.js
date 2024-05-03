@@ -52,9 +52,6 @@ attachProducts(fresh_vegetables, "fresh_vegetables");
 attachProducts(frozen_meats, "frozen_meats");
 attachProducts(frozen_seafood, "frozen_seafood");
 
-
-
-
 // Fix the accordian scroll issue
 document.querySelectorAll('.accordion-item').forEach((item) => {
   item.addEventListener('shown.bs.collapse', () => {

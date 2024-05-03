@@ -35,15 +35,15 @@ function generateShopCats(cats) {
   } = cats;
 
   const output =
-    `<div id="${category}" class="accordion-item">`+
+    `<div id="${category}" class="accordion-item bg-transparent">`+
      `<h2 class="accordion-header">`+
-        `<button class="accordion-button collapsed fw-medium fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#${number}" aria-expanded="false" aria-controls="collapseOne">`+
+        `<button class="accordion-button collapsed fw-medium fs-5 btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#${number}" aria-expanded="false" aria-controls="collapseOne">`+
           `${title}`+
         `</button>`+
       `</h2>`+
       `<div id="${number}" class="accordion-collapse collapse" data-bs-parent="#shopAccordian">`+
-        `<div class="accordion-body">`+
-          `<ul id="${shopId}" class="list-unstyled row g-2"></ul>`+
+        `<div class="accordion-body px-0">`+
+          `<ul id="${shopId}" class="list-unstyled row g-1 mb-0"></ul>`+
         `</div>`+
       `</div>`+
     `</div>`;
