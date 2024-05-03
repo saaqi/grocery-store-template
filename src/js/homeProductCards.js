@@ -35,12 +35,8 @@ attachProducts(products.slice(0, 4), "new-arrivals");
 // Attach first 8 featured products to the HTML element with the id 'featured-items'.
 attachProducts(products.filter((prods) => prods.featured).slice(0, 8), "featured-items");
 
-// Query all the list items inside the HTML element with the id 'featured-items'.
-// const featuredProdsElements = document.querySelectorAll("#featured-items > li");
-// featuredProdsElements.forEach((e) => {
-//   // Add Bootstrap CSS classes for responsive grid layout
-//   e.classList.add('col-sm-6', 'col-md-4', 'col-lg-3');
-// });
+
+
 
 
 // Insert Shop Categories
