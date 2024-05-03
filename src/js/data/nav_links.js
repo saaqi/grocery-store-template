@@ -25,18 +25,23 @@ const nav_links = [
         icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
-        link: "vegetable-shop-heading",
+        link: "vegetable-shop",
         text: "Fresh Vegetables",
         icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
-        link: "frozen-meats-shop-heading",
+        link: "frozen-meats-shop",
         text: "Frozen Meats",
         icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
-        link: "frozen-seafood-shop-heading",
+        link: "frozen-seafood-shop",
         text: "Frozen Sea Food",
+        icon: "<i class='bx bxs-purchase-tag'></i>",
+      },
+      {
+        link: "frozen-vegetables-shop",
+        text: "Frozen Vegetables",
         icon: "<i class='bx bxs-purchase-tag'></i>",
       },
     ],
