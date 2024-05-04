@@ -4,6 +4,8 @@ import "bootstrap/js/dist/dropdown.js";
 
 import nav_links from "./data/nav_links.js";
 
+import { attachSocialLinksById } from "./functions/attachSocialLinks.js";
+
 // Setup Navigation Links
 const navigationLinks = nav_links.map( nl => {
   const {
@@ -43,9 +45,10 @@ const navigationLinks = nav_links.map( nl => {
 const navLinkElements = document.getElementById("navbar");
 if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");
 
-// Navigatoin Shop Link Customization
-// const shopLink = document.querySelector(".Shop");
-// shopLink.classList.add("btn", 'btn-outline-secondary', 'py-2', 'w-auto');
+
+// Attach social links on top of mobile navigation
+attachSocialLinksById('nav-socia-links');
+
 
 
 // Scroll to target sections on click
