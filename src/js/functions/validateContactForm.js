@@ -1,7 +1,7 @@
 // JavaScript form validation
 import "bootstrap/js/dist/alert.js";
 
-const validateContactFroms = formId => {
+const validateContactFroms = (formId, recEmail) => {
 
   const contactForm = document.getElementById(formId);
   if (contactForm) {
@@ -62,7 +62,7 @@ const validateContactFroms = formId => {
       }
 
       else {
-        const receiveEmail = "fazaldinsons@gmail.com";
+        const receiveEmail = recEmail;
         // Compose email message
         const subject = `[Contact-Form] ${nameInput.value}`;
         const body = `${messageInput.value}\n\n${nameInput.value}\n${emailInput.value}`;

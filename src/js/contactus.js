@@ -64,4 +64,4 @@ setInterval(updateStatusRealtime, 15000);
 
 
 // JavaScript form submission
-validateContactFroms('homepage-contact-form');
+validateContactFroms('homepage-contact-form', 'fazaldinsons@gmail.com');
