@@ -70,6 +70,7 @@
   </header>
 
   <main>
+    <noscript>Please enable JavaScript, this app will not working without JavaScript.</noscript>
     <!-- Home Section Start -->
     <section id="home" class="section home bg-warning text-bg-warning">
       <div class="container py-5">
@@ -214,7 +215,7 @@
           <div class="col-lg-6">
             <div class="contact-form" id="contact-form">
               <form id="homepage-contact-form" class="homepage-contact-form" method="post">
-                <noscript class="wpforms-error-noscript">Please enable JavaScript in your browser to complete this form.</noscript>
+                <noscript>Please enable JavaScript in your browser to complete this form.</noscript>
                 <label for="contact-form-name"><i class="bx bx-user"></i>
                   Name: <span class="required-label text-primary-emphasis">*</span>
                 </label>
@@ -227,6 +228,7 @@
                   Message: <span class="required-label text-primary-emphasis">*</span>
                 </label>
                 <textarea id="contact-form-message" class="contact-form-message" name="contact-form-message" placeholder="Your message here.." rows="5" required></textarea>
+                <div id="errorAlerts"></div>
                 <button type="submit" name="form-submit-button" id="form-submit-button" class="form-submit-button btn btn-info" data-submit-text="Send us an E-Mail" aria-live="assertive" value="form-submit-button">
                   <i class="bx bxs-envelope"></i> Send us an E-Mail
                 </button>
