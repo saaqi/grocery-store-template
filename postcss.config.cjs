@@ -21,7 +21,7 @@ module.exports = {
           `${bootstrap}/js/dist/modal.js`,
           `${bootstrap}/js/dist/offcanvas.js`,
           // `${bootstrap}/js/dist/popover.js`,
-          `${bootstrap}/js/dist/scrollspy.js`,
+          // `${bootstrap}/js/dist/scrollspy.js`,
           // `${bootstrap}/js/dist/tab.js`,
           // `${bootstrap}/js/dist/toast.js`,
           // `${bootstrap}/js/dist/tooltip.js`,

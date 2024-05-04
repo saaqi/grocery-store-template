@@ -19,6 +19,7 @@ const validateContactFroms = formId => {
     // Error Alerts
     const alertPlaceholder = document.querySelector('#' + formId + ' #errorAlerts');
     const appendAlert = (message, type) => {
+      // Keps styles .alert-danger for postcss
       alertPlaceholder.innerHTML = [
         `<div class="alert alert-${type} alert-dismissible" role="alert">`,
           `<div>${message}</div>`,

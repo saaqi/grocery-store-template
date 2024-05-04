@@ -20,7 +20,7 @@ const nav_links = [
     icon: "<i class='bx bxs-store'></i>",
     subcategories: [
       {
-        link: "fruit-shop-heading",
+        link: "fruit-shop",
         text: "Fresh Fruits",
         icon: "<i class='bx bxs-purchase-tag'></i>",
       },
