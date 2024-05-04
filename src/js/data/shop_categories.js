@@ -48,7 +48,7 @@ function generateShopCats(cats) {
   const output =
     `<div id="${category}" class="accordion-item bg-transparent">`+
      `<h2 class="accordion-header">`+
-        `<button class="accordion-button collapsed fw-medium fs-5 btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#${number}" aria-expanded="false" aria-controls="collapseOne">`+
+        `<button class="accordion-button collapsed fw-medium fs-5 btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#${number}" aria-expanded="false" aria-controls="${number}">`+
           `${title}`+
         `</button>`+
       `</h2>`+

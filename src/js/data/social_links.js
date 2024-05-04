@@ -6,7 +6,7 @@ const social_links = [
     icon: `bx-map-alt`,
   },
   {
-    link: `mailto:fazaldinsons@gmail.com?subject=Hi,&nbsp;Sadiq Supper Store&nbsp;Let's&nbsp;talk!`,
+    link: `mailto:fazaldinsons@gmail.com?subject=Message&nbsp;From&nbsp;Website!`,
     title: `Send us an E-Mail!`,
     link_class: `email-link`,
     icon: `bxl-gmail`,

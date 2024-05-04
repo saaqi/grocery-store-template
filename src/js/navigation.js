@@ -32,7 +32,7 @@ const navigationLinks = nav_links.map((nl) => {
     `</li>` :
     // If there are no subcategories, generate a regular navigation link
     `<li class="nav-item">` +
-    `<a class="nav-link link-dark ${link}" scroll-spy-target="#${link}" href="#${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
+    `<a class="nav-link link-dark ${link}" href="#${link}" scroll-spy-target="#${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
         `${icon ? icon + ' ' : ''}${text}` +
       `</a>` +
     `</li>`;
