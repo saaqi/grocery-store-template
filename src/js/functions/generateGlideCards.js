@@ -1,10 +1,10 @@
 import Glide from "@glidejs/glide";
-import generateProductCards from "./generateProductCards.js";
+import { generateProductCards } from "./generateProductCards.js";
 
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 
-export default function generateGlideCards(data, parent) {
+const generateGlideCards = (data, parent) => {
 
   const products = [...data];
   products.sort((a, b) => (b.added) - (a.added));
@@ -55,3 +55,4 @@ export default function generateGlideCards(data, parent) {
   }).mount();
 };
 
+export default generateGlideCards;

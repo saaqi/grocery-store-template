@@ -45,12 +45,12 @@ const validateContactFroms = (formId, recEmail) => {
       return true;
     }
 
-    contactForm.addEventListener("submit", function (event) {
+    contactForm.addEventListener("submit", e => {
       // Prevent default form submission
-      event.preventDefault();
+      e.preventDefault();
 
       // Remove previous alerts
-      const alertDismiss = this.querySelectorAll('#' + formId + ' #errorAlerts > *');
+      const alertDismiss = contactForm.querySelectorAll('#' + formId + ' #errorAlerts > *');
       if (alertDismiss) {
         alertDismiss.forEach(e => {
           e.remove();

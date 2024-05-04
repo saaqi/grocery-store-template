@@ -36,7 +36,7 @@ const shopCats = [
   };
 });
 
-function generateShopCats(cats) {
+const generateShopCats = cats => {
 
   const {
     category = '',
@@ -62,10 +62,12 @@ function generateShopCats(cats) {
   return output;
 }
 
-export default function shop_categories(parentId) {
+const shop_categories = parentId => {
   const parentElement = document.getElementById(parentId);
   if (parentElement) {
     const shopCategories = shopCats.map(generateShopCats).join("");
     parentElement.innerHTML = shopCategories;
   }
 }
+
+export default shop_categories;

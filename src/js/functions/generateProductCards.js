@@ -1,8 +1,6 @@
 import "bootstrap/js/dist/modal.js";
 // Include the classes added by Bootstrap Modal to keep them from purging on build from stylesheet ;)
-const keepStyles = document.querySelectorAll(
-  ".modal-backdrop, .fad, .show, .modal-open"
-);
+// ".modal-backdrop, .fad, .show, .modal-open"
 
 
 const generateProductCards = (prods) => {
@@ -98,4 +96,13 @@ const generateProductCards = (prods) => {
     `</li>`;
   return output;
 };
-export default generateProductCards;
+
+const attachProducts = (dataArray, parentId) => {
+  const parentElement = document.getElementById(parentId);
+  if (parentElement) {
+    const cardsHtml = dataArray.map(generateProductCards).join("");
+    parentElement.innerHTML = cardsHtml;
+  }
+}
+
+export { generateProductCards, attachProducts };

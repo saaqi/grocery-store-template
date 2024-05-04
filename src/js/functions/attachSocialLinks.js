@@ -1,7 +1,7 @@
 // Setup Social Media Links
 import social_links from "../data/social_links";
 
-export function attachSocialLinksById(parentId) {
+const attachSocialLinksById = parentId => {
 
   const socialLinks = social_links.map((sl) => {
     const {
@@ -13,9 +13,9 @@ export function attachSocialLinksById(parentId) {
 
     const output =
       `<li class="lh-1">` +
-      `<a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">` +
-      `<i class="bx ${icon}"></i>` +
-      `</a>` +
+        `<a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">` +
+          `<i class="bx ${icon}"></i>` +
+        `</a>` +
       `</li>`;
 
     return output;
@@ -26,7 +26,7 @@ export function attachSocialLinksById(parentId) {
 }
 
 
-export function attachSocialLinksByClass(parentClass) {
+const attachSocialLinksByClass = parentClass => {
 
   const socialLinks = social_links.map((sl) => {
     const {
@@ -38,9 +38,9 @@ export function attachSocialLinksByClass(parentClass) {
 
     const output =
       `<li class="lh-1">` +
-      `<a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">` +
-      `<i class="bx ${icon}"></i>` +
-      `</a>` +
+        `<a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">` +
+          `<i class="bx ${icon}"></i>` +
+        `</a>` +
       `</li>`;
 
     return output;
@@ -50,3 +50,5 @@ export function attachSocialLinksByClass(parentClass) {
   // if (parentSelector) for( var each of parentSelector) each.innerHTML = socialLinks.join("");
   if (parentSelector) parentSelector.forEach(each => each.innerHTML = socialLinks.join(""));
 }
+
+export { attachSocialLinksById, attachSocialLinksByClass };

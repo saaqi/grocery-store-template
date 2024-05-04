@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const title = `Sadiq Super Store`;
   const tagline = `Unearth the Extraodinary!`;
   const orgTitle = `${title} | ${tagline}`;
@@ -31,12 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let currentSection = null;
 
-  function updateTitles() {
+  const updateTitles = () => {
     sections.forEach((section) => {
       const sectionElement = document.getElementById(section.id);
       if (
         sectionElement &&
-        window.scrollY + 77 >= sectionElement.offsetTop &&
+        window.scrollY + 70 >= sectionElement.offsetTop &&
         window.scrollY <= sectionElement.offsetTop + sectionElement.offsetHeight
       ) {
         // Update the title only if the section has changed
@@ -50,8 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let debounceTimer;
   const DEBOUNCE_DELAY = 300;
-
-  function debounceUpdateTitles() {
+ const debounceUpdateTitles = () => {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(updateTitles, DEBOUNCE_DELAY);
   }

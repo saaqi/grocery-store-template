@@ -5,7 +5,7 @@ import "bootstrap/js/dist/dropdown.js";
 import nav_links from "./data/nav_links.js";
 
 // Setup Navigation Links
-const navigationLinks = nav_links.map((nl) => {
+const navigationLinks = nav_links.map( nl => {
   const {
     text = '',
     link = '',
@@ -49,12 +49,11 @@ if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");
 
 
 // Scroll to target sections on click
-document.querySelectorAll('.main-nav a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = this.getAttribute('href');
+document.querySelectorAll('.main-nav a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = link.getAttribute('href');
     document.querySelector(target).scrollIntoView();
-
     // Update URL hash without triggering page reload
     history.pushState(null, null, target);
   });
@@ -66,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-  function highlightNavLink() {
+  const highlightNavLink = () => {
     sections.forEach(section => {
       const scrollPosition = window.scrollY;
       const top = section.offsetTop - 70;
@@ -92,14 +91,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Hide Navigation on right swipe
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const offcanvasBody = document.querySelector('.offcanvas-body');
   const closeButton = document.querySelector('[data-bs-dismiss="offcanvas"]');
   let startX;
-  offcanvasBody.addEventListener('touchstart', function (e) {
+  offcanvasBody.addEventListener('touchstart', e => {
     startX = e.touches[0].clientX;
   });
-  offcanvasBody.addEventListener('touchend', function (e) {
+  offcanvasBody.addEventListener('touchend', e => {
     const endX = e.changedTouches[0].clientX;
     const deltaX = endX - startX;
     if (deltaX > 50) {
@@ -111,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Expand Shop accordians corresponding to the navigation link
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const shopLinks = document.querySelectorAll("#navbar > li.nav-item.dropdown a.shop-link");
   shopLinks.forEach(link => {
     const target = link.getAttribute('href');

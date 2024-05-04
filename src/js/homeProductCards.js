@@ -1,6 +1,6 @@
 import "bootstrap/js/dist/collapse.js";
 
-import attachProducts from "./functions/attachProductsCards.js";
+import { attachProducts } from "./functions/generateProductCards.js";
 import shop_categories from "./data/shop_categories.js";
 import fresh_fruits from "./data/fresh_fruits.js";
 import fresh_vegetables from "./data/fresh_vegetables.js";
