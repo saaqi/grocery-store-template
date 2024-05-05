@@ -47,7 +47,7 @@ const generateProductCards = prods => {
             : ''}`
           : '<span class="text-muted">Out of Stock</span"></span>'}`+
           `</div>`+
-          // `<div class="btn-group w-100">`+
+          `<div class="btn-group w-100">`+
             // `<a href="https://wa.me/+32493338881" class="btn btn-primary text-nowrap" target="_blank">`+
             //   `<i class='bx bxl-whatsapp'></i>`+
             // `</a>`+
@@ -56,7 +56,7 @@ const generateProductCards = prods => {
                 `<i class="bx bx-info-circle"></i>`+
               `</button>`
             : ''}`+
-          // `</div>`+
+          `</div>`+
         `</div>`+
         `${sale ?
           `<i class='bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm'></i>`
