@@ -65,7 +65,7 @@ const generateProductCards = prods => {
 
       // Modal Info Box
       `${desc ?
-        `<div class="modal fade" id="${id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="${id}Label" aria-hidden="true">`+
+        `<div class="modal fade" id="${id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="${id}-label" aria-hidden="true">`+
           `<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">`+
             `<div class="modal-content">` +
               `<div class="modal-header py-2 shadow-sm bg-warning text-bg-warning">`+
@@ -81,7 +81,7 @@ const generateProductCards = prods => {
                   `<div class="row">`+
                     `<img src="${img}" alt="${title}" class="col-md-4 h-100 img-fluid mb-3 p-0 rounded shadow-sm" loading="lazy">`+
                     `<div class="col-md-8">`+
-                      `<h4 id="${id}Label">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>`+
+                      `<h4 id="${id}-label">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>`+
                       `<p class="card-text my-3">${desc}</p>`+
                       `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
                         `${price ? `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
