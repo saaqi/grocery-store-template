@@ -6,19 +6,19 @@ const social_links = [
     icon: `bx-map-alt`,
   },
   {
-    link: `mailto:fazaldinsons@gmail.com?subject=Message&nbsp;From&nbsp;Website!`,
+    link: `mailto:info@sadiqsuperstore.com?subject=Message&nbsp;From&nbsp;Website!`,
     title: `Send us an E-Mail!`,
     link_class: `email-link`,
     icon: `bxl-gmail`,
   },
   {
-    link: `tel:+32493338881`,
+    link: `tel:+32465638887`,
     title: `Give us a Call!`,
     link_class: `phone-link`,
     icon: `bx-phone-call`,
   },
   {
-    link: `https://wa.me/+32493338881`,
+    link: `https://wa.me/+32465638887`,
     title: `Send us a message on WhatsApp!`,
     link_class: `whatsapp-link`,
     icon: `bxl-whatsapp`,

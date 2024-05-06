@@ -36,7 +36,7 @@ const generateProductCards = prods => {
           `<h4 class="card-title fs-5 mb-0">${title}</h4>`+
           `${quantity ? `<div class="card-qauntity mb-0">${quantity} ${uom}</div>` : ''}`+
           `${s_desc ? `<div class="short-description">${s_desc}</div>` : ''}`+
-          `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
+          `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} flex-column flex-sm-row align-items-center mb-2 mt-auto gap-sm-1 gap-2 text-center">`+
           `${stock ?
             `${price ?
               `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price.toString()}</span >`
@@ -48,7 +48,7 @@ const generateProductCards = prods => {
           : '<span class="text-muted">Out of Stock</span"></span>'}`+
           `</div>`+
           `<div class="btn-group w-100">`+
-            // `<a href="https://wa.me/+32493338881" class="btn btn-primary text-nowrap" target="_blank">`+
+            // `<a href="https://wa.me/+32465638887" class="btn btn-primary text-nowrap" target="_blank">`+
             //   `<i class='bx bxl-whatsapp'></i>`+
             // `</a>`+
             `${desc ?
@@ -94,7 +94,7 @@ const generateProductCards = prods => {
                 `</div>`+
               `</div>`+
               // `<div class="modal-footer">`+
-              //   `<a href="https://wa.me/+32493338881" class="btn btn-primary text-uppercase"><i class="bx bx-cart"></i> Book Now!</a>`+
+              //   `<a href="https://wa.me/+32465638887" class="btn btn-primary text-uppercase"><i class="bx bx-cart"></i> Book Now!</a>`+
               // `</div>`+
             `</div>`+
           `</div>`+

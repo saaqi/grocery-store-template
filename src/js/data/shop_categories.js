@@ -53,7 +53,7 @@ const generateShopCats = cats => {
         `</button>`+
       `</h2>`+
       `<div id="${number}" class="accordion-collapse collapse" data-bs-parent="#shopAccordian">`+
-        `<div class="accordion-body px-0">`+
+        `<div class="accordion-body px-0 py-1">`+
           `<ul id="${shopId}" class="list-unstyled row g-1 mb-0"></ul>`+
         `</div>`+
       `</div>`+

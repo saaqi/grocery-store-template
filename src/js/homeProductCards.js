@@ -38,6 +38,9 @@ const featuredProducts = products.filter((prods) => prods.featured).slice(0, 8);
 attachProducts(featuredProducts, "featured-items");
 
 
+// Attach first 8 products on sale to the HTML element with the id 'on-sale'.
+const onSaleProducts = products.filter((prods) => prods.sale).slice(0, 8);
+attachProducts(onSaleProducts, "on-sale");
 
 
 

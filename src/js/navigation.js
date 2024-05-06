@@ -24,7 +24,7 @@ const navigationLinks = nav_links.map( nl => {
       `<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">` +
         // Map over subcategories to generate dropdown items
         subcategories.map((subcategory) =>
-          `<li class="nav-item">` +
+          `<li class="nav-item m-2">` +
             `<a class="dropdown-item fw-medium shop-link ${subcategory.link}" href="#${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
               `${subcategory.icon ? subcategory.icon + ' ' : ''}${subcategory.text}` +
             `</a>` +
