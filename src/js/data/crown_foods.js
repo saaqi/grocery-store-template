@@ -98,7 +98,7 @@ const crown_foods = [
     stock: true,
     uom: 'PC(s)',
     quantity: 20.0,
-    // price: 7.50,
+    price: 7.50,
     // sale: 0,
     // featured: true,
     added: 20240501,
