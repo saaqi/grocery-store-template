@@ -28,21 +28,14 @@ products.sort((a, b) => (b.added) - (a.added));
 
 
 
-// Attach the 4 newest arrival products to the "new-arrivals" section
-attachProducts(products.slice(0, 4), "new-arrivals");
-
-// Query and style each element in the "new-arrivals" section
-// const arrivalProdsElements = document.querySelectorAll("#new-arrivals > li");
-// arrivalProdsElements.forEach((e) => {
-//   // Add Bootstrap CSS classes for responsive grid layout
-//   e.classList.add('col-sm-6', 'col-md-4', 'col-lg-3');
-// });
-
-
+// Attach and modify the "new-arrivals" section
+const arrivalProducts = products.slice(0, 4);
+attachProducts(arrivalProducts, "new-arrivals");
 
 
 // Attach first 8 featured products to the HTML element with the id 'featured-items'.
-attachProducts(products.filter((prods) => prods.featured).slice(0, 8), "featured-items");
+const featuredProducts = products.filter((prods) => prods.featured).slice(0, 8);
+attachProducts(featuredProducts, "featured-items");
 
 
 

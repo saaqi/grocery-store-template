@@ -52,7 +52,7 @@ const generateProductCards = prods => {
             //   `<i class='bx bxl-whatsapp'></i>`+
             // `</a>`+
             `${desc ?
-              `<button type="button" class="btn btn-outline-primary text-nowrap" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!">`+
+              `<button type="button" class="btn btn-outline-primary text-nowrap modal-button" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!">`+
                 `<i class="bx bx-info-circle"></i>`+
               `</button>`
             : ''}`+
@@ -70,7 +70,7 @@ const generateProductCards = prods => {
             `<div class="modal-content">` +
               `<div class="modal-header py-2 shadow-sm bg-warning text-bg-warning">`+
                 `<div class="d-flex justify-content-between w-100">`+
-                  `<ul class="modal-header-social-links modal-header-social-link list-unstyled d-flex flex-wrap align-items-center gap-4 gap-md-5"></ul>`+
+                  `<ul id="${id}-label" class="social-links modal-label list-unstyled d-flex flex-wrap align-items-center gap-4 gap-md-5"></ul>`+
                   `<button type="button" class="btn btn-outline-danger p-0 lh-1" data-bs-dismiss="modal" aria-label="Close">`+
                     `<i class="bx bx-x fs-1"></i>`+
                   `</button>`+
@@ -81,7 +81,7 @@ const generateProductCards = prods => {
                   `<div class="row">`+
                     `<img src="${img}" alt="${title}" class="col-md-4 h-100 img-fluid mb-3 p-0 rounded shadow-sm" loading="lazy">`+
                     `<div class="col-md-8">`+
-                      `<h4 id="${id}-label">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>`+
+                      `<h4 class="modal-heading">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>`+
                       `<p class="card-text my-3">${desc}</p>`+
                       `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
                         `${price ? `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
@@ -104,12 +104,28 @@ const generateProductCards = prods => {
   return output;
 };
 
+// Attach Products Function for attaching product cards in sections
 const attachProducts = (dataArray, parentId) => {
   const parentElement = document.getElementById(parentId);
   if (parentElement) {
     const cardsHtml = dataArray.map(generateProductCards).join("");
     parentElement.innerHTML = cardsHtml;
-  }
+  };
+  // Generate custom ids for products card for individual sections to avoid duplicate ids.
+  dataArray.forEach((product, index) => {
+    const modal = document.querySelector(`#${parentId} > li:nth-child(${index + 1}) > .modal`);
+    const modalButton = document.querySelector(`#${parentId} > li:nth-child(${index + 1}) > .product-card .modal-button`);
+    const modalLabel = document.querySelector(`#${parentId} > li:nth-child(${index + 1}) > .modal .modal-label`);
+    if (modal) {
+      modal.id = `${modal.id}-${parentId}`;
+      modalButton.dataset.bsTarget = `${modalButton.dataset.bsTarget}-${parentId}`;
+      modalLabel.id = `${modalLabel.id}-${parentId}`;
+      const ariaLabel = modal.getAttribute('aria-labelledby');
+      modal.setAttribute('aria-labelledby', `${ariaLabel}-${parentId}`);
+    }
+  });
 }
+
+
 
 export { generateProductCards, attachProducts };

@@ -18,7 +18,7 @@ const navigationLinks = nav_links.map( nl => {
   // If there are subcategories, generate a dropdown menu
   const output = subcategories.length > 0 ?
     `<li class="nav-item dropdown">` +
-      `<a class="nav-link link-dark dropdown-toggle ${link}" scroll-spy-target="#${link}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">` +
+      `<a class="nav-link link-dark dropdown-toggle ${link}" data-scroll-spy-target="#${link}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">` +
         `${icon ? icon + ' ' : ''}${text}` +
       `</a>` +
       `<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">` +
@@ -34,7 +34,7 @@ const navigationLinks = nav_links.map( nl => {
     `</li>` :
     // If there are no subcategories, generate a regular navigation link
     `<li class="nav-item">` +
-    `<a class="nav-link link-dark ${link}" href="#${link}" scroll-spy-target="#${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
+    `<a class="nav-link link-dark ${link}" href="#${link}" data-scroll-spy-target="#${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
         `${icon ? icon + ' ' : ''}${text}` +
       `</a>` +
     `</li>`;
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (scrollPosition >= top && scrollPosition < bottom) {
         const id = section.getAttribute('id');
         navLinks.forEach(link => {
-          if (link.getAttribute('scroll-spy-target').slice(1) === id) {
+          if (link.getAttribute('data-scroll-spy-target').slice(1) === id) {
             link.classList.add('active');
           } else {
             link.classList.remove('active');
