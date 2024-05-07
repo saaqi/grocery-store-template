@@ -93,7 +93,7 @@ const generateProductCards = prods => {
                   `</div>`+
                 `</div>`+
               `</div>`+
-              // `<div class="modal-footer">`+
+              // `<div class="modal-footer py-2">`+
               //   `<a href="https://wa.me/+32465638887" class="btn btn-primary text-uppercase"><i class="bx bx-cart"></i> Book Now!</a>`+
               // `</div>`+
             `</div>`+
