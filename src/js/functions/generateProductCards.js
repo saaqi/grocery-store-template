@@ -36,31 +36,31 @@ const generateProductCards = prods => {
           `<h4 class="card-title fs-5 mb-0">${title}</h4>`+
           `${quantity ? `<div class="card-qauntity mb-0">${quantity} ${uom}</div>` : ''}`+
           `${s_desc ? `<div class="short-description">${s_desc}</div>` : ''}`+
-          `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} flex-column flex-sm-row align-items-center mb-2 mt-auto gap-sm-1 gap-2 text-center">`+
+          `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} flex-column flex-lg-row align-items-center mb-2 mt-auto gap-sm-1 gap-2 text-center">`+
           `${stock ?
             `${price ?
-              `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold">€${price.toString()}</span>`
-            : ``}`+
+              `<div class="item-price-regular rounded py-1 px-2 ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`}">€${price.toFixed(2)}</div>`
+            : ''}`+
             `${sale ?
-              `<span class="percent fw-medium">${percent()}</span>` +
-              `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>`
+              `<div class="percent fw-medium">${percent()}</div>`+
+              `<div class="item-price-sale rounded py-1 px-2 bg-primary text-bg-primary">€${sale.toFixed(2)}</div>`
             : ''}`
-          : '<span class="text-muted">Out of Stock</span"></span>'}`+
+          : '<div class="text-muted">Out of Stock</div>'}`+
           `</div>`+
-          `<div class="btn-group w-100">`+
-            // `<a href="https://wa.me/+32465638887" class="btn btn-primary text-nowrap" target="_blank">`+
+          // `<div class="btn-group w-100">`+
+            // `<a href="https://wa.me/+32465638887" class="btn btn-primary" target="_blank">`+
             //   `<i class='bx bxl-whatsapp'></i>`+
             // `</a>`+
             `${desc ?
-              `<button type="button" class="btn btn-outline-primary text-nowrap modal-button" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!">`+
+              `<button type="button" class="btn btn-outline-primary p-2 p-2 modal-button" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!">`+
                 `<i class="bx bx-info-circle"></i>`+
               `</button>`
             : ''}`+
-          `</div>`+
+          // `</div>`+
         `</div>`+
         `${sale ?
           `<i class='bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm'></i>`
-        : ``}`+
+        : ''}`+
       `</div>` +
 
       // Modal Info Box
@@ -85,7 +85,7 @@ const generateProductCards = prods => {
                       `<p class="card-text my-3">${desc}</p>`+
                       `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
                         `${price ? `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
-                          : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold">€${price}</span> ` : ``}`+
+                          : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold">€${price}</span> ` : ''}`+
                         `${sale ? `<span class="percent fw-medium">${percent()}</span>`+
                         `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>` : ''}` +
                       `</div>` +
