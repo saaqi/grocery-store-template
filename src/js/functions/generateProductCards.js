@@ -39,7 +39,7 @@ const generateProductCards = prods => {
           `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} flex-column flex-sm-row align-items-center mb-2 mt-auto gap-sm-1 gap-2 text-center">`+
           `${stock ?
             `${price ?
-              `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price.toString()}</span >`
+              `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold">€${price.toString()}</span>`
             : ``}`+
             `${sale ?
               `<span class="percent fw-medium">${percent()}</span>` +
@@ -85,7 +85,7 @@ const generateProductCards = prods => {
                       `<p class="card-text my-3">${desc}</p>`+
                       `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
                         `${price ? `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
-                          : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold" >€${price}</span > ` : ``}`+
+                          : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold">€${price}</span> ` : ``}`+
                         `${sale ? `<span class="percent fw-medium">${percent()}</span>`+
                         `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>` : ''}` +
                       `</div>` +
