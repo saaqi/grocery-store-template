@@ -39,11 +39,11 @@ const generateProductCards = prods => {
           `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} flex-column flex-lg-row align-items-center mb-2 mt-auto gap-sm-1 gap-2 text-center">`+
           `${stock ?
             `${price ?
-              `<div class="item-price-regular rounded py-1 px-2 ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`}">€${price.toFixed(2)}</div>`
+              `<div class="item-price-regular rounded py-1 px-2 fw-medium ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`}">€${price.toFixed(2)}</div>`
             : ''}`+
             `${sale ?
               `<div class="percent fw-medium">${percent()}</div>`+
-              `<div class="item-price-sale rounded py-1 px-2 bg-primary text-bg-primary">€${sale.toFixed(2)}</div>`
+              `<div class="item-price-sale rounded py-1 px-2 fw-medium bg-primary text-bg-primary">€${sale.toFixed(2)}</div>`
             : ''}`
           : '<div class="text-muted">Out of Stock</div>'}`+
           `</div>`+
@@ -84,10 +84,10 @@ const generateProductCards = prods => {
                       `<h4 class="modal-heading">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>`+
                       `<p class="card-text my-3">${desc}</p>`+
                       `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
-                        `${price ? `<span class="item-price-regular rounded ${sale ? `bg-info text-bg-info text-decoration-line-through`
-                          : `bg-primary text-bg-primary`} px-2 py-1 fs-5 fw-semibold">€${price}</span> ` : ''}`+
-                        `${sale ? `<span class="percent fw-medium">${percent()}</span>`+
-                        `<span class="item-price-sale rounded bg-primary text-bg-primary px-2 py-1 fs-5 fw-medium">€${sale}</span>` : ''}` +
+                        `${price ? `<div class="item-price-regular ${sale ? `bg-info text-bg-info text-decoration-line-through`
+                          : `bg-primary text-bg-primary`} rounded py-1 px-2 fw-medium">€${price.toFixed(2)}</div> ` : ''}`+
+                        `${sale ? `<div class="percent fw-medium">${percent()}</div>`+
+                        `<div class="item-price-sale bg-primary text-bg-primary rounded py-1 px-2 fw-medium">€${sale.toFixed(2)}</div>` : ''}` +
                       `</div>` +
                     `</div>`+
                   `</div>`+
