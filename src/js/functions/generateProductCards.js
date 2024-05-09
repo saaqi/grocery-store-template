@@ -66,7 +66,7 @@ const generateProductCards = prods => {
       // Modal Info Box
       `${desc ?
         `<div id="${id}" class="modal fade" data-bs-keyboard="false" tabindex="-1" aria-labelledby="${id}-label" aria-hidden="true">`+
-          `<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">`+
+          `<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">`+
             `<div class="modal-content">` +
               `<div class="modal-header py-2 shadow-sm bg-warning text-bg-warning">`+
                 `<div class="d-flex justify-content-between w-100">`+

@@ -19,11 +19,12 @@ const hidePreloader = () => {
 
 export default defineConfig({
   plugins: [
-    webfontDownload([
-      "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap",
-    ]),
     // Hide Preloader while in Development
     IN_DEVELOPMENT && hidePreloader(),
+    // Download and attach Google Fonts locally
+    IN_PRODUCTION && webfontDownload([
+      "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap",
+    ]),
     // Minify Output HTML File
     IN_PRODUCTION && ViteMinifyPlugin({}),
   ],

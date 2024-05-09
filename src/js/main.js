@@ -1,13 +1,20 @@
 
+// JS Functionalities
+import './navigation.js';
+import './hero.js';
+import './homeProductCards.js';
+import './updateTitles.js';
+import './contactus.js';
+import './footer.js';
+
 // css
 import "../scss/bs-static.scss";
 import "../scss/main.scss";
 // BOX Icons
 import "boxicons/css/boxicons.min.css";
 
-// Product Cards Modals Social Links
-import { attachSocialLinksByClass } from "./functions/attachSocialLinks";
-attachSocialLinksByClass('.modal-header .social-links');
+
+
 
 /* ## Add dark claass to the header and top link
 --------------------------------------------- */
@@ -19,9 +26,17 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Add Current Year to the footer
-document.getElementById("curr_year").innerHTML = new Date().getFullYear();
 
 
-// preloader
-import "./hidepreloader.js";
+
+// Hide Preloader ------------
+const preloader = document.getElementById("atf-preloader");
+
+window.onload = setTimeout(() => {
+  if (preloader) preloader.hidden = true;
+  if (preloader) preloader.style.display = "none";
+}, 2000);
+
+window.onload = () => {
+  preloader.classList.add("hide-preloader");
+};

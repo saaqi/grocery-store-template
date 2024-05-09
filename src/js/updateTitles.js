@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       title: `Shop | ${title}`,
     },
     {
-      id: "weaklysale",
-      title: `Weekly Sale | ${title}`,
+      id: "sale",
+      title: `On Sale | ${title}`,
     },
     {
       id: "contact",
@@ -49,10 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   let debounceTimer;
-  const DEBOUNCE_DELAY = 300;
  const debounceUpdateTitles = () => {
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(updateTitles, DEBOUNCE_DELAY);
+    debounceTimer = setTimeout(updateTitles, 200);
   }
 
   window.addEventListener('load', updateTitles);

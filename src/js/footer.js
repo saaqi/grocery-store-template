@@ -23,3 +23,7 @@ const footerQuickLinks = nav_links.map((nl) => {
 
 const navLinkElements = document.getElementById("footer-nav");
 if (navLinkElements) navLinkElements.innerHTML = footerQuickLinks.join("");
+
+
+// Add Current Year to the footer
+document.getElementById("curr_year").innerHTML = new Date().getFullYear();

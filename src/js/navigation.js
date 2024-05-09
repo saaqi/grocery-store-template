@@ -120,16 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const targetButton = document.querySelector(target + ' .accordion-button');
     const targetBody = document.querySelector(target + ' .accordion-collapse');
 
-    // const otherButtons = Array.from(document.querySelectorAll('.accordion-button')).filter(button => button !== targetButton);
-    // const otherBody = Array.from(document.querySelectorAll('.accordion-collapse')).filter(button => button !== targetBody);
     link.addEventListener('click', () => {
-      // otherButtons.forEach(i => {
-      //   if (i) i.classList.add('collapsed');
-      //   if (i) i.setAttribute('aria-expanded', 'false');
-      // });
-      // otherBody.forEach(i => {
-      //   if (i) i.classList.remove('show');
-      // });
       if (targetButton) targetButton.classList.remove('collapsed');
       if (targetButton) targetButton.setAttribute('aria-expanded', 'true');
       if (targetBody) targetBody.classList.add('show');

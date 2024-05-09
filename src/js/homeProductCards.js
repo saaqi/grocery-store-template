@@ -1,17 +1,18 @@
 import "bootstrap/js/dist/collapse.js";
 
 import { attachProducts } from "./functions/generateProductCards.js";
+import { attachSocialLinksByClass } from "./functions/attachSocialLinks";
+
 import shop_categories from "./data/shop_categories.js";
+
+
+// Combine all products from different categories into one array
 import fresh_fruits from "./data/fresh_fruits.js";
 import fresh_vegetables from "./data/fresh_vegetables.js";
 import frozen_meats from "./data/frozen_meats.js";
 import frozen_seafood from "./data/frozen_seafood.js";
 import frozen_vegetables from "./data/frozen_vegetables.js";
 import crown_foods from "./data/crown_foods.js";
-
-
-
-// Combine all products from different categories into one array
 const products = [
   ...fresh_fruits,
   ...fresh_vegetables,
@@ -62,3 +63,8 @@ document.querySelectorAll('.accordion-item').forEach((item) => {
     window.scrollTo(0, scrollOffset);
   });
 });
+
+
+
+// Product Cards Modals Social Links
+attachSocialLinksByClass('.modal-header .social-links');
