@@ -31,7 +31,7 @@ const storeStatus = () => {
     timeZone,
     weekday: "long",
   });
-  // const isOpeningHours =
+
   const openingHours = {
     Monday: [9, 20],
     Tuesday: [9, 20],
@@ -40,14 +40,34 @@ const storeStatus = () => {
     Sunday: [9, 20],
     Friday: [9, 21],
   };
+
   const [startHour, endHour] = openingHours[dayOfWeek] || [];
   const isOpeningHours = startHour <= hours && hours < endHour;
 
-  const outputTime = isOpeningHours
-    ? '<span class="open text-primary fw-bold">Open</span> come on down 🙂'
-    : '<span class="closed text-danger-emphasis fw-bold">Closed</span> see you tomorrow 😴';
+  const openMsg = '<span class="open text-primary fw-bold">Open</span> come on down 🙂';
+  const morningMsg = '<span class="text-danger-emphasis fw-bold">Closed</span> at this hour see you at 9:00 AM 😴';
+  const tomorrowMsg = '<span class="text-danger-emphasis fw-bold">Closed</span> see you tomorrow 😴';
 
-  return `${outputDay}, We are ${outputTime}`;
+  // if (dayOfWeek === "Thursday") {
+  //   outputTime = '<span class="text-danger-emphasis fw-bold">Closed</span> see you tomorrow 😴';
+  // } else if (isOpeningHours) {
+  //   outputTime = '<span class="open text-primary fw-bold">Open</span> come on down 🙂';
+  // } else if (dayOfWeek === "Friday" && hours >= 21) {
+  //   outputTime = '<span class="text-danger-emphasis fw-bold">Closed</span> See you tomorrow 😴';
+  // } else if (hours < 9) {
+  //   outputTime = '<span class="text-danger-emphasis fw-bold">Closed</span> see you at 9:00 AM 😴';
+  // } else {
+  //   outputTime = '<span class="text-danger-emphasis fw-bold">Closed</span> see you tomorrow 😴';
+  // }
+
+  let outputTime;
+
+  if (isOpeningHours) outputTime = openMsg;
+  else if (dayOfWeek === "Thursday") outputTime = tomorrowMsg;
+  else if (hours < 9) outputTime = morningMsg;
+  else outputTime = tomorrowMsg;
+
+  return `It is ${outputDay}, We are ${outputTime}`;
 }
 
 const updateStatusRealtime = () => {
