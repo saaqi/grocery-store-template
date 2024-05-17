@@ -2,9 +2,7 @@
 import { attachSocialLinksById } from "./functions/attachSocialLinks.js";
 import validateContactFroms from "./functions/validateContactForm.js";
 
-
 attachSocialLinksById("contact-us-list");
-
 
 const storeStatus = () => {
   const timeZone = "Europe/Brussels";
@@ -48,18 +46,6 @@ const storeStatus = () => {
   const morningMsg = '<span class="text-danger-emphasis fw-bold">Closed</span> at this hour see you at 9:00 AM 😴';
   const tomorrowMsg = '<span class="text-danger-emphasis fw-bold">Closed</span> see you tomorrow 😴';
 
-  // if (dayOfWeek === "Thursday") {
-  //   outputTime = '<span class="text-danger-emphasis fw-bold">Closed</span> see you tomorrow 😴';
-  // } else if (isOpeningHours) {
-  //   outputTime = '<span class="open text-primary fw-bold">Open</span> come on down 🙂';
-  // } else if (dayOfWeek === "Friday" && hours >= 21) {
-  //   outputTime = '<span class="text-danger-emphasis fw-bold">Closed</span> See you tomorrow 😴';
-  // } else if (hours < 9) {
-  //   outputTime = '<span class="text-danger-emphasis fw-bold">Closed</span> see you at 9:00 AM 😴';
-  // } else {
-  //   outputTime = '<span class="text-danger-emphasis fw-bold">Closed</span> see you tomorrow 😴';
-  // }
-
   let outputTime;
 
   if (isOpeningHours) outputTime = openMsg;
@@ -75,8 +61,6 @@ const updateStatusRealtime = () => {
 }
 updateStatusRealtime();
 setInterval(updateStatusRealtime, 15000);
-
-
 
 
 

@@ -59,7 +59,7 @@ attachProducts(crown_foods, "crown_foods");
 // Fix the accordian scroll issue
 document.querySelectorAll('.accordion-item').forEach((item) => {
   item.addEventListener('shown.bs.collapse', () => {
-    const scrollOffset = item.offsetTop - 70;
+    const scrollOffset = item.offsetTop - 68;
     window.scrollTo(0, scrollOffset);
   });
 });

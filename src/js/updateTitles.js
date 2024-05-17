@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
       title: orgTitle,
     },
     {
-      id: "arrivals",
-      title: `New Arrivals | ${title}`,
-    },
-    {
       id: "featured",
       title: `Featured Products | ${title}`,
+    },
+    {
+      id: "arrivals",
+      title: `New Arrivals | ${title}`,
     },
     {
       id: "shop",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const sectionElement = document.getElementById(section.id);
       if (
         sectionElement &&
-        window.scrollY + 70 >= sectionElement.offsetTop &&
+        window.scrollY + 68 >= sectionElement.offsetTop &&
         window.scrollY <= sectionElement.offsetTop + sectionElement.offsetHeight
       ) {
         // Update the title only if the section has changed

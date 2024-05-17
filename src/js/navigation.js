@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const highlightNavLink = () => {
     sections.forEach(section => {
       const scrollPosition = window.scrollY;
-      const top = section.offsetTop - 70;
+      const top = section.offsetTop - 68;
       const bottom = top + section.offsetHeight;
 
       if (scrollPosition >= top && scrollPosition < bottom) {
