@@ -21,7 +21,7 @@ const frozen_vegetables = [
     uom: 'KG',
     quantity: 0.40,
     price: 2.00,
-    // sale: 0,
+    sale: 2.20,
     // featured: true,
     added: 20240503,
   },

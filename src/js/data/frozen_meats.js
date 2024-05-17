@@ -177,7 +177,7 @@ const frozen_meats = [
     uom: 'PC(s)',
     quantity: 1,
     price: 9,
-    // sale: 0,
+    sale: 10,
     // featured: true,
     added: 20240430,
   },

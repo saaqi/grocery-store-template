@@ -112,7 +112,7 @@ const frozen_seafood = [
     uom: 'KG',
     quantity: 1,
     price: 13,
-    // sale: 0,
+    sale: 15,
     featured: true,
     added: 20240430,
   },
