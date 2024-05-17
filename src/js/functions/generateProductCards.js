@@ -32,7 +32,7 @@ const generateProductCards = prods => {
         `<div class="image-holder">`+
           `<img src="${img}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy">`+
         `</div>`+
-        `<div class="card-body d-flex flex-column gap-2">`+
+        `<div class="card-body d-flex flex-column gap-2 p-2 p-sm-3">`+
           `<h4 class="card-title fs-5 mb-0">${title}</h4>`+
           `${quantity ? `<div class="card-qauntity mb-0">${quantity} ${uom}</div>` : ''}`+
           `${s_desc ? `<div class="short-description">${s_desc}</div>` : ''}`+
