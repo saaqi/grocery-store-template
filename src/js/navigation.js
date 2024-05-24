@@ -19,7 +19,7 @@ const navigationLinks = nav_links.map( nl => {
   const output = subcategories.length > 0 ?
     `<li class="nav-item dropdown">` +
       `<a class="nav-link link-dark dropdown-toggle ${link}" data-scroll-spy-target="#${link}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">` +
-        `${icon ? icon + ' ' : ''}${text}` +
+        `${icon} ${text}` +
       `</a>` +
       `<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">` +
         // Map over subcategories to generate dropdown items
