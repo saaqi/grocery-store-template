@@ -1,5 +1,5 @@
 // JavaScript form validation
-import "bootstrap/js/dist/alert.js";
+import Alert from "bootstrap/js/dist/alert.js";
 
 const validateContactFroms = (formId, recEmail) => {
 

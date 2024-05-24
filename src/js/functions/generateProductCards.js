@@ -1,4 +1,4 @@
-import "bootstrap/js/dist/modal.js";
+import Modal from "bootstrap/js/dist/modal.js";
 // Include the classes added by Bootstrap Modal to keep them from purging on build from stylesheet ;)
 // ".modal-backdrop, .fad, .show, .modal-open"
 

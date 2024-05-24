@@ -1,4 +1,4 @@
-import "bootstrap/js/dist/collapse.js";
+import Collapse from "bootstrap/js/dist/collapse.js";
 
 import { attachProducts } from "./functions/generateProductCards.js";
 import { attachSocialLinksByClass } from "./functions/attachSocialLinks";
