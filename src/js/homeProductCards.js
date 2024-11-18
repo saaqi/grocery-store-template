@@ -1,4 +1,4 @@
-import Collapse from "bootstrap/js/dist/collapse.js";
+import "bootstrap/js/dist/collapse.js";
 
 import { attachProducts } from "./functions/generateProductCards.js";
 import { attachSocialLinksByClass } from "./functions/attachSocialLinks";
@@ -7,21 +7,70 @@ import shop_categories from "./data/shop_categories.js";
 
 
 // Combine all products from different categories into one array
-import fresh_fruits from "./data/fresh_fruits.js";
-import fresh_vegetables from "./data/fresh_vegetables.js";
-import frozen_meats from "./data/frozen_meats.js";
-import frozen_seafood from "./data/frozen_seafood.js";
-import frozen_vegetables from "./data/frozen_vegetables.js";
-import crown_foods from "./data/crown_foods.js";
-import telecommunications from "./data/telecommunications.js";
+import fresh_fruits from "/public/products/fresh_fruits.json";
+const fresh_fruits_with_ids = fresh_fruits.map((item, index) => {
+  return {
+    ...item,
+    id: `fresh-fruits-${index}`,
+    cat: "Fresh Fruits",
+  };
+});
+import fresh_vegetables from "/public/products/fresh_vegetables.json";
+const fresh_vegetables_with_ids = fresh_vegetables.map((item, index) => {
+  return {
+    ...item,
+    id: `fresh-vegetalbes-${index}`,
+    cat: "Fresh Vegetables",
+  };
+});
+import frozen_meats from "/public/products/frozen_meats.json";
+const frozen_meats_with_ids = frozen_meats.map((item, index) => {
+  return {
+    ...item,
+    id: `frozen-meats-${index}`,
+    cat: "Frozen Meats",
+  };
+});
+import frozen_seafood from "/public/products/frozen_seafood.json";
+const frozen_seafood_with_ids = frozen_seafood.map((item, index) => {
+  return {
+    ...item,
+    id: `frozen-seafood-${index}`,
+    cat: "Frozen Seafood",
+  };
+});
+import frozen_vegetables from "/public/products/frozen_vegetables.json";
+const frozen_vegetables_with_ids = frozen_vegetables.map((item, index) => {
+  return {
+    ...item,
+    id: `frozen-vegetables-${index}`,
+    cat: "Frozen Vegetables",
+  };
+});
+import crown_foods from "/public/products/crown_foods.json";
+const crown_foods_with_ids = crown_foods.map((item, index) => {
+  return {
+    ...item,
+    id: `crown-foods-${index}`,
+    cat: "Crown Foods",
+  };
+});
+import telecommunications from "/public/products/telecommunications.json";
+const telecommunications_with_ids = telecommunications.map((item, index) => {
+  return {
+    ...item,
+    id: `telecommunications-${index}`,
+    cat: "Telecommunications",
+  };
+});
 const products = [
-  ...fresh_fruits,
-  ...fresh_vegetables,
-  ...frozen_meats,
-  ...frozen_seafood,
-  ...frozen_vegetables,
-  ...crown_foods,
-  ...telecommunications,
+  ...fresh_fruits_with_ids,
+  ...fresh_vegetables_with_ids,
+  ...frozen_meats_with_ids,
+  ...frozen_seafood_with_ids,
+  ...frozen_vegetables_with_ids,
+  ...crown_foods_with_ids,
+  ...telecommunications_with_ids,
 ];
 
 // Sort the products array by the 'added' property in descending order
@@ -51,13 +100,13 @@ attachProducts(onSaleProducts, "on-sale");
 shop_categories("shopAccordian");
 
 // Attach the shops data to their respective categories
-attachProducts(fresh_fruits, "fresh_fruits");
-attachProducts(fresh_vegetables, "fresh_vegetables");
-attachProducts(frozen_meats, "frozen_meats");
-attachProducts(frozen_seafood, "frozen_seafood");
-attachProducts(frozen_vegetables, "frozen_vegetables");
-attachProducts(crown_foods, "crown_foods");
-attachProducts(telecommunications, "telecommunications");
+attachProducts(fresh_fruits_with_ids, "fresh_fruits");
+attachProducts(fresh_vegetables_with_ids, "fresh_vegetables");
+attachProducts(frozen_meats_with_ids, "frozen_meats");
+attachProducts(frozen_seafood_with_ids, "frozen_seafood");
+attachProducts(frozen_vegetables_with_ids, "frozen_vegetables");
+attachProducts(crown_foods_with_ids, "crown_foods");
+attachProducts(telecommunications_with_ids, "telecommunications");
 
 // Fix the accordian scroll issue
 document.querySelectorAll('.accordion-item').forEach((item) => {

@@ -1,17 +1,13 @@
-/* Import Variables */
-@use "./variables"as v;
-
-
 // Import base styling
-@import "./base";
+@use "./base";
 
 // Import navigation styles
-@import "./navigation";
+@use "./navigation";
 
 // Import Sections
 
-@import "./home-section";
-@import "./product-cards";
-@import "./yearlysale";
-@import "./contactus";
-@import "./footer";
+@use "./home-section";
+@use "./product-cards";
+@use "./yearlysale";
+@use "./contactus";
+@use "./footer";

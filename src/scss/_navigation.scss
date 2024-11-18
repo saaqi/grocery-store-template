@@ -1,3 +1,6 @@
+/* Import Variables */
+@use "./variables" as v;
+
 .site-header {
   z-index: 10;
   transition: v.$transition;
