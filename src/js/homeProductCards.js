@@ -57,12 +57,12 @@ shop_categories("shopAccordian");
 
 // Attach the shops data to their respective categories
 attachProducts(products.filter((prods) => prods.cat === 'Fresh Fruits'), "fresh_fruits");
-attachProducts(fresh_vegetables_with_ids, "fresh_vegetables");
-attachProducts(frozen_meats_with_ids, "frozen_meats");
-attachProducts(frozen_seafood_with_ids, "frozen_seafood");
-attachProducts(frozen_vegetables_with_ids, "frozen_vegetables");
-attachProducts(crown_foods_with_ids, "crown_foods");
-attachProducts(telecommunications_with_ids, "telecommunications");
+attachProducts(products.filter((prods) => prods.cat === 'Fresh Vegetables'), "fresh_vegetables");
+attachProducts(products.filter((prods) => prods.cat === 'Frozen Meats'), "frozen_meats");
+attachProducts(products.filter((prods) => prods.cat === 'Frozen Seafood'), "frozen_seafood");
+attachProducts(products.filter((prods) => prods.cat === 'Frozen Vegetables'), "frozen_vegetables");
+attachProducts(products.filter((prods) => prods.cat === 'Crown Foods'), "crown_foods");
+attachProducts(products.filter((prods) => prods.cat === 'Telecommunications'), "telecommunications");
 
 // Fix the accordian scroll issue
 document.querySelectorAll('.accordion-item').forEach((item) => {

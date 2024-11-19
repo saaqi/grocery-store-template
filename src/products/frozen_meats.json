@@ -8,7 +8,7 @@
     "uom": "KG",
     "quantity": 1.0,
     "price": 10.00,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240501
   },
   {
@@ -20,7 +20,7 @@
     "uom": "KG",
     "quantity": 1.0,
     "price": 6.00,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -33,7 +33,7 @@
     "quantity": 1.0,
     "price": 10.00,
     "featured": true,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -45,7 +45,7 @@
     "uom": "KG",
     "quantity": 1,
     "price": 6,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -57,7 +57,7 @@
     "uom": "KG",
     "quantity": 1,
     "price": 6,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -69,7 +69,7 @@
     "uom": "KG",
     "quantity": 1,
     "price": 6,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -81,7 +81,7 @@
     "uom": "KG",
     "quantity": 1,
     "price": 5,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -93,7 +93,7 @@
     "uom": "KG",
     "quantity": 1,
     "price": 5,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -105,7 +105,7 @@
     "uom": "KG",
     "quantity": 1,
     "price": 5,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -117,7 +117,7 @@
     "uom": "KG",
     "quantity": 1,
     "price": 6,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -129,7 +129,7 @@
     "uom": "KG",
     "quantity": 1.1,
     "price": 4,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -141,7 +141,7 @@
     "uom": "KG",
     "quantity": 1.2,
     "price": 4.5,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -153,7 +153,7 @@
     "uom": "KG",
     "quantity": 1.4,
     "price": 5,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -166,7 +166,7 @@
     "quantity": 1,
     "price": 10,
     "sale": 9,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -179,7 +179,7 @@
     "quantity": 1,
     "price": 7.5,
     "featured": true,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   },
   {
@@ -191,7 +191,7 @@
     "uom": "KG",
     "quantity": 1,
     "price": 9,
-    "cat": "Fresh Meats",
+    "cat": "Frozen Meats",
     "added": 20240430
   }
 ]
