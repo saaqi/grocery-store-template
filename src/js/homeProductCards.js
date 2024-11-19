@@ -7,7 +7,7 @@ import shop_categories from "./data/shop_categories.js";
 
 
 // Combine all products from different categories into one array
-import fresh_fruits from "/public/products/fresh_fruits.json";
+import fresh_fruits from "../products/fresh_fruits.json";
 const fresh_fruits_with_ids = fresh_fruits.map((item, index) => {
   return {
     ...item,
@@ -15,7 +15,7 @@ const fresh_fruits_with_ids = fresh_fruits.map((item, index) => {
     cat: "Fresh Fruits",
   };
 });
-import fresh_vegetables from "/public/products/fresh_vegetables.json";
+import fresh_vegetables from "../products/fresh_vegetables.json";
 const fresh_vegetables_with_ids = fresh_vegetables.map((item, index) => {
   return {
     ...item,
@@ -23,7 +23,7 @@ const fresh_vegetables_with_ids = fresh_vegetables.map((item, index) => {
     cat: "Fresh Vegetables",
   };
 });
-import frozen_meats from "/public/products/frozen_meats.json";
+import frozen_meats from "../products/frozen_meats.json";
 const frozen_meats_with_ids = frozen_meats.map((item, index) => {
   return {
     ...item,
@@ -31,7 +31,7 @@ const frozen_meats_with_ids = frozen_meats.map((item, index) => {
     cat: "Frozen Meats",
   };
 });
-import frozen_seafood from "/public/products/frozen_seafood.json";
+import frozen_seafood from "../products/frozen_seafood.json";
 const frozen_seafood_with_ids = frozen_seafood.map((item, index) => {
   return {
     ...item,
@@ -39,7 +39,7 @@ const frozen_seafood_with_ids = frozen_seafood.map((item, index) => {
     cat: "Frozen Seafood",
   };
 });
-import frozen_vegetables from "/public/products/frozen_vegetables.json";
+import frozen_vegetables from "../products/frozen_vegetables.json";
 const frozen_vegetables_with_ids = frozen_vegetables.map((item, index) => {
   return {
     ...item,
@@ -47,7 +47,7 @@ const frozen_vegetables_with_ids = frozen_vegetables.map((item, index) => {
     cat: "Frozen Vegetables",
   };
 });
-import crown_foods from "/public/products/crown_foods.json";
+import crown_foods from "../products/crown_foods.json";
 const crown_foods_with_ids = crown_foods.map((item, index) => {
   return {
     ...item,
@@ -55,7 +55,7 @@ const crown_foods_with_ids = crown_foods.map((item, index) => {
     cat: "Crown Foods",
   };
 });
-import telecommunications from "/public/products/telecommunications.json";
+import telecommunications from "../products/telecommunications.json";
 const telecommunications_with_ids = telecommunications.map((item, index) => {
   return {
     ...item,
@@ -100,7 +100,7 @@ attachProducts(onSaleProducts, "on-sale");
 shop_categories("shopAccordian");
 
 // Attach the shops data to their respective categories
-attachProducts(fresh_fruits_with_ids, "fresh_fruits");
+attachProducts(products.filter((prods) => prods.cat === 'Fresh Fruits'), "fresh_fruits");
 attachProducts(fresh_vegetables_with_ids, "fresh_vegetables");
 attachProducts(frozen_meats_with_ids, "frozen_meats");
 attachProducts(frozen_seafood_with_ids, "frozen_seafood");
