@@ -6,78 +6,34 @@ import { attachSocialLinksByClass } from "./functions/attachSocialLinks";
 import shop_categories from "./data/shop_categories.js";
 
 
-// Combine all products from different categories into one array
 import fresh_fruits from "../products/fresh_fruits.json";
-const fresh_fruits_with_ids = fresh_fruits.map((item, index) => {
-  return {
-    ...item,
-    id: `fresh-fruits-${index}`,
-    cat: "Fresh Fruits",
-  };
-});
 import fresh_vegetables from "../products/fresh_vegetables.json";
-const fresh_vegetables_with_ids = fresh_vegetables.map((item, index) => {
-  return {
-    ...item,
-    id: `fresh-vegetalbes-${index}`,
-    cat: "Fresh Vegetables",
-  };
-});
 import frozen_meats from "../products/frozen_meats.json";
-const frozen_meats_with_ids = frozen_meats.map((item, index) => {
-  return {
-    ...item,
-    id: `frozen-meats-${index}`,
-    cat: "Frozen Meats",
-  };
-});
 import frozen_seafood from "../products/frozen_seafood.json";
-const frozen_seafood_with_ids = frozen_seafood.map((item, index) => {
-  return {
-    ...item,
-    id: `frozen-seafood-${index}`,
-    cat: "Frozen Seafood",
-  };
-});
 import frozen_vegetables from "../products/frozen_vegetables.json";
-const frozen_vegetables_with_ids = frozen_vegetables.map((item, index) => {
-  return {
-    ...item,
-    id: `frozen-vegetables-${index}`,
-    cat: "Frozen Vegetables",
-  };
-});
 import crown_foods from "../products/crown_foods.json";
-const crown_foods_with_ids = crown_foods.map((item, index) => {
-  return {
-    ...item,
-    id: `crown-foods-${index}`,
-    cat: "Crown Foods",
-  };
-});
 import telecommunications from "../products/telecommunications.json";
-const telecommunications_with_ids = telecommunications.map((item, index) => {
+
+// Combine all products from different categories into one array
+const products = [
+  ...fresh_fruits,
+  ...fresh_vegetables,
+  ...frozen_meats,
+  ...frozen_seafood,
+  ...frozen_vegetables,
+  ...crown_foods,
+  ...telecommunications,
+].map((item, index) => {
   return {
     ...item,
-    id: `telecommunications-${index}`,
-    cat: "Telecommunications",
+    id: `products-${index}`
   };
 });
-const products = [
-  ...fresh_fruits_with_ids,
-  ...fresh_vegetables_with_ids,
-  ...frozen_meats_with_ids,
-  ...frozen_seafood_with_ids,
-  ...frozen_vegetables_with_ids,
-  ...crown_foods_with_ids,
-  ...telecommunications_with_ids,
-];
+
+
 
 // Sort the products array by the 'added' property in descending order
 products.sort((a, b) => (b.added) - (a.added));
-
-
-
 
 
 // Attach and modify the "new-arrivals" section

@@ -8,6 +8,7 @@
     "uom": "KG",
     "quantity": 0.40,
     "price": 1.30,
+    "cat": "Frozen Vegetable",
     "added": 20240430
   },
   {
@@ -20,6 +21,7 @@
     "quantity": 0.40,
     "price": 2.20,
     "sale": 2.00,
+    "cat": "Frozen Vegetable",
     "added": 20240503
   },
   {
@@ -32,6 +34,7 @@
     "quantity": 0.40,
     "price": 2.00,
     "featured": true,
+    "cat": "Frozen Vegetable",
     "added": 20240430
   },
   {
@@ -43,6 +46,7 @@
     "uom": "KG",
     "quantity": 0.50,
     "price": 2.00,
+    "cat": "Frozen Vegetable",
     "added": 20240430
   },
   {
@@ -54,6 +58,7 @@
     "uom": "KG",
     "quantity": "1.50 (approx.)",
     "price": 6.00,
+    "cat": "Frozen Vegetable",
     "added": 20240430
   },
   {
@@ -65,6 +70,7 @@
     "uom": "KG",
     "quantity": 0.40,
     "price": 2.00,
+    "cat": "Frozen Vegetable",
     "added": 20240430
   },
   {
@@ -76,6 +82,7 @@
     "uom": "KG",
     "quantity": 0.40,
     "price": 2.00,
+    "cat": "Frozen Vegetable",
     "added": 20240430
   },
   {
@@ -87,6 +94,7 @@
     "uom": "KG",
     "quantity": 0.20,
     "price": 2.00,
+    "cat": "Frozen Vegetable",
     "added": 20240430
   },
   {
@@ -98,6 +106,7 @@
     "uom": "KG",
     "quantity": 0.40,
     "price": 2.00,
+    "cat": "Frozen Vegetable",
     "added": 20240430
   }
 ]

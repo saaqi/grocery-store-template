@@ -9,6 +9,7 @@
     "quantity": 20.0,
     "price": 8.00,
     "sale": 7.20,
+    "cat": "Crown Foods",
     "added": 20240501
   },
   {
@@ -20,6 +21,7 @@
     "uom": "PC(s)",
     "quantity": 5.0,
     "price": 1.80,
+    "cat": "Crown Foods",
     "added": 20240503
   },
   {
@@ -31,6 +33,7 @@
     "uom": "PC(s)",
     "quantity": 4.0,
     "price": 2.00,
+    "cat": "Crown Foods",
     "added": 20240501
   },
   {
@@ -42,6 +45,7 @@
     "uom": "PC(s)",
     "quantity": 4.0,
     "price": 2.00,
+    "cat": "Crown Foods",
     "added": 20240501
   },
   {
@@ -53,6 +57,7 @@
     "uom": "PC(s)",
     "quantity": 4.0,
     "price": 2.00,
+    "cat": "Crown Foods",
     "added": 20240501
   },
   {
@@ -64,6 +69,7 @@
     "uom": "PC(s)",
     "quantity": 5.0,
     "price": 2.50,
+    "cat": "Crown Foods",
     "added": 20240501
   },
   {
@@ -76,6 +82,7 @@
     "quantity": 20.0,
     "price": 7.50,
     "featured": true,
+    "cat": "Crown Foods",
     "added": 20240501
   },
   {
@@ -87,6 +94,7 @@
     "uom": "PC(s)",
     "quantity": 20.0,
     "price": 7.50,
+    "cat": "Crown Foods",
     "added": 20240501
   }
 ]

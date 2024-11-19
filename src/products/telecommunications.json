@@ -5,6 +5,7 @@
     "img": "images/products/telecommunication_logos/lycamobile.webp",
     "stock": true,
     "featured": true,
+    "cat": "Telecommunication",
     "added": 20240501
   },
   {
@@ -12,6 +13,7 @@
     "s_desc": "Recharge your mobile credit effortlessly with our recharge vouchers and cards, ensuring uninterrupted communication whenever you need it.",
     "img": "images/products/telecommunication_logos/lycamobile.webp",
     "stock": true,
+    "cat": "Telecommunication",
     "added": 20240501
   },
   {
@@ -19,6 +21,7 @@
     "s_desc": "Recharge your mobile credit effortlessly with our recharge vouchers and cards, ensuring uninterrupted communication whenever you need it.",
     "img": "images/products/telecommunication_logos/orange.svg",
     "stock": true,
+    "cat": "Telecommunication",
     "added": 20240517
   },
   {
@@ -33,6 +36,7 @@
     "s_desc": "Recharge your mobile credit effortlessly with our recharge vouchers and cards, ensuring uninterrupted communication whenever you need it.",
     "img": "images/products/telecommunication_logos/JIM_mobile.webp",
     "stock": true,
+    "cat": "Telecommunication",
     "added": 20240501
   },
   {
@@ -40,6 +44,7 @@
     "s_desc": "Recharge your mobile credit effortlessly with our recharge vouchers and cards, ensuring uninterrupted communication whenever you need it.",
     "img": "images/products/telecommunication_logos/base.webp",
     "stock": true,
+    "cat": "Telecommunication",
     "added": 20240501
   },
   {
@@ -47,6 +52,7 @@
     "s_desc": "Recharge your mobile credit effortlessly with our recharge vouchers and cards, ensuring uninterrupted communication whenever you need it.",
     "img": "images/products/telecommunication_logos/l-mobil.webp",
     "stock": true,
+    "cat": "Telecommunication",
     "added": 20240501
   },
   {
@@ -54,6 +60,7 @@
     "s_desc": "Recharge your mobile credit effortlessly with our recharge vouchers and cards, ensuring uninterrupted communication whenever you need it.",
     "img": "images/products/telecommunication_logos/paysafecard.webp",
     "stock": true,
+    "cat": "Telecommunication",
     "added": 20240501
   },
   {
@@ -61,6 +68,7 @@
     "s_desc": "Recharge your mobile credit effortlessly with our recharge vouchers and cards, ensuring uninterrupted communication whenever you need it.",
     "img": "images/products/telecommunication_logos/neosurf.webp",
     "stock": true,
+    "cat": "Telecommunication",
     "added": 20240501
   }
 ]
