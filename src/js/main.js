@@ -2,7 +2,7 @@
 // JS Functionalities
 import './navigation.js';
 import './hero.js';
-import './homeProductCards.js';
+import './homePage.js';
 import './updateTitles.js';
 import './contactus.js';
 import './footer.js';

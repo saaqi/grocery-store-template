@@ -41,6 +41,9 @@ const shopCats = [
   };
 });
 
+import { alphabetSortedProducts } from "./products.js";
+import { attachProducts } from "../functions/generateProductCards.js";
+
 const generateShopCats = cats => {
 
   const {
@@ -73,6 +76,16 @@ const shop_categories = parentId => {
     const shopCategories = shopCats.map(generateShopCats).join("");
     parentElement.innerHTML = shopCategories;
   }
+
+  // Attach the shops data to their respective categories
+  attachProducts(alphabetSortedProducts.filter((p) => p.cat === 'Fresh Fruits'), "fresh_fruits");
+  attachProducts(alphabetSortedProducts.filter((p) => p.cat === 'Fresh Vegetables'), "fresh_vegetables");
+  attachProducts(alphabetSortedProducts.filter((p) => p.cat === 'Frozen Meats'), "frozen_meats");
+  attachProducts(alphabetSortedProducts.filter((p) => p.cat === 'Frozen Seafood'), "frozen_seafood");
+  attachProducts(alphabetSortedProducts.filter((p) => p.cat === 'Frozen Vegetables'), "frozen_vegetables");
+  attachProducts(alphabetSortedProducts.filter((p) => p.cat === 'Crown Foods'), "crown_foods");
+  attachProducts(alphabetSortedProducts.filter((p) => p.cat === 'Telecommunications'), "telecommunications");
 }
+
 
 export default shop_categories;
