@@ -1,6 +1,6 @@
 // --- Import only the required components.
-import Offcanvas from "bootstrap/js/dist/offcanvas.js";
-import Dropdown from "bootstrap/js/dist/dropdown.js";
+import "bootstrap/js/dist/offcanvas.js";
+import "bootstrap/js/dist/dropdown.js";
 
 import nav_links from "./data/nav_links.js";
 

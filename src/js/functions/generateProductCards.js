@@ -33,7 +33,7 @@ const generateProductCards = prods => {
           `<img src="${img}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy">`+
         `</div>`+
         `<div class="card-body d-flex flex-column gap-2 p-2 p-sm-3">`+
-          `<h4 class="card-title fs-5 mb-0">${title}</h4>`+
+          `<div class="card-title h5 mb-0">${title}</div>`+
           `${quantity ? `<div class="card-qauntity mb-0">${quantity} ${uom}</div>` : ''}`+
           `${s_desc ? `<div class="short-description">${s_desc}</div>` : ''}`+
           `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} flex-column flex-sm-row align-items-center mb-2 mt-auto gap-sm-1 gap-2 text-center">`+
@@ -48,7 +48,7 @@ const generateProductCards = prods => {
           : '<div class="text-muted">Out of Stock</div>'}`+
           `</div>`+
           `<div class="btn-group w-100">`+
-            `<a href="https://wa.me/+32465638887" class="btn btn-outline-primary" target="_blank">`+
+            `<a href="https://wa.me/+32465638887" class="btn btn-outline-primary" target="_blank" title="Contact us via WhatsApp!">`+
               `<i class='bx bxl-whatsapp'></i>`+
             `</a>`+
             `${desc ?
