@@ -31,23 +31,24 @@ const products = [
 });
 
 
-
 // Sort the products array by the 'added' property in descending order
-products.sort((a, b) => (b.added) - (a.added));
+const dateSortedProducts = [...products].sort((a, b) => (b.added) - (a.added));
 
 
-// Attach and modify the "new-arrivals" section
-const arrivalProducts = products.slice(0, 4);
+
+
+// Attach and modify the "new-arrivals" section to include the first 4 products in the sorted array.
+const arrivalProducts = dateSortedProducts.slice(0, 4);
 attachProducts(arrivalProducts, "new-arrivals");
 
 
 // Attach first 8 featured products to the HTML element with the id 'featured-items'.
-const featuredProducts = products.filter((prods) => prods.featured).slice(0, 8);
+const featuredProducts = dateSortedProducts.filter((prods) => prods.featured).slice(0, 8);
 attachProducts(featuredProducts, "featured-items");
 
 
 // Attach first 8 products on sale to the HTML element with the id 'on-sale'.
-const onSaleProducts = products.filter((prods) => prods.sale).slice(0, 8);
+const onSaleProducts = dateSortedProducts.filter((prods) => prods.sale).slice(0, 8);
 attachProducts(onSaleProducts, "on-sale");
 
 
@@ -56,48 +57,13 @@ attachProducts(onSaleProducts, "on-sale");
 shop_categories("shopAccordian");
 
 // Attach the shops data to their respective categories
-attachProducts(
-  products
-    .filter((p) => p.cat === 'Fresh Fruits')
-    .sort((a, b) => a.title.localeCompare(b.title)),
-  "fresh_fruits"
-);
-attachProducts(
-  products
-    .filter((p) => p.cat === 'Fresh Vegetables')
-    .sort((a, b) => a.title.localeCompare(b.title)),
-  "fresh_vegetables"
-);
-attachProducts(
-  products
-    .filter((p) => p.cat === 'Frozen Meats')
-    .sort((a, b) => a.title.localeCompare(b.title)),
-  "frozen_meats"
-);
-attachProducts(
-  products
-    .filter((p) => p.cat === 'Frozen Seafood')
-    .sort((a, b) => a.title.localeCompare(b.title)),
-  "frozen_seafood"
-);
-attachProducts(
-  products
-    .filter((p) => p.cat === 'Frozen Vegetables')
-    .sort((a, b) => a.title.localeCompare(b.title)),
-  "frozen_vegetables"
-);
-attachProducts(
-  products
-    .filter((p) => p.cat === 'Crown Foods')
-    .sort((a, b) => a.title.localeCompare(b.title)),
-  "crown_foods"
-);
-attachProducts(
-  products
-    .filter((p) => p.cat === 'Telecommunications')
-    .sort((a, b) => a.title.localeCompare(b.title)),
-  "telecommunications"
-);
+attachProducts(products.filter((p) => p.cat === 'Fresh Fruits'), "fresh_fruits");
+attachProducts(products.filter((p) => p.cat === 'Fresh Vegetables'), "fresh_vegetables");
+attachProducts(products.filter((p) => p.cat === 'Frozen Meats'), "frozen_meats");
+attachProducts(products.filter((p) => p.cat === 'Frozen Seafood'), "frozen_seafood");
+attachProducts(products.filter((p) => p.cat === 'Frozen Vegetables'), "frozen_vegetables");
+attachProducts(products.filter((p) => p.cat === 'Crown Foods'), "crown_foods");
+attachProducts(products.filter((p) => p.cat === 'Telecommunications'), "telecommunications");
 
 // Fix the accordian scroll issue
 document.querySelectorAll('.accordion-item').forEach((item) => {
