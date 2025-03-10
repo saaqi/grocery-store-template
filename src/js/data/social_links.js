@@ -1,6 +1,6 @@
 const social_links = [
   {
-    link: `https://maps.app.goo.gl/7DvDtoe2L5U6awqu6`,
+    link: `https://maps.app.goo.gl/5LcX4sf9Wz3zGMxE9`,
     title: `Visit Us Now!`,
     link_class: `map-link`,
     icon: `bx-map-alt`,

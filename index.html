@@ -9,15 +9,28 @@
   <title>Sadiq Super Store | Unearth the Extraodinary!</title>
   <meta name="author" content="Saqib Islam">
   <meta name="description"
-    content="Explore the unexpected at Sadiq Super Store! Your go-to spot in Belgium for an electric mix of everyday must-haves and delightfully odd treasures. Embrace the unique shopping experience today!">
-  <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-  <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
+    content="We offer fresh groceries, snacks, household essentials, and more. Whether you're picking up daily necessities or grabbing something quick, we've got you covered with friendly service and great prices!">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/logo.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Sadiq Super Store" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta property="og:title" content="Sadiq Super Store">
+  <meta property="og:site_name" content="Sadiq Super Store">
+  <meta property="og:url" content="https://sadiqsuperstore.com">
+  <meta property="og:description"
+    content="Looking for fresh groceries, tasty snacks, and household essentials? We've got you covered!">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://sadiqsuperstore.com/web-app-manifest-512x512.png">
+  <!-- <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@saaqi">
+  <meta name="twitter:title" content="Sadiq Super Store">
+  <meta name="twitter:description"
+    content="Looking for fresh groceries, tasty snacks, and household essentials? We've got you covered!">
+  <meta name="twitter:image" content="https://sadiqsuperstore.com/web-app-manifest-512x512.png"> -->
+  <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="./src/scss/preloader.css">
 </head>
 
@@ -40,7 +53,7 @@
           <i class='bx bxs-store display-6'></i>
         </a>
         <a class="navbar-brand me-0" href="#home">
-          <img src="images/logo.svg" class="logo" alt="Logo" height="50">
+          <img src="/src/assets/logo.svg" class="logo" alt="Logo" height="50">
         </a>
         <button class="navbar-toggler p-1 btn btn-outline-primary" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +89,9 @@
           <div class="text-col col-lg-6 text-center text-lg-start mt-3 mt-lg-0">
             <div class="lead fw-medium pb-1">Welcome to</div>
             <h1 class="text-uppercase fw-bold">Sadiq Super Store</h1>
-            <h2 class="h5">Explore the unexpected at Sadiq Super Store! Your go-to spot in Belgium for an electric mix of everyday must-haves and delightfully odd treasures. Embrace the unique shopping experience today!</h2>
+            <h2 class="h5">Located in Meensesteenweg 2, 8800 Roeselare, Belgium, offers fresh groceries, snacks, household
+            essentials, and more. Whether you're picking up daily necessities or grabbing something quick, we've got you covered
+            with friendly service and great prices!</h2>
             <ul id="hero-social-links" class="social-links social-links-hero list-unstyled d-flex flex-wrap py-4 gap-5 justify-content-around justify-content-lg-start">
               <!-- Insert with JS -->
             </ul>
@@ -91,12 +106,12 @@
           </div>
           <div class="graphic-col col-lg-6 text-center text-lg-end">
             <picture>
-              <source media="(max-width: 576px)" srcset="./images/hero/hero-image@576x.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./images/hero/hero-image@768x.webp" type="image/webp">
-              <source media="(max-width: 992px)" srcset="./images/hero/hero-image@992x.webp" type="image/webp">
-              <source media="(max-width: 1200px)" srcset="./images/hero/hero-image@1200x.webp" type="image/webp">
-              <source media="(min-width: 1201px)" srcset="./images/hero/hero-image.svg" type="image/svg+xml">
-              <img class="img-fluid hero-image" src="./images/hero/hero-image.svg" alt="Basket full of Groceries">
+              <source media="(max-width: 576px)" srcset="/src/assets/hero/hero-image@576x.webp" type="image/webp">
+              <source media="(max-width: 768px)" srcset="/src/assets/hero/hero-image@768x.webp" type="image/webp">
+              <source media="(max-width: 992px)" srcset="/src/assets/hero/hero-image@992x.webp" type="image/webp">
+              <source media="(max-width: 1200px)" srcset="/src/assets/hero/hero-image@1200x.webp" type="image/webp">
+              <source media="(min-width: 1201px)" srcset="/src/assets/hero/hero-image.svg" type="image/svg+xml">
+              <img class="img-fluid hero-image" src="/src/assets/hero/hero-image.svg" alt="Basket full of Groceries">
             </picture>
           </div>
         </div>
@@ -142,18 +157,18 @@
         <div class="row d-flex flex-lg-row-reverse overlay align-items-center py-4">
           <div class="graphic-col col-lg-6 mb-5 mb-lg-0">
             <picture>
-              <source media="(max-width: 576px)" srcset="./images/hero/sale-image@576x.webp" type="image/webp">
-              <source media="(max-width: 768px)" srcset="./images/hero/sale-image@768x.webp" type="image/webp">
-              <source media="(max-width: 992px)" srcset="./images/hero/sale-image@992x.webp" type="image/webp">
-              <source media="(max-width: 1200px)" srcset="./images/hero/sale-image@1200x.webp" type="image/webp">
-              <source media="(min-width: 1201px)" srcset="./images/hero/sale-image.svg" type="image/svg+xml">
-              <img class="img-fluid" src="./images/hero/sale-image.svg" alt="Limited Time Sale Deals" loading="lazy">
+              <source media="(max-width: 576px)" srcset="/src/assets/hero/sale-image@576x.webp" type="image/webp">
+              <source media="(max-width: 768px)" srcset="/src/assets/hero/sale-image@768x.webp" type="image/webp">
+              <source media="(max-width: 992px)" srcset="/src/assets/hero/sale-image@992x.webp" type="image/webp">
+              <source media="(max-width: 1200px)" srcset="/src/assets/hero/sale-image@1200x.webp" type="image/webp">
+              <source media="(min-width: 1201px)" srcset="/src/assets/hero/sale-image.svg" type="image/svg+xml">
+              <img class="img-fluid" src="/src/assets/hero/sale-image.svg" alt="Limited Time Sale Deals" loading="lazy">
             </picture>
           </div>
           <div class="text-col col-lg-6">
             <!-- <h2 class="fs-3 text-uppercase mb-2">Buy one Get one Free!</h2> -->
             <h3 class="display-4 text-uppercase mb-3">Weekly Sale is now Live!</h3>
-            <a href="https://maps.app.goo.gl/7DvDtoe2L5U6awqu6" class="btn btn-primary" target="_blank">Come Visit Us!</a>
+            <a href="https://maps.app.goo.gl/5LcX4sf9Wz3zGMxE9" class="btn btn-primary" target="_blank">Come Visit Us!</a>
           </div>
         </div>
         <div class="on-sale-section">
@@ -246,7 +261,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 pb-4 text-center text-md-start">
-          <img class="img-fluid footer-logo" src="images/logo.svg" alt="logo">
+          <img class="img-fluid footer-logo" src="/src/assets/logo.svg" alt="logo">
         </div>
         <div class="col-md-4 pb-4">
           <div class="pb-2 h4">Quick Links:</div>
@@ -277,7 +292,7 @@
       </div>
     </div>
     <a class="top-link" href="#home" title="Go to Top">
-      <i class='btn btn-outline-secondary p-2 rounded-pill bx bxs-to-top'></i>
+      <i class='btn btn-outline-primary p-2 rounded-pill bx bxs-to-top'></i>
     </a>
   </footer>
 

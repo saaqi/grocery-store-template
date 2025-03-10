@@ -13,19 +13,19 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
-    "autoprefixer": "^10.4.20",
+    "autoprefixer": "^10.4.21",
     "bootstrap": "^5.3.3",
     "cssnano": "^7.0.6",
-    "postcss": "^8.4.49",
-    "sass": "^1.81.0",
-    "vite": "^5.4.11",
+    "postcss": "^8.5.3",
+    "sass": "^1.85.1",
+    "vite": "^5.4.14",
     "vite-plugin-minify": "^2.1.0",
-    "vite-plugin-webfont-dl": "^3.10.2"
+    "vite-plugin-webfont-dl": "^3.10.4"
   },
   "dependencies": {
     "@glidejs/glide": "^3.7.1",
     "@popperjs/core": "^2.11.8",
     "boxicons": "^2.1.4",
-    "caniuse-lite": "^1.0.30001684"
+    "caniuse-lite": "^1.0.30001703"
   }
 }

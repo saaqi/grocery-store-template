@@ -28,7 +28,7 @@ export default defineConfig({
     // Minify Output HTML File
     IN_PRODUCTION && ViteMinifyPlugin({}),
   ],
-  base: "./",
+  // base: "./",
   server: {
     hot: true,
     port: 3000,

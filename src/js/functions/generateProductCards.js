@@ -2,6 +2,9 @@ import Modal from "bootstrap/js/dist/modal.js";
 // Include the classes added by Bootstrap Modal to keep them from purging on build from stylesheet ;)
 // ".modal-backdrop, .fad, .show, .modal-open"
 
+// Import Portfolio Media Folder
+const productPics = import.meta.glob('../../products/images/**/*', { eager: true });
+
 
 const generateProductCards = prods => {
   // Destructure properties from prods with default values to avoid errors
@@ -18,6 +21,9 @@ const generateProductCards = prods => {
     quantity = ''
   } = prods;
 
+  // const coverImage = portfolioMedia[`../assets/images/${cover}`]?.default || '/path/to/placeholder.jpg';
+  const coverImage = productPics[`../../products/images/${img}`]?.default || '';
+
   // Calculate percentage discount
   const percent = () => {
     const percentage = ((price - sale) / price) * 100;
@@ -25,12 +31,14 @@ const generateProductCards = prods => {
     return roundedPercentage;
   };
 
+
+
   // Generate HTML output
   const output =
     `<li class="col-6 col-lg-3">`+
       `<div class="product-card card shadow-sm h-100">`+
         `<div class="image-holder">`+
-          `<img src="${img}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy">`+
+          `<img src="${coverImage}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy">`+
         `</div>`+
         `<div class="card-body d-flex flex-column gap-2 p-2 p-sm-3">`+
           `<div class="card-title h5 mb-0">${title}</div>`+
@@ -52,7 +60,7 @@ const generateProductCards = prods => {
               `<i class='bx bxl-whatsapp'></i>`+
             `</a>`+
             `${desc ?
-              `<button type="button" class="btn btn-outline-dark p-2 p-2 modal-button" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!">`+
+              `<button type="button" class="btn btn-outline-dark modal-button" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!">`+
                 `<i class="bx bx-info-circle"></i>`+
               `</button>`
             : ''}`+
@@ -79,7 +87,7 @@ const generateProductCards = prods => {
               `<div class="modal-body">`+
                 `<div class="container-fluid">`+
                   `<div class="row">`+
-                    `<img src="${img}" alt="${title}" class="col-md-4 h-100 img-fluid mb-3 p-0 rounded shadow-sm" loading="lazy">`+
+                    `<img src="${coverImage}" alt="${title}" class="col-md-4 h-100 img-fluid mb-3 p-0 rounded shadow-sm" loading="lazy">`+
                     `<div class="col-md-8">`+
                       `<h4 class="modal-heading">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>`+
                       `<p class="card-text my-3">${desc}</p>`+
