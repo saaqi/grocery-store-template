@@ -44,6 +44,7 @@ const shopCats = [
 import { alphabetSortedProducts } from "./products.js";
 import { attachProducts } from "../functions/generateProductCards.js";
 
+
 const generateShopCats = cats => {
 
   const {
@@ -62,7 +63,7 @@ const generateShopCats = cats => {
       `</h2>`+
       `<div id="${number}" class="accordion-collapse collapse" data-bs-parent="#shopAccordian">`+
         `<div class="accordion-body px-0 py-1">`+
-          `<ul id="${shopId}" class="list-unstyled row g-1 g-md-2"></ul>`+
+          `<ul id="${shopId}" class="list-unstyled draggableContainer"></ul>`+
         `</div>`+
       `</div>`+
     `</div>`;

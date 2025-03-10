@@ -2,8 +2,9 @@ import "bootstrap/js/dist/modal.js";
 // Include the classes added by Bootstrap Modal to keep them from purging on build from stylesheet ;)
 // ".modal-backdrop, .fad, .show, .modal-open"
 
-// Import Portfolio Media Folder
+// Import Products Images folder
 const productPics = import.meta.glob('../../assets/products/**/*', { eager: true });
+import fallBackImg from '../../assets/web-app-manifest-192x192.png';
 
 
 const generateProductCards = prods => {
@@ -21,8 +22,7 @@ const generateProductCards = prods => {
     quantity = ''
   } = prods;
 
-  // const coverImage = portfolioMedia[`../assets/images/${cover}`]?.default || '/path/to/placeholder.jpg';
-  const coverImage = productPics[`../../assets/products/${img}`]?.default || '';
+  const coverImage = productPics[`../../assets/products/${img}`]?.default || fallBackImg;
 
   // Calculate percentage discount
   const percent = () => {
@@ -35,10 +35,10 @@ const generateProductCards = prods => {
 
   // Generate HTML output
   const output =
-    `<li class="col-6 col-lg-3">`+
+    `<li class="col-6 col-lg-3 draggableItem">`+
       `<div class="product-card card shadow-sm h-100">`+
         `<div class="image-holder">`+
-          `<img src="${coverImage}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy">`+
+          `<img src="${coverImage}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy" draggable="false">`+
         `</div>`+
         `<div class="card-body d-flex flex-column gap-2 p-2 p-sm-3">`+
           `<div class="card-title h5 mb-0">${title}</div>`+

@@ -37,6 +37,18 @@ document.querySelectorAll('.accordion-item').forEach((item) => {
 });
 
 
+// Setup Carousel
+import "../scss/draggable.scss";
+import draggableContainer from "./functions/draggableContainer.js";
+draggableContainer('fresh_fruits');
+draggableContainer('fresh_vegetables');
+draggableContainer('frozen_meats');
+draggableContainer('frozen_seafood');
+draggableContainer('frozen_vegetables');
+draggableContainer('crown_foods');
+draggableContainer('telecommunications');
+
+
 // ---------------------------------------------------------------------
 // Product Cards Modals Social Links
 attachSocialLinksByClass('.modal-header .social-links');
