@@ -1,9 +1,9 @@
-import Modal from "bootstrap/js/dist/modal.js";
+import "bootstrap/js/dist/modal.js";
 // Include the classes added by Bootstrap Modal to keep them from purging on build from stylesheet ;)
 // ".modal-backdrop, .fad, .show, .modal-open"
 
 // Import Portfolio Media Folder
-const productPics = import.meta.glob('../../products/images/**/*', { eager: true });
+const productPics = import.meta.glob('../../assets/products/**/*', { eager: true });
 
 
 const generateProductCards = prods => {
@@ -22,7 +22,7 @@ const generateProductCards = prods => {
   } = prods;
 
   // const coverImage = portfolioMedia[`../assets/images/${cover}`]?.default || '/path/to/placeholder.jpg';
-  const coverImage = productPics[`../../products/images/${img}`]?.default || '';
+  const coverImage = productPics[`../../assets/products/${img}`]?.default || '';
 
   // Calculate percentage discount
   const percent = () => {
