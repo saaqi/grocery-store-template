@@ -2,7 +2,7 @@
   "name": "grocery-store-template",
   "description": "This project provides a flexible and customizable template for building your own online grocery store. Whether you're a developer looking to create a new e-commerce platform or a business owner aiming to establish an online presence for your grocery store, this template serves as a solid foundation.",
   "private": true,
-  "version": "1.0.13",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
