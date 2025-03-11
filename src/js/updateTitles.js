@@ -8,20 +8,20 @@ document.addEventListener("DOMContentLoaded", () => {
       title: orgTitle,
     },
     {
-      id: "featured",
-      title: `Featured Products | ${title}`,
+      id: "sale",
+      title: `On Sale | ${title}`,
     },
     {
       id: "arrivals",
       title: `New Arrivals | ${title}`,
     },
     {
-      id: "shop",
-      title: `Shop | ${title}`,
+      id: "featured",
+      title: `Featured Products | ${title}`,
     },
     {
-      id: "sale",
-      title: `On Sale | ${title}`,
+      id: "shop",
+      title: `Shop | ${title}`,
     },
     {
       id: "contact",

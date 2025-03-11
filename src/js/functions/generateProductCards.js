@@ -16,6 +16,7 @@ const generateProductCards = prods => {
     price = '',
     sale = '',
     img = '',
+    img_extra = [],
     id = '',
     stock = '',
     uom = '',
@@ -23,6 +24,9 @@ const generateProductCards = prods => {
   } = prods;
 
   const coverImage = productPics[`../../assets/products/${img}`]?.default || fallBackImg;
+  const extraImages = img_extra.map((img) => {
+    return `<div class="col-6 col-lg-4"><img src="${productPics[`../../assets/products/${img}`]?.default || fallBackImg}" alt="${title}" class="img-fluid rounded shadow-sm" loading="lazy"></div>`;
+  }).join('');
 
   // Calculate percentage discount
   const percent = () => {
@@ -40,11 +44,11 @@ const generateProductCards = prods => {
         `<div class="image-holder">`+
           `<img src="${coverImage}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy" draggable="false">`+
         `</div>`+
-        `<div class="card-body d-flex flex-column gap-2 p-2 p-sm-3">`+
+        `<div class="card-body d-flex flex-column align-items-start gap-2 p-2 p-sm-3">`+
           `<div class="card-title h5 mb-0">${title}</div>`+
-          `${quantity ? `<div class="card-qauntity mb-0">${quantity} ${uom}</div>` : ''}`+
+          `${quantity ? `<div class="card-qauntity py-1 px-2 fw-medium rounded-2 bg-primary-subtle text-center">${quantity} ${uom}</div>` : ''}`+
           `${s_desc ? `<div class="short-description">${s_desc}</div>` : ''}`+
-          `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} flex-column flex-sm-row align-items-center mb-2 mt-auto gap-sm-1 gap-2 text-center">`+
+          `<div class="sale-price w-100 d-flex justify-content-${sale ? `between` : `end`} flex-column flex-sm-row align-items-center mb-2 mt-auto gap-sm-1 gap-2 text-center">`+
           `${stock ?
             `${price ?
               `<div class="item-price-regular rounded py-1 px-2 fw-medium ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`}">€${price.toFixed(2)}</div>`
@@ -66,9 +70,7 @@ const generateProductCards = prods => {
             : ''}`+
           `</div>`+
         `</div>`+
-        `${sale ?
-          `<i class='bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm'></i>`
-        : ''}`+
+        `${sale ? `<i class='bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm'></i>` : ''}`+
       `</div>` +
 
       // Modal Info Box
@@ -92,12 +94,12 @@ const generateProductCards = prods => {
                       `<h4 class="modal-heading">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>`+
                       `<p class="card-text my-3">${desc}</p>`+
                       `<div class="sale-price d-flex justify-content-${sale ? `between` : `end`} align-items-center mb-2 mt-auto gap-1 text-center">`+
-                        `${price ? `<div class="item-price-regular ${sale ? `bg-info text-bg-info text-decoration-line-through`
-                          : `bg-primary text-bg-primary`} rounded py-1 px-2 fw-medium">€${price.toFixed(2)}</div> ` : ''}`+
+                        `${price ? `<div class="item-price-regular ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`} rounded py-1 px-2 fw-medium">€${price.toFixed(2)}</div> ` : ''}`+
                         `${sale ? `<div class="percent fw-medium">${percent()}</div>`+
                         `<div class="item-price-sale bg-primary text-bg-primary rounded py-1 px-2 fw-medium">€${sale.toFixed(2)}</div>` : ''}` +
                       `</div>` +
                     `</div>`+
+                    `${img_extra ? `<div class="container mt-3"><div class="row g-3">${extraImages}</div></div>` : ''}`+
                   `</div>`+
                 `</div>`+
               `</div>`+

@@ -1,0 +1,69 @@
+[
+  {
+    "title": "Premium Travel Suitcase Set",
+    "s_desc": "Travel with ease using our 3-piece suitcase set, available in multiple colors to match your style! Lightweight, durable, and spacious, these suitcases are perfect for all your adventures.",
+    "desc": "<p>Upgrade your travel experience with our Premium Suitcase Collection! This 3-piece luggage set comes in different sizes to suit all your needs—from quick getaways to long vacations. Made with high-quality, durable materials, these suitcases are designed to withstand the rigors of travel while keeping your belongings safe.</p><ul class='list-unstyled mb-3'><li>✅ Available in multiple colors to match your style</li><li>✅ Spacious & lightweight for easy packing</li><li>✅ Smooth-rolling wheels for effortless movement</li><li>✅ Strong & secure zippers for added protection</li></ul><p>Perfect for business trips, vacations, and family travels—get yours today at Sadiq Super Store! 🛍️✨</p>",
+    "img": "home_essentials/suite_case_3x.webp",
+    "img_extra": [
+      "home_essentials/suite_case_3x_ex1.webp",
+      "home_essentials/suite_case_3x_ex2.webp",
+      "home_essentials/suite_case_3x_ex3.webp",
+      "home_essentials/suite_case_3x_ex4.webp",
+      "home_essentials/suite_case_3x_ex5.webp",
+      "home_essentials/suite_case_3x_ex6.webp"
+    ],
+    "stock": true,
+    "featured": true,
+    "uom": "PC(s)",
+    "quantity": 3,
+    "price": 180,
+    "sale": 130,
+    "cat": "Home Essentials",
+    "added": 20250309
+  },
+  {
+    "title": "Musallah (Prayer Mat)",
+    "s_desc": "Experience peace and comfort during your prayers with our high-quality Musallah. Designed with soft, durable fabric, it provides a comfortable surface for daily worship. Perfect for home, travel, or gifting! 🙏✨",
+    "desc": false,
+    "img": "home_essentials/musllah.webp",
+    "img_extra": [],
+    "stock": true,
+    "featured": false,
+    "uom": "PC(s)",
+    "quantity": 1,
+    "price": 5.00,
+    "sale": false,
+    "cat": "Home Essentials",
+    "added": 20250308
+  },
+  {
+    "title": "Tasbeeh (Digital)",
+    "s_desc": "Keep track of your prayers and supplications effortlessly with our Digital Tasbeeh. Compact, easy to use, and perfect for daily zikr, it helps you stay focused and connected anytime, anywhere! 🙏✨",
+    "desc": false,
+    "img": "home_essentials/digtal_tasbeeh.webp",
+    "img_extra": [],
+    "stock": true,
+    "featured": false,
+    "uom": "PC(s)",
+    "quantity": 1,
+    "price": 5.00,
+    "sale": false,
+    "cat": "Home Essentials",
+    "added": 20250308
+  },
+  {
+    "title": "Tasbeeh (Prayer Beads)",
+    "s_desc": "Our Tasbeeh (Prayer Beads) are crafted with care to help you stay focused during dhikr. With smooth, durable beads, it's the perfect tool for enhancing your spiritual practice and bringing peace to your heart. 🙏✨",
+    "desc": false,
+    "img": "home_essentials/tasbeeh.webp",
+    "img_extra": [],
+    "stock": true,
+    "featured": false,
+    "uom": "PC(s)",
+    "quantity": 1,
+    "price": false,
+    "sale": false,
+    "cat": "Home Essentials",
+    "added": 20250308
+  }
+]

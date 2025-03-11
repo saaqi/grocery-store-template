@@ -9,7 +9,7 @@ import shop_categories from "./data/shop_categories.js";
 
 // ---------------------------------------------------------------------
 // Attach "new-arrivals" section to include the first 4 products in the sorted array.
-const arrivalProducts = dateSortedProducts.slice(0, 4);
+const arrivalProducts = dateSortedProducts.filter((prods) => !prods.featured && !prods.sale).slice(0, 4);
 attachProducts(arrivalProducts, "new-arrivals");
 
 
@@ -45,7 +45,9 @@ draggableContainer('fresh_vegetables');
 draggableContainer('frozen_meats');
 draggableContainer('frozen_seafood');
 draggableContainer('frozen_vegetables');
-draggableContainer('crown_foods');
+draggableContainer('frozen_foods');
+draggableContainer('nuts_dry_fruits');
+draggableContainer('home_essentials');
 draggableContainer('telecommunications');
 
 

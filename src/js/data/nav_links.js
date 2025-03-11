@@ -5,14 +5,19 @@ const nav_links = [
     icon: "<i class='bx bxs-home-smile'></i>",
   },
   {
-    link: "featured",
-    text: "Featured",
-    icon: "<i class='bx bxs-shopping-bag-alt'></i>",
+    link: "sale",
+    text: "Sale",
+    icon: "<i class='bx bxs-shopping-bag'></i>",
   },
   {
     link: "arrivals",
     text: "New Arrivals",
     icon: "<i class='bx bxs-shopping-bags'></i>",
+  },
+  {
+    link: "featured",
+    text: "Featured",
+    icon: "<i class='bx bxs-shopping-bag-alt'></i>",
   },
   {
     link: "shop",
@@ -45,8 +50,18 @@ const nav_links = [
         icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
-        link: "frozen-crown-foods-shop",
-        text: "Crown Frozen Foods",
+        link: "frozen-foods-shop",
+        text: "Frozen Foods",
+        icon: "<i class='bx bxs-purchase-tag'></i>",
+      },
+      {
+        link: "nuts-dry-fruits-shop",
+        text: "Nuts Dry Fruits",
+        icon: "<i class='bx bxs-purchase-tag'></i>",
+      },
+      {
+        link: "home-essentials-shop",
+        text: "Home Essentials",
         icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
@@ -55,11 +70,6 @@ const nav_links = [
         icon: "<i class='bx bxs-purchase-tag'></i>",
       },
     ],
-  },
-  {
-    link: "sale",
-    text: "Sale",
-    icon: "<i class='bx bxs-shopping-bag'></i>",
   },
   {
     link: "contact",
