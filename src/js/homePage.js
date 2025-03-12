@@ -1,7 +1,6 @@
 import "bootstrap/js/dist/collapse.js";
 
 import { attachProducts } from "./functions/generateProductCards.js";
-import { attachSocialLinksByClass } from "./functions/attachSocialLinks.js";
 import { dateSortedProducts } from "./data/products.js";
 
 import shop_categories from "./data/shop_categories.js";
@@ -49,8 +48,3 @@ draggableContainer('frozen_foods');
 draggableContainer('nuts_dry_fruits');
 draggableContainer('home_essentials');
 draggableContainer('telecommunications');
-
-
-// ---------------------------------------------------------------------
-// Product Cards Modals Social Links
-attachSocialLinksByClass('.modal-header .social-links');

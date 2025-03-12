@@ -4,8 +4,6 @@ import "bootstrap/js/dist/dropdown.js";
 
 import nav_links from "./data/nav_links.js";
 
-import { attachSocialLinksById } from "./functions/attachSocialLinks.js";
-
 // Setup Navigation Links
 const navigationLinks = nav_links.map( nl => {
   const {
@@ -44,10 +42,6 @@ const navigationLinks = nav_links.map( nl => {
 
 const navLinkElements = document.getElementById("navbar");
 if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");
-
-
-// Attach social links on top of mobile navigation
-attachSocialLinksById('nav-socia-links');
 
 
 

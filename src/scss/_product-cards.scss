@@ -15,14 +15,10 @@
 }
 
 .card-qauntity {
-  // background-color: var(--bs-primary);
-  // text-align: center;
-  // color: var(--bs-white);
-  // padding: 10px 20px;
-  // width: auto !important;
-  flex-grow: 0;
-  // flex-grow: none;
-  flex-shrink: 0;
   flex-basis: 5em;
   flex: 0
+}
+
+.sale-price > * {
+  flex: auto;
 }
