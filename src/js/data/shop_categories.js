@@ -1,4 +1,15 @@
+
+import { products } from "./products.js";
+import { attachProducts } from "../functions/generateProductCards.js";
+import "../../scss/draggable.scss";
+import draggableContainer from "../functions/draggableContainer.js";
+
 const shopCats = [
+  {
+    category: 'drinks-shop',
+    title: 'Drinks',
+    shopId: 'drinks',
+  },
   {
     category: 'fruit-shop',
     title: 'Fresh Fruits',
@@ -6,8 +17,8 @@ const shopCats = [
   },
   {
     category: 'vegetable-shop',
-    title: 'Fresh Vegetables',
-    shopId: 'fresh_vegetables',
+    title: 'Vegetables',
+    shopId: 'vegetables',
   },
   {
     category: 'frozen-meats-shop',
@@ -18,11 +29,6 @@ const shopCats = [
     category: 'frozen-seafood-shop',
     title: 'Frozen Sea Food',
     shopId: 'frozen_seafood',
-  },
-  {
-    category: 'frozen-vegetables-shop',
-    title: 'Frozen Vegetables',
-    shopId: 'frozen_vegetables',
   },
   {
     category: 'frozen-foods-shop',
@@ -51,8 +57,7 @@ const shopCats = [
   };
 });
 
-import { products } from "./products.js";
-import { attachProducts } from "../functions/generateProductCards.js";
+
 
 
 const generateShopCats = cats => {
@@ -66,7 +71,7 @@ const generateShopCats = cats => {
 
   const output =
     `<div id="${category}" class="accordion-item bg-transparent">
-     <h2 class="accordion-header">
+      <h2 class="accordion-header">
         <button class="accordion-button collapsed fw-medium fs-5 btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#${number}" aria-expanded="false" aria-controls="${number}">
           ${title}
         </button>
@@ -93,16 +98,16 @@ const shop_categories = parentId => {
   }
 
   // Attach the shops data to their respective categories
-  attachProducts(products.filter((p) => p.cat === 'Fresh Fruits'), "fresh_fruits");
-  attachProducts(products.filter((p) => p.cat === 'Fresh Vegetables'), "fresh_vegetables");
-  attachProducts(products.filter((p) => p.cat === 'Frozen Meats'), "frozen_meats");
-  attachProducts(products.filter((p) => p.cat === 'Frozen Seafood'), "frozen_seafood");
-  attachProducts(products.filter((p) => p.cat === 'Frozen Vegetables'), "frozen_vegetables");
-  attachProducts(products.filter((p) => p.cat === 'Frozen Foods'), "frozen_foods");
-  attachProducts(products.filter((p) => p.cat === 'Nuts & Dry Fruits'), "nuts_dry_fruits");
-  attachProducts(products.filter((p) => p.cat === 'Home Essentials'), "home_essentials");
-  attachProducts(products.filter((p) => p.cat === 'Telecommunications'), "telecommunications");
+  shopCats.forEach(cat => {
+    attachProducts(products.filter(p => p.cat === cat.title), cat.shopId);
+  });
 }
 
+// Setup Carousel
+document.addEventListener('DOMContentLoaded', function () {
+  shopCats.forEach((cat) => {
+    draggableContainer(cat.shopId);
+  })
+})
 
 export default shop_categories;

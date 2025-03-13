@@ -25,49 +25,40 @@ const nav_links = [
     icon: "<i class='bx bxs-store'></i>",
     subcategories: [
       {
+        link: "drinks-shop",
+        text: "Drinks",
+      },
+      {
         link: "fruit-shop",
         text: "Fresh Fruits",
-        icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
         link: "vegetable-shop",
-        text: "Fresh Vegetables",
-        icon: "<i class='bx bxs-purchase-tag'></i>",
+        text: "Vegetables",
       },
       {
         link: "frozen-meats-shop",
         text: "Frozen Meats",
-        icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
         link: "frozen-seafood-shop",
         text: "Frozen Sea Food",
-        icon: "<i class='bx bxs-purchase-tag'></i>",
-      },
-      {
-        link: "frozen-vegetables-shop",
-        text: "Frozen Vegetables",
-        icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
         link: "frozen-foods-shop",
         text: "Frozen Foods",
-        icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
         link: "nuts-dry-fruits-shop",
         text: "Nuts Dry Fruits",
-        icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
         link: "home-essentials-shop",
         text: "Home Essentials",
-        icon: "<i class='bx bxs-purchase-tag'></i>",
       },
       {
         link: "telecommunications-shop",
         text: "Telecommunications",
-        icon: "<i class='bx bxs-purchase-tag'></i>",
       },
     ],
   },

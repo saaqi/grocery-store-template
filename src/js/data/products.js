@@ -1,8 +1,8 @@
+import drinks from "./products/drinks.json";
 import fresh_fruits from "./products/fresh_fruits.json";
-import fresh_vegetables from "./products/fresh_vegetables.json";
+import vegetables from "./products/vegetables.json";
 import frozen_meats from "./products/frozen_meats.json";
 import frozen_seafood from "./products/frozen_seafood.json";
-import frozen_vegetables from "./products/frozen_vegetables.json";
 import frozen_foods from "./products/frozen_foods.json";
 import nuts_dry_fruits from "./products/nuts_dry_fruits.json";
 import home_essentials from "./products/home_essentials.json";
@@ -10,11 +10,11 @@ import telecommunications from "./products/telecommunications.json";
 
 // Combine all products from different categories into one array
 export const products = [
+  ...drinks,
   ...fresh_fruits,
-  ...fresh_vegetables,
+  ...vegetables,
   ...frozen_meats,
   ...frozen_seafood,
-  ...frozen_vegetables,
   ...frozen_foods,
   ...nuts_dry_fruits,
   ...home_essentials,

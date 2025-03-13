@@ -35,16 +35,3 @@ document.querySelectorAll('.accordion-item').forEach((item) => {
   });
 });
 
-
-// Setup Carousel
-import "../scss/draggable.scss";
-import draggableContainer from "./functions/draggableContainer.js";
-draggableContainer('fresh_fruits');
-draggableContainer('fresh_vegetables');
-draggableContainer('frozen_meats');
-draggableContainer('frozen_seafood');
-draggableContainer('frozen_vegetables');
-draggableContainer('frozen_foods');
-draggableContainer('nuts_dry_fruits');
-draggableContainer('home_essentials');
-draggableContainer('telecommunications');
