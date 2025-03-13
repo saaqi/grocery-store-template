@@ -25,39 +25,39 @@ const nav_links = [
     icon: "<i class='bx bxs-store'></i>",
     subcategories: [
       {
-        link: "drinks-shop",
+        link: "drinks_shop",
         text: "Drinks",
       },
       {
-        link: "fruit-shop",
+        link: "fresh_fruits_shop",
         text: "Fresh Fruits",
       },
       {
-        link: "vegetable-shop",
+        link: "vegetables_shop",
         text: "Vegetables",
       },
       {
-        link: "frozen-meats-shop",
+        link: "frozen_meats_shop",
         text: "Frozen Meats",
       },
       {
-        link: "frozen-seafood-shop",
+        link: "frozen_seafood_shop",
         text: "Frozen Sea Food",
       },
       {
-        link: "frozen-foods-shop",
+        link: "frozen_foods_shop",
         text: "Frozen Foods",
       },
       {
-        link: "nuts-dry-fruits-shop",
+        link: "nuts_dry_fruits_shop",
         text: "Nuts Dry Fruits",
       },
       {
-        link: "home-essentials-shop",
+        link: "home_essentials_shop",
         text: "Home Essentials",
       },
       {
-        link: "telecommunications-shop",
+        link: "telecommunications_shop",
         text: "Telecommunications",
       },
     ],
