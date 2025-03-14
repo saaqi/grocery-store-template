@@ -4,61 +4,34 @@ import { attachProducts } from "../functions/generateProductCards.js";
 import draggableContainer from "../functions/draggableContainer.js";
 import "../../scss/draggable.scss";
 
-const shopCats = [
-  {
-    title: 'Drinks',
-    shopId: 'drinks',
-  },
-  {
-    title: 'Fresh Fruits',
-    shopId: 'fresh_fruits',
-  },
-  {
-    title: 'Vegetables',
-    shopId: 'vegetables',
-  },
-  {
-    title: 'Frozen Meats',
-    shopId: 'frozen_meats',
-  },
-  {
-    title: 'Frozen Seafood',
-    shopId: 'frozen_seafood',
-  },
-  {
-    title: 'Frozen Foods',
-    shopId: 'frozen_foods',
-  },
-  {
-    title: 'Nuts & Dry Fruits',
-    shopId: 'nuts_dry_fruits',
-  },
-  {
-    title: 'Home Essentials',
-    shopId: 'home_essentials',
-  },
-  {
-    title: 'Telecommunications',
-    shopId: 'telecommunications',
-  },
-]
+export const shopCats = [...new Set(products.map(item => item.cat).filter(cat => cat))].map(cat => ({ cat }))
+  .map((item, index) => {
+    return {
+      ...item,
+      title: item.cat,
+      shopId: item.cat.toLowerCase().replace(/\s+/g, '_'),
+      shopLink: item.cat.toLowerCase().replace(/\s+/g, '_') + '_shop',
+      shopIndex: `shop-` + index
+    }
+  });
 
-
-const generateShopCats = (cats, index) => {
+const generateShopCats = cats => {
 
   const {
     title = '',
     shopId = '',
+    shopLink = '',
+    shopIndex = ''
   } = cats;
 
   const output =
-    `<div id="${shopId + '_shop'}" class="accordion-item bg-transparent">
+    `<div id="${shopLink}" class="accordion-item bg-transparent">
       <h2 class="accordion-header">
-        <button class="accordion-button collapsed fw-medium fs-5 btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#${`shop-` + index}" aria-expanded="false" aria-controls="${`shop-` + index}">
+        <button class="accordion-button collapsed fw-medium fs-5 btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#${shopIndex}" aria-expanded="false" aria-controls="${shopIndex}">
           ${title}
         </button>
       </h2>
-      <div id="${`shop-` + index}" class="accordion-collapse collapse" data-bs-parent="#shopAccordian">
+      <div id="${shopIndex}" class="accordion-collapse collapse" data-bs-parent="#shopAccordian">
         <div class="accordion-body px-0 py-1">
           <ul id="${shopId}" class="list-unstyled draggableContainer row g-2"></ul>
           <div class="directionIndicators fs-4">

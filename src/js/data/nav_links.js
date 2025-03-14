@@ -1,3 +1,5 @@
+import { shopCats } from "./shop_categories";
+
 const nav_links = [
   {
     link: "home",
@@ -23,44 +25,7 @@ const nav_links = [
     link: "shop",
     text: "Shop",
     icon: "<i class='bx bxs-store'></i>",
-    subcategories: [
-      {
-        link: "drinks_shop",
-        text: "Drinks",
-      },
-      {
-        link: "fresh_fruits_shop",
-        text: "Fresh Fruits",
-      },
-      {
-        link: "vegetables_shop",
-        text: "Vegetables",
-      },
-      {
-        link: "frozen_meats_shop",
-        text: "Frozen Meats",
-      },
-      {
-        link: "frozen_seafood_shop",
-        text: "Frozen Sea Food",
-      },
-      {
-        link: "frozen_foods_shop",
-        text: "Frozen Foods",
-      },
-      {
-        link: "nuts_dry_fruits_shop",
-        text: "Nuts Dry Fruits",
-      },
-      {
-        link: "home_essentials_shop",
-        text: "Home Essentials",
-      },
-      {
-        link: "telecommunications_shop",
-        text: "Telecommunications",
-      },
-    ],
+    subcategories: [],
   },
   {
     link: "contact",
@@ -68,5 +33,11 @@ const nav_links = [
     icon: "<i class='bx bxs-contact'></i>",
   },
 ];
+
+nav_links.forEach(item => {
+  if (item.link === "shop") {
+    item.subcategories = shopCats;
+  }
+});
 
 export default nav_links;

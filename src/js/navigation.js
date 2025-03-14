@@ -23,8 +23,8 @@ const navigationLinks = nav_links.map( nl => {
       // Map over subcategories to generate dropdown items
       subcategories.map((subcategory) =>
         `<li class="nav-item m-2">
-          <a class="dropdown-item fw-medium shop-link ${subcategory.link}" href="#${subcategory.link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">
-            <i class='bx bxs-purchase-tag'></i> ${subcategory.text}
+          <a class="dropdown-item fw-medium shop-link ${subcategory.shopLink}" href="#${subcategory.shopLink}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">
+            <i class='bx bxs-purchase-tag'></i> ${subcategory.title}
           </a>
         </li>`).join("") +
       `</ul>` +
