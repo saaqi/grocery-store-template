@@ -7,7 +7,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1.0,
-    price: 10.00,
+    // price: 10.00,
     cat: "Frozen Meats",
     added: 20240501
   },
@@ -19,7 +19,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1.0,
-    price: 6.00,
+    // price: 6.00,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -31,8 +31,8 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1.0,
-    price: 10.00,
-    featured: true,
+    // price: 10.00,
+    // featured: true,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -44,7 +44,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 6,
+    // price: 6,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -56,7 +56,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 6,
+    // price: 6,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -68,7 +68,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 6,
+    // price: 6,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -80,7 +80,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 5,
+    // price: 5,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -92,7 +92,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 5,
+    // price: 5,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -104,7 +104,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 5,
+    // price: 5,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -116,7 +116,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 6,
+    // price: 6,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -128,7 +128,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1.1,
-    price: 4,
+    // price: 4,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -140,7 +140,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1.2,
-    price: 4.5,
+    // price: 4.5,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -152,7 +152,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1.4,
-    price: 5,
+    // price: 5,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -164,8 +164,8 @@ export const frozen_meats = [
     stock: true,
     uom: "PC(s)",
     quantity: 1,
-    price: 10,
-    sale: 9,
+    // price: 10,
+    // sale: 9,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -177,8 +177,8 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 7.5,
-    featured: true,
+    // price: 7.5,
+    // featured: true,
     cat: "Frozen Meats",
     added: 20240430
   },
@@ -190,7 +190,7 @@ export const frozen_meats = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 9,
+    // price: 9,
     cat: "Frozen Meats",
     added: 20240430
   }

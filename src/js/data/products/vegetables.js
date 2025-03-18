@@ -260,7 +260,7 @@ export const vegetables = [
     stock: true,
     uom: "KG",
     quantity: 0.4,
-    price: 1.3,
+    // price: 1.3,
     cat: "Vegetables",
     added: 20240430
   },
@@ -272,8 +272,8 @@ export const vegetables = [
     stock: true,
     uom: "KG",
     quantity: 0.4,
-    price: 2.2,
-    sale: 2.0,
+    // price: 2.2,
+    // sale: 2.0,
     cat: "Vegetables",
     added: 20240503
   },
@@ -285,8 +285,8 @@ export const vegetables = [
     stock: true,
     uom: "KG",
     quantity: 0.4,
-    price: 2.0,
-    featured: true,
+    // price: 2.0,
+    // featured: true,
     cat: "Vegetables",
     added: 20240430
   },
@@ -298,7 +298,7 @@ export const vegetables = [
     stock: true,
     uom: "KG",
     quantity: 0.5,
-    price: 2.0,
+    // price: 2.0,
     cat: "Vegetables",
     added: 20240430
   },
@@ -310,7 +310,7 @@ export const vegetables = [
     stock: true,
     uom: "KG",
     quantity: "1.50 (approx.)",
-    price: 6.0,
+    // price: 6.0,
     cat: "Vegetables",
     added: 20240430
   },
@@ -322,7 +322,7 @@ export const vegetables = [
     stock: true,
     uom: "KG",
     quantity: 0.4,
-    price: 2.0,
+    // price: 2.0,
     cat: "Vegetables",
     added: 20240430
   },
@@ -334,7 +334,7 @@ export const vegetables = [
     stock: true,
     uom: "KG",
     quantity: 0.4,
-    price: 2.0,
+    // price: 2.0,
     cat: "Vegetables",
     added: 20240430
   },
@@ -346,7 +346,7 @@ export const vegetables = [
     stock: true,
     uom: "KG",
     quantity: 0.2,
-    price: 2.0,
+    // price: 2.0,
     cat: "Vegetables",
     added: 20240430
   },
@@ -358,7 +358,7 @@ export const vegetables = [
     stock: true,
     uom: "KG",
     quantity: 0.4,
-    price: 2.0,
+    // price: 2.0,
     cat: "Vegetables",
     added: 20240430
   }

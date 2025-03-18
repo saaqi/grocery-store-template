@@ -23,7 +23,7 @@ export const fresh_fruits = [
     desc:"Discover the tropical delight of our fresh coconuts, harvested from sun-kissed palm trees for unparalleled freshness and flavor. Crack open the rugged husk to reveal the creamy, hydrating flesh inside, perfect for snacking, baking, or adding a touch of exotic flair to your favorite dishes. Whether enjoyed raw, shredded, or blended into creamy coconut milk, our coconuts offer a bounty of health benefits, from promoting hydration and supporting digestion to providing essential nutrients like potassium and electrolytes. Elevate your culinary creations and transport your taste buds to paradise with the irresistible taste and versatility of our premium coconuts.",
     img:"fruits/coconut.webp",
     stock:true,
-    featured:true,
+    // featured:true,
     cat:"Fresh Fruits",
     added:20240501
   },
@@ -42,7 +42,7 @@ export const fresh_fruits = [
     desc:"Indulge in the succulent sweetness of our Brazilian mangoes, carefully sourced from sun-drenched orchards for their exceptional taste and juiciness. Bursting with tropical flavor and vibrant color, these mangoes are a true delight for the senses. Enjoy them fresh as a refreshing snack, blend them into creamy smoothies, or incorporate them into your favorite desserts and salads for a burst of exotic sweetness. With their rich aroma and silky texture, our Brazilian mangoes are sure to transport you to paradise with every bite, while providing a generous dose of vitamins, minerals, and antioxidants for your health and wellbeing.",
     img:"fruits/mango_brazilian.webp",
     stock:true,
-    featured:true,
+    // featured:true,
     cat:"Fresh Fruits",
     added:20240430
   },
@@ -79,7 +79,7 @@ export const fresh_fruits = [
     desc:"Indulge in the sweet and creamy goodness of our ripe yellow plantains, carefully selected for their golden hue and soft texture. With their naturally sweet flavor and tender consistency, yellow plantains are a versatile ingredient that can be enjoyed in both sweet and savory dishes. Packed with potassium, vitamins, and dietary fiber, our yellow plantains offer not only irresistible taste but also essential nutrients for your health and wellbeing.",
     img:"fruits/plantain_yellow.webp",
     stock:true,
-    featured:true,
+    // featured:true,
     cat:"Fresh Fruits",
     added:20240501
   }

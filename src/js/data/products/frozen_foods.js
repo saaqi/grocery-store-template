@@ -6,7 +6,7 @@ export const frozen_foods = [
     stock:true,
     uom:"PC(s)",
     quantity:1,
-    price:0.90,
+    // price:0.90,
     cat:"Frozen Foods",
     added:20250309
   },
@@ -18,8 +18,8 @@ export const frozen_foods = [
     stock:true,
     uom:"PC(s)",
     quantity:20.0,
-    price:8.00,
-    sale:7.20,
+    // price:8.00,
+    // sale:7.20,
     cat:"Frozen Foods",
     added:20240501
   },
@@ -31,7 +31,7 @@ export const frozen_foods = [
     stock:true,
     uom:"PC(s)",
     quantity:5.0,
-    price:1.80,
+    // price:1.80,
     cat:"Frozen Foods",
     added:20240503
   },
@@ -43,7 +43,7 @@ export const frozen_foods = [
     stock:true,
     uom:"PC(s)",
     quantity:4.0,
-    price:2.00,
+    // price:2.00,
     cat:"Frozen Foods",
     added:20240501
   },
@@ -55,7 +55,7 @@ export const frozen_foods = [
     stock:true,
     uom:"PC(s)",
     quantity:4.0,
-    price:2.00,
+    // price:2.00,
     cat:"Frozen Foods",
     added:20240501
   },
@@ -67,7 +67,7 @@ export const frozen_foods = [
     stock:true,
     uom:"PC(s)",
     quantity:4.0,
-    price:2.00,
+    // price:2.00,
     cat:"Frozen Foods",
     added:20240501
   },
@@ -79,7 +79,7 @@ export const frozen_foods = [
     stock:true,
     uom:"PC(s)",
     quantity:5.0,
-    price:2.50,
+    // price:2.50,
     cat:"Frozen Foods",
     added:20240501
   },
@@ -91,7 +91,7 @@ export const frozen_foods = [
     stock:true,
     uom:"PC(s)",
     quantity:20.0,
-    price:7.50,
+    // price:7.50,
     featured:true,
     cat:"Frozen Foods",
     added:20240501
@@ -104,7 +104,7 @@ export const frozen_foods = [
     stock:true,
     uom:"PC(s)",
     quantity:20.0,
-    price:7.50,
+    // price:7.50,
     cat:"Frozen Foods",
     added:20240501
   }

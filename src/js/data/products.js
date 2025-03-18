@@ -1,4 +1,4 @@
-import { drinks } from "./products/drinks";
+import { snacks_and_drinks } from "./products/snacks_and_drinks";
 import { fresh_fruits } from "./products/fresh_fruits";
 import { vegetables } from "./products/vegetables";
 import { frozen_meats } from "./products/frozen_meats";
@@ -10,7 +10,7 @@ import { telecommunications } from "./products/telecommunications";
 
 // Combine all products from different categories into one array
 export const products = [
-  ...drinks,
+  ...snacks_and_drinks,
   ...fresh_fruits,
   ...vegetables,
   ...frozen_meats,

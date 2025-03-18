@@ -7,7 +7,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 6,
+    // price: 6,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -19,7 +19,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 6,
+    // price: 6,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -31,7 +31,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: "1.5 (approx.)",
-    price: 6,
+    // price: 6,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -43,7 +43,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: "0.9 (approx.)",
-    price: 5.5,
+    // price: 5.5,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -55,7 +55,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 8,
+    // price: 8,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -67,7 +67,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 6,
+    // price: 6,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -79,7 +79,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "Bag",
     quantity: 1,
-    price: 7.5,
+    // price: 7.5,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -91,7 +91,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 6,
+    // price: 6,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -103,8 +103,8 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 15,
-    sale: 13,
+    // price: 15,
+    // sale: 13,
     featured: true,
     cat: "Frozen Seafood",
     added: 20240430
@@ -117,7 +117,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 0.200,
-    price: 4,
+    // price: 4,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -129,7 +129,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 1,
-    price: 18,
+    // price: 18,
     cat: "Frozen Seafood",
     added: 20240502
   },
@@ -141,7 +141,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 0.800,
-    price: 5.50,
+    // price: 5.50,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -153,7 +153,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 0.75,
-    price: 13,
+    // price: 13,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -165,7 +165,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 0.50,
-    price: 7.20,
+    // price: 7.20,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -177,7 +177,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 0.80,
-    price: 5.50,
+    // price: 5.50,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -189,7 +189,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 0.80,
-    price: 5.20,
+    // price: 5.20,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -201,7 +201,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 0.80,
-    price: 7.00,
+    // price: 7.00,
     cat: "Frozen Seafood",
     added: 20240430
   },
@@ -213,7 +213,7 @@ export const frozen_seafood = [
     stock: true,
     uom: "KG",
     quantity: 0.80,
-    price: 4.20,
+    // price: 4.20,
     cat: "Frozen Seafood",
     added: 20240430
   },
