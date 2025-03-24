@@ -1,6 +1,6 @@
 {
   "name": "Sadiq Super Store",
-  "short_name": "SSS",
+  "short_name": "Sadiq Store",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,8 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#F7F6BB",
+  "background_color": "#F7F6BB",
+  "start_url": "https://sadiqsuperstore.com",
   "display": "standalone"
 }
