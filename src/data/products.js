@@ -7,6 +7,7 @@ import { frozen_foods } from "./products/frozen_foods";
 import { nuts_dry_fruits } from "./products/nuts_dry_fruits";
 import { home_essentials } from "./products/home_essentials";
 import { telecommunications } from "./products/telecommunications";
+import { misc } from "./products/misc";
 
 // Combine all products from different categories into one array
 export const products = [
@@ -19,6 +20,7 @@ export const products = [
   ...nuts_dry_fruits,
   ...home_essentials,
   ...telecommunications,
+  ...misc,
 ].map((item, index) => {
   return {
     ...item,

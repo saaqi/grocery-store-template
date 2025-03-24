@@ -7,9 +7,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 3.00,
-    // sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    // sale: 0.50,added: 20250318
   },
   {
     title: "Fruit Cake",
@@ -19,9 +17,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 3.90,
-    // sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    // sale: 0.50,added: 20250318
   },
   {
     title: "Creem Roll",
@@ -31,9 +27,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 4.50,
-    // sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    // sale: 0.50,added: 20250318
   },
   {
     title: "Cake Rusk",
@@ -43,9 +37,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 6.00,
-    // sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    // sale: 0.50,added: 20250318
   },
   {
     title: "Sweets",
@@ -55,9 +47,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 3.00,
-    // sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    // sale: 0.50,added: 20250318
   },
   {
     title: "Sweets",
@@ -67,9 +57,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 3.00,
-    // sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    // sale: 0.50,added: 20250318
   },
   {
     title: "Buldok Noodles",
@@ -79,9 +67,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 2.00,
-    // sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    // sale: 0.50,added: 20250318
   },
   {
     title: "Buldok Noodles",
@@ -91,9 +77,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 2.50,
-    // sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    // sale: 0.50,added: 20250318
   },
   {
     title: "Maggi Noodles",
@@ -103,9 +87,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 0.70,
-    // sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    // sale: 0.50,added: 20250318
   },
   {
     title: "Miscellaneous Noodles",
@@ -115,9 +97,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 2.50,
-    // sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    // sale: 0.50,added: 20250318
   },
   {
     title: "Cookies and Biscuits",
@@ -128,9 +108,7 @@ export const snacks_and_drinks = [
     quantity: 1,
     price: 3.50,
     // sale: 0.50,
-    featured: true,
-    cat: "Snacks and Drinks",
-    added: 20250318
+    featured: true,added: 20250318
   },
   {
     title: "Sun Exotic Sparkling Fruit Juice",
@@ -140,9 +118,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 1.20,
-    sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250305
+    sale: 0.50,added: 20250305
   },
   {
     title: "Rubicon Sparkling Fruit Juice",
@@ -152,9 +128,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 1.20,
-    sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250305
+    sale: 0.50,added: 20250305
   },
   {
     title: "Maaza Fruit Punch",
@@ -164,9 +138,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 2.00,
-    sale: 1.00,
-    cat: "Snacks and Drinks",
-    added: 20250305
+    sale: 1.00,added: 20250305
   },
   {
     title: "Chaudfontaine Sparkling Water",
@@ -176,9 +148,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 1.00,
-    sale: 0.50,
-    cat: "Snacks and Drinks",
-    added: 20250305
+    sale: 0.50,added: 20250305
   },
   {
     title: "Hawai Fesa Strawberry Drink",
@@ -188,9 +158,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 2.00,
-    sale: 1.00,
-    cat: "Snacks and Drinks",
-    added: 20250309
+    sale: 1.00,added: 20250309
   },
   {
     title: "OKF Farmer Aloe Vera Drink",
@@ -200,8 +168,6 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 1.50,
-    sale: 1.00,
-    cat: "Snacks and Drinks",
-    added: 20250308
+    sale: 1.00,added: 20250308
   }
-]
+].map((item) => ({ ...item, cat: 'Snacks and Drinks' }));

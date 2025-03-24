@@ -1,6 +1,19 @@
 export const home_essentials = [
   {
-    title: "Miscellaneous Home Cleaning Equipment",
+    title: "Clocks – Stylish and Functional",
+    s_desc: "Upgrade your space with our beautiful and functional clocks – perfect for any home or office! 🏡⌚ Available in multiple designs to match your style.",
+    // desc: "",
+    img: "home_essentials/clocks.webp",
+    stock: true,
+    featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 30.00,
+    sale: 15.00,
+    added: 20250324
+  },
+  {
+    title: "Home Cleaning Equipment",
     s_desc: "Keep your home clean and organized with our premium cleaning equipment! From mops and brooms to dustpans and brushes, we have everything you need to maintain a spotless living space. 🏡✨",
     // desc: "",
     img: "home_essentials/cleaning_equipment.webp",
@@ -9,12 +22,10 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     // price: 7.00,
-    // sale: 140,
-    cat: "Home Essentials",
-    added: 20250317
+    // sale: 140,added: 20250317
   },
   {
-    title: "Fabric Softeners – Fresh & Clean",
+    title: "Fabric Softeners",
     s_desc: "Keep your clothes soft, fresh, and clean with our premium fabric softeners! Available in multiple scents, these softeners are perfect for all your laundry needs. 🧺✨",
     // desc: "",
     img: "home_essentials/fabric_softener_01.webp",
@@ -23,12 +34,10 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 7.00,
-    // sale: 140,
-    cat: "Home Essentials",
-    added: 20250317
+    // sale: 140,added: 20250317
   },
   {
-    title: "Fabric Softeners – Fresh & Clean",
+    title: "Fabric Softeners",
     s_desc: "Keep your clothes soft, fresh, and clean with our premium fabric softeners! Available in multiple scents, these softeners are perfect for all your laundry needs. 🧺✨",
     // desc: "",
     img: "home_essentials/fabric_softener_02.webp",
@@ -37,12 +46,10 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 6.50,
-    // sale: 140,
-    cat: "Home Essentials",
-    added: 20250317
+    // sale: 140,added: 20250317
   },
   {
-    title: "Stylish & Durable Backpack",
+    title: "Stylish and Durable Backpack",
     s_desc: "Stay organized on the go with our high-quality backpack! Spacious, comfortable, and designed for everyday use—whether for work, school, or travel. Available in multiple colors!",
     // desc: "",
     img: "home_essentials/backpack_01.webp",
@@ -51,12 +58,10 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 15.00,
-    // sale: 140,
-    cat: "Home Essentials",
-    added: 20250317
+    // sale: 140,added: 20250317
   },
   {
-    title: "Stylish & Durable Backpack",
+    title: "Stylish and Durable Backpack",
     s_desc: "Stay organized on the go with our high-quality backpack! Spacious, comfortable, and designed for everyday use—whether for work, school, or travel. Available in multiple colors!",
     // desc: "",
     img: "home_essentials/backpack_02.webp",
@@ -65,12 +70,10 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 15.00,
-    // sale: 140,
-    cat: "Home Essentials",
-    added: 20250317
+    // sale: 140,added: 20250317
   },
   {
-    title: "2-Piece Tray Set – Elegant & Practical!",
+    title: "2-Piece Tray Set",
     s_desc: "Serve in style with our premium 2-piece tray set! Perfect for everyday use or special gatherings, these trays are durable, stylish, and easy to carry. A must-have for any home! 🏡🍽️",
     // desc: "",
     img: "home_essentials/2x_tray_set.webp",
@@ -79,12 +82,10 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 2,
     price: 8.50,
-    // sale: 140,
-    cat: "Home Essentials",
-    added: 20250317
+    // sale: 140,added: 20250317
   },
   {
-    title: "4-Piece Suitcase Set for Sale!",
+    title: "4-Piece Suitcase",
     s_desc: "Travel in Style, Get ready for your next trip with this durable and spacious 4-piece suitcase set! Available in multiple colors, it's perfect for all your travel needs. 🏖️✈️",
     // desc: "",
     img: "home_essentials/suite_case_4x_01.webp",
@@ -93,12 +94,10 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 4,
     price: 200,
-    sale: 140,
-    cat: "Home Essentials",
-    added: 20250315
+    sale: 140,added: 20250315
   },
   {
-    title: "4-Piece Suitcase Set for Sale!",
+    title: "4-Piece Suitcase",
     s_desc: "Travel in Style, Get ready for your next trip with this durable and spacious 4-piece suitcase set! Available in multiple colors, it's perfect for all your travel needs. 🏖️✈️",
     // desc: "",
     img: "home_essentials/suite_case_4x_02.webp",
@@ -107,9 +106,7 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 4,
     price: 210,
-    sale: 145,
-    cat: "Home Essentials",
-    added: 20250315
+    sale: 145,added: 20250315
   },
   {
     title: "Temperature Cups – Perfect for Hot & Cold Drinks!",
@@ -121,9 +118,7 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 10,
-    // sale: 145,
-    cat: "Home Essentials",
-    added: 20250315
+    // sale: 145,added: 20250315
   },
   {
     title: "Bowls and Plates",
@@ -141,9 +136,7 @@ export const home_essentials = [
     uom: "PC(s)",
     // quantity: 3,
     // price: 180,
-    // sale: 130,
-    cat: "Home Essentials",
-    added: 20250315
+    // sale: 130,added: 20250315
   },
   {
     title: "Premium Travel Suitcase Set",
@@ -163,9 +156,7 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 3,
     price: 180,
-    sale: 130,
-    cat: "Home Essentials",
-    added: 20250309
+    sale: 130,added: 20250309
   },
   {
     title: "Musallah (Prayer Mat)",
@@ -178,24 +169,20 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 5.00,
-    sale: false,
-    cat: "Home Essentials",
-    added: 20250308
+    sale: false,added: 20250308
   },
   {
     title: "Tasbeeh (Digital)",
     s_desc: "Keep track of your prayers and supplications effortlessly with our Digital Tasbeeh. Compact, easy to use, and perfect for daily zikr, it helps you stay focused and connected anytime, anywhere! 🙏✨",
     desc: false,
     img: "home_essentials/digtal_tasbeeh.webp",
-    img_extra: [],
+    // img_extra: [],
     stock: true,
-    featured: false,
+    // featured: false,
     uom: "PC(s)",
     quantity: 1,
     price: 5.00,
-    sale: false,
-    cat: "Home Essentials",
-    added: 20250308
+    sale: 3.00,added: 20250308
   },
   {
     title: "Tasbeeh (Prayer Beads)",
@@ -207,9 +194,7 @@ export const home_essentials = [
     featured: false,
     uom: "PC(s)",
     quantity: 1,
-    price: false,
-    sale: false,
-    cat: "Home Essentials",
-    added: 20250308
+    price: 5.00,
+    sale: 3.00,added: 20250308
   }
-]
+].map((item) => ({ ...item, cat: 'Home Essentials' }));

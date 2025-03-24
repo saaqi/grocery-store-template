@@ -9,7 +9,6 @@ export const nuts_dry_fruits = [
     quantity: 1,
     price: 2.70,
     sale: 2.00,
-    cat: "Nuts and Dry Fruits",
     added: 20250308
   }
-]
+].map((item) => ({ ...item, cat: 'Nuts and Dry Fruits' }));

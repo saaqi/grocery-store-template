@@ -1,5 +1,5 @@
 // Setup Social Media Links
-import social_links from "../data/social_links";
+import social_links from "../../data/social_links";
 
 const attachSocialLinksById = parentId => {
 

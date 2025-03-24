@@ -1,9 +1,9 @@
 import "bootstrap/js/dist/collapse.js";
 
 import { attachProducts } from "./functions/generateProductCards.js";
-import { dateSortedProducts } from "./data/products.js";
+import { dateSortedProducts } from "../data/products.js";
 
-import shop_categories from "./data/shop_categories.js";
+import shop_categories from "../data/shop_categories.js";
 
 
 // ---------------------------------------------------------------------

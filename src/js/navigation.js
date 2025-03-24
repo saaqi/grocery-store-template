@@ -2,7 +2,7 @@
 import "bootstrap/js/dist/offcanvas.js";
 import "bootstrap/js/dist/dropdown.js";
 
-import nav_links from "./data/nav_links.js";
+import nav_links from "../data/nav_links.js";
 
 // Setup Navigation Links
 const navigationLinks = nav_links.map( nl => {

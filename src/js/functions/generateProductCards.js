@@ -46,7 +46,7 @@ const generateProductCards = prods => {
   const descButton =
     desc ? `<button type="button" class="btn btn-outline-dark modal-button p-2" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!"><i class="bx bx-info-circle"></i></button>` : ''
   // WhatsApp Button
-  const waButton = '<a href="https://wa.me/+32465638887" class="btn btn-outline-primary p-2" target="_blank" title="Contact us via WhatsApp!"><i class="bx bxl-whatsapp"></i></a>'
+  const waButton = `<a href="https://wa.me/32465638887?text=${title} €${sale ? sale : price}" class="btn btn-outline-primary p-2" target="_blank" title="Contact us via WhatsApp!"><i class="bx bxl-whatsapp"></i></a>`
   // Sale Icon
   const saleIcon = sale ? '<i class="bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm"></i>' : ''
   // Quantity & UOM
