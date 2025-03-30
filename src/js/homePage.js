@@ -15,17 +15,17 @@ const onSaleProducts = sortedProducts
     .slice(0, 8);
 attachProducts(onSaleProducts, "on-sale");
 
+// Attach first 4 featured products to the HTML element with the id 'featured-items'.
+const featuredProducts = sortedProducts
+  .filter((prods) => prods.featured)
+  .slice(0, 4);
+attachProducts(featuredProducts, "featured-items");
+
 // Attach "new-arrivals" section to include the first 4 products in the sorted array.
 const arrivalProducts = sortedProducts
   .filter((prods) => !prods.featured && !prods.sale)
   .slice(0, 4);
 attachProducts(arrivalProducts, "new-arrivals");
-
-// Attach first 8 featured products to the HTML element with the id 'featured-items'.
-const featuredProducts = sortedProducts
-  .filter((prods) => prods.featured && !prods.sale)
-  .slice(0, 8);
-attachProducts(featuredProducts, "featured-items");
 
 
 

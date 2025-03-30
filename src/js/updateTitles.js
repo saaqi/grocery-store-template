@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
       title: `On Sale | ${title}`,
     },
     {
-      id: "arrivals",
-      title: `New Arrivals | ${title}`,
-    },
-    {
       id: "featured",
       title: `Featured Products | ${title}`,
+    },
+    {
+      id: "arrivals",
+      title: `New Arrivals | ${title}`,
     },
     {
       id: "shop",

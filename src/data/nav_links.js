@@ -12,14 +12,14 @@ const nav_links = [
     icon: "<i class='bx bxs-shopping-bag'></i>",
   },
   {
-    link: "arrivals",
-    text: "New Arrivals",
-    icon: "<i class='bx bxs-shopping-bags'></i>",
-  },
-  {
     link: "featured",
     text: "Featured",
     icon: "<i class='bx bxs-shopping-bag-alt'></i>",
+  },
+  {
+    link: "arrivals",
+    text: "New Arrivals",
+    icon: "<i class='bx bxs-shopping-bags'></i>",
   },
   {
     link: "shop",
