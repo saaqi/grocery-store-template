@@ -1,22 +1,30 @@
 import "bootstrap/js/dist/collapse.js";
 
 import { attachProducts } from "./functions/generateProductCards.js";
-import { dateSortedProducts } from "../data/products.js";
+import { products } from "../data/products.js";
 
 import shop_categories from "../data/shop_categories.js";
 
 
 // ---------------------------------------------------------------------
+const sortedProducts = [...products].sort((a, b) => (b.added) - (a.added))
+
 // Attach first 8 products on sale to the HTML element with the id 'on-sale'.
-const onSaleProducts = dateSortedProducts.filter((prods) => prods.sale && !prods.featured).slice(0, 8);
+const onSaleProducts = sortedProducts
+    .filter((prods) => prods.sale && !prods.featured)
+    .slice(0, 8);
 attachProducts(onSaleProducts, "on-sale");
 
 // Attach "new-arrivals" section to include the first 4 products in the sorted array.
-const arrivalProducts = dateSortedProducts.filter((prods) => !prods.featured && !prods.sale).slice(0, 4);
+const arrivalProducts = sortedProducts
+  .filter((prods) => !prods.featured && !prods.sale)
+  .slice(0, 4);
 attachProducts(arrivalProducts, "new-arrivals");
 
 // Attach first 8 featured products to the HTML element with the id 'featured-items'.
-const featuredProducts = dateSortedProducts.filter((prods) => prods.featured && !prods.sale).slice(0, 8);
+const featuredProducts = sortedProducts
+  .filter((prods) => prods.featured && !prods.sale)
+  .slice(0, 8);
 attachProducts(featuredProducts, "featured-items");
 
 
