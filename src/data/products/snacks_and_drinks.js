@@ -1,3 +1,5 @@
+const toDate = d => new Date(d)
+
 export const snacks_and_drinks = [
   {
     title: "Matri",
@@ -7,7 +9,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 3.00,
-    // sale: 0.50,added: 20250318
+    // sale: 0.50,
+    added: toDate("2025-03-30T06:11:22")
   },
   {
     title: "Fruit Cake",
@@ -17,7 +20,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 3.90,
-    // sale: 0.50,added: 20250318
+    // sale: 0.50,
+    added: toDate("2025-03-30T06:12:28")
   },
   {
     title: "Creem Roll",
@@ -27,7 +31,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 4.50,
-    // sale: 0.50,added: 20250318
+    // sale: 0.50,
+    added: toDate("2025-03-30T06:12:24")
   },
   {
     title: "Cake Rusk",
@@ -37,7 +42,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 6.00,
-    // sale: 0.50,added: 20250318
+    // sale: 0.50,
+    added: toDate("2025-03-30T06:12:15")
   },
   {
     title: "Sweets",
@@ -47,7 +53,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 3.00,
-    // sale: 0.50,added: 20250318
+    // sale: 0.50,
+    added: toDate("2025-03-30T06:12:10")
   },
   {
     title: "Sweets",
@@ -57,7 +64,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 3.00,
-    // sale: 0.50,added: 20250318
+    // sale: 0.50,
+    added: toDate("2025-03-30T06:12:07")
   },
   {
     title: "Buldok Noodles",
@@ -67,7 +75,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 2.00,
-    // sale: 0.50,added: 20250318
+    // sale: 0.50,
+    added: toDate("2025-03-30T06:12:05")
   },
   {
     title: "Buldok Noodles",
@@ -77,7 +86,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 2.50,
-    // sale: 0.50,added: 20250318
+    // sale: 0.50,
+    added: toDate("2025-03-30T06:12:01")
   },
   {
     title: "Maggi Noodles",
@@ -87,7 +97,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 0.70,
-    // sale: 0.50,added: 20250318
+    // sale: 0.50,
+    added: toDate("2025-03-30T06:11:58")
   },
   {
     title: "Miscellaneous Noodles",
@@ -97,7 +108,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 2.50,
-    // sale: 0.50,added: 20250318
+    // sale: 0.50,
+    added: toDate("2025-03-30T06:11:54")
   },
   {
     title: "Cookies and Biscuits",
@@ -108,7 +120,8 @@ export const snacks_and_drinks = [
     quantity: 1,
     price: 3.50,
     // sale: 0.50,
-    featured: true,added: 20250318
+    featured: true,
+    added: toDate("2025-03-30T06:11:44")
   },
   {
     title: "Sun Exotic Sparkling Fruit Juice",
@@ -118,7 +131,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 1.20,
-    sale: 0.50,added: 20250305
+    sale: 0.50,
+    added: toDate("2025-03-30T06:11:42")
   },
   {
     title: "Rubicon Sparkling Fruit Juice",
@@ -128,7 +142,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 1.20,
-    sale: 0.50,added: 20250305
+    sale: 0.50,
+    added: toDate("2025-03-30T06:11:39")
   },
   {
     title: "Maaza Fruit Punch",
@@ -138,7 +153,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 2.00,
-    sale: 1.00,added: 20250305
+    sale: 1.00,
+    added: toDate("2025-03-30T06:11:36")
   },
   {
     title: "Chaudfontaine Sparkling Water",
@@ -148,7 +164,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 1.00,
-    sale: 0.50,added: 20250305
+    sale: 0.50,
+    added: toDate("2025-03-30T06:11:33")
   },
   {
     title: "Hawai Fesa Strawberry Drink",
@@ -158,7 +175,8 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 2.00,
-    sale: 1.00,added: 20250309
+    sale: 1.00,
+    added: toDate("2025-03-30T06:11:30")
   },
   {
     title: "OKF Farmer Aloe Vera Drink",
@@ -168,6 +186,7 @@ export const snacks_and_drinks = [
     uom: "PC(s)",
     quantity: 1,
     price: 1.50,
-    sale: 1.00,added: 20250308
+    sale: 1.00,
+    added: toDate("2025-03-30T06:11:28")
   }
 ].map((item) => ({ ...item, cat: 'Snacks and Drinks' }));

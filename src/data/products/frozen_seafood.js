@@ -1,3 +1,5 @@
+const toDate = d => new Date(d)
+
 export const frozen_seafood = [
   {
     title: "Horse Mackerel",
@@ -8,7 +10,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 1,
     // price: 6,
-    added: 20240430
+    added: toDate("2025-03-30T06:03:06")
   },
   {
     title: "Horse Mackerel Thompson",
@@ -19,7 +21,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 1,
     // price: 6,
-    added: 20240430
+    added: toDate("2025-03-30T06:03:02")
   },
   {
     title: "Black Tilapia Whole",
@@ -30,7 +32,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: "1.5 (approx.)",
     // price: 6,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:58")
   },
   {
     title: "Black Tilapia Whole",
@@ -41,7 +43,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: "0.9 (approx.)",
     // price: 5.5,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:54")
   },
   {
     title: "Croaker",
@@ -52,7 +54,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 1,
     // price: 8,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:50")
   },
   {
     title: "Red Tilapia Whole",
@@ -63,7 +65,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 1,
     // price: 6,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:46")
   },
   {
     title: "Hake",
@@ -74,7 +76,7 @@ export const frozen_seafood = [
     uom: "Bag",
     quantity: 1,
     // price: 7.5,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:42")
   },
   {
     title: "Cat Fish",
@@ -85,7 +87,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 1,
     // price: 6,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:38")
   },
   {
     title: "Crab",
@@ -98,7 +100,7 @@ export const frozen_seafood = [
     // price: 15,
     // sale: 13,
     featured: true,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:31")
   },
   {
     title: "King Weakfish",
@@ -109,7 +111,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 0.200,
     // price: 4,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:27")
   },
   {
     title: "Smoked Fish",
@@ -120,7 +122,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 1,
     // price: 18,
-    added: 20240502
+    added: toDate("2025-03-30T06:02:23")
   },
   {
     title: "Pangasius Fillet",
@@ -131,7 +133,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 0.800,
     // price: 5.50,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:19")
   },
   {
     title: "Tiger Prawns",
@@ -142,7 +144,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 0.75,
     // price: 13,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:14")
   },
   {
     title: "Gambia, Harnaal Fish",
@@ -153,7 +155,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 0.50,
     // price: 7.20,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:11")
   },
   {
     title: "Cat Fish Steak",
@@ -164,7 +166,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 0.80,
     // price: 5.50,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:07")
   },
   {
     title: "Black Tilapia Steak",
@@ -175,7 +177,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 0.80,
     // price: 5.20,
-    added: 20240430
+    added: toDate("2025-03-30T06:02:02")
   },
   {
     title: "Red Tilapia Steak",
@@ -186,7 +188,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 0.80,
     // price: 7.00,
-    added: 20240430
+    added: toDate("2025-03-30T06:01:52")
   },
   {
     title: "Pangasius Steak",
@@ -197,7 +199,7 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 0.80,
     // price: 4.20,
-    added: 20240430
+    added: toDate("2025-03-30T06:01:48")
   },
   {
     title: "Tuna Steak",
@@ -208,6 +210,6 @@ export const frozen_seafood = [
     uom: "KG",
     quantity: 0.80,
     price: 7.20,
-    added: 20240430
+    added: toDate("2025-03-30T06:01:42")
   }
 ].map((item) => ({ ...item, cat: 'Frozen Seafood' }));

@@ -1,3 +1,5 @@
+const toDate = d => new Date(d)
+
 export const home_essentials = [
   {
     title: "Clocks – Stylish and Functional",
@@ -10,7 +12,7 @@ export const home_essentials = [
     quantity: 1,
     price: 30.00,
     sale: 15.00,
-    added: 20250324
+    added: toDate("2025-03-30T06:07:54")
   },
   {
     title: "Home Cleaning Equipment",
@@ -22,7 +24,8 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     // price: 7.00,
-    // sale: 140,added: 20250317
+    // sale: 140,
+    added: toDate("2025-03-30T06:07:39")
   },
   {
     title: "Fabric Softeners",
@@ -34,7 +37,8 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 7.00,
-    // sale: 140,added: 20250317
+    // sale: 140,
+    added: toDate("2025-03-30T06:07:30")
   },
   {
     title: "Fabric Softeners",
@@ -46,7 +50,8 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 6.50,
-    // sale: 140,added: 20250317
+    // sale: 140,
+    added: toDate("2025-03-30T06:07:21")
   },
   {
     title: "Stylish and Durable Backpack",
@@ -54,11 +59,12 @@ export const home_essentials = [
     // desc: "",
     img: "home_essentials/backpack_01.webp",
     stock: true,
-    featured: true,
+    // featured: true,
     uom: "PC(s)",
     quantity: 1,
     price: 15.00,
-    // sale: 140,added: 20250317
+    // sale: 140,
+    added: toDate("2025-03-30T06:40:11")
   },
   {
     title: "Stylish and Durable Backpack",
@@ -66,11 +72,12 @@ export const home_essentials = [
     // desc: "",
     img: "home_essentials/backpack_02.webp",
     stock: true,
-    featured: false,
+    featured: true,
     uom: "PC(s)",
     quantity: 1,
     price: 15.00,
-    // sale: 140,added: 20250317
+    // sale: 140,
+    added: toDate("2025-03-30T06:13:32")
   },
   {
     title: "2-Piece Tray Set",
@@ -82,7 +89,8 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 2,
     price: 8.50,
-    // sale: 140,added: 20250317
+    // sale: 140,
+    added: toDate("2025-03-30T06:06:52")
   },
   {
     title: "4-Piece Suitcase",
@@ -94,7 +102,8 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 4,
     price: 200,
-    sale: 140,added: 20250315
+    sale: 140,
+    added: toDate("2025-03-30T06:06:41")
   },
   {
     title: "4-Piece Suitcase",
@@ -106,7 +115,8 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 4,
     price: 210,
-    sale: 145,added: 20250315
+    sale: 145,
+    added: toDate("2025-03-30T06:06:35")
   },
   {
     title: "Temperature Cups – Perfect for Hot & Cold Drinks!",
@@ -118,7 +128,8 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 10,
-    // sale: 145,added: 20250315
+    // sale: 145,
+    added: toDate("2025-03-30T06:06:28")
   },
   {
     title: "Bowls and Plates",
@@ -134,9 +145,10 @@ export const home_essentials = [
     stock: true,
     // featured: true,
     uom: "PC(s)",
-    // quantity: 3,
+    quantity: 3,
     // price: 180,
-    // sale: 130,added: 20250315
+    // sale: 130,
+    added: toDate("2025-03-30T06:05:51")
   },
   {
     title: "Premium Travel Suitcase Set",
@@ -156,7 +168,8 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 3,
     price: 180,
-    sale: 130,added: 20250309
+    sale: 130,
+    added: toDate("2025-03-30T06:05:21")
   },
   {
     title: "Musallah (Prayer Mat)",
@@ -165,11 +178,12 @@ export const home_essentials = [
     img: "home_essentials/musllah.webp",
     img_extra: [],
     stock: true,
-    featured: false,
+    featured: true,
     uom: "PC(s)",
     quantity: 1,
     price: 5.00,
-    sale: false,added: 20250308
+    sale: false,
+    added: toDate("2025-03-30T06:05:15")
   },
   {
     title: "Tasbeeh (Digital)",
@@ -182,7 +196,8 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 5.00,
-    sale: 3.00,added: 20250308
+    sale: 3.00,
+    added: toDate("2025-03-30T06:05:03")
   },
   {
     title: "Tasbeeh (Prayer Beads)",
@@ -195,6 +210,7 @@ export const home_essentials = [
     uom: "PC(s)",
     quantity: 1,
     price: 5.00,
-    sale: 3.00,added: 20250308
+    sale: 3.00,
+    added: toDate("2025-03-30T06:04:55")
   }
 ].map((item) => ({ ...item, cat: 'Home Essentials' }));

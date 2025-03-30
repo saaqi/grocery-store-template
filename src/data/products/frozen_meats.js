@@ -1,3 +1,5 @@
+const toDate = d => new Date(d)
+
 export const frozen_meats = [
   {
     title: "Goat Meat",
@@ -9,7 +11,7 @@ export const frozen_meats = [
     quantity: 1.0,
     // price: 10.00,
     cat: "Frozen Meats",
-    added: 20240501
+    added: toDate("2025-03-30T06:00:49")
   },
   {
     title: "Goat Feet",
@@ -21,7 +23,7 @@ export const frozen_meats = [
     quantity: 1.0,
     // price: 6.00,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T06:00:45")
   },
   {
     title: "Cow Meat",
@@ -34,7 +36,7 @@ export const frozen_meats = [
     // price: 10.00,
     // featured: true,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T06:00:41")
   },
   {
     title: "Cow Legs",
@@ -46,7 +48,7 @@ export const frozen_meats = [
     quantity: 1,
     // price: 6,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T06:00:35")
   },
   {
     title: "Cow Stomach",
@@ -58,7 +60,7 @@ export const frozen_meats = [
     quantity: 1,
     // price: 6,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T06:00:30")
   },
   {
     title: "Cow Skin",
@@ -70,7 +72,7 @@ export const frozen_meats = [
     quantity: 1,
     // price: 6,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T06:00:24")
   },
   {
     title: "Chicken Feet",
@@ -82,7 +84,7 @@ export const frozen_meats = [
     quantity: 1,
     // price: 5,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T06:00:21")
   },
   {
     title: "Chicken Stomach",
@@ -94,7 +96,7 @@ export const frozen_meats = [
     quantity: 1,
     // price: 5,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T06:00:16")
   },
   {
     title: "Chicken Wings",
@@ -106,7 +108,7 @@ export const frozen_meats = [
     quantity: 1,
     // price: 5,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T06:00:13")
   },
   {
     title: "Osso Bucco",
@@ -118,7 +120,7 @@ export const frozen_meats = [
     quantity: 1,
     // price: 6,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T06:00:09")
   },
   {
     title: "Hen Meat",
@@ -130,7 +132,7 @@ export const frozen_meats = [
     quantity: 1.1,
     // price: 4,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T06:00:04")
   },
   {
     title: "Hen Meat",
@@ -142,7 +144,7 @@ export const frozen_meats = [
     quantity: 1.2,
     // price: 4.5,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T05:59:58")
   },
   {
     title: "Hen Meat",
@@ -154,7 +156,7 @@ export const frozen_meats = [
     quantity: 1.4,
     // price: 5,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T05:59:51")
   },
   {
     title: "Smoked Hen Meat",
@@ -167,7 +169,7 @@ export const frozen_meats = [
     // price: 10,
     // sale: 9,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T05:59:39")
   },
   {
     title: "Turkey Wings",
@@ -180,7 +182,7 @@ export const frozen_meats = [
     // price: 7.5,
     // featured: true,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T05:59:35")
   },
   {
     title: "Smoked Turkey Wings",
@@ -192,6 +194,6 @@ export const frozen_meats = [
     quantity: 1,
     // price: 9,
     cat: "Frozen Meats",
-    added: 20240430
+    added: toDate("2025-03-30T05:59:28")
   }
 ]

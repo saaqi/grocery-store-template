@@ -1,3 +1,5 @@
+const toDate = d => new Date(d)
+
 export const misc = [
   {
     title: "9 Days Nail Polish",
@@ -11,7 +13,7 @@ export const misc = [
     quantity: 1,
     price: 6.00,
     sale: 3.00,
-    added: 20250327
+    added: toDate("2025-03-30T06:38:43")
   },
   {
     title: "Waterproof Liquid Eyeliner",
@@ -25,7 +27,7 @@ export const misc = [
     quantity: 1,
     price: 6.00,
     sale: 3.00,
-    added: 20250327
+    added: toDate("2025-03-30T06:38:39")
   },
   {
     title: "Skin Shimmer Loose Powder",
@@ -39,7 +41,7 @@ export const misc = [
     quantity: 1,
     price: 8.00,
     sale: 4.50,
-    added: 20250326
+    added: toDate("2025-03-30T06:38:36")
   },
   {
     title: "KC Compact Powder",
@@ -53,7 +55,7 @@ export const misc = [
     quantity: 1,
     price: 6.00,
     sale: 3.00,
-    added: 202503270452
+    added: toDate("2025-03-30T06:38:32")
   },
   {
     title: "Meryam Perfumes for Men",
@@ -67,7 +69,7 @@ export const misc = [
     quantity: 1,
     price: 5.00,
     sale: 3.50,
-    added: 20250325
+    added: toDate("2025-03-30T06:38:29")
   },
   {
     title: "Meryam Perfumes for Women",
@@ -81,7 +83,7 @@ export const misc = [
     quantity: 1,
     price: 5.00,
     sale: 3.50,
-    added: 20250325
+    added: toDate("2025-03-30T06:38:25")
   },
   {
     title: "Miswak",
@@ -95,7 +97,7 @@ export const misc = [
     quantity: 1,
     price: 3.00,
     sale: 1.50,
-    added: 20250324
+    added: toDate("2025-03-30T06:38:21")
   },
   {
     title: "Birthday Party Supplies",
@@ -109,7 +111,7 @@ export const misc = [
     // quantity: 1,
     // price: 3.00,
     // sale: 1.50,
-    added: 20250324
+    added: toDate("2025-03-30T06:38:16")
   },
   {
     title: "Special Perfumes",
@@ -123,6 +125,6 @@ export const misc = [
     quantity: 1,
     price: 12.00,
     sale: 6.50,
-    added: 20250324
+    added: toDate("2025-03-30T06:38:11")
   }
 ].map((item) => ({ ...item, cat: 'Miscellaneous' }));
