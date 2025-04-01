@@ -124,6 +124,17 @@ export const snacks_and_drinks = [
     added: toDate("2025-03-30T06:11:44")
   },
   {
+    title: "Premium Quality Dates",
+    s_desc: "Stay connected with a Lyca Mobile SIM card offering seamless network coverage and affordable international calling rates.",
+    img: "snacks_and_drinks/gold_dates.webp",
+    stock: true,
+    uom: "Box",
+    quantity: 1,
+    price: 2.70,
+    sale: 2.00,
+    added: toDate("2025-03-30T06:35:28")
+  },
+  {
     title: "Sun Exotic Sparkling Fruit Juice",
     s_desc: "Stay refreshed and save BIG with our limited-time offer! Enjoy a 50% DISCOUNT on a variety of drinks from soft drinks to juices and more! ",
     img: "snacks_and_drinks/sun_exotic_sparkling.webp",
