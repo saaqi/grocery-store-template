@@ -4,7 +4,6 @@ import { vegetables } from "./products/vegetables";
 import { frozen_meats } from "./products/frozen_meats";
 import { frozen_seafood } from "./products/frozen_seafood";
 import { frozen_foods } from "./products/frozen_foods";
-import { nuts_dry_fruits } from "./products/nuts_dry_fruits";
 import { home_essentials } from "./products/home_essentials";
 import { telecommunications } from "./products/telecommunications";
 import { misc } from "./products/misc";
@@ -17,7 +16,6 @@ export const products = [
   ...frozen_meats,
   ...frozen_seafood,
   ...frozen_foods,
-  ...nuts_dry_fruits,
   ...home_essentials,
   ...telecommunications,
   ...misc,
