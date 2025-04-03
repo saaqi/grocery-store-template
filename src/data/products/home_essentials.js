@@ -55,7 +55,7 @@ export const home_essentials = [
   },
   {
     title: "Baby Blanket",
-    s_desc: "Upgrade your space with our beautiful and functional clocks – perfect for any home or office! 🏡⌚ Available in multiple designs to match your style.",
+    s_desc: "Wrap yourself in warmth with our premium-quality blanket! 🛌✨ Made from super-soft, breathable fabric, it's perfect for chilly nights or cozy lounging. Available in various colors and sizes, it adds a touch of comfort and style to your home.",
     // desc: "",
     img: "home_essentials/baby_blanket_15.webp",
     stock: true,
@@ -68,7 +68,7 @@ export const home_essentials = [
   },
   {
     title: "Quilt 220x240",
-    s_desc: "Upgrade your space with our beautiful and functional clocks – perfect for any home or office! 🏡⌚ Available in multiple designs to match your style.",
+    s_desc: "Wrap yourself in warmth with our premium-quality blanket! 🛌✨ Made from super-soft, breathable fabric, it's perfect for chilly nights or cozy lounging. Available in various colors and sizes, it adds a touch of comfort and style to your home.",
     // desc: "",
     img: "home_essentials/quilt_220_240.webp",
     stock: true,
@@ -81,7 +81,7 @@ export const home_essentials = [
   },
   {
     title: "Blanket for 2 Persons - Double Ply",
-    s_desc: "Upgrade your space with our beautiful and functional clocks – perfect for any home or office! 🏡⌚ Available in multiple designs to match your style.",
+    s_desc: "Wrap yourself in warmth with our premium-quality blanket! 🛌✨ Made from super-soft, breathable fabric, it's perfect for chilly nights or cozy lounging. Available in various colors and sizes, it adds a touch of comfort and style to your home.",
     // desc: "",
     img: "home_essentials/blanket_2person_2ply.webp",
     stock: true,
@@ -94,7 +94,7 @@ export const home_essentials = [
   },
   {
     title: "Blanket For One Person - Single Ply",
-    s_desc: "Upgrade your space with our beautiful and functional clocks – perfect for any home or office! 🏡⌚ Available in multiple designs to match your style.",
+    s_desc: "Wrap yourself in warmth with our premium-quality blanket! 🛌✨ Made from super-soft, breathable fabric, it's perfect for chilly nights or cozy lounging. Available in various colors and sizes, it adds a touch of comfort and style to your home.",
     // desc: "",
     img: "home_essentials/blanket_single_ply.webp",
     stock: true,
