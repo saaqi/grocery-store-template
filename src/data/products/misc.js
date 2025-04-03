@@ -3,7 +3,7 @@ const toDate = d => new Date(d)
 export const misc = [
   {
     title: "9 Days Nail Polish",
-    s_desc: "Get the perfect cat-eye every time with our Waterproof Liquid Eyeliner. Easy to apply, long-lasting, and smudge-proof—so you can look flawless all day long!",
+    s_desc: "Add a pop of color to your nails with our high-quality nail polish! Available in gorgeous shades, it offers a smooth finish, long-lasting shine, and quick drying. Perfect for any occasion!",
     desc: false,
     img: "misc/9_days_nail_polish.webp",
     // img_extra: [],
@@ -87,8 +87,8 @@ export const misc = [
   },
   {
     title: "Miswak",
-    s_desc: "Our Tasbeeh (Prayer Beads) are crafted with care to help you stay focused during dhikr. With smooth, durable beads, it's the perfect tool for enhancing your spiritual practice and bringing peace to your heart. 🙏✨",
-    desc: false,
+    s_desc: "Experience the power of nature with our high-quality Miswak! Known for its natural antibacterial properties, it helps whiten teeth, freshen breath, and promote healthy gums—all without chemicals! Stay fresh the traditional way.",
+    // desc: false,
     img: "misc/miswak.webp",
     // img_extra: [],
     stock: true,

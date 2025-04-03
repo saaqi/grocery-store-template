@@ -249,7 +249,7 @@ export const home_essentials = [
     stock: true,
     // featured: true,
     uom: "PC(s)",
-    quantity: 3,
+    quantity: 1,
     // price: 180,
     // sale: 130,
     added: toDate("2025-03-30T06:05:51")

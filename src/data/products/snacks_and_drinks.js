@@ -48,24 +48,17 @@ export const snacks_and_drinks = [
   {
     title: "Sweets",
     s_desc: "Indulge in a delightful variety of miscellaneous sweets, perfect for any sweet tooth! From fruity gummies to rich chocolates, there's something for everyone to enjoy.",
+    desc: "Indulge in a delightful variety of miscellaneous sweets, perfect for any sweet tooth! From fruity gummies to rich chocolates, there's something for everyone to enjoy.",
     img: "snacks_and_drinks/sweets-01.webp",
+    img_extra: [
+      "snacks_and_drinks/sweets-02.webp"
+    ],
     stock: true,
     uom: "PC(s)",
     quantity: 1,
     price: 3.00,
     // sale: 0.50,
     added: toDate("2025-03-30T06:12:10")
-  },
-  {
-    title: "Sweets",
-    s_desc: "Indulge in a delightful variety of miscellaneous sweets, perfect for any sweet tooth! From fruity gummies to rich chocolates, there's something for everyone to enjoy.",
-    img: "snacks_and_drinks/sweets-02.webp",
-    stock: true,
-    uom: "PC(s)",
-    quantity: 1,
-    price: 3.00,
-    // sale: 0.50,
-    added: toDate("2025-03-30T06:12:07")
   },
   {
     title: "Buldok Noodles",
@@ -125,7 +118,7 @@ export const snacks_and_drinks = [
   },
   {
     title: "Premium Quality Dates",
-    s_desc: "Stay connected with a Lyca Mobile SIM card offering seamless network coverage and affordable international calling rates.",
+    s_desc: "Indulge in the rich taste and natural goodness of our premium quality dates! Soft, juicy, and packed with essential nutrients, they make the perfect healthy snack or energy booster. Great for everyday consumption or special occasions!",
     img: "snacks_and_drinks/gold_dates.webp",
     stock: true,
     uom: "Box",
