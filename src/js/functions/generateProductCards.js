@@ -44,34 +44,34 @@ const generateProductCards = prods => {
     `<img src="${coverImage}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy" draggable="false">`
   // Description Button
   const descButton =
-    `<button type="button" class="btn btn-outline-dark modal-button p-2" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!"><i class="bx bx-info-circle"></i> Info</button>`
+    `<button type="button" class="btn btn-outline-dark flex-grow-1 modal-button d-flex flex-wrap gap-1 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!"><i class="bx bx-info-circle"></i> <span>Info</span></button>`
   // WhatsApp Button
-  const waButton = `<a href="https://wa.me/32465638887?text=${title} €${sale ? sale : price}" class="btn btn-outline-primary p-2" target="_blank" title="Contact us via WhatsApp!"><i class="bx bxl-whatsapp"></i> Book Now!</a>`
+  const waButton = `<a href="https://wa.me/32465638887?text=${title} €${sale ? sale : price}" class="btn btn-outline-primary flex-grow-1 d-flex flex-wrap gap-1 justify-content-center align-items-center" target="_blank" title="Contact us via WhatsApp!"><i class="bx bxl-whatsapp"></i> <span>Buy!</span></a>`
   // Sale Icon
   const saleIcon = sale ? '<i class="bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm"></i>' : ''
   // Quantity & UOM
-  const q_UOM = quantity ? `<div class="card-qauntity py-1 px-2 fw-medium rounded-2 bg-primary-subtle text-center">${quantity} ${uom}</div>` : ''
+  const q_UOM = quantity ? `<div class="card-qauntity py-2 px-1 fw-medium rounded-2 bg-primary-subtle text-center w-100">${quantity} ${uom}</div>` : ''
   // Short Description
   const shDesc = s_desc ? `<div class="short-description">${s_desc}</div>` : ''
   // Price Button
-  const priceButton = price ? `<div class="item-price-regular rounded py-1 px-2 fw-medium ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`}">€${price.toFixed(2)}</div>` : ''
+  const priceButton = price ? `<div class="item-price-regular rounded py-2 px-1 fw-medium ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`}">€${price.toFixed(2)}</div>` : ''
   // Sale Button
-  const saleButton = sale ? `<div class="item-price-sale rounded py-1 px-2 fw-medium bg-primary text-bg-primary">€${sale.toFixed(2)}</div>` : ''
+  const saleButton = sale ? `<div class="item-price-sale rounded py-2 px-1 fw-medium bg-primary text-bg-primary">€${sale.toFixed(2)}</div>` : ''
   // Percent off text
   const percentOff = sale ? `<div class="percent fw-medium">${percent()}</div>` : ''
 
   const productCard =
     `<div class="product-card card shadow-sm h-100">
       ${topImg}
-      <div class="card-body d-flex flex-column align-items-start gap-3 p-2 p-sm-3">
-        <div class="card-title h5 mb-0">${title}</div>
-        ${q_UOM}
-        <div class="sale-price w-100 d-flex justify-content-${sale ? 'between' : 'end'} align-items-center mb-2 mt-auto gap-2 flex-wrap text-center">
+      <div class="card-body d-flex flex-column align-items-start gap-4 p-2 p-sm-3">
+        <div class="card-title h4 mb-0">${title}</div>
+        <div class="mt-auto w-100">${q_UOM}</div>
+        <div class="sale-price w-100 d-flex justify-content-${sale ? 'between' : 'end'} align-items-center mb-2 gap-2 flex-wrap text-center">
           ${stock ? `${priceButton + percentOff + saleButton}` : '<div class="text-muted">Out of Stock</div>'}
         </div>
       </div>
       <div class="card-footer">
-        <div class="btn-group w-100">${waButton + descButton}</div>
+        <div class="d-flex gap-2 flex-wrap card-buttons">${waButton + descButton}</div>
       </div>
       ${saleIcon}
     </div>`.replace(/\s+/g, ' ');
