@@ -44,9 +44,9 @@ const generateProductCards = prods => {
     `<img src="${coverImage}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy" draggable="false">`
   // Description Button
   const descButton =
-    desc ? `<button type="button" class="btn btn-outline-dark modal-button p-2" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!"><i class="bx bx-info-circle"></i></button>` : ''
+    `<button type="button" class="btn btn-outline-dark modal-button p-2" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!"><i class="bx bx-info-circle"></i> Info</button>`
   // WhatsApp Button
-  const waButton = `<a href="https://wa.me/32465638887?text=${title} €${sale ? sale : price}" class="btn btn-outline-primary p-2" target="_blank" title="Contact us via WhatsApp!"><i class="bx bxl-whatsapp"></i></a>`
+  const waButton = `<a href="https://wa.me/32465638887?text=${title} €${sale ? sale : price}" class="btn btn-outline-primary p-2" target="_blank" title="Contact us via WhatsApp!"><i class="bx bxl-whatsapp"></i> Book Now!</a>`
   // Sale Icon
   const saleIcon = sale ? '<i class="bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm"></i>' : ''
   // Quantity & UOM
@@ -65,7 +65,7 @@ const generateProductCards = prods => {
       ${topImg}
       <div class="card-body d-flex flex-column align-items-start gap-3 p-2 p-sm-3">
         <div class="card-title h5 mb-0">${title}</div>
-        ${q_UOM + shDesc}
+        ${q_UOM}
         <div class="sale-price w-100 d-flex justify-content-${sale ? 'between' : 'end'} align-items-center mb-2 mt-auto gap-2 flex-wrap text-center">
           ${stock ? `${priceButton + percentOff + saleButton}` : '<div class="text-muted">Out of Stock</div>'}
         </div>
@@ -92,7 +92,8 @@ const generateProductCards = prods => {
                 <img src="${coverImage}" alt="${title}" class="col-md-4 h-100 img-fluid mb-3 p-0 rounded shadow-sm" loading="lazy">
                 <div class="col-md-8">
                   <h4 class="modal-heading">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>
-                  <p class="card-text my-3">${desc}</p>
+                  <p class="card-text">${shDesc}</p>
+                  <p class="card-text">${desc}</p>
                   <div class="sale-price w-100 d-flex justify-content-${sale ? 'between' : 'end'} align-items-center mb-2 mt-auto gap-2 flex-wrap text-center">
                     ${stock ? `${priceButton + percentOff + saleButton}` : '<div class="text-muted">Out of Stock</div>'}
                   </div>
@@ -108,8 +109,7 @@ const generateProductCards = prods => {
   // Generate HTML output
   const output =
     `<li class="col-6 col-lg-3 draggableItem">
-      ${productCard}
-      ${desc ? `${modalDetails}` : ''}
+      ${productCard + modalDetails}
     </li>`
   return output;
 };
