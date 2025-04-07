@@ -1,10 +1,9 @@
 import { snacks_and_drinks } from "./products/snacks_and_drinks";
 import { fresh_fruits } from "./products/fresh_fruits";
 import { vegetables } from "./products/vegetables";
-import { frozen_meats } from "./products/frozen_meats";
-import { frozen_seafood } from "./products/frozen_seafood";
 import { frozen_foods } from "./products/frozen_foods";
 import { home_essentials } from "./products/home_essentials";
+import { electronics } from "./products/electronics";
 import { telecommunications } from "./products/telecommunications";
 import { misc } from "./products/misc";
 
@@ -13,10 +12,9 @@ export const products = [
   ...snacks_and_drinks,
   ...fresh_fruits,
   ...vegetables,
-  ...frozen_meats,
-  ...frozen_seafood,
   ...frozen_foods,
   ...home_essentials,
+  ...electronics,
   ...telecommunications,
   ...misc,
 ].map((item, index) => {

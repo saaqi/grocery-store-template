@@ -52,7 +52,9 @@ const generateProductCards = prods => {
   // Quantity & UOM
   const q_UOM = quantity ? `<div class="card-qauntity py-2 px-1 fw-medium rounded-2 bg-primary-subtle text-center w-100">${quantity} ${uom}</div>` : ''
   // Short Description
-  const shDesc = s_desc ? `<div class="short-description">${s_desc}</div>` : ''
+  const shortDesc = s_desc ? `<p class="short-description">${s_desc}</p>` : ''
+  // Long Description
+  const longDesc = desc ? `<p class="long-description">${desc}</p>` : ''
   // Price Button
   const priceButton = price ? `<div class="item-price-regular rounded py-2 px-1 fw-medium ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`}">€${price.toFixed(2)}</div>` : ''
   // Sale Button
@@ -92,8 +94,7 @@ const generateProductCards = prods => {
                 <img src="${coverImage}" alt="${title}" class="col-md-4 h-100 img-fluid mb-3 p-0 rounded shadow-sm" loading="lazy">
                 <div class="col-md-8">
                   <h4 class="modal-heading">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>
-                  <p class="card-text">${shDesc}</p>
-                  <p class="card-text">${desc}</p>
+                  ${shortDesc + longDesc}
                   <div class="sale-price w-100 d-flex justify-content-${sale ? 'between' : 'end'} align-items-center mb-2 mt-auto gap-2 flex-wrap text-center">
                     ${stock ? `${priceButton + percentOff + saleButton}` : '<div class="text-muted">Out of Stock</div>'}
                   </div>
