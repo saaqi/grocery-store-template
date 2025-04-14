@@ -1,6 +1,100 @@
 const toDate = d => new Date(d)
 
 export const home_essentials = [
+  // {
+  //   title: "",
+  //   s_desc: "",
+  //   // desc: "",
+  //   img: "home_essentials/metal_basket_02.webp",
+  //   stock: true,
+  //   // featured: true,
+  //   uom: "PC(s)",
+  //   quantity: 1,
+  //   price: ,
+  //   sale: ,
+  //   added: toDate()
+  // },
+  {
+    title: "Mercury Haus Cooking Pot",
+    s_desc: "Cook like a pro with the Mercury Haus Premium Cooking Pot, now available for just €39.99! Known for its exceptional quality, durability, and sleek design, it’s perfect for everyday meals and special recipes.Even heat distribution and easy cleanup make cooking a breeze!",
+    // desc: "",
+    img: "home_essentials/mercury_haus_pot.webp",
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 50.00,
+    sale: 39.99,
+    added: toDate("2025-04-14T12:59:40")
+  },
+  {
+    title: "5 Piece Cooking Set",
+    s_desc: "Level up your kitchen with our Premium Quality 5-Piece Cooking Pot Set - now available for just €124.99! Durable, stylish, and built for performance - perfect for daily cooking or special meals.Even heat distribution, easy to clean, and long- lasting shine make it a must - have",
+    // desc: "",
+    img: "home_essentials/5p_cooking_set.webp",
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 5,
+    price: 150.00,
+    sale: 124.99,
+    added: toDate("2025-04-14T12:53:58")
+  },
+  {
+    title: "Kitchen Knife Set",
+    s_desc: "Upgrade your kitchen game with our Premium Quality Kitchen Knife Set, now available for just €12.99! Sharp, durable, and stylish - perfect for chopping, slicing, and dicing with ease.A must- have for every home chef!",
+    // desc: "",
+    img: "home_essentials/kitchen_knife.webp",
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 15.00,
+    sale: 12.99,
+    added: toDate("2025-04-14T12:51:55")
+  },
+  {
+    title: "Metal Fruit Baskets",
+    s_desc: "Add elegance to your kitchen or dining space with our Premium Metal Fruit Baskets - now available for only €6.49! Beautiful, sturdy, and perfect for keeping your fruits fresh and organized in style.A touch of charm for every home!",
+    // desc: "",
+    img: "home_essentials/metal_basket_02.webp",
+    img_extra: [
+      "home_essentials/metal_basket_01.webp",
+    ],
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 10.00,
+    sale: 6.49,
+    added: toDate("2025-04-14T12:48:18")
+  },
+  {
+    title: "Traditional Khal Batta",
+    s_desc: "Bring back the authentic touch to your kitchen with our Khal Batta - perfect for grinding spices the traditional way! Strong, durable, and timeless - ideal for those who love rich flavors and homemade goodness.A must- have for every desi kitchen.",
+    // desc: "",
+    img: "home_essentials/khal_batta.webp",
+    stock: true,
+    featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    // price: 20.00,
+    // sale: 17.99,
+    added: toDate("2025-04-14T12:43:07")
+  },
+  {
+    title: "Premium Tea Cups",
+    s_desc: "Upgrade your tea time with our Premium Tea Cups - elegant, durable, and now only €17.99! Perfect for daily use or serving guests with a touch of class.Available in beautiful designs that bring charm to every sip.",
+    // desc: "",
+    img: "home_essentials/tea_cups.webp",
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 6,
+    price: 20.00,
+    sale: 17.99,
+    added: toDate("2025-04-14T12:39:39")
+  },
   {
     title: "School Bags - Large",
     s_desc: "Get your kids ready for school with our high-quality school bags! Designed for comfort, durability, and style, they come in multiple sizes, colors, and fun designs. Perfect for carrying books, lunch, and essentials with ease!",
@@ -106,8 +200,8 @@ export const home_essentials = [
     added: toDate("2025-04-03T12:43:06")
   },
   {
-    title: "Clocks – Stylish and Functional",
-    s_desc: "Upgrade your space with our beautiful and functional clocks – perfect for any home or office! 🏡⌚ Available in multiple designs to match your style.",
+    title: "Clocks - Stylish and Functional",
+    s_desc: "Upgrade your space with our beautiful and functional clocks - perfect for any home or office! 🏡⌚ Available in multiple designs to match your style.",
     // desc: "",
     img: "home_essentials/clocks.webp",
     stock: true,
@@ -223,7 +317,7 @@ export const home_essentials = [
     added: toDate("2025-03-30T06:06:35")
   },
   {
-    title: "Temperature Cups – Perfect for Hot & Cold Drinks!",
+    title: "Temperature Cups - Perfect for Hot & Cold Drinks!",
     s_desc: "Keep your drinks at the perfect temperature with our premium temperature control cups! Whether you love hot coffee or ice-cold juice, these cups maintain the ideal temperature for longer. Stylish, durable, and perfect for everyday use!",
     // desc: "",
     img: "home_essentials/temperature_cup.webp",
