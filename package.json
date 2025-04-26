@@ -8,17 +8,17 @@
     "dev": "vite",
     "build": "vite build --emptyOutDir",
     "test": "vite preview",
-    "bs-static": "sass --no-source-map ./src/scss/bs-dynamic.scss ./src/scss/bs-static.scss",
+    "build-bootstrap": "sass --no-source-map ./src/scss/bs-dynamic.scss ./src/scss/bs-static.scss",
     "push": "git add . && git commit -m \"auto commit\" && npm version patch && git push"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "autoprefixer": "^10.4.21",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.5",
     "cssnano": "^7.0.6",
     "postcss": "^8.5.3",
-    "sass": "^1.86.0",
-    "vite": "^5.4.15",
+    "sass": "^1.87.0",
+    "vite": "^5.4.18",
     "vite-plugin-minify": "^2.1.0",
     "vite-plugin-webfont-dl": "^3.10.4"
   },
@@ -26,6 +26,6 @@
     "@glidejs/glide": "^3.7.1",
     "@popperjs/core": "^2.11.8",
     "boxicons": "^2.1.4",
-    "caniuse-lite": "^1.0.30001707"
+    "caniuse-lite": "^1.0.30001715"
   }
 }

@@ -322,12 +322,12 @@ export const home_essentials = [
     // desc: "",
     img: "home_essentials/temperature_cup.webp",
     stock: true,
-    featured: true,
+    // featured: true,
     uom: "PC(s)",
     quantity: 1,
-    price: 10,
-    // sale: 145,
-    added: toDate("2025-03-30T06:06:28")
+    price: 15,
+    sale: 20,
+    added: toDate("2025-04-26T15:06:37")
   },
   {
     title: "Bowls and Plates",
