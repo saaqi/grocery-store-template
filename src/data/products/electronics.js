@@ -16,6 +16,34 @@ export const electronics = [
   //   added: toDate()
   // },
   {
+    title: "Handheld Garment Steamer",
+    s_desc: "Say goodbye to wrinkles in seconds with our Handheld Garment Steamer, now available for just €19.99! Perfect for quick touch-ups, easy to use, travel - friendly, and gentle on all fabrics.Look sharp every day!",
+    // desc: "",
+    img: "electronics/handheld_steamer.webp",
+    // img_extra: [],
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 25.00,
+    sale: 19.99,
+    added: toDate("2025-04-29T16:53:44")
+  },
+  {
+    title: "Universal TV Remote",
+    s_desc: "Lost your remote? No worries! Grab a Universal TV Remote for only €4.99! Compatible with most TV brands, easy to set up, and super convenient.Switch channels with ease again!",
+    // desc: "",
+    img: "electronics/universal_tv_remote.webp",
+    // img_extra: [],
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 7.00,
+    sale: 4.99,
+    added: toDate("2025-04-29T15:57:13")
+  },
+  {
     title: "AE800 Ultra2 Smart Watch",
     s_desc: "Experience smart living with the AE800 Ultra2 Smart Watch, now available for just €20! Stay connected, track your fitness, monitor your health, and enjoy a sleek, stylish design - all from your wrist. Big features.Small price.Perfect choice!",
     // desc: "",
