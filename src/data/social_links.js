@@ -6,6 +6,12 @@ const social_links = [
     icon: `bxl-facebook`,
   },
   {
+    link: `https://instagram.com/sadiq.superstore`,
+    title: `Follow us on Instagram to stay Up to date with our latest offers!`,
+    link_class: `instagram-link`,
+    icon: `bxl-instagram`,
+  },
+  {
     link: `https://maps.app.goo.gl/5LcX4sf9Wz3zGMxE9`,
     title: `Visit Us Now!`,
     link_class: `map-link`,
