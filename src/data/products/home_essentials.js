@@ -15,6 +15,64 @@ export const home_essentials = [
   //   added: toDate()
   // },
   {
+    title: "Portable BBQ Grill Just",
+    s_desc: "Get ready for tasty outdoor fun with our Portable Barbecue Grill, perfect for picnics, camping, and backyard gatherings! Easy to carry. Quick setup. Durable & stylish.",
+    // desc: "",
+    img: "home_essentials/barbecue_grill_40.webp",
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 45,
+    sale: 40,
+    added: toDate("2025-05-17T15:41:58")
+  },
+  {
+    title: "10-Piece Schleizer Immer Base",
+    s_desc: "Cook like a pro with the 10-Piece Schleizer Immer Base Set, durable, stylish, and built for everyday use. Whether you're whipping up breakfast or a family feast, this set has everything you need, and it's just €20!",
+    // desc: "",
+    img: "home_essentials/immer_base_20_01.webp",
+    img_extra: [
+      "home_essentials/immer_base_20_02.webp",
+    ],
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 25,
+    sale: 20,
+    added: toDate("2025-05-17T15:29:08")
+  },
+  {
+    title: "Premium 4-Piece Ceramic Bowl Set",
+    s_desc: "Style meets function with our 4-Piece Ceramic Bowl Set, elegant, durable, and perfect for everyday use or special meals! Serve soups, salads, or snacks in premium quality ceramic, all for just €6",
+    // desc: "",
+    img: "home_essentials/ceramic_bowl_set_6_01.webp",
+    img_extra: [
+      "home_essentials/ceramic_bowl_set_6_02.webp",
+    ],
+    stock: true,
+    featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 6.00,
+    // sale: ,
+    added: toDate("2025-05-17T15:21:38")
+  },
+  {
+    title: "Professional 9-Piece Kitchen Knife Set",
+    s_desc: "Upgrade your kitchen like a pro with our 9-Piece Kitchen Knife Set, perfect for chefs and home cooks alike! Precision blades, sleek design, and chef- level quality, all for just €18! Chop, slice, and dice with ease, your kitchen deserves this!",
+    // desc: "",
+    img: "home_essentials/knife_set_18.webp",
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 22.00,
+    sale: 18.00,
+    added: toDate("2025-05-17T15:18:40")
+  },
+  {
     title: "Mercury Haus Cooking Pot",
     s_desc: "Cook like a pro with the Mercury Haus Premium Cooking Pot, now available for just €39.99! Known for its exceptional quality, durability, and sleek design, it’s perfect for everyday meals and special recipes.Even heat distribution and easy cleanup make cooking a breeze!",
     // desc: "",

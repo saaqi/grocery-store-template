@@ -50,7 +50,7 @@ const generateProductCards = prods => {
   // Sale Icon
   const saleIcon = sale ? '<i class="bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm"></i>' : ''
   // Quantity & UOM
-  const q_UOM = quantity ? `<div class="card-qauntity py-2 px-1 fw-medium rounded-2 bg-primary-subtle text-center w-100">${quantity} ${uom}</div>` : ''
+  const q_UOM = quantity ? `<div class="card-qauntity fw-medium">${quantity} ${uom}</div>` : ''
   // Short Description
   const shortDesc = s_desc ? `<p class="short-description">${s_desc}</p>` : ''
   // Long Description
@@ -66,9 +66,12 @@ const generateProductCards = prods => {
     `<div class="product-card card shadow-sm h-100">
       ${topImg}
       <div class="card-body d-flex flex-column align-items-start gap-4 p-2 p-sm-3">
-        <div class="card-title h4 mb-0">${title}</div>
-        <div class="mt-auto w-100">${q_UOM}</div>
-        <div class="sale-price w-100 d-flex justify-content-${sale ? 'between' : 'end'} align-items-center mb-2 gap-2 flex-wrap text-center">
+        <div class="body-header">
+          <div class="card-title h4">${title}</div>
+          ${q_UOM}
+        </div>
+        ${s_desc ? `<div class="card-text shortDescription">${s_desc}</div>` : ''}
+        <div class="mt-auto sale-price w-100 d-flex justify-content-${sale ? 'between' : 'end'} align-items-center mb-2 gap-2 flex-wrap text-center">
           ${stock ? `${priceButton + percentOff + saleButton}` : '<div class="text-muted">Out of Stock</div>'}
         </div>
       </div>

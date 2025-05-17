@@ -16,6 +16,36 @@ export const electronics = [
   //   added: toDate()
   // },
   {
+    title: "16\" Stand Fan",
+    s_desc: "Beat the heat with our 16\" Stand Fan, packed with features to keep you cool and comfortable. Perfect for your home or office, all for just €30!. 3 Speed Control. Super Quiet Motor. 180° Oscillation.",
+    // desc: "",
+    img: "electronics/padestal_fan_30.webp",
+    // img_extra: [],
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 35.00,
+    sale: 30.00,
+    added: toDate("2025-05-17T15:39:00")
+  },
+  {
+    title: "Eisenbach HW-1501 Juicer",
+    s_desc: "Start your day the fresh way with the Eisenbach HW-1501 Juicer, now available for only €28! Powerful, efficient, and easy to clean, perfect for making fresh juices at home in minutes.",
+    // desc: "",
+    img: "electronics/eisenbach_juicer_28_01.webp",
+    img_extra: [
+      "electronics/eisenbach_juicer_28_02.webp",
+    ],
+    stock: true,
+    // featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 35,
+    sale: 28,
+    added: toDate("2025-05-17T15:27:16")
+  },
+  {
     title: "Handheld Garment Steamer",
     s_desc: "Say goodbye to wrinkles in seconds with our Handheld Garment Steamer, now available for just €19.99! Perfect for quick touch-ups, easy to use, travel - friendly, and gentle on all fabrics.Look sharp every day!",
     // desc: "",

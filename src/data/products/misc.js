@@ -3,12 +3,26 @@ const toDate = d => new Date(d)
 export const misc = [
   {
     title: "9 Days Nail Polish",
+    s_desc: "Soft, huggable, and full of charm, our Plush Skin Stuffed Toys are perfect for kids and collectors alike! Super soft & safe. Adorable designs. Great gift idea.",
+    desc: false,
+    img: "misc/toy_set_10.webp",
+    // img_extra: [],
+    stock: true,
+    featured: true,
+    uom: "PC(s)",
+    quantity: 1,
+    price: 10,
+    // sale: 10,
+    added: toDate("2025-05-17T15:51:07")
+  },
+  {
+    title: "9 Days Nail Polish",
     s_desc: "Add a pop of color to your nails with our high-quality nail polish! Available in gorgeous shades, it offers a smooth finish, long-lasting shine, and quick drying. Perfect for any occasion!",
     desc: false,
     img: "misc/9_days_nail_polish.webp",
     // img_extra: [],
     stock: true,
-    featured: true,
+    // featured: true,
     uom: "PC(s)",
     quantity: 1,
     price: 6.00,
