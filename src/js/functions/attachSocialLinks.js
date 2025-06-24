@@ -12,11 +12,13 @@ const attachSocialLinksById = parentId => {
     } = sl;
 
     const output =
-      `<li class="lh-1">` +
-        `<a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">` +
-          `<i class="bx ${icon}"></i>` +
-        `</a>` +
-      `</li>`;
+      [
+        `<li class="lh-1">`,
+        `<a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">`,
+        `<i class="bx ${icon}"></i>`,
+        `</a>`,
+        `</li>`
+      ].join("");
 
     return output;
   });
@@ -37,11 +39,13 @@ const attachSocialLinksByClass = parentClass => {
     } = sl;
 
     const output =
-      `<li class="lh-1">` +
-        `<a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">` +
-          `<i class="bx ${icon}"></i>` +
-        `</a>` +
-      `</li>`;
+      [
+        `<li class="lh-1">`,
+        `<a class="${link_class} fs-3" href="${link}" title="${title}!" target="_blank" rel="nofollow">`,
+        `<i class="bx ${icon}"></i>`,
+        `</a>`,
+        `</li>`
+      ].join("");
 
     return output;
   });

@@ -8,6 +8,11 @@ import './contactus.js';
 import './footer.js';
 
 // css
+// Supports weights 100-900
+import '@fontsource-variable/inter';
+// Supports weights 400-700
+import '@fontsource-variable/lora';
+
 import "../scss/bs-static.scss";
 import "../scss/main.scss";
 // BOX Icons

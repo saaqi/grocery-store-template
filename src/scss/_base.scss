@@ -1,8 +1,15 @@
-/* Import Variables */
-@use "./variables" as v;
+:root {
+  --odd-bg: #fefefe;
+  --even-bg: #fafafa;
+  --transition: all ease-in-out 0.2s;
+}
 
 html {
   scroll-padding-top: 67px;
+}
+
+p {
+	line-height: 1.6;
 }
 
 .section {
@@ -12,11 +19,11 @@ html {
 }
 
 .section:nth-child(even) {
-  background-color: v.$even-bg;
+  background-color: var(--even-bg);
 }
 
 .section:nth-child(odd) {
-  background-color: v.$odd-bg;
+  background-color: var(--odd-bg);
 }
 
 ////////////
@@ -91,12 +98,8 @@ a.top-link {
 // Accordians
 .accordion-button {
   &[aria-expanded="true"] {
-    background-color: v.$warning;
+    background-color: rgb(var(--bs-warning-rgb));
   }
-
-  // &:focus {
-  //   box-shadow: none;
-  // }
 }
 
 /* Section Heading Titles */
@@ -116,7 +119,7 @@ a.top-link {
   bottom: 3px;
   left: 50%;
   margin-left: -14px;
-  background-color: v.$primary;
+  background-color: rgb(var(--bs-primary-rgb));
 }
 
 .section-heading::after {
@@ -128,7 +131,7 @@ a.top-link {
   margin-top: 1rem;
   left: 50%;
   margin-left: -50px;
-  background-color: v.$primary;
+  background-color: rgb(var(--bs-primary-rgb));
 }
 
 /* Product Cards */
