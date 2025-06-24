@@ -2,6 +2,17 @@ const toDate = d => new Date(d)
 
 export const snacks_and_drinks = [
   {
+    title: "Crown Kulfi Ice Cream",
+    s_desc: "Enjoy the rich, creamy taste of traditional Crown Kulfi, made with real milk and authentic flavors. A perfect frozen treat to satisfy your sweet cravings with every bite.",
+    img: "snacks_and_drinks/crown_kulfi_ice.webp",
+    stock: true,
+    uom: "PC(s)",
+    quantity: 1,
+    // price: 3.00,
+    // sale: 0.50,
+    added: toDate("2025-06-24T16:30:28")
+  },
+  {
     title: "Matri",
     s_desc: "Enjoy the perfect golden, flaky, and crispy Matri! A delicious traditional snack, perfect for tea time or whenever you crave something savory and satisfying.",
     img: "snacks_and_drinks/matri.webp",

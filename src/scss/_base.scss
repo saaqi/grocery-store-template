@@ -72,6 +72,12 @@ a.top-link {
     // font-size: .8rem;
     line-height: 0;
   }
+  .btn:first-child {
+    border-radius: 0 0 0 var(--bs-border-radius);
+  }
+  .btn:last-child {
+    border-radius: 0 0 var(--bs-border-radius) 0;
+  }
 }
 
 [class*="btn-"]:not([class*="btn-outline-"]) {
@@ -138,11 +144,11 @@ a.top-link {
 .product-card {
   .shortDescription {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-clamp: 2;
-    max-height: 3em;
+    line-clamp: 3;
+    max-height: 4.8em;
   }
 }

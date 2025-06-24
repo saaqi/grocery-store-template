@@ -44,9 +44,9 @@ const generateProductCards = prods => {
     `<img src="${coverImage}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy" draggable="false">`
   // Description Button
   const descButton =
-    `<button type="button" class="btn btn-outline-dark flex-grow-1 modal-button d-flex flex-wrap gap-1 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!"><i class="bx bx-info-circle"></i> <span>Info</span></button>`
+    `<button type="button" class="btn btn-outline-dark modal-button border-0 px-1 d-flex flex-wrap gap-1 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!"><i class="bx bx-info-circle"></i> <span>Info</span></button>`
   // WhatsApp Button
-  const waButton = `<a href="https://wa.me/32465638887?text=${title} €${sale ? sale : price}" class="btn btn-outline-primary flex-grow-1 d-flex flex-wrap gap-1 justify-content-center align-items-center" target="_blank" title="Contact us via WhatsApp!"><i class="bx bxl-whatsapp"></i> <span>Buy!</span></a>`
+  const waButton = `<a class="btn btn-outline-primary border-0 px-1 d-flex flex-wrap gap-1 justify-content-center align-items-center" href="https://wa.me/32465638887?text=${title} €${sale ? sale : price}" target="_blank" title="Contact us via WhatsApp!"><i class="bx bxl-whatsapp"></i> <span>Buy!</span></a>`
   // Sale Icon
   const saleIcon = sale ? '<i class="bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm"></i>' : ''
   // Quantity & UOM
@@ -65,7 +65,7 @@ const generateProductCards = prods => {
   const productCard =
     `<div class="product-card card shadow-sm h-100">
       ${topImg}
-      <div class="card-body d-flex flex-column align-items-start gap-4 p-2 p-sm-3">
+      <div class="card-body d-flex flex-column align-items-start gap-3 p-2 p-sm-3">
         <div class="body-header">
           <div class="card-title h4">${title}</div>
           ${q_UOM}
@@ -75,8 +75,8 @@ const generateProductCards = prods => {
           ${stock ? `${priceButton + percentOff + saleButton}` : '<div class="text-muted">Out of Stock</div>'}
         </div>
       </div>
-      <div class="card-footer">
-        <div class="d-flex gap-2 flex-wrap card-buttons">${waButton + descButton}</div>
+      <div class="card-footer p-0">
+        <div class="btn-group card-buttons w-100" role="group" aria-label="Card Buttons">${waButton + descButton}</div>
       </div>
       ${saleIcon}
     </div>`.replace(/\s+/g, ' ');
