@@ -1,7 +1,6 @@
 
 import { products } from "./products.js";
 import { attachProducts } from "../js/functions/generateProductCards.js";
-import draggableContainer from "../js/functions/draggableContainer.js";
 import "../scss/draggable.scss";
 
 export const shopCats = [...new Set(products.map(item => item.cat).filter(cat => cat))].map(cat => ({ cat }))

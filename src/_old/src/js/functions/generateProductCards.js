@@ -40,13 +40,9 @@ const generateProductCards = prods => {
   const logoImg =
     `<img src="${logo}" alt="Sadiq Super Store Logo" class="img-fluid fs-1" style="height: 1em" loading="lazy" draggable="false">`
   // Card Top Image
-  const topImg =
-    `<img src="${coverImage}" alt="${title}" class="img-fluid card-img-top border-bottom border-light-subtle" loading="lazy" draggable="false">`
   // Description Button
   const descButton =
     `<button type="button" class="btn btn-outline-dark modal-button border-0 px-1 d-flex flex-wrap gap-1 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!"><i class="bx bx-info-circle"></i> <span>Info</span></button>`
-  // WhatsApp Button
-  const waButton = `<a class="btn btn-outline-primary border-0 px-1 d-flex flex-wrap gap-1 justify-content-center align-items-center" href="https://wa.me/32465638887?text=${title} €${sale ? sale : price}" target="_blank" title="Contact us via WhatsApp!"><i class="bx bxl-whatsapp"></i> <span>Buy!</span></a>`
   // Sale Icon
   const saleIcon = sale ? '<i class="bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm"></i>' : ''
   // Quantity & UOM

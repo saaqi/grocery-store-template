@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Home } from '$sections';
+	import { Home, WeeklySales } from '$sections';
 </script>
 
 <Home />
+<WeeklySales />

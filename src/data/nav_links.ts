@@ -4,7 +4,7 @@ interface Navigation {
   link: string;
   text: string;
   icon: string;
-  subcategories?: any[];
+  subcategories?: { title: string; shopId: string; shopLink: string; shopIndex: string; }[];
 }
 
 

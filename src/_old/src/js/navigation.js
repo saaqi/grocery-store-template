@@ -1,41 +1,5 @@
 // --- Import only the required components.
 
-import nav_links from "../data/nav_links.js";
-
-// Setup Navigation Links
-const navigationLinks = nav_links.map( nl => {
-  const {
-    text = '',
-    link = '',
-    icon = '',
-    subcategories = [] // Add default value for subcategories
-  } = nl;
-
-  // If there are subcategories, generate a dropdown menu
-  const output = subcategories.length > 0 ?
-    `<li class="nav-item dropdown">` +
-      `<a class="nav-link link-dark dropdown-toggle ${link}" data-scroll-spy-target="#${link}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">` +
-        `${icon} ${text}` +
-      `</a>` +
-      `<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">` +
-      // Map over subcategories to generate dropdown items
-      subcategories.map((subcategory) =>
-        `<li class="nav-item m-2">
-          <a class="dropdown-item fw-medium shop-link ${subcategory.shopLink}" href="#${subcategory.shopLink}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">
-            <i class='bx bxs-purchase-tag'></i> ${subcategory.title}
-          </a>
-        </li>`).join("") +
-      `</ul>` +
-    `</li>` :
-    // If there are no subcategories, generate a regular navigation link
-    `<li class="nav-item">` +
-      `<a class="nav-link link-dark ${link}" href="#${link}" data-scroll-spy-target="#${link}" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">` +
-        `${icon ? icon + ' ' : ''}${text}` +
-      `</a>` +
-    `</li>`;
-
-  return output;
-});
 
 const navLinkElements = document.getElementById("navbar");
 if (navLinkElements) navLinkElements.innerHTML = navigationLinks.join("");

@@ -28,6 +28,8 @@ export const products = [
 
 
 // Sort the products array by the 'added' property
-// export const dateSortedProducts = products.sort((a, b) => (b.added) - (a.added));
+export const dateSortedProducts = [...products]
+  .sort((a, b) => new Date(b.added).getTime() - new Date(a.added).getTime());
 // Sort the products array by alphabetically by the 'title' property
-// export const alphabetSortedProducts = [...products].sort((a, b) => a.title.localeCompare(b.title));
+export const alphabetSortedProducts = [...products]
+  .sort((a, b) => a.title.localeCompare(b.title));

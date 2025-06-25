@@ -109,38 +109,6 @@ a.top-link {
 	}
 }
 
-/* Section Heading Titles */
-.section-heading {
-	position: relative;
-	text-align: center;
-	text-transform: uppercase;
-	padding-bottom: 5px;
-}
-
-.section-heading::before {
-	width: 28px;
-	height: 5px;
-	display: block;
-	content: '';
-	position: absolute;
-	bottom: 3px;
-	left: 50%;
-	margin-left: -14px;
-	background-color: rgb(var(--bs-primary-rgb));
-}
-
-.section-heading::after {
-	width: 100px;
-	height: 1px;
-	display: block;
-	content: '';
-	position: relative;
-	margin-top: 1rem;
-	left: 50%;
-	margin-left: -50px;
-	background-color: rgb(var(--bs-primary-rgb));
-}
-
 /* Product Cards */
 .product-card {
 	.shortDescription {
