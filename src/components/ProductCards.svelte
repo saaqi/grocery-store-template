@@ -13,16 +13,19 @@
 	onMount(async () => {
 		await import('bootstrap/js/dist/modal.js');
 	});
-	import fallBackImg from '$assets/logo.svg';
+	import logo from '$assets/logo.svg';
 </script>
 
-{#snippet prodImage(img: string, title: string)}
+{#snippet prodImage(img: string, title: string, topImg: boolean)}
 	{#each Object.entries(productPics) as [_path, module], index ('prod-' + index)}
+		<!-- .card-img-top, rounded : keeps from purging -->
 		{#if _path.includes(img)}
 			<enhanced:img
 				src={(module as any).default}
 				sizes="(min-width: 500px) 500px, 100vw"
-				class="img-fluid card-img-top border-bottom"
+				class="img-fluid border-bottom"
+				class:card-img-top={topImg}
+				class:rounded={!topImg}
 				alt={'Screenshot of ' + title}
 				loading="lazy"
 				width="500"
@@ -31,6 +34,12 @@
 			/>
 		{/if}
 	{/each}
+{/snippet}
+
+{#snippet q_UOM(uom: string, quantity: number | string)}
+	{#if quantity}
+		<div class="card-quantity fw-medium">{quantity} {uom}</div>
+	{/if}
 {/snippet}
 
 {#snippet whatsAppButton(title: string, sale: number, price: number)}
@@ -57,98 +66,167 @@
 	</button>
 {/snippet}
 
-{#each data as { title, s_desc, desc, img, img_extra, stock, featured, uom, quantity, price, sale, added, cat }, index (identity + index)}
-	<li class="col-6 col-lg-3 draggableItem">
+{#snippet priceButton(sale: number, price: number)}
+	{#if price}
+		<div
+			class="item-price-regular rounded p-2 fw-medium {sale
+				? 'bg-info text-bg-info text-decoration-line-through'
+				: 'bg-primary text-bg-primary'}"
+		>
+			€{price.toFixed(2)}
+		</div>
+	{/if}
+{/snippet}
+
+{#snippet percentOff(sale: number, price: number)}
+	{#if sale}
+		<div class="percent fw-medium">{Math.ceil(((price - sale) / price) * 100)}% OFF</div>
+	{/if}
+{/snippet}
+
+{#snippet saleButton(sale: number)}
+	{#if sale}
+		<div class="item-price-sale rounded p-2 fw-medium bg-primary text-bg-primary">
+			€{sale.toFixed(2)}
+		</div>
+	{/if}
+{/snippet}
+
+{#each data as { title, s_desc, desc, img, img_extra, stock, featured, uom, quantity, price, sale }, index (identity + index)}
+	<li class="col-6 col-lg-3 draggableItem hoverTransition">
 		<div class="product-card card shadow-sm h-100">
-			{@render prodImage(img, title)}
-			<!-- <div class="card-body d-flex flex-column align-items-start gap-3 p-2 p-sm-3">
+			{@render prodImage(img, title, true)}
+			<div class="card-body d-flex flex-column align-items-start gap-3 p-2 p-sm-3">
 				<div class="body-header">
-					<div class="card-title h4">${title}</div>
-					{q_UOM}
+					<div class="card-title h4">{title}</div>
+					{@render q_UOM(uom, quantity)}
+					{#if featured}
+						<div class="sale-indicator badge bg-warning text-dark">Featured</div>
+					{/if}
 				</div>
-				${s_desc ? `<div class="card-text shortDescription">${s_desc}</div>` : ''}
+				<div class="card-text shortDescription">{s_desc}</div>
+				<!-- .justify-content-between, .justify-content-end : keeps from purging -->
 				<div
-					class="mt-auto sale-price w-100 d-flex justify-content-${sale
-						? 'between'
-						: 'end'} align-items-center mb-2 gap-2 flex-wrap text-center"
+					class="mt-auto sale-price w-100 d-flex align-items-center mb-2 gap-2 flex-wrap text-center"
+					class:justify-content-between={sale}
+					class:justify-content-end={!sale}
 				>
-					${stock
-						? `${priceButton + percentOff + saleButton}`
-						: '<div class="text-muted">Out of Stock</div>'}
+					{#if stock}
+						{@render priceButton(sale, price)}
+						{@render percentOff(sale, price)}
+						{@render saleButton(sale)}
+					{:else}
+						<div class="text-muted">Out of Stock</div>
+					{/if}
 				</div>
-			</div> -->
+			</div>
 			<div class="card-footer p-0">
 				<div class="btn-group card-buttons w-100" role="group" aria-label="Card Buttons">
-					<!-- ${waButton + descButton} -->
 					{@render whatsAppButton(title, sale, price)}
 					{#if sale}
 						{@render infoButton(identity, index)}
 					{/if}
 				</div>
 			</div>
-			<!-- ${saleIcon} -->
+			{#if sale}
+				<i
+					class="bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm"
+				></i>
+			{/if}
 		</div>
 	</li>
-{/each}
 
-<!-- <li class="col-6 col-lg-3 draggableItem">
-	{productCard}
-</li> -->
-
-<!-- <div
-	{id}
-	class="modal fade"
-	data-bs-keyboard="false"
-	tabindex="-1"
-	aria-labelledby={id + '-label'}
-	aria-hidden="true"
->
 	<div
-		id={id + '-label'}
-		class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+		id={identity + index}
+		class="modal fade"
+		data-bs-keyboard="false"
+		tabindex="-1"
+		aria-labelledby={identity + index + '-label'}
+		aria-hidden="true"
 	>
-		<div class="modal-content">
-			<div
-				class="modal-header py-2 shadow-sm bg-warning text-bg-warning d-flex justify-content-between"
-			>
-				${logoImg}
-				<button
-					type="button"
-					class="btn btn-outline-danger p-0 lh-1"
-					data-bs-dismiss="modal"
-					aria-label="Close"
+		<div
+			id={identity + index + '-label'}
+			class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+		>
+			<div class="modal-content">
+				<div
+					class="modal-header py-2 shadow-sm bg-warning text-bg-warning d-flex justify-content-between"
 				>
-					<i class="bx bx-x fs-1"></i>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="container-fluid">
-					<div class="row">
-						<img
-							src="${coverImage}"
-							alt="${title}"
-							class="col-md-4 h-100 img-fluid mb-3 p-0 rounded shadow-sm"
-							loading="lazy"
-						/>
-						<div class="col-md-8">
-							<h4 class="modal-heading">${title}${quantity ? ` - ${quantity} ${uom}` : ''}</h4>
-							${shortDesc + longDesc}
-							<div
-								class="sale-price w-100 d-flex justify-content-${sale
-									? 'between'
-									: 'end'} align-items-center mb-2 mt-auto gap-2 flex-wrap text-center"
-							>
-								${stock
-									? `${priceButton + percentOff + saleButton}`
-									: '<div class="text-muted">Out of Stock</div>'}
+					<img
+						src={logo}
+						alt="Sadiq Super Store Logo"
+						class="img-fluid fs-1"
+						style="height: 1em"
+						loading="lazy"
+						draggable="false"
+					/>
+					<button
+						type="button"
+						class="btn btn-outline-danger p-0 lh-1"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					>
+						<i class="bx bx-x fs-1"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col">
+								{@render prodImage(img, title, false)}
 							</div>
+							<div class="col-md-8 mt-4">
+								<h4 class="modal-heading">{title} {quantity ? ` - ${quantity} ${uom}` : ''}</h4>
+								<p class="short-description">{s_desc}</p>
+								{#if desc}
+									<p class="long-description">{desc}</p>
+								{/if}
+								<div
+									class="sale-price w-100 d-flex justify-content-${sale
+										? 'between'
+										: 'end'} align-items-center mb-2 mt-auto gap-2 flex-wrap text-center"
+								>
+									{#if stock}
+										{@render priceButton(sale, price)}
+										{@render percentOff(sale, price)}
+										{@render saleButton(sale)}
+									{:else}
+										<div class="text-muted">Out of Stock</div>
+									{/if}
+								</div>
+							</div>
+							{#if img_extra}
+								<div class="container mt-3">
+									<div class="row g-3">
+										{#each img_extra as extraImg, index ('extra-' + index)}
+										<div class="col-6 col-md-4 g-3">
+											{@render prodImage(extraImg, title, false)}
+										</div>
+										{/each}
+									</div>
+								</div>
+							{/if}
 						</div>
-						${img_extra
-							? `<div class="container mt-3"><div class="row g-3">${extraImages}</div></div>`
-							: ''}
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div> -->
+{/each}
+
+<style lang="scss">
+	.sale-indicator {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+	}
+
+	.card-quantity {
+		flex-basis: 5em;
+		flex: 0;
+	}
+
+	.sale-price > * {
+		flex: auto;
+	}
+</style>

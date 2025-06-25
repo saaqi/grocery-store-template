@@ -112,6 +112,7 @@
 		</nav>
 	</div>
 </header>
+<div class="nav-spacer bg-warning"></div>
 
 <style lang="scss">
 	.site-header {
@@ -119,7 +120,11 @@
 		transition: var(--transition);
 	}
 
-	.dark .site-header {
+	.nav-spacer {
+		height: 68px;
+	}
+
+	.site-header {
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 	}
 

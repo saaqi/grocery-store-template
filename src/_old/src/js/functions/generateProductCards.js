@@ -36,27 +36,11 @@ const generateProductCards = prods => {
     return roundedPercentage;
   };
 
-  // Logo Image
-  const logoImg =
-    `<img src="${logo}" alt="Sadiq Super Store Logo" class="img-fluid fs-1" style="height: 1em" loading="lazy" draggable="false">`
-  // Card Top Image
-  // Description Button
+
   const descButton =
     `<button type="button" class="btn btn-outline-dark modal-button border-0 px-1 d-flex flex-wrap gap-1 justify-content-center align-items-center" data-bs-toggle="modal" data-bs-target="#${id}" title="Read More Information!"><i class="bx bx-info-circle"></i> <span>Info</span></button>`
   // Sale Icon
-  const saleIcon = sale ? '<i class="bx bxs-discount sale-indicator p-2 fs-4 bg-info text-bg-info rounded-circle shadow-sm"></i>' : ''
   // Quantity & UOM
-  const q_UOM = quantity ? `<div class="card-qauntity fw-medium">${quantity} ${uom}</div>` : ''
-  // Short Description
-  const shortDesc = s_desc ? `<p class="short-description">${s_desc}</p>` : ''
-  // Long Description
-  const longDesc = desc ? `<p class="long-description">${desc}</p>` : ''
-  // Price Button
-  const priceButton = price ? `<div class="item-price-regular rounded py-2 px-1 fw-medium ${sale ? `bg-info text-bg-info text-decoration-line-through` : `bg-primary text-bg-primary`}">€${price.toFixed(2)}</div>` : ''
-  // Sale Button
-  const saleButton = sale ? `<div class="item-price-sale rounded py-2 px-1 fw-medium bg-primary text-bg-primary">€${sale.toFixed(2)}</div>` : ''
-  // Percent off text
-  const percentOff = sale ? `<div class="percent fw-medium">${percent()}</div>` : ''
 
   const productCard =
     `<div class="product-card card shadow-sm h-100">

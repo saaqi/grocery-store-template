@@ -12,19 +12,14 @@ p {
 	line-height: 1.6;
 }
 
-.section {
-	display: flex;
-	align-items: center;
-	place-content: center;
+.hoverTransition {
+	transition: var(--transition);
+	&:hover {
+		transition: var(--transition);
+		transform: translateY(-2px);
+	}
 }
 
-.section:nth-child(even) {
-	background-color: var(--even-bg);
-}
-
-.section:nth-child(odd) {
-	background-color: var(--odd-bg);
-}
 
 ////////////
 /*Top Link*/

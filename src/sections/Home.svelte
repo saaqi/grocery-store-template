@@ -5,10 +5,11 @@
 	import heroImage768 from '$assets/hero/hero-image@768x.webp';
 	import heroImage576 from '$assets/hero/hero-image@576x.webp';
 
+	import { SectionWrapper } from '$components'
 	import { social_links } from '$data';
 </script>
 
-<section id="home" class="section home bg-warning text-bg-warning">
+<SectionWrapper id="home" class="home bg-warning text-bg-warning">
 	<div class="container py-5">
 		<div class="row flex-wrap-reverse align-items-center">
 			<div class="text-col col-lg-6 text-center text-lg-start mt-3 mt-lg-0">
@@ -63,26 +64,4 @@
 			</div>
 		</div>
 	</div>
-</section>
-
-<style>
-	#home {
-		min-height: 100svh;
-
-		.container {
-			margin-top: 30px;
-			margin-bottom: 30px;
-		}
-
-		.hero-image {
-			max-height: 50svh;
-			filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-		}
-
-		@media only screen and (min-width: 992px) {
-			.hero-image {
-				max-height: 80svh;
-			}
-		}
-	}
-</style>
+</SectionWrapper>

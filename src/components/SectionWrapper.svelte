@@ -1,47 +1,74 @@
 <script lang="ts">
-	const { id, title, copy, children, ...props } = $props();
+	interface Props {
+		id?: string;
+		heading?: string;
+		copy?: string;
+		children: import('svelte').Snippet;
+		[key: string]: any;
+	}
+	const { id, heading, copy, children, ...props }: Props = $props();
 </script>
-
-<section {id} {...props} class:section={true} class:section-wrapper={true}>
-	<div class="container py-4">
-		<h2 class="section-heading">{title}</h2>
-		{#if copy}
-			<p class="section-copy">{copy}</p>
-		{/if}
-		{@render children()}
-	</div>
+<!-- .section, .gap-4 : keeps from purging -->
+<section {id} class:section={true} class:gap-4={true} {...props}>
+	{#if heading || copy}
+		<div class="container py-4">
+			{#if heading}
+				<h2 class="section-heading">{heading}</h2>
+			{/if}
+			{#if copy}
+				<p class="section-copy">{copy}</p>
+			{/if}
+		</div>
+	{/if}
+	{@render children()}
 </section>
 
 <style>
-/* Section Heading Titles */
-.section-heading {
-	position: relative;
-	text-align: center;
-	text-transform: uppercase;
-	padding-bottom: 5px;
-}
+	.section {
+		display: flex;
+		place-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 5em;
+		min-height: 100svh;
+	}
 
-.section-heading::before {
-	width: 28px;
-	height: 5px;
-	display: block;
-	content: '';
-	position: absolute;
-	bottom: 3px;
-	left: 50%;
-	margin-left: -14px;
-	background-color: rgb(var(--bs-primary-rgb));
-}
+	.section:nth-child(even) {
+		background-color: var(--even-bg);
+	}
 
-.section-heading::after {
-	width: 100px;
-	height: 1px;
-	display: block;
-	content: '';
-	position: relative;
-	margin-top: 1rem;
-	left: 50%;
-	margin-left: -50px;
-	background-color: rgb(var(--bs-primary-rgb));
-}
+	.section:nth-child(odd) {
+		background-color: var(--odd-bg);
+	}
+
+	.section-heading {
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+		padding-bottom: 5px;
+	}
+
+	.section-heading::before {
+		width: 28px;
+		height: 5px;
+		display: block;
+		content: '';
+		position: absolute;
+		bottom: 3px;
+		left: 50%;
+		margin-left: -14px;
+		background-color: rgb(var(--bs-primary-rgb));
+	}
+
+	.section-heading::after {
+		width: 100px;
+		height: 1px;
+		display: block;
+		content: '';
+		position: relative;
+		margin-top: 1rem;
+		left: 50%;
+		margin-left: -50px;
+		background-color: rgb(var(--bs-primary-rgb));
+	}
 </style>

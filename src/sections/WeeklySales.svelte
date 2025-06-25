@@ -5,13 +5,13 @@
 	import saleImage1200 from '$assets/hero/sale-image@1200x.webp';
 	import saleImageSvg from '$assets/hero/sale-image.svg';
 
-	import { ProductCards } from '$components';
+	import { ProductCards, SectionWrapper } from '$components';
 	import { dateSortedProducts } from '$data';
 	const onsale = dateSortedProducts
 		.filter((product) => product.sale).slice(0, 8);
 </script>
 
-<section id="sale" class="section position-relative overflow-hidden">
+<SectionWrapper id="weekly-sale">
 	<div class="container py-4">
 		<div class="row d-flex flex-lg-row-reverse overlay align-items-center py-4">
 			<div class="graphic-col col-lg-6 mb-5 mb-lg-0">
@@ -38,4 +38,4 @@
 			</ul>
 		</div>
 	</div>
-</section>
+</SectionWrapper>
