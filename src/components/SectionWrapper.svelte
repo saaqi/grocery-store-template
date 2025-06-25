@@ -9,9 +9,9 @@
 	const { id, heading, copy, children, ...props }: Props = $props();
 </script>
 <!-- .section, .gap-4 : keeps from purging -->
-<section {id} class:section={true} class:gap-4={true} {...props}>
+<section {id} class:section={true} {...props}>
 	{#if heading || copy}
-		<div class="container py-4">
+		<div class="container pt-4">
 			{#if heading}
 				<h2 class="section-heading">{heading}</h2>
 			{/if}
@@ -29,7 +29,6 @@
 		place-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: 5em;
 		min-height: 100svh;
 	}
 
