@@ -1,0 +1,13 @@
+// Import base styling
+@use './base';
+
+// Import navigation styles
+@use './navigation';
+
+// Import Sections
+
+@use './home-section';
+@use './product-cards';
+@use './yearlysale';
+@use './contactus';
+@use './footer';

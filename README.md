@@ -22,7 +22,6 @@ The introduction section includes a call us button that makes it easy for users 
 
 The list of services includes a counter that shows how many services have been done. This is a great way to showcase your expertise and build trust with potential customers.
 
-
 ### Contact section with call, WhatsApp and Google Maps embedded
 
 The contact section includes call, WhatsApp and Google Maps embedded. This makes it easy for users to contact you or find your location.
@@ -32,33 +31,39 @@ The contact section includes call, WhatsApp and Google Maps embedded. This makes
 The working contact us form opens up the default email client and types the info automatically on submit button. This makes it easy for users to contact you without leaving your website.
 
 ## Getting Started
+
 ```bash
 git clone https://github.com/saaqi/grocery-store-template.git
 ```
 
 ### Install dependencies:
+
 ```bash
 cd grocery-store-template
 npm install
 ```
 
-### Start the development server: 
+### Start the development server:
+
 ```bash
 npm run dev
 ```
 
 ### Build for production:
+
 ```bash
 npm run build
 ```
 
 ### Git commit, bump patch version and Git push all in one command:
+
 ```bash
 npm run push
 ```
+
 ## Credits
 
-This template is created and maintained by [Saqib Islam](https://saqibtech.com "Saqib Islam - UI/UX Designer & Fullstack Developer.")s using HTML5, CSS3 and JavaScript.
+This template is created and maintained by [Saqib Islam](https://saqibtech.com 'Saqib Islam - UI/UX Designer & Fullstack Developer.')s using HTML5, CSS3 and JavaScript.
 
 ## License
 

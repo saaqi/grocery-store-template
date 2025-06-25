@@ -1,0 +1,16 @@
+// OVERRIDE DEFAULT VARIABLES
+$primary: #114232;
+$secondary: #87a922;
+$info: #fcdc2a;
+$warning: #f7f6bb;
+// $success:
+// $danger: #E87883;
+// $light:
+// $dark:
+$font-family-base: 'Inter Variable', sans-serif;
+// $font-family-sans-serif: $font-family-base;
+// $headings-font-family: 'Lora Variable', serif;
+// $btn-font-family: $headings-font-family;
+
+// IMPORT BOOTSTRAP
+@import '../../node_modules/bootstrap/scss/bootstrap';

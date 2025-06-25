@@ -1,0 +1,155 @@
+:root {
+	--odd-bg: #fefefe;
+	--even-bg: #fafafa;
+	--transition: all ease-in-out 0.2s;
+}
+
+html {
+	scroll-padding-top: 67px;
+}
+
+p {
+	line-height: 1.6;
+}
+
+.section {
+	display: flex;
+	align-items: center;
+	place-content: center;
+}
+
+.section:nth-child(even) {
+	background-color: var(--even-bg);
+}
+
+.section:nth-child(odd) {
+	background-color: var(--odd-bg);
+}
+
+////////////
+/*Top Link*/
+body.dark a.top-link {
+	opacity: 1;
+	transition: all ease-in-out 0.3s;
+	visibility: visible;
+}
+
+a.top-link {
+	bottom: 10px;
+	opacity: 0;
+	position: fixed;
+	right: 10px;
+	transition: all ease-in-out 0.3s;
+	visibility: hidden;
+	z-index: 4;
+}
+
+// BUTTONS ---------------------------
+.btn {
+	box-shadow:
+		inset 0 -2px 0 rgba(0, 0, 0, 0.3),
+		1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+	font-weight: 500;
+	padding: 0.75rem 1.5rem;
+	text-transform: uppercase;
+	transition: all ease-in-out 0.1s;
+	letter-spacing: 1px;
+
+	&:hover {
+		box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+		transform: translateY(0.5px);
+	}
+
+	&:active {
+		box-shadow: none;
+		text-shadow: none;
+		transform: translateY(2px);
+	}
+}
+
+.card-buttons {
+	.btn {
+		transform: none;
+		// font-size: .8rem;
+		line-height: 0;
+	}
+	.btn:first-child {
+		border-radius: 0 0 0 var(--bs-border-radius);
+	}
+	.btn:last-child {
+		border-radius: 0 0 var(--bs-border-radius) 0;
+	}
+}
+
+[class*='btn-']:not([class*='btn-outline-']) {
+	border: 0;
+}
+
+[class*='btn-outline-'] {
+	box-shadow: none;
+	transform: none;
+
+	&:hover {
+		box-shadow: none;
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+}
+
+.social-button {
+	letter-spacing: 0;
+}
+
+// Accordians
+.accordion-button {
+	&[aria-expanded='true'] {
+		background-color: rgb(var(--bs-warning-rgb));
+	}
+}
+
+/* Section Heading Titles */
+.section-heading {
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 5px;
+}
+
+.section-heading::before {
+	width: 28px;
+	height: 5px;
+	display: block;
+	content: '';
+	position: absolute;
+	bottom: 3px;
+	left: 50%;
+	margin-left: -14px;
+	background-color: rgb(var(--bs-primary-rgb));
+}
+
+.section-heading::after {
+	width: 100px;
+	height: 1px;
+	display: block;
+	content: '';
+	position: relative;
+	margin-top: 1rem;
+	left: 50%;
+	margin-left: -50px;
+	background-color: rgb(var(--bs-primary-rgb));
+}
+
+/* Product Cards */
+.product-card {
+	.shortDescription {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-clamp: 3;
+		max-height: 4.8em;
+	}
+}

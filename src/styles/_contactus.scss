@@ -1,0 +1,61 @@
+// contact form
+.contact-form {
+	label {
+		margin-bottom: 0.2rem;
+		color: rgb(var(--bs-primary-rgb));
+	}
+
+	input,
+	textarea {
+		border-radius: 5px;
+		border: 1px solid rgb(var(--bs-primary-rgb));
+		margin-bottom: 1rem;
+		outline: 0;
+		padding: 0.5rem;
+		transition: var(--transition);
+		width: 100%;
+	}
+
+	input:focus,
+	textarea:focus {
+		box-shadow: inset 1px 1px 2px rgb(var(--bs-secondary-rgb));
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.contact-form {
+		input,
+		textarea {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+/////////////
+// map widget
+.map-widget-container {
+	position: relative;
+	padding-bottom: 400px !important;
+	height: 0;
+	overflow: hidden;
+	height: auto;
+	border: 1px solid rgb(var(--bs-primary-rgb));
+	display: block;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+		max-height: 400px !important;
+	}
+}
+
+.business-hours-table {
+	tr {
+		td {
+			padding: 0.8em 0.9em;
+		}
+	}
+}

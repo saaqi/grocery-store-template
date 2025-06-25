@@ -1,0 +1,26 @@
+.product-store .product-card ul li:hover {
+	transform: scale(1.2);
+	transition: all ease-in-out 0.2s;
+}
+
+.sale-indicator {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+.accordion-button[aria-expanded='true'] {
+	border-radius: 0 0 0.25rem 0.25rem !important;
+	box-shadow:
+		0 1px 2px rgba(0, 0, 0, 0.2),
+		inset 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-qauntity {
+	flex-basis: 5em;
+	flex: 0;
+}
+
+.sale-price > * {
+	flex: auto;
+}
