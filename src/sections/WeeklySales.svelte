@@ -5,7 +5,7 @@
 	import saleImage1200 from '$assets/hero/sale-image@1200x.webp';
 	import saleImageSvg from '$assets/hero/sale-image.svg';
 
-	import { ProductCards, SectionWrapper } from '$components';
+	import { ProductCards, SectionWrapper, DraggableContainer } from '$components';
 	import { dateSortedProducts } from '$data';
 	const onsale = dateSortedProducts
 		.filter((product) => product.sale).slice(0, 8);
@@ -33,9 +33,9 @@
 			</div>
 		</div>
 		<div class="on-sale-section">
-			<ul id="on-sale" class="row list-unstyled g-1 g-md-2">
+			<DraggableContainer id="on-sale">
 				<ProductCards identity="weekly-sale" data={onsale} />
-			</ul>
+			</DraggableContainer>
 		</div>
 	</div>
 </SectionWrapper>

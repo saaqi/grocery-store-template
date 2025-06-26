@@ -15,7 +15,7 @@ export const nav_links: Navigation[] = [
     icon: "bxs-home-smile",
   },
   {
-    link: "sale",
+    link: "weekly-sale",
     text: "Sale",
     icon: "bxs-shopping-bag",
   },

@@ -10,7 +10,7 @@
 </script>
 
 <SectionWrapper id="home" class="home bg-warning text-bg-warning">
-	<div class="container py-5">
+	<div class="container">
 		<div class="row flex-wrap-reverse align-items-center">
 			<div class="text-col col-lg-6 text-center text-lg-start mt-3 mt-lg-0">
 				<div class="lead fw-medium pb-1">Welcome to</div>

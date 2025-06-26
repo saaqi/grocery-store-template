@@ -1,6 +1,19 @@
-<script>
-
-	const { touchSensitivity = 2, indicators = true, children, ...props } = $props();
+<script lang="ts">
+	interface Props {
+		id: string;
+		element?: string;
+		touchSensitivity?: number;
+		indicators?: boolean;
+		children: () => any;
+	}
+	const {
+		id,
+		element = 'div',
+		touchSensitivity = 2,
+		indicators = true,
+		children,
+		...props
+	}: Props = $props();
 
 	/**
 	 * Svelte 5 action that enables horizontal dragging functionality for a container element.
@@ -8,12 +21,11 @@
 	function hasTouchSupport() {
 		return (
 			'ontouchstart' in window || // Most browsers
-			navigator.maxTouchPoints > 0 || // Modern browsers
-			navigator.msMaxTouchPoints > 0 // Older IE
+			navigator.maxTouchPoints > 0 // Modern browsers
 		);
 	}
 
-	function draggableContainer(node, options = {}) {
+	function draggableContainer(node: any, options: { sensitivity?: number } = {}) {
 		// Only add drag functionality if device doesn't have touch support
 		if (hasTouchSupport()) {
 			return {
@@ -24,10 +36,10 @@
 		const { sensitivity = 3 } = options;
 
 		let isDragging = false;
-		let startX;
-		let scrollLeft;
+		let startX: any;
+		let scrollLeft: any;
 
-		function handleMouseDown(e) {
+		function handleMouseDown(e: any) {
 			isDragging = true;
 			startX = e.pageX - node.offsetLeft;
 			scrollLeft = node.scrollLeft;
@@ -44,7 +56,7 @@
 			node.classList.remove('dragging');
 		}
 
-		function handleMouseMove(e) {
+		function handleMouseMove(e: any) {
 			if (!isDragging) return;
 			e.preventDefault();
 			const x = e.pageX - node.offsetLeft;
@@ -77,13 +89,24 @@
 </script>
 
 <div class="draggableOuterContainer">
-	<div use:draggableContainer={{ sensitivity: touchSensitivity }} {...props}>
+	<!-- .draggableContainer, .row, .list-unstyles, g-1, g-md-2, py-4 : keeps from purging -->
+	<svelte:element
+		this={element}
+		{id}
+		class:row={true}
+		class:draggableContainer={true}
+		class:list-unstyled={element === 'ul'}
+		class:g-1={true}
+		class:g-md-2={true}
+		use:draggableContainer={{ sensitivity: touchSensitivity }}
+		{...props}
+	>
 		{@render children()}
-	</div>
+	</svelte:element>
 	{#if indicators}
 		<div class="directionIndicators d-flex justify-content-between text-primary fs-4 d-lg-none">
-			<i class='bx bxs-chevron-left-circle'></i>
-			<i class='bx bxs-chevron-right-circle'></i>
+			<i class="bx bxs-chevron-left-circle"></i>
+			<i class="bx bxs-chevron-right-circle"></i>
 		</div>
 	{/if}
 </div>
@@ -127,6 +150,17 @@
 			&.dragging {
 				cursor: grabbing;
 			}
+		}
+	}
+
+	@media (max-width: 992px) {
+		.draggableContainer > :global(*) {
+			flex: 0 0 48% !important;
+		}
+	}
+	@media (max-width: 576px) {
+		.draggableContainer > :global(*) {
+			flex: 0 0 95% !important;
 		}
 	}
 </style>

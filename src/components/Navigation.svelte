@@ -7,6 +7,45 @@
 		await import('bootstrap/js/dist/offcanvas.js');
 		await import('bootstrap/js/dist/dropdown.js');
 	});
+
+	// Scroll spy functionality -----------------
+	import { page } from '$app/state';
+	let activeSection: string = $state('');
+
+	$effect(() => {
+		// Re-run when route changes
+		page.url.pathname;
+		// Get all sections that have data-scroll-spy attribte
+		const sections = document.querySelectorAll('[data-scroll-spy]');
+
+		// Intersection Observer options
+		const observerOptions = {
+			root: null,
+			rootMargin: '-20% 0px -100% 0px',
+			threshold: 0
+		};
+
+		// Create intersection observer
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const sectionId = entry.target.getAttribute('data-scroll-spy');
+					if (sectionId) {
+						activeSection = sectionId;
+					}
+				}
+			});
+		}, observerOptions);
+
+		// Observe all sections
+		sections.forEach((section) => observer.observe(section));
+		// Cleanup function
+		return () => {
+			if (observer) observer.disconnect();
+		};
+	});
+
+	$inspect(activeSection)
 </script>
 
 <header id="header" class="site-header bg-warning text-bg-warning position-fixed w-100">
@@ -63,11 +102,11 @@
 					>
 						{#each nav_links as { link, text, icon, subcategories }, index ('navlinks-' + index)}
 							{#if !subcategories}
-								<li class="nav-item">
+								<li class="nav-item" data-target={link}>
 									<a
 										class="nav-link link-dark {link}"
+										class:active={link == activeSection}
 										href={'#' + link}
-										data-scroll-spy-target={'#' + link}
 										data-bs-dismiss="offcanvas"
 										data-bs-target="#bdNavbar"
 									>

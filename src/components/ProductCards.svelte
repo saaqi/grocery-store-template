@@ -1,5 +1,11 @@
 <script lang="ts">
-	const { identity, data } = $props();
+	interface Props {
+		identity: string;
+		data: Array<any>;
+		element?: string;
+	}
+
+	const { element = 'article', identity, data }: Props = $props();
 	const productPics = import.meta.glob('$assets/products/**/*.{webp,svg,png,jpg}', {
 		eager: true,
 		query: {
@@ -8,7 +14,12 @@
 			format: 'avif;webp;jpg'
 		}
 	});
+
 	// Bootstrap Modals
+	let modalNumber = $state();
+	const loadModal = (index: number) => () => {
+		modalNumber = index;
+	};
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		await import('bootstrap/js/dist/modal.js');
@@ -57,6 +68,8 @@
 {#snippet infoButton(identity: string, index: number)}
 	<button
 		type="button"
+		onmouseover={loadModal(index)}
+		onfocus={loadModal(index)}
 		class="btn btn-outline-dark modal-button border-0 px-1 d-flex flex-wrap gap-1 justify-content-center align-items-center"
 		data-bs-toggle="modal"
 		data-bs-target={'#' + identity + index}
@@ -92,8 +105,8 @@
 	{/if}
 {/snippet}
 
-{#each data as { title, s_desc, desc, img, img_extra, stock, featured, uom, quantity, price, sale }, index (identity + index)}
-	<li class="col-6 col-lg-3 draggableItem hoverTransition">
+{#each data as { title, s_desc, img, stock, featured, uom, quantity, price, sale }, index (identity + index)}
+	<svelte:element this={element} class="col-6 col-lg-3 draggableItem hoverTransition">
 		<div class="product-card card shadow-sm h-100">
 			{@render prodImage(img, title, true)}
 			<div class="card-body d-flex flex-column align-items-start gap-3 p-2 p-sm-3">
@@ -134,8 +147,22 @@
 				></i>
 			{/if}
 		</div>
-	</li>
+	</svelte:element>
+{/each}
 
+{#snippet modals(
+	index: number,
+	img: string,
+	title: string,
+	s_desc: string,
+	desc: string,
+	stock: boolean,
+	sale: number,
+	price: number,
+	uom: string,
+	quantity: number | string,
+	img_extra: Array<string> = []
+)}
 	<div
 		id={identity + index}
 		class="modal fade"
@@ -199,9 +226,9 @@
 								<div class="container mt-3">
 									<div class="row g-3">
 										{#each img_extra as extraImg, index ('extra-' + index)}
-										<div class="col-6 col-md-4 g-3">
-											{@render prodImage(extraImg, title, false)}
-										</div>
+											<div class="col-6 col-md-4 g-3">
+												{@render prodImage(extraImg, title, false)}
+											</div>
 										{/each}
 									</div>
 								</div>
@@ -212,6 +239,12 @@
 			</div>
 		</div>
 	</div>
+{/snippet}
+
+{#each data as { title, s_desc, desc, img, img_extra, stock, uom, quantity, price, sale }, index (identity + index)}
+	{#if index === modalNumber}
+		{@render modals(index, img, title, s_desc, desc, stock, sale, price, uom, quantity, img_extra)}
+	{/if}
 {/each}
 
 <style lang="scss">
