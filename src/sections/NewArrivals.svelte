@@ -2,14 +2,14 @@
 	import { ProductCards, SectionWrapper, DraggableContainer } from '$components';
 	import { dateSortedProducts } from '$data';
 	const featured = dateSortedProducts
-		.filter((product) => product.featured && !product.sale)
+		.filter((product) => !product.featured && !product.sale)
 		.slice(0, 8);
 </script>
 
-<SectionWrapper id="featured" heading="Featured Products:">
+<SectionWrapper id="new-arrivals" heading="New Arrivals Products:">
 	<div class="container py-4">
-		<DraggableContainer id="educationContainer">
-			<ProductCards identity="weekly-sale" data={featured} />
+		<DraggableContainer id="newArrivalsContainer">
+			<ProductCards identity="new-arrivals" data={featured} />
 		</DraggableContainer>
 	</div>
 </SectionWrapper>

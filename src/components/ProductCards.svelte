@@ -209,9 +209,9 @@
 									<p class="long-description">{desc}</p>
 								{/if}
 								<div
-									class="sale-price w-100 d-flex justify-content-${sale
-										? 'between'
-										: 'end'} align-items-center mb-2 mt-auto gap-2 flex-wrap text-center"
+									class="mt-auto sale-price w-100 d-flex align-items-center mb-2 gap-2 flex-wrap text-center"
+									class:justify-content-between={sale}
+									class:justify-content-end={!sale}
 								>
 									{#if stock}
 										{@render priceButton(sale, price)}

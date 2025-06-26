@@ -7,8 +7,7 @@
 
 	import { ProductCards, SectionWrapper, DraggableContainer } from '$components';
 	import { dateSortedProducts } from '$data';
-	const onsale = dateSortedProducts
-		.filter((product) => product.sale).slice(0, 8);
+	const onsale = dateSortedProducts.filter((product) => product.sale).slice(0, 8);
 </script>
 
 <SectionWrapper id="weekly-sale">
@@ -32,10 +31,8 @@
 				>
 			</div>
 		</div>
-		<div class="on-sale-section">
-			<DraggableContainer id="on-sale">
-				<ProductCards identity="weekly-sale" data={onsale} />
-			</DraggableContainer>
-		</div>
+		<DraggableContainer id="on-sale">
+			<ProductCards identity="weekly-sale" data={onsale} />
+		</DraggableContainer>
 	</div>
 </SectionWrapper>
