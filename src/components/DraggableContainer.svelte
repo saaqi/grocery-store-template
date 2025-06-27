@@ -126,15 +126,6 @@
 			width: 100%;
 			top: 50%;
 			pointer-events: none;
-
-			svg.swipe-indicator {
-				// background-color: var(--bs-tertiary-bg);
-				// border: 1px solid var(--bs-tertiary-color);
-				// border-radius: 4.8em;
-				padding: 0.2em;
-				height: 1.1em;
-				width: 1.1em;
-			}
 		}
 	}
 

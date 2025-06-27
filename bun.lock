@@ -5,6 +5,7 @@
       "name": "grocery-store-template",
       "dependencies": {
         "@fontsource-variable/inter": "^5.2.6",
+        "@fontsource-variable/merriweather": "^5.2.4",
         "@types/bootstrap": "^5.2.10",
         "bootstrap": "^5.3.7",
         "boxicons": "^2.1.4",
@@ -119,6 +120,8 @@
     "@eslint/plugin-kit": ["@eslint/plugin-kit@0.3.2", "", { "dependencies": { "@eslint/core": "^0.15.0", "levn": "^0.4.1" } }, "sha512-4SaFZCNfJqvk/kenHpI8xvN42DMaoycy4PzKc5otHxRswww1kAt82OlBuwRVLofCACCTZEcla2Ydxv8scMXaTg=="],
 
     "@fontsource-variable/inter": ["@fontsource-variable/inter@5.2.6", "", {}, "sha512-jks/bficUPQ9nn7GvXvHtlQIPudW7Wx8CrlZoY8bhxgeobNxlQan8DclUJuYF2loYRrGpfrhCIZZspXYysiVGg=="],
+
+    "@fontsource-variable/merriweather": ["@fontsource-variable/merriweather@5.2.4", "", {}, "sha512-yIEZy+RLRn1wbr4PTlwu0pi1zYAd6z+t4nloP/r164WPjsL6HXL06xUVsnZYA7/f5Fa1OuoU+6EA3sJsZXYO7A=="],
 
     "@fullhuman/postcss-purgecss": ["@fullhuman/postcss-purgecss@7.0.2", "", { "dependencies": { "purgecss": "^7.0.2" }, "peerDependencies": { "postcss": "^8.0.0" } }, "sha512-U4zAXNaVztbDxO9EdcLp51F3UxxYsb/7DN89rFxFJhfk2Wua2pvw2Kf3HdspbPhW/wpHjSjsxWYoIlbTgRSjbQ=="],
 

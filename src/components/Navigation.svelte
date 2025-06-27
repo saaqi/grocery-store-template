@@ -45,7 +45,7 @@
 		};
 	});
 
-	$inspect(activeSection)
+	$inspect(activeSection);
 </script>
 
 <header id="header" class="site-header bg-warning text-bg-warning position-fixed w-100">

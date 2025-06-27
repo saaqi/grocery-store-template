@@ -8,6 +8,7 @@
 	}
 	const { id, heading, copy, children, ...props }: Props = $props();
 </script>
+
 <!-- .section, .gap-4 .py-5 : keeps from purging -->
 <section {id} class:section={true} class:py-5={true} data-scroll-spy={id} {...props}>
 	{#if heading || copy}

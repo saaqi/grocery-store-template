@@ -5,7 +5,7 @@
 	import heroImage768 from '$assets/hero/hero-image@768x.webp';
 	import heroImage576 from '$assets/hero/hero-image@576x.webp';
 
-	import { SectionWrapper } from '$components'
+	import { SectionWrapper } from '$components';
 	import { social_links } from '$data';
 </script>
 
@@ -24,7 +24,7 @@
 					id="hero-social-links"
 					class="social-links social-links-hero list-unstyled d-flex flex-wrap py-4 gap-1 fw-bolder justify-content-between"
 				>
-					{#each social_links as { link, title, link_class, icon }, index('home-social-link-' + index)}
+					{#each social_links as { link, title, link_class, icon }, index ('home-social-link-' + index)}
 						<li class="lh-1">
 							<a
 								class="{link_class} fs-3"
@@ -41,7 +41,7 @@
 				<div class="d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center">
 					<a
 						href="https://maps.app.goo.gl/7DvDtoe2L5U6awqu6"
-            rel="nofollow noopener noreferrer"
+						rel="nofollow noopener noreferrer"
 						class="btn btn-primary"
 						target="_blank"
 					>

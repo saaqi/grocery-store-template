@@ -39,7 +39,7 @@ export default defineConfig({
 						purgeCSSPlugin({
 							content: [
 								'./src/app.html',
-								'./src/**/*.{js,ts, svelte}',
+								'./src/**/*.{js,ts,svelte}',
 								// --- Import only the required components.
 								`${bootstrap}/js/dist/alert.js`,
 								// `${bootstrap}/js/dist/base-component.js`,
