@@ -80,7 +80,7 @@
 {/snippet}
 
 {#each data as { title, s_desc, img, stock, uom, quantity, approximate, price, sale }, index (identity + index)}
-	<svelte:element this={element} class="col-6 col-lg-3 draggableItem hoverTransition">
+	<svelte:element this={element} class="col-6 col-lg-3 draggableItem hoverTransition" id={identity}>
 		<div class="product-card card shadow-sm h-100">
 			{@render prodImage(img, title, true)}
 			<div class="card-body d-flex flex-column align-items-start gap-3 p-2 p-sm-3">
