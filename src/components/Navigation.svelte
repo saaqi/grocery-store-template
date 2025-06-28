@@ -54,12 +54,12 @@
 		>
 			<a
 				class="d-block d-lg-none rounded navbar-toggler btn btn-outline-primary nav-shop-button"
-				href="#shop"
+				href="/shop"
 				aria-label="Shopping Categories"
 			>
 				<i class="bx bxs-store display-6"></i>
 			</a>
-			<a class="navbar-brand me-0" href="#home">
+			<a class="navbar-brand me-0" href="/">
 				<img src={logo} class="logo" alt="Logo" height="50" />
 			</a>
 			<button
@@ -98,15 +98,13 @@
 						id="navbar"
 						class="navbar-nav main-nav text-uppercase justify-content-end gap-1 gap-lg-2 fs-6 ps-5 p-lg-0 flex-grow-1 fw-bold"
 					>
-						{#each nav_links as { link, text, icon, subcategories }, index ('navlinks-' + index)}
+						{#each nav_links as { link, text, target, icon, subcategories }, index ('navlinks-' + index)}
 							{#if !subcategories}
-								<li class="nav-item" data-target={link}>
+								<li class="nav-item" data-target={target}>
 									<a
-										class="nav-link link-dark {link}"
-										class:active={link == activeSection}
-										href={'#' + link}
-										data-bs-dismiss="offcanvas"
-										data-bs-target="#bdNavbar"
+										class="nav-link link-dark"
+										class:active={target == activeSection}
+										href={link}
 									>
 										<i class="bx {icon}"></i>
 										{text}

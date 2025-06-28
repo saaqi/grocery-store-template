@@ -34,6 +34,12 @@
 		event.preventDefault();
 		if (!disableSubmit) window.open(mailtoUrl, '_blank');
 	};
+
+	let mainAlert: boolean = $state(false);
+	const showMainAlert = () => {
+		if (disableSubmit) mainAlert = true;
+	};
+	const hideMainAlert = () => (mainAlert = false);
 </script>
 
 <form id="contact-email-form" class="contact-email-form">
@@ -102,7 +108,14 @@
 				required
 			></textarea>
 		</div>
-		<div class="text-end text-md-start mt-4">
+		<div
+			class="mt-4 submitContainer"
+			onmouseenter={showMainAlert}
+			onfocus={showMainAlert}
+			onmouseleave={hideMainAlert}
+			onblur={hideMainAlert}
+			role="presentation"
+		>
 			<button
 				{onclick}
 				type="submit"
@@ -112,6 +125,11 @@
 			>
 				<i class="bx bxs-envelope"></i> Send Message
 			</button>
+			{#if mainAlert}
+				<div class="alert alert-danger mt-3" role="alert" transition:slide={{ duration: 100 }}>
+					Please complete the form before sending your message.
+				</div>
+			{/if}
 		</div>
 	</div>
 </form>
@@ -125,7 +143,7 @@
 		box-shadow: none;
 	}
 
-	.btn:disabled:hover {
+	.submitContainer:hover:has(.btn[disabled]) {
 		cursor: not-allowed;
 	}
 </style>

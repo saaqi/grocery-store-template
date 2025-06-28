@@ -57,7 +57,7 @@
 	setInterval(storeStatus, 15000);
 </script>
 
-<SectionWrapper id="contact" heading="Contact Us!:" class="section bg-info-subtle">
+<SectionWrapper id="contact" heading="Contact Us!" class="section bg-info-subtle">
 	<div class="container">
 		<div class="row py-4">
 			<div class="col-lg-6 working-hours border-primary mb-4 mb-lg-0">

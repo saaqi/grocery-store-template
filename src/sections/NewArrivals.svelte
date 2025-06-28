@@ -6,7 +6,7 @@
 		.slice(0, 8);
 </script>
 
-<SectionWrapper id="new-arrivals" heading="New Arrivals Products:">
+<SectionWrapper id="new-arrivals" heading="New Arrivals">
 	<div class="container py-4">
 		<DraggableContainer id="newArrivalsContainer">
 			<ProductCards identity="new-arrivals" data={featured} />
