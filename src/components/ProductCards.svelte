@@ -85,13 +85,13 @@
 			{@render prodImage(img, title, true)}
 			<div class="card-body d-flex flex-column align-items-start gap-3 p-2 p-sm-3">
 				<div class="body-header">
-					<div class="card-title h4">{title}</div>
+					<h3 class="card-title h4">{title}</h3>
 					{@render q_UOM(uom, quantity, approximate)}
 				</div>
-				<div class="card-text shortDescription">{s_desc}</div>
+				<p class="card-text shortDescription mb-0">{s_desc}</p>
 				<!-- .justify-content-between, .justify-content-end : keeps from purging -->
 				<div
-					class="mt-auto sale-price w-100 d-flex align-items-center mb-2 gap-2 flex-wrap text-center"
+					class="mt-auto sale-price w-100 d-flex align-items-center my-2 gap-2 flex-wrap text-center"
 					class:justify-content-between={sale}
 					class:justify-content-end={!sale}
 				>
@@ -125,6 +125,26 @@
 		position: absolute;
 		top: 1rem;
 		right: 1rem;
+	}
+
+	.shortDescription {
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-clamp: 3;
+		max-height: 4.8em;
+	}
+
+	.card-title {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-clamp: 2;
+		height: 2.4em;
 	}
 
 	.card-quantity {

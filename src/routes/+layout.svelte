@@ -14,7 +14,8 @@
 	const baseUrl = data.baseURL;
 
 	// Import Components
-	import { Preloader, Navigation } from '$components';
+	import { Preloader, Navigation, TopLink } from '$components';
+	import { Footer } from '$sections';
 </script>
 
 <svelte:head>
@@ -28,4 +29,6 @@
 	<Preloader />
 	<Navigation />
 	{@render children()}
+	<Footer />
+	<TopLink />
 </main>
