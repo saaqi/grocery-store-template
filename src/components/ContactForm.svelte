@@ -77,7 +77,7 @@
 		</div>
 		<div class="mt-3">
 			<label for="contact-form-subject">
-				<i class='bx bx-message-dots' ></i> Subject:
+				<i class="bx bx-message-dots"></i> Subject:
 			</label>
 			<input
 				bind:value={subject}
@@ -90,7 +90,7 @@
 		</div>
 		<div class="mt-3">
 			<label for="contact-form-message">
-				<i class='bx bx-chat'></i> Message:
+				<i class="bx bx-chat"></i> Message:
 			</label>
 			<textarea
 				bind:value={message}

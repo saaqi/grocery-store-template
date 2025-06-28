@@ -27,7 +27,8 @@ export const ready_to_cook: Product[] = [
 	// },
 	{
 		title: 'Firecracker Chicken Breast Fillet Strips',
-		s_desc: 'Turn up the heat with these fiery chicken breast fillet strips, seasoned with bold spices for a real kick. Juicy, tender, and perfect for wraps, salads, or as a spicy snack straight from the oven.',
+		s_desc:
+			'Turn up the heat with these fiery chicken breast fillet strips, seasoned with bold spices for a real kick. Juicy, tender, and perfect for wraps, salads, or as a spicy snack straight from the oven.',
 		img: 'ready_to_cook/firecracker_chicken_breast_fillet_strips_1kg.webp',
 		stock: true,
 		uom: 'PC(s)',
@@ -37,7 +38,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Battered Chicken Nuggets',
-		s_desc: "Golden, crispy, and tender—these battered chicken nuggets are a family favorite. Made with juicy chicken and coated in a crunchy batter, they're perfect for quick meals, lunchboxes, or dipping snacks.",
+		s_desc:
+			"Golden, crispy, and tender—these battered chicken nuggets are a family favorite. Made with juicy chicken and coated in a crunchy batter, they're perfect for quick meals, lunchboxes, or dipping snacks.",
 		img: 'ready_to_cook/chicken-nuggets-6.50.webp',
 		stock: true,
 		uom: 'PC(s)',
@@ -47,7 +49,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Spicy Crunchy Chicken Burger',
-		s_desc: "Sink your teeth into a crispy, spicy chicken fillet packed in a soft bun for the ultimate flavor punch. Perfectly seasoned and ready to heat, it's a quick and delicious meal anytime you crave bold taste.",
+		s_desc:
+			"Sink your teeth into a crispy, spicy chicken fillet packed in a soft bun for the ultimate flavor punch. Perfectly seasoned and ready to heat, it's a quick and delicious meal anytime you crave bold taste.",
 		img: 'ready_to_cook/chicken-burger-9.0.webp',
 		stock: true,
 		uom: 'PC(s)',
@@ -57,7 +60,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Okra Cut (Lady Finger)',
-		s_desc: 'Pre-cut okra for quick and easy cooking—ideal for curries, stir-fries, and stews. This 340g pack saves prep time while delivering fresh taste and texture in every bite.',
+		s_desc:
+			'Pre-cut okra for quick and easy cooking—ideal for curries, stir-fries, and stews. This 340g pack saves prep time while delivering fresh taste and texture in every bite.',
 		img: 'ready_to_cook/karella_cut_340g.webp',
 		stock: true,
 		uom: 'Gram(s)',
@@ -66,7 +70,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Karela Cut (Bitter Gourd)',
-		s_desc: 'Freshly cut karela (bitter gourd) ready for cooking—perfect for stir-fries, curries, or traditional recipes. This 340g pack offers convenience without compromising on nutrition or flavor.',
+		s_desc:
+			'Freshly cut karela (bitter gourd) ready for cooking—perfect for stir-fries, curries, or traditional recipes. This 340g pack offers convenience without compromising on nutrition or flavor.',
 		img: 'ready_to_cook/karella_cut_340g.webp',
 		stock: true,
 		uom: 'Gram(s)',
@@ -75,7 +80,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Special Meat Seekh Kebabs with Cheese',
-		s_desc: 'Experience premium taste with Special Crown Seekh Kebabs, made from spiced meat and a rich cheese filling. This 900 grams pack includes 15 succulent kebabs—perfect for entertaining guests or enjoying a gourmet-style meal at home.',
+		s_desc:
+			'Experience premium taste with Special Crown Seekh Kebabs, made from spiced meat and a rich cheese filling. This 900 grams pack includes 15 succulent kebabs—perfect for entertaining guests or enjoying a gourmet-style meal at home.',
 		img: 'ready_to_cook/meat_special_cheese_seekh_kebab_15pcs.webp',
 		stock: true,
 		uom: 'Gram(s)',
@@ -85,7 +91,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Special Chicken Seekh Kebabs with Cheese',
-		s_desc: 'Experience premium taste with Special Crown Seekh Kebabs, made from spiced chicken and a rich cheese filling. This 1kg pack includes 15 succulent kebabs—perfect for entertaining guests or enjoying a gourmet-style meal at home.',
+		s_desc:
+			'Experience premium taste with Special Crown Seekh Kebabs, made from spiced chicken and a rich cheese filling. This 1kg pack includes 15 succulent kebabs—perfect for entertaining guests or enjoying a gourmet-style meal at home.',
 		img: 'ready_to_cook/chicken_special_cheese_seekh_kebab_15pcs.webp',
 		stock: true,
 		uom: 'KG(s)',
@@ -94,7 +101,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Meat Seekh Kebab',
-		s_desc: 'Classic meat seekh kebabs made with a blend of aromatic spices and tender minced meat. This 1kg pack offers 15 kebabs, great for grilling, pan-frying, or adding to wraps and rolls for a quick, flavorful meal.',
+		s_desc:
+			'Classic meat seekh kebabs made with a blend of aromatic spices and tender minced meat. This 1kg pack offers 15 kebabs, great for grilling, pan-frying, or adding to wraps and rolls for a quick, flavorful meal.',
 		img: 'ready_to_cook/meat_seekh_kebab_15pcs.webp',
 		stock: true,
 		uom: 'Gram(s)',
@@ -113,7 +121,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Chicken Reshmi Seekh Kebabs',
-		s_desc: 'Indulge in these soft and juicy Chicken Reshmi Seekh Kebabs. This 1kg pack includes 15 flavorful kebabs, perfect for party platters, wraps, or a gourmet snack at home.',
+		s_desc:
+			'Indulge in these soft and juicy Chicken Reshmi Seekh Kebabs. This 1kg pack includes 15 flavorful kebabs, perfect for party platters, wraps, or a gourmet snack at home.',
 		img: 'ready_to_cook/chicken_reshmi_seekh_kebab_15pcs.webp',
 		stock: true,
 		uom: 'Kg(s)',
@@ -122,7 +131,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Meat Reshmi Seekh Kebabs',
-		s_desc: 'Indulge in these soft and juicy Meat Reshmi Seekh Kebabs. This 900 grams pack includes 15 flavorful kebabs, perfect for party platters, wraps, or a gourmet snack at home.',
+		s_desc:
+			'Indulge in these soft and juicy Meat Reshmi Seekh Kebabs. This 900 grams pack includes 15 flavorful kebabs, perfect for party platters, wraps, or a gourmet snack at home.',
 		img: 'ready_to_cook/meat_reshmi_seekh_kebab_15pcs.webp',
 		stock: true,
 		uom: 'Gram(s)',
@@ -141,7 +151,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Chicken Seekh Kebabs with Green Chilli',
-		s_desc: 'Spice up your meals with these Chicken Green Chilli Seekh Kebabs, grilled to perfection over charcoal for a smoky flavor. Made with tender chicken and green chillies, this 1kg pack includes 15 juicy kebabs—perfect for BBQs, wraps, or quick appetizers.',
+		s_desc:
+			'Spice up your meals with these Chicken Green Chilli Seekh Kebabs, grilled to perfection over charcoal for a smoky flavor. Made with tender chicken and green chillies, this 1kg pack includes 15 juicy kebabs—perfect for BBQs, wraps, or quick appetizers.',
 		img: 'ready_to_cook/chicken_green_chilli_seekh_kebab_15pcs.webp',
 		stock: true,
 		uom: 'Kg(s)',
@@ -150,7 +161,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Meat Seekh Kebabs with Green Chilli',
-		s_desc: 'Bold and flavorful, these meat seekh kebabs are infused with green chilli for a spicy kick. Made with quality minced meat and traditional spices, this 15-piece pack is perfect for grilling, frying, or serving as a hearty appetizer.',
+		s_desc:
+			'Bold and flavorful, these meat seekh kebabs are infused with green chilli for a spicy kick. Made with quality minced meat and traditional spices, this 15-piece pack is perfect for grilling, frying, or serving as a hearty appetizer.',
 		img: 'ready_to_cook/meat_green_chilli_seekh_kebab_15pcs.webp',
 		stock: true,
 		uom: 'Gram(s)',
@@ -159,7 +171,8 @@ export const ready_to_cook: Product[] = [
 	},
 	{
 		title: 'Chicken Chapli Kebab',
-		s_desc: "Savor the convenience and taste of homemade parathas with Crown Frozen Foods' Plain Paratha Family Pack, 20 pieces per pack!",
+		s_desc:
+			"Savor the convenience and taste of homemade parathas with Crown Frozen Foods' Plain Paratha Family Pack, 20 pieces per pack!",
 		img: 'ready_to_cook/chicken_chappli_kebab_12pcs.webp',
 		stock: true,
 		uom: 'Gram(s)',

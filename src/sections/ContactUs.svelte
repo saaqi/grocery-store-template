@@ -46,7 +46,7 @@
 		};
 
 		const [startHour, endHour] = openingHours[dayOfWeek as keyof typeof openingHours] || [];
-    isOpeningHours = (startHour <= hours && hours < endHour);
+		isOpeningHours = startHour <= hours && hours < endHour;
 
 		if (isOpeningHours) outputTime = openMsg;
 		else if (dayOfWeek === 'Thursday') outputTime = tomorrowMsg;
@@ -112,7 +112,7 @@
 </SectionWrapper>
 
 <style>
-  .table td {
-    padding: .6em 1em;
-  }
+	.table td {
+		padding: 0.6em 1em;
+	}
 </style>
