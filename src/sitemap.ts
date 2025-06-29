@@ -59,5 +59,6 @@ const sitemap = generateSitemap(routes);
 
 fs.writeFileSync('static/sitemap.xml', sitemap);
 console.log('✅ Sitemap generated at static/sitemap.xml');
+fs.mkdirSync('build', { recursive: true });
 fs.writeFileSync('build/sitemap.xml', sitemap);
 console.log('✅ Sitemap generated at build/sitemap.xml');
