@@ -41,13 +41,13 @@ export default defineConfig({
 								'./src/app.html',
 								'./src/**/*.{js,ts,svelte}',
 								// --- Import only the required components.
-								`${bootstrap}/js/dist/alert.js`,
+								// `${bootstrap}/js/dist/alert.js`,
 								// `${bootstrap}/js/dist/base-component.js`,
 								// `${bootstrap}/js/dist/button.js`,
 								// `${bootstrap}/js/dist/carousel.js`,
 								`${bootstrap}/js/dist/collapse.js`,
 								`${bootstrap}/js/dist/dropdown.js`,
-								`${bootstrap}/js/dist/modal.js`,
+								// `${bootstrap}/js/dist/modal.js`,
 								`${bootstrap}/js/dist/offcanvas.js`
 								// `${bootstrap}/js/dist/popover.js`,
 								// `${bootstrap}/js/dist/scrollspy.js`,
@@ -55,7 +55,7 @@ export default defineConfig({
 								// `${bootstrap}/js/dist/toast.js`,
 								// `${bootstrap}/js/dist/tooltip.js`,
 							],
-							safelist: [/modal-/, /fad/, /show/, /accordion-/],
+							safelist: [/svelte-/, /fad/, /show/],
 							defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 							keyframes: true,
 							variables: true
