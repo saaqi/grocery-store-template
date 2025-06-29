@@ -25,13 +25,15 @@
 	/>
 	<link
 		rel="canonical"
-		href={page.url.href.startsWith(appData.baseURL) ? page.url.href : appData.baseURL + page.url.pathname}
+		href={page.url.href.startsWith(appData.baseURL)
+			? page.url.href
+			: appData.baseURL + page.url.pathname}
 	/>
 </svelte:head>
 
 <main id="main" class="main-container">
 	<Preloader />
-	<Navigation homePage={page.url.pathname === '/'} />
+	<Navigation />
 	{@render children()}
 	<Footer />
 	<TopLink />

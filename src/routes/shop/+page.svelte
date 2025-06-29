@@ -2,17 +2,23 @@
 	import { PaginatedProductCards } from '$components';
 	import { dateSortedProducts } from '$data';
 	import { store } from './store.svelte';
+	store.shopHeading = 'Shop';
 
 	// let search: string = $state('');
 	const productsData = $derived(
 		dateSortedProducts.filter(
 			(product) =>
-				product.cat.toLowerCase().trim().includes(store.filter.toLowerCase().trim()) ||
-				product.title.toLowerCase().trim().includes(store.filter.toLowerCase().trim()) ||
-				product.s_desc.toLowerCase().trim().includes(store.filter.toLowerCase().trim())
+				product.cat.toLowerCase().includes(store.filter.toLowerCase()) ||
+				product.title.toLowerCase().includes(store.filter.toLowerCase()) ||
+				product.s_desc.toLowerCase().includes(store.filter.toLowerCase())
 		)
 	);
+	import { appData } from '$lib';
 </script>
+
+<svelte:head>
+	<title>Shop Products | {appData.title}</title>
+</svelte:head>
 
 <PaginatedProductCards
 	{productsData}

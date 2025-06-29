@@ -1,11 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-import { data } from './app'; // adjust if needed
+import { appData } from '$lib';
 
-const siteUrl = data.baseURL;
+const siteUrl = appData.baseURL;
 
 function getStaticRoutes(dir = '.svelte-kit/output/prerendered/pages') {
-	let routes: string[] = [];
+	const routes: string[] = [];
 
 	function walk(currentPath: string) {
 		const entries = fs.readdirSync(currentPath, { withFileTypes: true });

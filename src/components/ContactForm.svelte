@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { appData } from '$lib'
+	import { appData } from '$lib';
 
 	let name = $state('');
 	let email = $state('');

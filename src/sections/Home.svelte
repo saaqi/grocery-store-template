@@ -9,7 +9,7 @@
 	import { social_links } from '$data';
 </script>
 
-<SectionWrapper id="home" class="home bg-warning text-bg-warning">
+<SectionWrapper id="home" className="home bg-warning text-bg-warning">
 	<div class="container">
 		<div class="row flex-wrap-reverse align-items-center">
 			<div class="text-col col-lg-6 text-center text-lg-start mt-3 mt-lg-0">

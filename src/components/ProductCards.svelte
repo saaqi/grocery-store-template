@@ -1,7 +1,17 @@
 <script lang="ts">
 	interface Props {
 		identity: string;
-		productsData: Array<any>;
+		productsData: Array<{
+			title: string;
+			s_desc: string;
+			img: string;
+			stock: boolean;
+			uom: string;
+			quantity: number;
+			approximate: boolean;
+			price: number;
+			sale: number;
+		}>;
 		element?: string;
 	}
 	const { element = 'article', identity, productsData }: Props = $props();

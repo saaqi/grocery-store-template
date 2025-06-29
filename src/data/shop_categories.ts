@@ -2,21 +2,17 @@ import { products } from './products';
 
 interface Cats {
 	title: string;
-	shopId: string;
 	shopLink: string;
-	shopIndex: string;
 }
 
 export const shop_categories: Cats[] = [
 	...new Set(products.map((item) => item.cat).filter((cat) => cat))
 ]
 	.map((cat) => ({ cat }))
-	.map((item, index) => {
+	.map((item) => {
 		return {
 			...item,
 			title: item.cat,
-			shopId: item.cat.toLowerCase().replace(/\s+/g, '_'),
-			shopLink: item.cat.toLowerCase().replace(/\s+/g, '_'),
-			shopIndex: `shop-` + index
+			shopLink: item.cat.toLowerCase().replace(/\s+/g, '_')
 		};
 	});

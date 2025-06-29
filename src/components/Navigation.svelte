@@ -8,43 +8,7 @@
 		await import('bootstrap/js/dist/dropdown.js');
 	});
 
-	const { homePage = false } = $props();
-	// Scroll spy functionality -----------------
 	import { page } from '$app/state';
-	let activeSection: string = $state('');
-
-	$effect(() => {
-		// Re-run when route changes
-		page.url.pathname;
-		// Get all sections that have data-scroll-spy attribte
-		const sections = document.querySelectorAll('[data-scroll-spy]');
-
-		// Intersection Observer options
-		const observerOptions = {
-			root: null,
-			rootMargin: '-20% 0px -100% 0px',
-			threshold: 0
-		};
-
-		// Create intersection observer
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					const sectionId = entry.target.getAttribute('data-scroll-spy');
-					if (sectionId) {
-						activeSection = sectionId;
-					}
-				}
-			});
-		}, observerOptions);
-
-		// Observe all sections
-		sections.forEach((section) => observer.observe(section));
-		// Cleanup function
-		return () => {
-			if (observer) observer.disconnect();
-		};
-	});
 </script>
 
 <header id="header" class="site-header bg-warning text-bg-warning position-fixed w-100">
@@ -97,20 +61,14 @@
 				<div class="offcanvas-body">
 					<ul
 						id="navbar"
-						class="navbar-nav main-nav text-uppercase justify-content-end gap-1 gap-lg-2 fs-6 ps-5 p-lg-0 flex-grow-1 fw-bold"
+						class="navbar-nav main-nav text-uppercase justify-content-end gap-1 gap-lg-2 fs-6 ps-5 p-lg-0 flex-grow-1"
 					>
-						{#each nav_links as { link, text, target, icon, subcategories }, index ('navlinks-' + index)}
+						{#each nav_links as { link, text, icon, subcategories }, index ('navlinks-' + index)}
 							{#if !subcategories}
-								<li
-									class="nav-item"
-									data-target={target}
-									data-bs-dismiss="offcanvas"
-									data-bs-target="#bdNavbar"
-								>
+								<li class="nav-item" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">
 									<a
-										class="nav-link link-dark"
-										class:active={(homePage && target === activeSection) ||
-											(!homePage && target === page.route.id?.replace('/', ''))}
+										class="nav-link link-dark fw-bold"
+										class:active={link === page.route.id}
 										href={link}
 									>
 										<i class="bx {icon}"></i>
@@ -118,11 +76,10 @@
 									</a>
 								</li>
 							{:else}
-								<li class="nav-item dropdown" data-target={target}>
+								<li class="nav-item dropdown">
 									<a
-										class="nav-link link-dark dropdown-toggle"
-										class:active={(homePage && target === activeSection) ||
-											(!homePage && target === page.route.id?.replace('/', ''))}
+										class="nav-link link-dark dropdown-toggle fw-bold"
+										class:active={link === page.route.id}
 										id="navbarDropdown"
 										role="button"
 										data-bs-toggle="dropdown"
@@ -139,7 +96,8 @@
 												data-bs-target="#bdNavbar"
 											>
 												<a
-													class="dropdown-item fw-medium shop-link {subcategory.shopLink}"
+													class="dropdown-item py-2 fw-bold"
+													class:active={subcategory.shopLink === page.params.categoryId}
 													href={'/shop/' + subcategory.shopLink}
 												>
 													<i class="bx bxs-purchase-tag"></i>
@@ -171,6 +129,24 @@
 
 	.site-header {
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	.navbar-nav {
+		a.nav-link,
+		a.dropdown-item {
+			line-height: 1;
+		}
+	}
+
+	@media (max-width: 992px) {
+		.navbar-nav {
+			a.nav-link,
+			a.dropdown-item {
+				line-height: 1;
+				padding-top: 1rem;
+				padding-bottom: 1rem;
+			}
+		}
 	}
 
 	.navbar-nav .nav-item a.nav-link.active,

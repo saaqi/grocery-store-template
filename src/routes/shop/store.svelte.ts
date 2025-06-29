@@ -1,7 +1,7 @@
 interface Props {
 	// Define the properties for the shared state
 	filter: string;
-	shopHeading: string
+	shopHeading: string;
 }
 
 export const store: Props = $state({

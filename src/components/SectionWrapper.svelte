@@ -11,7 +11,7 @@
 </script>
 
 <!-- .section, .gap-4 .py-5 : keeps from purging -->
-<section {id} class:section={true} class:py-5={true} data-scroll-spy={id} class={className} {...props}>
+<section {id} class:section={true} class:py-5={true} class={className} {...props}>
 	{#if heading || copy}
 		<div class="container pt-4">
 			{#if heading}
