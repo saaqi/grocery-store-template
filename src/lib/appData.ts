@@ -5,7 +5,7 @@ const appData: Record<string, string> = {
 	primaryColor: '#2b2e4a',
 	secondaryColor: '#afc68b',
 	title: 'Sadiq Super Store',
-	tagline: 'Fresh groceries, snacks, household essentials, sand more.'
+	tagline: 'Fresh groceries, snacks, household essentials, and more.'
 };
 
 export default appData;

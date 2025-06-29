@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	
+
 	interface Props {
 		children: Snippet;
 	}
@@ -8,8 +8,18 @@
 	import { SectionWrapper } from '$components';
 
 	import { store } from './store.svelte';
-	store.shopHeading = 'Shop'
+	store.shopHeading = 'Shop';
+
+	import { appData } from '$lib';
 </script>
+
+<svelte:head>
+	<title>{store.shopHeading} | {appData.title}</title>
+	<meta
+		name="description"
+		content="We offer fresh groceries, snacks, household essentials, and more. Whether you're picking up daily necessities or grabbing something quick, we've got you covered with friendly service and great prices!"
+	/>
+</svelte:head>
 
 <div class="container">
 	<div class="row justify-content-center">

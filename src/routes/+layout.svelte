@@ -10,8 +10,7 @@
 
 	// Canonical URL for SEO
 	import { page } from '$app/state';
-	import { appData } from '$lib'
-	const baseUrl = appData.baseURL;
+	import { appData } from '$lib';
 
 	// Import Components
 	import { Preloader, Navigation, TopLink } from '$components';
@@ -19,9 +18,14 @@
 </script>
 
 <svelte:head>
+	<title>{appData.title} | {appData.tagline}</title>
+	<meta
+		name="description"
+		content="We offer fresh groceries, snacks, household essentials, and more. Whether you're picking up daily necessities or grabbing something quick, we've got you covered with friendly service and great prices!"
+	/>
 	<link
 		rel="canonical"
-		href={page.url.href.startsWith(baseUrl) ? page.url.href : baseUrl + page.url.pathname}
+		href={page.url.href.startsWith(appData.baseURL) ? page.url.href : appData.baseURL + page.url.pathname}
 	/>
 </svelte:head>
 
