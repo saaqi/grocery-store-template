@@ -45,7 +45,7 @@ export default defineConfig({
 								// `${bootstrap}/js/dist/base-component.js`,
 								// `${bootstrap}/js/dist/button.js`,
 								// `${bootstrap}/js/dist/carousel.js`,
-								`${bootstrap}/js/dist/collapse.js`,
+								// `${bootstrap}/js/dist/collapse.js`,
 								`${bootstrap}/js/dist/dropdown.js`,
 								// `${bootstrap}/js/dist/modal.js`,
 								`${bootstrap}/js/dist/offcanvas.js`
