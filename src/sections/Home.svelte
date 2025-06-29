@@ -38,7 +38,9 @@
 						</li>
 					{/each}
 				</ul>
-				<div class="homeButton d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center align-items-center">
+				<div
+					class="homeButton d-flex gap-3 flex-wrap justify-content-lg-start justify-content-center align-items-center"
+				>
 					<a
 						href="https://maps.app.goo.gl/7DvDtoe2L5U6awqu6"
 						rel="nofollow noopener noreferrer"

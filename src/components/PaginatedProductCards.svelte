@@ -1,7 +1,7 @@
 <script lang="ts">
 	interface Props {
 		productsData: Array<any>;
-	  identity: string;
+		identity: string;
 		perPage?: number;
 		topPagination?: boolean;
 		bottomPagination?: boolean;
@@ -18,7 +18,7 @@
 
 	import { ProductCards } from '$components';
 
-	let paginatedContainer: any;
+	let paginatedContainer: HTMLElement;
 	let currentPage: number = $state(1);
 	let itemsPerPage: number = $state(perPage);
 	const totalPages = $derived(Math.ceil(productsData.length / itemsPerPage));
@@ -27,8 +27,8 @@
 	);
 </script>
 
-{#snippet paginationButtons()}
-	<div class="d-flex justify-content-between gap-3 flex-wrap align-items-center my-3">
+{#snippet headerPagination()}
+	<nav class="d-flex justify-content-between gap-3 flex-wrap align-items-center my-3">
 		<div class="pagination">
 			Showing {Math.min((currentPage - 1) * itemsPerPage + 1, productsData.length)} - {Math.min(
 				currentPage * itemsPerPage,
@@ -60,19 +60,70 @@
 				<i class="bx bxs-right-arrow"></i>
 			</button>
 		</div>
-	</div>
+	</nav>
 {/snippet}
 
-<div {@attach paginatedContainer} class:paginatedContainer={true} {...props}>
+{#snippet footerPagination()}
+	<nav aria-label="footerNavigation">
+		<div class="container text-end d-flex justify-content-center justify-content-md-end">
+			<ul class="footerPagination pagination mt-4">
+				<li class="page-item {currentPage === 1 ? 'disabled' : ''}">
+					<button
+						class="page-link align-items-center d-flex h-100"
+						aria-label="Previous Page"
+						disabled={currentPage === 1}
+						onclick={() => {
+							currentPage--;
+							paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
+						}}
+					>
+						<i class="bx bxs-left-arrow"></i>
+					</button>
+				</li>
+				{#each Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+					const start = Math.max(1, Math.min(currentPage - 2, totalPages - 4));
+					return start + i;
+				}) as pageNum}
+					<li class="page-item {currentPage === pageNum ? 'active' : ''}">
+						<button
+							class="page-link"
+							onclick={() => {
+								currentPage = pageNum;
+								paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
+							}}
+						>
+							{pageNum}
+						</button>
+					</li>
+				{/each}
+				<li class="page-item {currentPage === totalPages ? 'disabled' : ''}">
+					<button
+						class="page-link align-items-center d-flex h-100"
+						aria-label="Next Page"
+						disabled={currentPage === totalPages}
+						onclick={() => {
+							currentPage++;
+							paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
+						}}
+					>
+						<i class="bx bxs-right-arrow"></i>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+{/snippet}
+
+<div bind:this={paginatedContainer} class:paginatedContainer={true} {...props}>
 	{#if topPagination}
-		{@render paginationButtons()}
+		{@render headerPagination()}
 	{/if}
 	<div class="container">
 		<div class="row g-2 mt-3">
-			<ProductCards identity={identity} productsData={paginatedProducts} />
+			<ProductCards {identity} productsData={paginatedProducts} />
 		</div>
 	</div>
 	{#if bottomPagination}
-		{@render paginationButtons()}
+		{@render footerPagination()}
 	{/if}
 </div>

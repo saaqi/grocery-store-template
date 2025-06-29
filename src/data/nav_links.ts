@@ -37,7 +37,7 @@ export const nav_links: Navigation[] = [
 		link: '/shop',
 		target: 'shop',
 		text: 'Shop',
-		icon: 'bxs-store',
+		icon: 'bxs-store'
 	},
 	{
 		link: '/shop',

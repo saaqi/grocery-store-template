@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Featured } from '$sections'
+	import { Featured } from '$sections';
 </script>
 
 <Featured />

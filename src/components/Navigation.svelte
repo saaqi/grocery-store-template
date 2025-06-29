@@ -45,7 +45,6 @@
 			if (observer) observer.disconnect();
 		};
 	});
-
 </script>
 
 <header id="header" class="site-header bg-warning text-bg-warning position-fixed w-100">
@@ -134,7 +133,11 @@
 									</a>
 									<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
 										{#each subcategories as subcategory, index ('subcats-' + index)}
-											<li class="nav-item m-2">
+											<li
+												class="nav-item m-2"
+												data-bs-dismiss="offcanvas"
+												data-bs-target="#bdNavbar"
+											>
 												<a
 													class="dropdown-item fw-medium shop-link {subcategory.shopLink}"
 													href={'/shop/' + subcategory.shopLink}

@@ -1,10 +1,12 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+
 	interface Props {
 		id: string;
 		element?: string;
 		touchSensitivity?: number;
 		indicators?: boolean;
-		children: () => any;
+		children: Snippet;
 	}
 	const {
 		id,

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ContactUs } from '$sections'
+	import { ContactUs } from '$sections';
 </script>
 
 <ContactUs />

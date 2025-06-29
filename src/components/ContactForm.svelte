@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { data } from '../app';
+	import { appData } from '$lib'
 
 	let name = $state('');
 	let email = $state('');
@@ -12,11 +12,11 @@
 
 	$effect(() => {
 		const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-		const fallbackSubject = `[Contact-Form] ${data.baseURL}`;
+		const fallbackSubject = `[Contact-Form] ${appData.baseURL}`;
 		emailValid = email !== '' && emailRegex.test(email);
 		disableSubmit = !(name !== '' && emailValid && message !== '');
 		mailtoUrl = [
-			`mailto:${data.baseEmail}`,
+			`mailto:${appData.baseEmail}`,
 			`?subject=${encodeURIComponent(subject.trim() || fallbackSubject)}`,
 			`&body=${encodeURIComponent(message.trim())}%0D%0A%0D%0A`,
 			`From: ${name.trim()}%0D%0A${email.trim()}`

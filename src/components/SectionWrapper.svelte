@@ -1,16 +1,17 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	interface Props {
 		id?: string;
 		heading?: string;
 		copy?: string;
-		children: import('svelte').Snippet;
-		[key: string]: any;
+		className?: string;
+		children: Snippet;
 	}
-	const { id, heading, copy, children, ...props }: Props = $props();
+	const { id, heading, copy, className, children, ...props }: Props = $props();
 </script>
 
 <!-- .section, .gap-4 .py-5 : keeps from purging -->
-<section {id} class:section={true} class:py-5={true} data-scroll-spy={id} {...props}>
+<section {id} class:section={true} class:py-5={true} data-scroll-spy={id} class={className} {...props}>
 	{#if heading || copy}
 		<div class="container pt-4">
 			{#if heading}

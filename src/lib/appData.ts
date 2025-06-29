@@ -1,5 +1,5 @@
 // Store Universal Data for app usage.
-export const data: Record<string, string> = {
+const appData: Record<string, string> = {
 	baseURL: 'https://sadiqsuperstore.com',
 	baseEmail: 'info@sadiqsuperstore.com',
 	primaryColor: '#2b2e4a',
@@ -7,3 +7,5 @@ export const data: Record<string, string> = {
 	title: 'Sadiq Super Store',
 	tagline: 'Fresh groceries, snacks, household essentials, sand more.'
 };
+
+export default appData;

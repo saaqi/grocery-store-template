@@ -1,11 +1,14 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+	
 	interface Props {
-		children: () => any;
+		children: Snippet;
 	}
 	const { children }: Props = $props();
+	import { SectionWrapper } from '$components';
 
 	import { store } from './store.svelte';
-	import { SectionWrapper } from '$components';
+	store.shopHeading = 'Shop'
 </script>
 
 <div class="container">
@@ -28,7 +31,7 @@
 			</aside>
 		</div>
 		<div class="col-12">
-			<SectionWrapper id="shop" heading="">
+			<SectionWrapper id="shop" heading={store.shopHeading} className="pt-0">
 				<div class="container">
 					<div class="row">
 						{@render children()}

@@ -10,8 +10,8 @@
 
 	// Canonical URL for SEO
 	import { page } from '$app/state';
-	import { data } from '../app';
-	const baseUrl = data.baseURL;
+	import { appData } from '$lib'
+	const baseUrl = appData.baseURL;
 
 	// Import Components
 	import { Preloader, Navigation, TopLink } from '$components';
