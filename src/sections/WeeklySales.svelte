@@ -32,7 +32,7 @@
 			</div>
 		</div>
 		<DraggableContainer id="on-sale">
-			<ProductCards identity="weekly-sale" data={onsale} />
+			<ProductCards identity="weekly-sale" productsData={onsale} />
 		</DraggableContainer>
 	</div>
 </SectionWrapper>

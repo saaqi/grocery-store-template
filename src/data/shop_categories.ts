@@ -16,7 +16,7 @@ export const shop_categories: Cats[] = [
 			...item,
 			title: item.cat,
 			shopId: item.cat.toLowerCase().replace(/\s+/g, '_'),
-			shopLink: item.cat.toLowerCase().replace(/\s+/g, '_') + '_shop',
+			shopLink: item.cat.toLowerCase().replace(/\s+/g, '_'),
 			shopIndex: `shop-` + index
 		};
 	});

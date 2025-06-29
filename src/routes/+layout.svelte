@@ -27,7 +27,7 @@
 
 <main id="main" class="main-container">
 	<Preloader />
-	<Navigation />
+	<Navigation homePage={page.url.pathname === '/'} />
 	{@render children()}
 	<Footer />
 	<TopLink />

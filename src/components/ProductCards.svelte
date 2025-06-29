@@ -1,10 +1,10 @@
 <script lang="ts">
 	interface Props {
 		identity: string;
-		data: Array<any>;
+		productsData: Array<any>;
 		element?: string;
 	}
-	const { element = 'article', identity, data }: Props = $props();
+	const { element = 'article', identity, productsData }: Props = $props();
 	const productPics = import.meta.glob('$assets/products/**/*.{webp,png,jpg}', {
 		eager: true,
 		query: {
@@ -79,7 +79,7 @@
 	{/if}
 {/snippet}
 
-{#each data as { title, s_desc, img, stock, uom, quantity, approximate, price, sale }, index (identity + index)}
+{#each productsData as { title, s_desc, img, stock, uom, quantity, approximate, price, sale }, index (identity + index)}
 	<svelte:element this={element} class="col-6 col-lg-3 draggableItem hoverTransition" id={identity}>
 		<div class="product-card card shadow-sm h-100">
 			{@render prodImage(img, title, true)}

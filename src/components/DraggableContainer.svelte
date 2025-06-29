@@ -104,7 +104,7 @@
 		{@render children()}
 	</svelte:element>
 	{#if indicators}
-		<div class="directionIndicators d-flex justify-content-between text-primary fs-4 d-lg-none">
+		<div class="directionIndicators d-flex justify-content-between text-primary fs-4">
 			<i class="bx bxs-chevron-left-circle"></i>
 			<i class="bx bxs-chevron-right-circle"></i>
 		</div>
@@ -112,24 +112,23 @@
 </div>
 
 <style lang="scss">
+	.draggableOuterContainer {
+		position: relative;
+	}
 	.draggableContainer {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: start;
 	}
-
-	.draggableOuterContainer {
-		position: relative;
-
-		.directionIndicators {
-			position: absolute;
-			width: 100%;
-			top: 50%;
-			pointer-events: none;
-		}
+	.directionIndicators {
+		display: none;
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		pointer-events: none;
 	}
 
-	@media (max-width: 992px) {
+	@media (max-width: 1200px) {
 		.draggableContainer {
 			flex-wrap: nowrap;
 			overflow-x: auto;
@@ -142,11 +141,20 @@
 				cursor: grabbing;
 			}
 		}
+		.directionIndicators {
+			display: block;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		.draggableContainer > :global(*) {
+			flex: 0 0 32% !important;
+		}
 	}
 
 	@media (max-width: 992px) {
 		.draggableContainer > :global(*) {
-			flex: 0 0 48% !important;
+			flex: 0 0 47.5% !important;
 		}
 	}
 	@media (max-width: 576px) {

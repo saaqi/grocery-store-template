@@ -9,7 +9,7 @@
 <SectionWrapper id="featured" heading="Featured Products:">
 	<div class="container py-4">
 		<DraggableContainer id="educationContainer">
-			<ProductCards identity="weekly-sale" data={featured} />
+			<ProductCards identity="weekly-sale" productsData={featured} />
 		</DraggableContainer>
 	</div>
 </SectionWrapper>
