@@ -32,7 +32,6 @@
 						class="form-control border-primary"
 						placeholder="Search for products."
 						aria-label="Search for products."
-						aria-describedby="Search for products."
 					/>
 				</div>
 			</aside>
