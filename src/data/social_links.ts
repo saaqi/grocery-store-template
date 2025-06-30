@@ -31,7 +31,7 @@ export const social_links: SocialLink[] = [
 		icon: `bxl-whatsapp`
 	},
 	{
-		link: `mailto:info@sadiqsuperstore.com?subject=Message&nbsp;From&nbsp;Website!`,
+		link: `mailto:info@sadiqsuperstore.com?subject=Message%20From%20Website!`,
 		title: `Send us an E-Mail!`,
 		link_class: `email-link`,
 		icon: `bxl-gmail`

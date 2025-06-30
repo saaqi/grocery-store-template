@@ -54,7 +54,7 @@
 {#snippet whatsAppButton(title: string, sale: number, price: number)}
 	<a
 		class="btn btn-outline-dark waButton border-0 px-1 d-flex flex-wrap gap-2 gap-sm-1 justify-content-center align-items-center"
-		href={'https://wa.me/32465638887?text=' + title + ' €' + (sale ? sale : price)}
+		href={'https://wa.me/32465638887?text=' + title + '%20€' + (sale ? sale : price)}
 		target="_blank"
 		rel="nofollow noopener noreferrer"
 		title="Contact us via WhatsApp!"
