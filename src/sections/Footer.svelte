@@ -8,7 +8,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 pb-4 text-center text-md-start">
-				<img class="img-fluid footer-logo" src={logo} alt="logo" />
+				<img class="img-fluid footer-logo" src={logo} alt="logo" width=203 height=250 />
 			</div>
 			<div class="col-md-4 pb-4">
 				<div class="pb-2 h4">Quick Links:</div>

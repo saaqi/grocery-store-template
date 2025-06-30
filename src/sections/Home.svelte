@@ -1,10 +1,6 @@
 <script lang="ts">
-	import heroImageSvg from '$assets/hero/hero-image.svg';
-	import heroImage1200 from '$assets/hero/hero-image@1200x.webp';
-	import heroImage992 from '$assets/hero/hero-image@992x.webp';
-	import heroImage768 from '$assets/hero/hero-image@768x.webp';
-	import heroImage576 from '$assets/hero/hero-image@576x.webp';
-
+	// @ts-ignore
+	import heroImage from '$assets/hero/hero-image.png?enhanced&w=2800;1400;1200;992;768;576&format=avif;webp';
 	import { SectionWrapper } from '$components';
 	import { social_links } from '$data';
 </script>
@@ -55,14 +51,14 @@
 				</div>
 			</div>
 			<div class="graphic-col col-lg-6 text-center text-lg-end">
-				<picture>
-					<source media="(max-width: 576px)" srcset={heroImage576} type="image/webp" />
-					<source media="(max-width: 768px)" srcset={heroImage768} type="image/webp" />
-					<source media="(max-width: 992px)" srcset={heroImage992} type="image/webp" />
-					<source media="(max-width: 1200px)" srcset={heroImage1200} type="image/webp" />
-					<source media="(min-width: 1201px)" srcset={heroImageSvg} type="image/svg+xml" />
-					<img class="img-fluid hero-image" src={heroImageSvg} alt="Basket full of Groceries" />
-				</picture>
+				<enhanced:img
+					src={heroImage}
+					sizes="(min-width: 2800px) 2800px, 100vw"
+					class="img-fluid border-bottom"
+					alt="Shopping basket full of groceries"
+					loading="eager"
+					draggable="false"
+				/>
 			</div>
 		</div>
 	</div>

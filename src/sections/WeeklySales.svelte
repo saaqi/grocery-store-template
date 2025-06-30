@@ -1,9 +1,6 @@
 <script lang="ts">
-	import saleImage576 from '$assets/hero/sale-image@576x.webp';
-	import saleImage768 from '$assets/hero/sale-image@768x.webp';
-	import saleImage992 from '$assets/hero/sale-image@992x.webp';
-	import saleImage1200 from '$assets/hero/sale-image@1200x.webp';
-	import saleImageSvg from '$assets/hero/sale-image.svg';
+	// @ts-ignore
+	import saleImageSvg from '$assets/hero/sale-image.png?enhanced&w=2800;1400;1200;992;768;576&format=avif;webp';
 
 	import { ProductCards, SectionWrapper, DraggableContainer } from '$components';
 	import { dateSortedProducts } from '$data';
@@ -24,14 +21,14 @@
 	<div class="container py-4">
 		<div class="row d-flex flex-lg-row-reverse overlay align-items-center py-4">
 			<div class="graphic-col col-lg-6 mb-5 mb-lg-0">
-				<picture>
-					<source media="(max-width: 576px)" srcset={saleImage576} type="image/webp" />
-					<source media="(max-width: 768px)" srcset={saleImage768} type="image/webp" />
-					<source media="(max-width: 992px)" srcset={saleImage992} type="image/webp" />
-					<source media="(max-width: 1200px)" srcset={saleImage1200} type="image/webp" />
-					<source media="(min-width: 1201px)" srcset={saleImageSvg} type="image/svg+xml" />
-					<img class="img-fluid" src={saleImageSvg} alt="Limited Time Sale Deals" loading="lazy" />
-				</picture>
+				<enhanced:img
+					src={saleImageSvg}
+					sizes="(min-width: 2800px) 2800px, 100vw"
+					class="img-fluid border-bottom"
+					alt="Shopping cart full of groceries"
+					loading="lazy"
+					draggable="false"
+				/>
 			</div>
 			<div class="text-col col-lg-6">
 				<!-- <h2 class="fs-3 text-uppercase mb-2">Buy one Get one Free!</h2> -->

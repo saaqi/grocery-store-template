@@ -39,8 +39,6 @@
 				class:rounded={!topImg}
 				alt={'Screenshot of ' + title}
 				loading="lazy"
-				width="500"
-				height="281"
 				draggable="false"
 			/>
 		{/if}
