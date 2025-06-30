@@ -39,9 +39,12 @@
 	let dataAvailable: boolean = $state(true);
 
 	$effect(() => {
-		if (productsData.length === 0 || currentPage <= 0) {
+		if (productsData.length === 0) {
 			dataAvailable = false;
 			currentPage = 1;
+		} else if (currentPage <= 0) {
+			currentPage = 1;
+			dataAvailable = false;
 		} else if (currentPage > totalPages) {
 			currentPage = totalPages;
 			dataAvailable = true;
@@ -49,41 +52,77 @@
 			dataAvailable = true;
 		}
 	});
+
+	import { page } from '$app/state';
+	import { store } from '../routes/shop/store.svelte';
+	$effect(() => {
+		page.route.id;
+		store.filter = '';
+	});
 </script>
 
+{#snippet searchBox()}
+	<div class="input-group border-primary">
+		<div class="input-group-prepend">
+			<span class="input-group-text rounded-0 rounded-start border-primary">🔍</span>
+		</div>
+		<input
+			bind:value={store.filter}
+			type="text"
+			class="form-control border-primary"
+			placeholder="Search for products."
+			aria-label="Search for products."
+		/>
+	</div>
+{/snippet}
+
+{#snippet productCount()}
+	<div class="pagination">
+		Showing {Math.min((currentPage - 1) * itemsPerPage + 1, productsData.length)} - {Math.min(
+			currentPage * itemsPerPage,
+			productsData.length
+		)} of {productsData.length} products
+	</div>
+{/snippet}
+
+{#snippet pageCount()}
+	<div class="headerButtons btn-group border border-primary align-items-center">
+		<button
+			class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
+			disabled={currentPage === 1 || productsData.length < 12}
+			onclick={() => {
+				currentPage--;
+				paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
+			}}
+			aria-label="Previous page"
+		>
+			<i class="bx bxs-left-arrow"></i>
+		</button>
+		<span class="mx-2">Page {currentPage} of {totalPages}</span>
+		<button
+			class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
+			disabled={currentPage === totalPages || productsData.length < 12}
+			onclick={() => {
+				currentPage++;
+				paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
+			}}
+			aria-label="Next page"
+		>
+			<i class="bx bxs-right-arrow"></i>
+		</button>
+	</div>
+{/snippet}
 
 {#snippet headerPagination()}
-	<nav class="d-flex justify-content-between gap-3 flex-wrap align-items-center my-3">
-		<div class="pagination">
-			Showing {Math.min((currentPage - 1) * itemsPerPage + 1, productsData.length)} - {Math.min(
-				currentPage * itemsPerPage,
-				productsData.length
-			)} of {productsData.length} products
+	<nav class="row justify-content-between g-3 align-items-center my-3">
+		<div class="col-lg-3 col-sm-6">
+			{@render pageCount()}
 		</div>
-		<div class="headerButtons btn-group border border-primary align-items-center">
-			<button
-				class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
-				disabled={currentPage === 1}
-				onclick={() => {
-					currentPage--;
-					paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
-				}}
-				aria-label="Previous page"
-			>
-				<i class="bx bxs-left-arrow"></i>
-			</button>
-			<span class="mx-2">Page {currentPage} of {totalPages}</span>
-			<button
-				class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
-				disabled={currentPage === totalPages}
-				onclick={() => {
-					currentPage++;
-					paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
-				}}
-				aria-label="Next page"
-			>
-				<i class="bx bxs-right-arrow"></i>
-			</button>
+		<div class="col-lg-3 col-sm-6">
+			{@render productCount()}
+		</div>
+		<div class="col-lg-6 col-sm-12">
+			{@render searchBox()}
 		</div>
 	</nav>
 {/snippet}
@@ -96,7 +135,7 @@
 					<button
 						class="page-link align-items-center d-flex h-100"
 						aria-label="Previous Page"
-						disabled={currentPage === 1}
+						disabled={currentPage === 1 || productsData.length < 12}
 						onclick={() => {
 							currentPage--;
 							paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
@@ -125,7 +164,7 @@
 					<button
 						class="page-link align-items-center d-flex h-100"
 						aria-label="Next Page"
-						disabled={currentPage === totalPages}
+						disabled={currentPage === totalPages || productsData.length < 12}
 						onclick={() => {
 							currentPage++;
 							paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
@@ -147,11 +186,11 @@
 		<div class="row g-2 mt-3">
 			{#if dataAvailable}
 				<ProductCards {identity} productsData={paginatedProducts} />
-				{:else}
+			{:else}
 				<div class="alert alert-primary" role="alert">
-				  Sorry! No Product matches your search criteria.
+					Sorry! No Product matches your search criteria.
 				</div>
-				{/if}
+			{/if}
 		</div>
 	</div>
 	{#if bottomPagination}

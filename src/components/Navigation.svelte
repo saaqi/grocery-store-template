@@ -25,7 +25,7 @@
 				<i class="bx bxs-store display-6"></i>
 			</a>
 			<a class="navbar-brand me-0" href="/">
-				<img src={logo} class="logo" alt="Logo" width=41 height=50 />
+				<img src={logo} class="logo" alt="Logo" width="41" height="50" />
 			</a>
 			<button
 				class="navbar-toggler p-1 btn btn-outline-primary"
@@ -46,8 +46,8 @@
 						class="img-fluid display-5"
 						loading="lazy"
 						draggable="false"
-						width=41
-						height=50
+						width="41"
+						height="50"
 					/>
 					<button
 						type="button"

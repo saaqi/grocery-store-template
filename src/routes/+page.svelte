@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Home, WeeklySales, Featured, NewArrivals, ContactUs } from '$sections';
 	import { appData } from '$lib';
-
 </script>
 
 <svelte:head>
