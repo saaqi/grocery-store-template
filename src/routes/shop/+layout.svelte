@@ -9,6 +9,12 @@
 
 	import { store } from './store.svelte';
 	store.shopHeading = 'Shop';
+
+	import { page } from '$app/state';
+	$effect(() => {
+		page.route.id;
+		store.filter = '';
+	});
 </script>
 
 <svelte:head>
@@ -21,7 +27,7 @@
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-12 col-sm-10 col-md-8 col-lg-6">
-			<aside class="pt-5">
+			<!-- <aside class="pt-5">
 				<div class="input-group mb-3 border-primary">
 					<div class="input-group-prepend">
 						<span class="input-group-text rounded-0 rounded-start border-primary">🔍</span>
@@ -34,12 +40,24 @@
 						aria-label="Search for products."
 					/>
 				</div>
-			</aside>
+			</aside> -->
 		</div>
 		<div class="col-12">
 			<SectionWrapper id="shop" heading={store.shopHeading} className="pt-0">
 				<div class="container">
 					<div class="row">
+						<div class="input-group mb-3 border-primary">
+							<div class="input-group-prepend">
+								<span class="input-group-text rounded-0 rounded-start border-primary">🔍</span>
+							</div>
+							<input
+								bind:value={store.filter}
+								type="text"
+								class="form-control border-primary"
+								placeholder="Search for products."
+								aria-label="Search for products."
+							/>
+							</div>
 						{@render children()}
 					</div>
 				</div>

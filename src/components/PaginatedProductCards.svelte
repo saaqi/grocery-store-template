@@ -36,14 +36,21 @@
 		productsData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
 	);
 
+	let dataAvailable: boolean = $state(true);
+
 	$effect(() => {
-		if (currentPage < 1) {
+		if (productsData.length === 0 || currentPage <= 0) {
+			dataAvailable = false;
 			currentPage = 1;
 		} else if (currentPage > totalPages) {
 			currentPage = totalPages;
+			dataAvailable = true;
+		} else {
+			dataAvailable = true;
 		}
 	});
 </script>
+
 
 {#snippet headerPagination()}
 	<nav class="d-flex justify-content-between gap-3 flex-wrap align-items-center my-3">
@@ -138,7 +145,13 @@
 	{/if}
 	<div class="container">
 		<div class="row g-2 mt-3">
-			<ProductCards {identity} productsData={paginatedProducts} />
+			{#if dataAvailable}
+				<ProductCards {identity} productsData={paginatedProducts} />
+				{:else}
+				<div class="alert alert-primary" role="alert">
+				  Sorry! No Product matches your search criteria.
+				</div>
+				{/if}
 		</div>
 	</div>
 	{#if bottomPagination}

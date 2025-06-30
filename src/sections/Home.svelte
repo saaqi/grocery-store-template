@@ -54,7 +54,7 @@
 				<enhanced:img
 					src={heroImage}
 					sizes="(min-width: 2800px) 2800px, 100vw"
-					class="img-fluid border-bottom"
+					class="img-fluid"
 					alt="Shopping basket full of groceries"
 					loading="eager"
 					draggable="false"

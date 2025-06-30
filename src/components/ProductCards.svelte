@@ -134,8 +134,8 @@
 <style lang="scss">
 	.waButton {
 		border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
-		line-height: 0;
 	}
+
 	.sale-indicator {
 		position: absolute;
 		top: 1rem;

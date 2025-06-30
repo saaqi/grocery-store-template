@@ -44,9 +44,10 @@
 						src={logo}
 						alt="Sadiq Super Store Logo"
 						class="img-fluid display-5"
-						style="height: 1em"
 						loading="lazy"
 						draggable="false"
+						width=41
+						height=50
 					/>
 					<button
 						type="button"

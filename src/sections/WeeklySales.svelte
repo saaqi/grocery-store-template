@@ -24,7 +24,7 @@
 				<enhanced:img
 					src={saleImageSvg}
 					sizes="(min-width: 2800px) 2800px, 100vw"
-					class="img-fluid border-bottom"
+					class="img-fluid"
 					alt="Shopping cart full of groceries"
 					loading="lazy"
 					draggable="false"
