@@ -27,7 +27,7 @@
 		);
 	}
 
-	function draggableContainer(node: any, options: { sensitivity?: number } = {}) {
+	function draggableContainer(node: HTMLElement, options: { sensitivity?: number } = {}) {
 		// Only add drag functionality if device doesn't have touch support
 		if (hasTouchSupport()) {
 			return {
@@ -38,10 +38,10 @@
 		const { sensitivity = 3 } = options;
 
 		let isDragging = false;
-		let startX: any;
-		let scrollLeft: any;
+		let startX: MouseEvent['pageX'];
+		let scrollLeft: number;
 
-		function handleMouseDown(e: any) {
+		function handleMouseDown(e: MouseEvent) {
 			isDragging = true;
 			startX = e.pageX - node.offsetLeft;
 			scrollLeft = node.scrollLeft;
@@ -58,7 +58,7 @@
 			node.classList.remove('dragging');
 		}
 
-		function handleMouseMove(e: any) {
+		function handleMouseMove(e: MouseEvent) {
 			if (!isDragging) return;
 			e.preventDefault();
 			const x = e.pageX - node.offsetLeft;

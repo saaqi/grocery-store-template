@@ -38,7 +38,7 @@ function generateSitemap(routes: string[]) {
 	const urls = routes
 		.map((route: string) => {
 			const encodedRoute = encodeURI(route);
-			return `<url><loc>${siteUrl}${encodedRoute}</loc></url>`;
+			return `<url><loc>${siteUrl}${encodedRoute}</loc></url>\n`;
 		})
 		.join('');
 

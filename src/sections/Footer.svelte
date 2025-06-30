@@ -13,7 +13,7 @@
 			<div class="col-md-4 pb-4">
 				<div class="pb-2 h4">Quick Links:</div>
 				<ul id="footer-nav" class="menu-list list-unstyled">
-					{#each nav_links as { link, text, icon }, index ('footer-nav-link-' + index)}
+					{#each nav_links as { link, text, icon } (link)}
 						<li class="nav-item mb-3">
 							<a class="nav-link link-dark fw-bold" href={link}>
 								<i class="bx {icon}"></i>
@@ -41,7 +41,7 @@
 					id="footer-social-links"
 					class="social-links social-links-footer d-flex flex-wrap justify-content-around mt-4 list-unstyled"
 				>
-					{#each social_links as { link, title, link_class, icon }, index ('home-social-link-' + index)}
+					{#each social_links as { link, title, link_class, icon } (link)}
 						<li class="lh-1">
 							<a
 								class="{link_class} fs-3"

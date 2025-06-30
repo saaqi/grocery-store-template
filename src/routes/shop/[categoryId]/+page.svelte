@@ -3,17 +3,18 @@
 	import { page } from '$app/state';
 	import { PaginatedProductCards } from '$components';
 	import { dateSortedProducts } from '$data';
+	import { store } from '../store.svelte';
 	import { appData } from '$lib';
 	let { data }: { data: PageData } = $props();
-
-	import { store } from '../store.svelte';
 
 	$effect(() => {
 		store.shopHeading = data.category.title;
 	});
 
+	// let search: string = $state('');
+	let products = $state(dateSortedProducts);
 	const categoryProducts = $derived(
-		dateSortedProducts.filter(
+		products.filter(
 			(product) => product.cat.toLowerCase().replace(/\s+/g, '_') === page.params.categoryId
 		)
 	);
@@ -33,7 +34,7 @@
 <PaginatedProductCards
 	{productsData}
 	perPage={12}
-	identity="shopPageCards"
+	identity="categoryPage"
 	topPagination={true}
 	bottomPagination={true}
 />

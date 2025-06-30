@@ -1,11 +1,21 @@
 <script lang="ts">
 	interface Props {
-		productsData: Array<any>;
+		productsData: Array<{
+			title: string;
+			s_desc: string;
+			img: string;
+			stock: boolean;
+			uom: string;
+			quantity: number;
+			approximate: boolean;
+			price: number;
+			sale: number;
+			id: string;
+		}>;
 		identity: string;
 		perPage?: number;
 		topPagination?: boolean;
 		bottomPagination?: boolean;
-		[key: string]: any;
 	}
 	const {
 		productsData,
@@ -83,7 +93,7 @@
 				{#each Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
 					const start = Math.max(1, Math.min(currentPage - 2, totalPages - 4));
 					return start + i;
-				}) as pageNum}
+				}) as pageNum (pageNum)}
 					<li class="page-item {currentPage === pageNum ? 'active' : ''}">
 						<button
 							class="page-link"

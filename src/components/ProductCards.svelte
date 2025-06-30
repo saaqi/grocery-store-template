@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { scale } from 'svelte/transition';
 	interface Props {
 		identity: string;
 		productsData: Array<{
@@ -11,6 +12,7 @@
 			approximate: boolean;
 			price: number;
 			sale: number;
+			id: string;
 		}>;
 		element?: string;
 	}
@@ -26,11 +28,11 @@
 </script>
 
 {#snippet prodImage(img: string, title: string, topImg: boolean)}
-	{#each Object.entries(productPics) as [_path, module], index ('prod-' + index)}
+	{#each Object.entries(productPics) as [_path, module] ((module as { default: string }).default)}
 		<!-- .card-img-top, rounded : keeps from purging -->
 		{#if _path.includes(img)}
 			<enhanced:img
-				src={(module as any).default}
+				src={(module as { default: string }).default}
 				sizes="(min-width: 500px) 500px, 100vw"
 				class="img-fluid border-bottom"
 				class:card-img-top={topImg}
@@ -89,8 +91,13 @@
 	{/if}
 {/snippet}
 
-{#each productsData as { title, s_desc, img, stock, uom, quantity, approximate, price, sale }, index (identity + index)}
-	<svelte:element this={element} class="col-6 col-lg-3 draggableItem hoverTransition" id={identity}>
+{#each productsData as { title, s_desc, img, stock, uom, quantity, approximate, price, sale, id }, index (id)}
+	<svelte:element
+		this={element}
+		class="col-6 col-lg-3 draggableItem hoverTransition"
+		id={identity + id + index}
+		transition:scale
+	>
 		<div class="product-card card shadow-sm h-100">
 			{@render prodImage(img, title, true)}
 			<div class="card-body d-flex flex-column align-items-start gap-3 p-2 p-sm-3">

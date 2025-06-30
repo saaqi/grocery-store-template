@@ -22,7 +22,7 @@ export const products = [
 ].map((item, index) => {
 	return {
 		...item,
-		id: `products-${index}`
+		id: `card#${index}`
 	};
 });
 

@@ -5,8 +5,9 @@
 	store.shopHeading = 'Shop';
 
 	// let search: string = $state('');
+	let products = $state(dateSortedProducts);
 	const productsData = $derived(
-		dateSortedProducts.filter(
+		products.filter(
 			(product) =>
 				product.cat.toLowerCase().includes(store.filter.toLowerCase()) ||
 				product.title.toLowerCase().includes(store.filter.toLowerCase()) ||
@@ -23,7 +24,7 @@
 <PaginatedProductCards
 	{productsData}
 	perPage={12}
-	identity="shopPageCards"
+	identity="shopPage"
 	topPagination={true}
 	bottomPagination={true}
 />
