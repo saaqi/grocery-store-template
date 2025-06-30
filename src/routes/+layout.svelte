@@ -18,11 +18,6 @@
 </script>
 
 <svelte:head>
-	<title>{appData.title} | {appData.tagline}</title>
-	<meta
-		name="description"
-		content="We offer fresh groceries, snacks, household essentials, and more. Whether you're picking up daily necessities or grabbing something quick, we've got you covered with friendly service and great prices!"
-	/>
 	<link
 		rel="canonical"
 		href={page.url.href.startsWith(appData.baseURL)
