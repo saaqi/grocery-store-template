@@ -22,7 +22,7 @@
 		query: {
 			enhanced: true,
 			w: '500;250',
-			format: 'avif;webp;jpg'
+			format: 'avif;webp'
 		}
 	});
 </script>
