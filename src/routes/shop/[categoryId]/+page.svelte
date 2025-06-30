@@ -19,11 +19,20 @@
 		)
 	);
 	const productsData = $derived(
-		categoryProducts.filter(
-			(product) =>
-				product.title.toLowerCase().trim().includes(store.filter.toLowerCase().trim()) ||
-				product.s_desc.toLowerCase().trim().includes(store.filter.toLowerCase().trim())
-		)
+		categoryProducts
+			.filter(
+				(product) =>
+					product.title.toLowerCase().trim().includes(store.filter.toLowerCase().trim()) ||
+					product.s_desc.toLowerCase().trim().includes(store.filter.toLowerCase().trim())
+			)
+			.map((product) => ({
+				...product,
+				approximate: false,
+				uom: product.uom || '',
+				quantity: product.quantity || 0,
+				price: product.price || 0,
+				sale: product.sale || 0
+			}))
 	);
 </script>
 

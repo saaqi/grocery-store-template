@@ -2,13 +2,9 @@
 	import { SectionWrapper, ContactForm } from '$components';
 
 	let outputDay: string = $state('');
-	let outputTime: string = $state('');
 	let isOpeningHours: boolean = $state(false);
-	const openMsg: string = '<span class="open text-primary fw-bold">Open</span> come on down 🙂';
-	const morningMsg: string =
-		'<span class="text-danger-emphasis fw-bold">Closed</span> at this hour see you at 9:00 AM 😴';
-	const tomorrowMsg: string =
-		'<span class="text-danger-emphasis fw-bold">Closed</span> see you tomorrow 😴';
+	let hours: number = $state(-1);
+	let dayOfWeek: string = $state('');
 
 	const storeStatus = () => {
 		const timeZone = 'Europe/Brussels';
@@ -30,8 +26,8 @@
 		outputDay = `${orangeCityDayToday} ${formattedTime}`;
 
 		// Time --------------------------
-		const hours = localTime.getHours();
-		const dayOfWeek = localTime.toLocaleString('en-US', {
+		hours = localTime.getHours();
+		dayOfWeek = localTime.toLocaleString('en-US', {
 			timeZone,
 			weekday: 'long'
 		});
@@ -47,11 +43,6 @@
 
 		const [startHour, endHour] = openingHours[dayOfWeek as keyof typeof openingHours] || [];
 		isOpeningHours = startHour <= hours && hours < endHour;
-
-		if (isOpeningHours) outputTime = openMsg;
-		else if (dayOfWeek === 'Thursday') outputTime = tomorrowMsg;
-		else if (hours < 9) outputTime = morningMsg;
-		else outputTime = tomorrowMsg;
 	};
 	storeStatus();
 	setInterval(storeStatus, 15000);
@@ -62,7 +53,22 @@
 		<div class="row py-4">
 			<div class="col-lg-6 working-hours border-primary mb-4 mb-lg-0">
 				<div class="business-hours fs-5 mb-3 fw-medium" id="business-hours">
-					<p><i class="bx bxs-calendar"></i> It is {outputDay}, We are {@html outputTime}</p>
+					<p>
+						<i class="bx bxs-calendar"></i> It is {outputDay}, We are
+						<span
+							class="fw-bold"
+							class:text-primary={isOpeningHours}
+							class:text-danger-emphasis={!isOpeningHours}
+							>{isOpeningHours ? 'Open' : 'Closed'}</span
+						>
+						{isOpeningHours
+							? ' come on down 🙂'
+							: dayOfWeek === 'Thursday'
+								? ' see you tomorrow 😴'
+								: hours < 9
+									? ' at this hour see you at 9:00 AM 😴'
+									: ' see you tomorrow 😴'}
+					</p>
 				</div>
 				<table class="table table-info table-bordered table-striped table-hover">
 					<thead class="thead">

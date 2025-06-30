@@ -106,7 +106,7 @@
 		{@render children()}
 	</svelte:element>
 	{#if indicators}
-		<div class="directionIndicators d-flex justify-content-between text-primary fs-4">
+		<div class="directionIndicators d-xl-none d-flex justify-content-between text-primary fs-4">
 			<i class="bx bxs-chevron-left-circle"></i>
 			<i class="bx bxs-chevron-right-circle"></i>
 		</div>
@@ -123,7 +123,6 @@
 		justify-content: start;
 	}
 	.directionIndicators {
-		display: none;
 		position: absolute;
 		width: 100%;
 		top: 50%;
@@ -143,12 +142,9 @@
 				cursor: grabbing;
 			}
 		}
-		.directionIndicators {
-			display: block;
-		}
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 1199px) {
 		.draggableContainer > :global(*) {
 			flex: 0 0 32% !important;
 		}

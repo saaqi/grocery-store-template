@@ -67,7 +67,7 @@
 							{#if !subcategories}
 								<li class="nav-item" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">
 									<a
-										class="nav-link link-dark fw-bold"
+										class="nav-link link-dark fw-medium"
 										class:active={link === page.route.id}
 										href={link}
 									>
@@ -78,7 +78,7 @@
 							{:else}
 								<li class="nav-item dropdown">
 									<a
-										class="nav-link link-dark dropdown-toggle fw-bold"
+										class="nav-link link-dark dropdown-toggle fw-medium"
 										class:active={link === page.route.id ||
 											subcategories.some((sub) => sub.shopLink === page.params.categoryId)}
 										id="navbarDropdown"
@@ -97,7 +97,7 @@
 												data-bs-target="#bdNavbar"
 											>
 												<a
-													class="dropdown-item py-2 fw-bold"
+													class="dropdown-item py-2 fw-medium"
 													class:active={subcategory.shopLink === page.params.categoryId}
 													href={'/shop/' + subcategory.shopLink}
 												>
