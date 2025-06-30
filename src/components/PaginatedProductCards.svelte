@@ -35,6 +35,14 @@
 	const paginatedProducts = $derived(
 		productsData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
 	);
+
+	$effect(() => {
+		if (currentPage < 1) {
+			currentPage = 1;
+		} else if (currentPage > totalPages) {
+			currentPage = totalPages;
+		}
+	});
 </script>
 
 {#snippet headerPagination()}

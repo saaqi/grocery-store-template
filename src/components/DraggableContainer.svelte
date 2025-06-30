@@ -145,6 +145,9 @@
 	}
 
 	@media (max-width: 1199px) {
+		.draggableContainer {
+			padding-bottom: 0.5rem;
+		}
 		.draggableContainer > :global(*) {
 			flex: 0 0 32% !important;
 		}
