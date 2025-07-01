@@ -18,14 +18,6 @@
 	/>
 </svelte:head>
 
-<div class="container">
-	<div class="row justify-content-center">
-		<div class="col-12">
-			<SectionWrapper id="shop" heading={store.shopHeading} className="pt-3" fullCenter={true}>
-				<div class="container">
-					{@render children()}
-				</div>
-			</SectionWrapper>
-		</div>
-	</div>
-</div>
+<SectionWrapper id="shop" heading={store.shopHeading} className="pt-3" fullCenter={true}>
+	{@render children()}
+</SectionWrapper>

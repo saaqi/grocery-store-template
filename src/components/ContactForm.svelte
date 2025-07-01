@@ -43,94 +43,92 @@
 </script>
 
 <form id="contact-email-form" class="contact-email-form">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<label for="contact-form-name">
-					<i class="bx bx-user-pin"></i> Name:
-				</label>
-				<input
-					bind:value={name}
-					type="text"
-					name="contact-form-name"
-					class="form-control {border.name}"
-					id="contact-form-name"
-					placeholder="Enter Your Full Name *"
-					required
-				/>
-			</div>
-			<div class="col-md-6 mt-3 mt-md-0">
-				<label for="contact-form-email">
-					<i class="bx bx-envelope"></i> Email Address:
-				</label>
-				<input
-					bind:value={email}
-					type="email"
-					class="form-control {border.email}"
-					name="contact-form-email"
-					id="contact-form-email"
-					placeholder="Enter Your Email *"
-					required
-				/>
-			</div>
-			{#if !emailValid && email}
-				<div class="col mt-3">
-					<div class="alert alert-danger m-0" role="alert" transition:slide={{ duration: 100 }}>
-						Please enter a Valid E-Mail Address to continue.
-					</div>
-				</div>
-			{/if}
-		</div>
-		<div class="mt-3">
-			<label for="contact-form-subject">
-				<i class="bx bx-message-dots"></i> Subject:
+	<div class="row">
+		<div class="col-md-6">
+			<label for="contact-form-name">
+				<i class="bx bx-user-pin"></i> Name:
 			</label>
 			<input
-				bind:value={subject}
+				bind:value={name}
 				type="text"
-				class="form-control"
-				name="contact-form-subject"
-				id="contact-form-subject"
-				placeholder="Enter The subject"
+				name="contact-form-name"
+				class="form-control {border.name}"
+				id="contact-form-name"
+				placeholder="Enter Your Full Name *"
+				required
 			/>
 		</div>
-		<div class="mt-3">
-			<label for="contact-form-message">
-				<i class="bx bx-chat"></i> Message:
+		<div class="col-md-6 mt-3 mt-md-0">
+			<label for="contact-form-email">
+				<i class="bx bx-envelope"></i> Email Address:
 			</label>
-			<textarea
-				bind:value={message}
-				class="form-control {border.message}"
-				name="contact-form-message"
-				id="contact-form-message"
-				rows="5"
-				placeholder="What is on your mind? *"
+			<input
+				bind:value={email}
+				type="email"
+				class="form-control {border.email}"
+				name="contact-form-email"
+				id="contact-form-email"
+				placeholder="Enter Your Email *"
 				required
-			></textarea>
+			/>
 		</div>
-		<div
-			class="mt-4 submitContainer"
-			onmouseenter={showMainAlert}
-			onfocus={showMainAlert}
-			onmouseleave={hideMainAlert}
-			onblur={hideMainAlert}
-			role="presentation"
-		>
-			<button
-				{onclick}
-				type="submit"
-				class="btn btn-primary w-100"
-				disabled={disableSubmit}
-				aria-disabled={disableSubmit}
-			>
-				<i class="bx bxs-envelope"></i> Send Message
-			</button>
-			{#if mainAlert}
-				<div class="alert alert-danger mt-3" role="alert" transition:slide={{ duration: 100 }}>
-					Please complete the form before sending your message.
+		{#if !emailValid && email}
+			<div class="col mt-3">
+				<div class="alert alert-danger m-0" role="alert" transition:slide={{ duration: 100 }}>
+					Please enter a Valid E-Mail Address to continue.
 				</div>
-			{/if}
-		</div>
+			</div>
+		{/if}
+	</div>
+	<div class="mt-3">
+		<label for="contact-form-subject">
+			<i class="bx bx-message-dots"></i> Subject:
+		</label>
+		<input
+			bind:value={subject}
+			type="text"
+			class="form-control"
+			name="contact-form-subject"
+			id="contact-form-subject"
+			placeholder="Enter The subject"
+		/>
+	</div>
+	<div class="mt-3">
+		<label for="contact-form-message">
+			<i class="bx bx-chat"></i> Message:
+		</label>
+		<textarea
+			bind:value={message}
+			class="form-control {border.message}"
+			name="contact-form-message"
+			id="contact-form-message"
+			rows="5"
+			placeholder="What is on your mind? *"
+			required
+		></textarea>
+	</div>
+	<div
+		class="mt-4 submitContainer"
+		onmouseenter={showMainAlert}
+		onfocus={showMainAlert}
+		onmouseleave={hideMainAlert}
+		onblur={hideMainAlert}
+		role="presentation"
+	>
+		<button
+			{onclick}
+			type="submit"
+			class="btn btn-primary w-100"
+			disabled={disableSubmit}
+			aria-disabled={disableSubmit}
+		>
+			<i class="bx bxs-envelope"></i> Send Message
+		</button>
+		{#if mainAlert}
+			<div class="alert alert-danger mt-3" role="alert" transition:slide={{ duration: 100 }}>
+				Please complete the form before sending your message.
+			</div>
+		{/if}
 	</div>
 </form>
 

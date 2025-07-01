@@ -49,70 +49,67 @@
 </script>
 
 <SectionWrapper id="contact-us" heading="Contact Us!" className="section bg-info-subtle">
-	<div class="container">
-		<div class="row py-4">
-			<div class="col-lg-6 working-hours border-primary mb-4 mb-lg-0">
-				<div class="business-hours fs-5 mb-3 fw-medium" id="business-hours">
-					<p>
-						<i class="bx bxs-calendar"></i> It is {outputDay}, We are
-						<span
-							class="fw-bold"
-							class:text-primary={isOpeningHours}
-							class:text-danger-emphasis={!isOpeningHours}
-							>{isOpeningHours ? 'Open' : 'Closed'}</span
-						>
-						{isOpeningHours
-							? ' come on down 🙂'
-							: dayOfWeek === 'Thursday'
-								? ' see you tomorrow 😴'
-								: hours < 9
-									? ' at this hour see you at 9:00 AM 😴'
-									: ' see you tomorrow 😴'}
-					</p>
-				</div>
-				<table class="table table-info table-bordered table-striped table-hover">
-					<thead class="thead">
-						<tr>
-							<th><i class="bx bxs-calendar-event"></i> Day</th>
-							<th><i class="bx bxs-time"></i> Hours ( Europe/Brussels )</th>
-						</tr>
-					</thead>
-					<tbody class="business-hours-table">
-						<tr>
-							<td>Monday</td>
-							<td>09:00 AM - 08:00 PM</td>
-						</tr>
-						<tr>
-							<td>Tuesday</td>
-							<td>09:00 AM - 08:00 PM</td>
-						</tr>
-						<tr>
-							<td>Wednesday</td>
-							<td>09:00 AM - 08:00 PM</td>
-						</tr>
-						<tr>
-							<td>Thursday</td>
-							<td class="text-danger-emphasis">Closed</td>
-						</tr>
-						<tr>
-							<td>Friday</td>
-							<td>09:00 AM - 09:00 PM</td>
-						</tr>
-						<tr>
-							<td>Saturday</td>
-							<td>09:00 AM - 08:00 PM</td>
-						</tr>
-						<tr>
-							<td>Sunday</td>
-							<td>09:00 AM - 08:00 PM</td>
-						</tr>
-					</tbody>
-				</table>
+	<div class="row py-4">
+		<div class="col-lg-6 working-hours border-primary mb-4 mb-lg-0">
+			<div class="business-hours fs-5 mb-3 fw-medium" id="business-hours">
+				<p>
+					<i class="bx bxs-calendar"></i> It is {outputDay}, We are
+					<span
+						class="fw-bold"
+						class:text-primary={isOpeningHours}
+						class:text-danger-emphasis={!isOpeningHours}>{isOpeningHours ? 'Open' : 'Closed'}</span
+					>
+					{isOpeningHours
+						? ' come on down 🙂'
+						: dayOfWeek === 'Thursday'
+							? ' see you tomorrow 😴'
+							: hours < 9
+								? ' at this hour see you at 9:00 AM 😴'
+								: ' see you tomorrow 😴'}
+				</p>
 			</div>
-			<div class="col-lg-6">
-				<p>Have something in mind? Please don't hesitate to ask us!</p>
-				<ContactForm />
-			</div>
+			<table class="table table-info table-bordered table-striped table-hover">
+				<thead class="thead">
+					<tr>
+						<th><i class="bx bxs-calendar-event"></i> Day</th>
+						<th><i class="bx bxs-time"></i> Hours ( Europe/Brussels )</th>
+					</tr>
+				</thead>
+				<tbody class="business-hours-table">
+					<tr>
+						<td>Monday</td>
+						<td>09:00 AM - 08:00 PM</td>
+					</tr>
+					<tr>
+						<td>Tuesday</td>
+						<td>09:00 AM - 08:00 PM</td>
+					</tr>
+					<tr>
+						<td>Wednesday</td>
+						<td>09:00 AM - 08:00 PM</td>
+					</tr>
+					<tr>
+						<td>Thursday</td>
+						<td class="text-danger-emphasis">Closed</td>
+					</tr>
+					<tr>
+						<td>Friday</td>
+						<td>09:00 AM - 09:00 PM</td>
+					</tr>
+					<tr>
+						<td>Saturday</td>
+						<td>09:00 AM - 08:00 PM</td>
+					</tr>
+					<tr>
+						<td>Sunday</td>
+						<td>09:00 AM - 08:00 PM</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-lg-6">
+			<p>Have something in mind? Please don't hesitate to ask us!</p>
+			<ContactForm />
 		</div>
 	</div>
 </SectionWrapper>

@@ -113,24 +113,22 @@
 {/snippet}
 
 {#snippet headerPagination()}
-	<div class="container">
-		<nav class="row justify-content-between g-3 align-items-center my-3">
-			<div class="col-lg-2 col-5">
-				{@render pageCount()}
-			</div>
-			<div class="col-lg-4 col-7">
-				{@render productCount()}
-			</div>
-			<div class="col-lg-6 col-12">
-				{@render searchBox()}
-			</div>
-		</nav>
-	</div>
+	<nav class="row justify-content-between g-3 align-items-center my-3">
+		<div class="col-lg-2 col-5">
+			{@render pageCount()}
+		</div>
+		<div class="col-lg-4 col-7">
+			{@render productCount()}
+		</div>
+		<div class="col-lg-6 col-12">
+			{@render searchBox()}
+		</div>
+	</nav>
 {/snippet}
 
 {#snippet footerPagination()}
 	<nav aria-label="footerNavigation">
-		<div class="container text-end d-flex justify-content-center justify-content-md-end">
+		<div class="text-end d-flex justify-content-center justify-content-md-end">
 			<ul class="footerPagination pagination mt-4">
 				<li class="page-item {currentPage === 1 ? 'disabled' : ''}">
 					<button
@@ -183,16 +181,14 @@
 	{#if topPagination}
 		{@render headerPagination()}
 	{/if}
-	<div class="container">
-		<div class="row g-2 mt-3">
-			{#if dataAvailable}
-				<ProductCards {identity} productsData={paginatedProducts} />
-			{:else}
-				<div class="alert alert-primary" role="alert">
-					Sorry! No Product matches your search criteria.
-				</div>
-			{/if}
-		</div>
+	<div class="row g-2 mt-3">
+		{#if dataAvailable}
+			<ProductCards {identity} productsData={paginatedProducts} />
+		{:else}
+			<div class="alert alert-primary" role="alert">
+				Sorry! No Product matches your search criteria.
+			</div>
+		{/if}
 	</div>
 	{#if bottomPagination}
 		{@render footerPagination()}

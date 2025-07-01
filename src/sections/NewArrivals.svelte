@@ -15,9 +15,7 @@
 </script>
 
 <SectionWrapper id="new-arrivals" heading="New Arrivals">
-	<div class="container py-4">
-		<DraggableContainer id="newArrivalsContainer">
-			<ProductCards identity="new-arrivals" productsData={featured} />
-		</DraggableContainer>
-	</div>
+	<DraggableContainer id="newArrivalsContainer">
+		<ProductCards identity="new-arrivals" productsData={featured} />
+	</DraggableContainer>
 </SectionWrapper>
