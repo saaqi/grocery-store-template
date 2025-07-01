@@ -158,9 +158,10 @@
 			flex: 0 0 47.5% !important;
 		}
 	}
-	/*@media (max-width: 576px) {
+
+	@media (max-width: 576px) {
 		.draggableContainer > :global(*) {
 			flex: 0 0 95% !important;
 		}
-	}*/
+	}
 </style>
