@@ -21,7 +21,7 @@
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-12">
-			<SectionWrapper id="shop" heading={store.shopHeading} className="pt-3">
+			<SectionWrapper id="shop" heading={store.shopHeading} className="pt-3" fullCenter={true}>
 				<div class="container">
 					{@render children()}
 				</div>
