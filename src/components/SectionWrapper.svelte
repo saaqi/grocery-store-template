@@ -1,17 +1,18 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	interface Props {
-		id?: string;
+		id: string;
+		fullCenter?: boolean;
 		heading?: string;
 		copy?: string;
 		className?: string;
 		children: Snippet;
 	}
-	const { id, heading, copy, className, children, ...props }: Props = $props();
+	const { id, heading, copy, className, fullCenter = true, children, ...props }: Props = $props();
 </script>
 
 <!-- .section, .gap-4 .py-5 : keeps from purging -->
-<section {id} class:section={true} class:py-5={true} class={className} {...props}>
+<section {id} class:section={true} class:centerContent={fullCenter} class:py-5={true} class={className} {...props}>
 	{#if heading || copy}
 		<div class="container pt-4">
 			{#if heading}
@@ -32,6 +33,11 @@
 		align-items: center;
 		flex-wrap: wrap;
 		min-height: 100svh;
+	}
+
+	.section.centerContent {
+		place-content: start;
+		align-items: start;
 	}
 
 	.section:nth-child(even) {
