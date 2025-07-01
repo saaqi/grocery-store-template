@@ -97,7 +97,7 @@
 		>
 			<i class="bx bxs-left-arrow"></i>
 		</button>
-		<span class="mx-2 text-center">Page {currentPage}/{totalPages}</span>
+		<span class="mx-2 text-center">{currentPage}/{totalPages}</span>
 		<button
 			class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
 			disabled={currentPage === totalPages || productsData.length <= 12}
