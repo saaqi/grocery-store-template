@@ -11,27 +11,30 @@
 		store.shopHeading = data.category.title;
 	});
 
-	// let search: string = $state('');
-	let products = $state(dateSortedProducts);
 	const categoryProducts = $derived(
-		products.filter(
+		dateSortedProducts.filter(
 			(product) => product.cat.toLowerCase().replace(/\s+/g, '_') === page.params.categoryId
 		)
 	);
+
+	const filterLower = $derived((store.filter || '').trim().toLowerCase());
 	const productsData = $derived(
 		categoryProducts
-			.filter(
-				(product) =>
-					product.title.toLowerCase().trim().includes(store.filter.toLowerCase().trim()) ||
-					product.s_desc.toLowerCase().trim().includes(store.filter.toLowerCase().trim())
-			)
+			.filter((product) => {
+				if (!filterLower) return true; // Skip filtering if no search term
+
+				const searchFields = [product.cat, product.title, product.s_desc].filter(
+					(field): field is string => Boolean(field)
+				);
+				return searchFields.some((field) => field.toLowerCase().includes(filterLower));
+			})
 			.map((product) => ({
 				...product,
-				approximate: false,
 				uom: product.uom || '',
 				quantity: product.quantity || 0,
 				price: product.price || 0,
-				sale: product.sale || 0
+				sale: product.sale || 0,
+				approximate: false
 			}))
 	);
 </script>

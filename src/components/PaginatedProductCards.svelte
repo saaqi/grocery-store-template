@@ -43,8 +43,8 @@
 			dataAvailable = false;
 			currentPage = 1;
 		} else if (currentPage <= 0) {
-			currentPage = 1;
 			dataAvailable = false;
+			currentPage = 1;
 		} else if (currentPage > totalPages) {
 			currentPage = totalPages;
 			dataAvailable = true;
@@ -89,7 +89,7 @@
 	<div class="headerButtons btn-group border border-primary align-items-center">
 		<button
 			class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
-			disabled={currentPage === 1 || productsData.length < 12}
+			disabled={currentPage === 1 || productsData.length <= 12}
 			onclick={() => {
 				currentPage--;
 				paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
@@ -101,7 +101,7 @@
 		<span class="mx-2">Page {currentPage} of {totalPages}</span>
 		<button
 			class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
-			disabled={currentPage === totalPages || productsData.length < 12}
+			disabled={currentPage === totalPages || productsData.length <= 12}
 			onclick={() => {
 				currentPage++;
 				paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
@@ -135,7 +135,7 @@
 					<button
 						class="page-link align-items-center d-flex h-100"
 						aria-label="Previous Page"
-						disabled={currentPage === 1 || productsData.length < 12}
+						disabled={currentPage === 1 || productsData.length <= 12}
 						onclick={() => {
 							currentPage--;
 							paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
@@ -164,7 +164,7 @@
 					<button
 						class="page-link align-items-center d-flex h-100"
 						aria-label="Next Page"
-						disabled={currentPage === totalPages || productsData.length < 12}
+						disabled={currentPage === totalPages || productsData.length <= 12}
 						onclick={() => {
 							currentPage++;
 							paginatedContainer?.scrollIntoView({ behavior: 'smooth' });

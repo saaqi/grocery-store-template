@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { scale } from 'svelte/transition';
 	interface Props {
 		identity: string;
 		productsData: Array<{
@@ -95,7 +94,6 @@
 		this={element}
 		class="col-6 col-lg-3 draggableItem hoverTransition"
 		id={identity + id + index}
-		transition:scale
 	>
 		<div class="product-card card shadow-sm h-100">
 			{@render prodImage(img, title, true)}

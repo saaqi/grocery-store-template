@@ -4,16 +4,17 @@
 	import { store } from './store.svelte';
 	store.shopHeading = 'Shop';
 
-	// let search: string = $state('');
-	let products = $state(dateSortedProducts);
+	const filterLower = $derived((store.filter || '').trim().toLowerCase());
 	const productsData = $derived(
-		products
-			.filter(
-				(product) =>
-					product.cat.toLowerCase().includes(store.filter.toLowerCase()) ||
-					product.title.toLowerCase().includes(store.filter.toLowerCase()) ||
-					product.s_desc.toLowerCase().includes(store.filter.toLowerCase())
-			)
+		dateSortedProducts
+			.filter((product) => {
+				if (!filterLower) return true; // Skip filtering if no search term
+
+				const searchFields = [product.cat, product.title, product.s_desc].filter(
+					(field): field is string => Boolean(field)
+				);
+				return searchFields.some((field) => field.toLowerCase().includes(filterLower));
+			})
 			.map((product) => ({
 				...product,
 				uom: product.uom || '',
@@ -23,6 +24,7 @@
 				approximate: false
 			}))
 	);
+
 	import { appData } from '$lib';
 </script>
 
