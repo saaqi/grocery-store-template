@@ -62,7 +62,7 @@ export const ready_to_cook: Product[] = [
 		title: 'Okra Cut (Lady Finger)',
 		s_desc:
 			'Pre-cut okra for quick and easy cooking—ideal for curries, stir-fries, and stews. This 340g pack saves prep time while delivering fresh taste and texture in every bite.',
-		img: 'ready_to_cook/karella_cut_340g.webp',
+		img: 'ready_to_cook/okra_cut_340g.webp',
 		stock: true,
 		uom: 'Gram(s)',
 		quantity: 340,
