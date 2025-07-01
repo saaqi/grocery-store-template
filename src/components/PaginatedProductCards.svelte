@@ -37,19 +37,17 @@
 	);
 
 	let dataAvailable: boolean = $state(true);
-
 	$effect(() => {
 		if (productsData.length === 0) {
 			dataAvailable = false;
-			currentPage = 1;
-		} else if (currentPage <= 0) {
-			dataAvailable = false;
-			currentPage = 1;
-		} else if (currentPage > totalPages) {
-			currentPage = totalPages;
-			dataAvailable = true;
+			currentPage = 0;
 		} else {
 			dataAvailable = true;
+			if (!Number.isInteger(currentPage) || currentPage <= 0) {
+				currentPage = 1;
+			} else if (totalPages > 0 && currentPage > totalPages) {
+				currentPage = totalPages;
+			}
 		}
 	});
 
@@ -58,6 +56,7 @@
 	$effect(() => {
 		page.route.id;
 		store.filter = '';
+		currentPage = 1;
 	});
 </script>
 
@@ -77,16 +76,16 @@
 {/snippet}
 
 {#snippet productCount()}
-	<div class="pagination">
-		Showing {Math.min((currentPage - 1) * itemsPerPage + 1, productsData.length)} - {Math.min(
+	<div class="pagination w-100">
+		Showing {Math.min((currentPage - 1) * itemsPerPage + 1, productsData.length)}-{Math.min(
 			currentPage * itemsPerPage,
 			productsData.length
-		)} of {productsData.length} products
+		)} of {productsData.length}
 	</div>
 {/snippet}
 
 {#snippet pageCount()}
-	<div class="headerButtons btn-group border border-primary align-items-center">
+	<div class="headerButtons btn-group border border-primary align-items-center w-100">
 		<button
 			class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
 			disabled={currentPage === 1 || productsData.length <= 12}
@@ -98,7 +97,7 @@
 		>
 			<i class="bx bxs-left-arrow"></i>
 		</button>
-		<span class="mx-2">Page {currentPage} of {totalPages}</span>
+		<span class="mx-2 text-center">Page {currentPage}/{totalPages}</span>
 		<button
 			class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
 			disabled={currentPage === totalPages || productsData.length <= 12}
@@ -114,17 +113,19 @@
 {/snippet}
 
 {#snippet headerPagination()}
+<div class="container">
 	<nav class="row justify-content-between g-3 align-items-center my-3">
-		<div class="col-lg-3 col-sm-6">
+		<div class="col-lg-3 col-6">
 			{@render pageCount()}
 		</div>
-		<div class="col-lg-3 col-sm-6">
+		<div class="col-lg-3 col-6">
 			{@render productCount()}
 		</div>
-		<div class="col-lg-6 col-sm-12">
+		<div class="col-lg-6 col-12">
 			{@render searchBox()}
 		</div>
 	</nav>
+</div>
 {/snippet}
 
 {#snippet footerPagination()}
