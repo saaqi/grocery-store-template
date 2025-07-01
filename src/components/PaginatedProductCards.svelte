@@ -113,19 +113,19 @@
 {/snippet}
 
 {#snippet headerPagination()}
-<div class="container">
-	<nav class="row justify-content-between g-3 align-items-center my-3">
-		<div class="col-lg-2 col-5">
-			{@render pageCount()}
-		</div>
-		<div class="col-lg-4 col-7">
-			{@render productCount()}
-		</div>
-		<div class="col-lg-6 col-12">
-			{@render searchBox()}
-		</div>
-	</nav>
-</div>
+	<div class="container">
+		<nav class="row justify-content-between g-3 align-items-center my-3">
+			<div class="col-lg-2 col-5">
+				{@render pageCount()}
+			</div>
+			<div class="col-lg-4 col-7">
+				{@render productCount()}
+			</div>
+			<div class="col-lg-6 col-12">
+				{@render searchBox()}
+			</div>
+		</nav>
+	</div>
 {/snippet}
 
 {#snippet footerPagination()}
