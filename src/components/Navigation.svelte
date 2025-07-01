@@ -18,9 +18,9 @@
 			class="navbar navbar-expand-lg d-flex justify-content-between align-items-center py-1"
 		>
 			<a
-				class="d-block d-lg-none rounded navbar-toggler btn btn-outline-primary nav-shop-button"
+				class="d-block d-lg-none rounded navbar-toggler btn btn-outline-dark nav-shop-button"
 				href="/shop"
-				aria-label="Shopping Categories"
+				aria-label="Shop Page"
 			>
 				<i class="bx bxs-store display-6"></i>
 			</a>
