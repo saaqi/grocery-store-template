@@ -62,13 +62,13 @@
 				<div class="offcanvas-body">
 					<ul
 						id="navbar"
-						class="navbar-nav main-nav text-uppercase justify-content-end gap-1 gap-lg-2 fs-6 ps-5 p-lg-0 flex-grow-1"
+						class="navbar-nav text-uppercase justify-content-end gap-1 gap-lg-2 fs-6 ps-3 p-lg-0 flex-grow-1"
 					>
 						{#each nav_links as { link, text, icon, subcategories } (link)}
 							{#if !subcategories}
 								<li class="nav-item" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">
 									<a
-										class="nav-link link-dark fw-medium"
+										class="nav-link link-dark fw-semibold"
 										class:active={link === page.route.id}
 										href={link}
 									>
@@ -79,7 +79,7 @@
 							{:else}
 								<li class="nav-item dropdown">
 									<a
-										class="nav-link link-dark dropdown-toggle fw-medium"
+										class="nav-link link-dark dropdown-toggle fw-semibold"
 										class:active={link === page.route.id ||
 											subcategories.some((sub) => sub.shopLink === page.params.categoryId)}
 										id="navbarDropdown"
@@ -98,7 +98,7 @@
 												data-bs-target="#bdNavbar"
 											>
 												<a
-													class="dropdown-item py-2 fw-medium"
+													class="dropdown-item py-2 fw-semibold"
 													class:active={subcategory.shopLink === page.params.categoryId}
 													href={'/shop/' + subcategory.shopLink}
 												>
