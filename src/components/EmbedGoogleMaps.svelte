@@ -5,7 +5,7 @@
 	const { mapUrl }: Props = $props();
 </script>
 
-<div class="map-container">
+<div class="map-container border border-2 border-primary rounded">
 	<iframe
 		src={mapUrl}
 		width="600"
@@ -20,21 +20,19 @@
 
 <style>
   .map-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
   }
 
   iframe {
+    bottom: 0;
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    bottom: 0;
   }
 
 </style>
