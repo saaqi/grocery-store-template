@@ -4,5 +4,6 @@ export { default as Navigation } from './Navigation.svelte';
 export { default as ContactForm } from './ContactForm.svelte';
 export { default as ProductCards } from './ProductCards.svelte';
 export { default as SectionWrapper } from './SectionWrapper.svelte';
+export { default as EmbedGoogleMaps } from './EmbedGoogleMaps.svelte';
 export { default as DraggableContainer } from './DraggableContainer.svelte';
 export { default as PaginatedProductCards } from './PaginatedProductCards.svelte';

@@ -8,23 +8,23 @@
 		className?: string;
 		children: Snippet;
 	}
-	const { id, heading, copy, className, fullCenter = false, children, ...props }: Props = $props();
+	const { id, heading, copy, className, fullCenter = true, children, ...props }: Props = $props();
 </script>
 
 <!-- .section, .gap-4 .py-5, .centerContent : keeps from purging -->
 <section
 	{id}
 	class:section={true}
-	class:centerContent={fullCenter}
+	class:centerContent={!fullCenter}
 	class:py-5={true}
 	class={className}
 	{...props}
 >
 	<div class="container">
 		{#if heading || copy}
-			<div class="pt-4 w-100">
+			<div class="w-100">
 				{#if heading}
-					<h2 class="section-heading">{heading}</h2>
+					<h2 class="section-heading mb-4">{heading}</h2>
 				{/if}
 				{#if copy}
 					<p class="section-copy">{copy}</p>
