@@ -18,6 +18,6 @@
 	/>
 </svelte:head>
 
-<SectionWrapper id="shop" heading={store.shopHeading} className="pt-3" fullCenter={true}>
+<SectionWrapper id="shop" heading={store.shopHeading} fullCenter={false}>
 	{@render children()}
 </SectionWrapper>

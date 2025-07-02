@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SectionWrapper, ContactForm } from '$components';
+	import { SectionWrapper, ContactForm, EmbedGoogleMaps } from '$components';
 
 	let outputDay: string = $state('');
 	let isOpeningHours: boolean = $state(false);
@@ -35,6 +35,7 @@
 		const openingHours = {
 			Monday: [9, 20],
 			Tuesday: [9, 20],
+			Thursday: [9, 20], // Allow only in July-25
 			Wednesday: [9, 20],
 			Saturday: [9, 20],
 			Sunday: [9, 20],
@@ -48,7 +49,7 @@
 	setInterval(storeStatus, 15000);
 </script>
 
-<SectionWrapper id="contact-us" heading="Contact Us!" className="section bg-info-subtle">
+<SectionWrapper id="contact-us" heading="Contact Us!" className="bg-info-subtle">
 	<div class="row py-4">
 		<div class="col-lg-6 working-hours border-primary mb-4 mb-lg-0">
 			<div class="business-hours fs-5 mb-3 fw-medium" id="business-hours">
@@ -59,11 +60,16 @@
 						class:text-primary={isOpeningHours}
 						class:text-danger-emphasis={!isOpeningHours}>{isOpeningHours ? 'Open' : 'Closed'}</span
 					>
-					{isOpeningHours
+					<!-- {isOpeningHours
 						? ' come on down 🙂'
 						: dayOfWeek === 'Thursday'
 							? ' see you tomorrow 😴'
 							: hours < 9
+								? ' at this hour see you at 9:00 AM 😴'
+								: ' see you tomorrow 😴'} -->
+					{isOpeningHours
+						? ' come on down 🙂'
+						: hours < 9
 								? ' at this hour see you at 9:00 AM 😴'
 								: ' see you tomorrow 😴'}
 				</p>
@@ -90,7 +96,7 @@
 					</tr>
 					<tr>
 						<td>Thursday</td>
-						<td class="text-danger-emphasis">Closed</td>
+						<td class="text-danger-emphasis">09:00 AM - 08:00 PM - July-25</td>
 					</tr>
 					<tr>
 						<td>Friday</td>
@@ -110,6 +116,12 @@
 		<div class="col-lg-6">
 			<p>Have something in mind? Please don't hesitate to ask us!</p>
 			<ContactForm />
+		</div>
+
+		<div class="col mt-5">
+			<EmbedGoogleMaps
+				mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2513.997040871025!2d3.1197990760086705!3d50.94226777169029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c335db219ddbb7%3A0x1de254007ee94efe!2sSadiq%20Super%20Store!5e0!3m2!1sen!2s!4v1751444458306!5m2!1sen!2s"
+			/>
 		</div>
 	</div>
 </SectionWrapper>
