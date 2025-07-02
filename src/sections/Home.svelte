@@ -9,7 +9,7 @@
 
 <SectionWrapper id="home" className="home bg-warning text-bg-warning">
 	<div class="row flex-wrap align-items-center">
-		<div class="text-col col-lg-6 text-center text-lg-start mt-3 mt-lg-0">
+		<div class="text-col col-lg-6 text-center text-lg-start">
 			<div class="lead fw-medium pb-1">Welcome to</div>
 			<h1 class="text-uppercase fw-bold pb-2">Sadiq Super Store</h1>
 			<p>
@@ -26,7 +26,7 @@
 						<a
 							class="{link_class} fs-3"
 							href={link}
-							aria-label={title + '!'}
+							aria-label={title}
 							target="_blank"
 							rel="nofollow noopener noreferrer"
 						>
@@ -51,7 +51,7 @@
 				</a>
 			</div>
 		</div>
-		<div class="graphic-col col-lg-6 text-center text-lg-end">
+		<div class="graphic-col col-lg-6 text-center text-lg-end d-none d-lg-block">
 			<img
 				src={heroImage}
 				class="img-fluid heroImage mt-lg-0 mt-4"
