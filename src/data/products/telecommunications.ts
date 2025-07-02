@@ -35,12 +35,12 @@ export const telecommunications: Product[] = [
 		title: 'Orange Vouchers & Cards',
 		s_desc:
 			'Recharge your mobile credit effortlessly with our recharge vouchers and cards, ensuring uninterrupted communication whenever you need it.',
-		img: 'telecommunication_logos/orange.svg',
+		img: 'telecommunication_logos/orange.webp',
 		stock: true,
 		added: toDate('2025-03-30T06:34:53')
 	},
 	{
-		title: 'Poximus Vouchers & Cards',
+		title: 'Proximus Vouchers & Cards',
 		s_desc:
 			'Recharge your mobile credit effortlessly with our recharge vouchers and cards, ensuring uninterrupted communication whenever you need it.',
 		img: 'telecommunication_logos/proximus.webp',
