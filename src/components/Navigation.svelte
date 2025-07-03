@@ -90,10 +90,13 @@
 										<i class="bx {icon}"></i>
 										{text}
 									</a>
-									<ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+									<ul
+										class="category-menu dropdown-menu border-primary shadow p-0 rounded-0"
+										aria-labelledby="navbarDropdown"
+									>
 										{#each subcategories as subcategory (subcategory.shopLink)}
 											<li
-												class="nav-item m-2"
+												class="nav-item text-bg-warning border-bottom border-primary"
 												data-bs-dismiss="offcanvas"
 												data-bs-target="#bdNavbar"
 											>
@@ -148,6 +151,19 @@
 				padding-top: 1rem;
 				padding-bottom: 1rem;
 			}
+		}
+	}
+
+	.category-menu {
+		li:first-child {
+			padding-bottom: none !important;
+		}
+	}
+
+	.category-menu {
+		li:last-child {
+			padding-bottom: none !important;
+			border-bottom: none !important;
 		}
 	}
 

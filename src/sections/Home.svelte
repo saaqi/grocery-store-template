@@ -11,7 +11,7 @@
 	<div class="row flex-wrap align-items-center">
 		<div class="text-col col-lg-6 text-center text-lg-start">
 			<div class="lead fw-medium pb-1">Welcome to</div>
-			<h1 class="text-uppercase fw-bold pb-2">Sadiq Super Store</h1>
+			<h1 class="text-uppercase fw-bold pb-2 display-5">Sadiq Super Store</h1>
 			<p>
 				We offer fresh groceries, snacks, household essentials, and more. Whether you're picking up
 				daily necessities or grabbing something quick, we've got you covered with friendly service

@@ -123,11 +123,11 @@
 		>
 			<i class="bx bxs-category"></i> Categories
 		</button>
-		<ul class="dropdown-menu">
+		<ul class="category-menu dropdown-menu shadow border border-primary p-0">
 			{#each shop_categories as { title, shopLink } (shopLink)}
-				<li class="py-1">
+				<li class="border-bottom border-primary">
 					<a
-						class="dropdown-item"
+						class="dropdown-item py-2 text-uppercase fw-semibold"
 						class:active={shopLink === page.params.categoryId}
 						href={'/shop/' + shopLink}
 					>
@@ -229,3 +229,19 @@
 		</div>
 	{/if}
 </div>
+
+<style lang="scss">
+	.category-menu {
+		min-width: 100%;
+
+		li:first-child {
+			padding-bottom: none !important;
+		}
+	}
+	.category-menu {
+		li:last-child {
+			padding-bottom: none !important;
+			border-bottom: none !important;
+		}
+	}
+</style>
