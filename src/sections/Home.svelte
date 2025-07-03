@@ -65,9 +65,6 @@
 </SectionWrapper>
 
 <style>
-	:global(.home) {
-		background-image: url('$assets/hero/pattern-1.webp');
-	}
 	.homeButton {
 		> .btn {
 			width: 10em;
