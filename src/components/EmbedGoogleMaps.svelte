@@ -19,20 +19,19 @@
 </div>
 
 <style>
-  .map-container {
-    height: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    position: relative;
-  }
+	.map-container {
+		height: 0;
+		overflow: hidden;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+		position: relative;
+	}
 
-  iframe {
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
+	iframe {
+		bottom: 0;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
 </style>

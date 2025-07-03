@@ -38,7 +38,7 @@ export const nav_links: Navigation[] = [
 	{
 		link: '/shop/',
 		text: 'Categories',
-		icon: 'bxs-store',
+		icon: 'bxs-category',
 		subcategories: shop_categories
 	},
 	{

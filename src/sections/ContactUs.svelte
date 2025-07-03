@@ -70,8 +70,8 @@
 					{isOpeningHours
 						? ' come on down 🙂'
 						: hours < 9
-								? ' at this hour see you at 9:00 AM 😴'
-								: ' see you tomorrow 😴'}
+							? ' at this hour see you at 9:00 AM 😴'
+							: ' see you tomorrow 😴'}
 				</p>
 			</div>
 			<table class="table table-info table-bordered table-striped table-hover">

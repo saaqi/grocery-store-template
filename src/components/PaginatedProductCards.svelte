@@ -27,6 +27,7 @@
 	}: Props = $props();
 
 	import { ProductCards } from '$components';
+	import { shop_categories } from '$data';
 
 	let paginatedContainer: HTMLElement;
 	let currentPage: number = $state(1);
@@ -76,7 +77,7 @@
 {/snippet}
 
 {#snippet productCount()}
-	<div class="pagination w-100">
+	<div class="pagination d-flex justify-content-center justify-content-sm-start w-100 mt-3">
 		Showing {Math.min((currentPage - 1) * itemsPerPage + 1, productsData.length)}-{Math.min(
 			currentPage * itemsPerPage,
 			productsData.length
@@ -112,24 +113,47 @@
 	</div>
 {/snippet}
 
+{#snippet categoryDropDown()}
+	<div class="btn-group w-100">
+		<button
+			type="button"
+			class="btn btn-outline-primary dropdown-toggle py-2 px-1"
+			data-bs-toggle="dropdown"
+			aria-expanded="false"
+		>
+			<i class="bx bxs-category"></i> Categories
+		</button>
+		<ul class="dropdown-menu">
+			{#each shop_categories as { title, shopLink } (shopLink)}
+				<li class="py-1">
+					<a class="dropdown-item" href={'/shop/' + shopLink}>
+						<i class="bx bxs-purchase-tag"></i>
+						{title}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</div>
+{/snippet}
+
 {#snippet headerPagination()}
-	<nav class="row justify-content-between g-3 align-items-center my-3">
-		<div class="col-lg-2 col-5">
+	<nav class="row justify-content-between g-0 align-items-center my-3 g-3">
+		<div class="col-md-6 col-12">
+			{@render searchBox()}
+		</div>
+		<div class="col-md-3 col-6">
 			{@render pageCount()}
 		</div>
-		<div class="col-lg-4 col-7">
-			{@render productCount()}
-		</div>
-		<div class="col-lg-6 col-12">
-			{@render searchBox()}
+		<div class="col-md-3 col-6">
+			{@render categoryDropDown()}
 		</div>
 	</nav>
 {/snippet}
 
 {#snippet footerPagination()}
 	<nav aria-label="footerNavigation">
-		<div class="text-end d-flex justify-content-center justify-content-md-end">
-			<ul class="footerPagination pagination mt-4">
+		<div class="d-flex justify-content-center justify-content-sm-end">
+			<ul class="footerPagination pagination mt-3">
 				<li class="page-item {currentPage === 1 ? 'disabled' : ''}">
 					<button
 						class="page-link align-items-center d-flex h-100"
@@ -191,6 +215,13 @@
 		{/if}
 	</div>
 	{#if bottomPagination}
-		{@render footerPagination()}
+		<div class="row align-items-center justify-content-between">
+			<div class="col-sm-6">
+				{@render productCount()}
+			</div>
+			<div class="col-sm-6">
+				{@render footerPagination()}
+			</div>
+		</div>
 	{/if}
 </div>

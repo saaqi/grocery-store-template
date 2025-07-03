@@ -41,7 +41,7 @@
 		place-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		min-height: 100svh;
+		min-height: calc(100svh - 68px);
 	}
 
 	.section.centerContent {
