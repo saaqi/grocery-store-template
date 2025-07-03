@@ -126,7 +126,11 @@
 		<ul class="dropdown-menu">
 			{#each shop_categories as { title, shopLink } (shopLink)}
 				<li class="py-1">
-					<a class="dropdown-item" href={'/shop/' + shopLink}>
+					<a
+						class="dropdown-item"
+						class:active={shopLink === page.params.categoryId}
+						href={'/shop/' + shopLink}
+					>
 						<i class="bx bxs-purchase-tag"></i>
 						{title}
 					</a>
@@ -138,14 +142,14 @@
 
 {#snippet headerPagination()}
 	<nav class="row justify-content-between g-0 align-items-center my-3 g-3">
-		<div class="col-md-6 col-12">
-			{@render searchBox()}
-		</div>
 		<div class="col-md-3 col-6">
 			{@render pageCount()}
 		</div>
 		<div class="col-md-3 col-6">
 			{@render categoryDropDown()}
+		</div>
+		<div class="col-md-6 col-12">
+			{@render searchBox()}
 		</div>
 	</nav>
 {/snippet}
