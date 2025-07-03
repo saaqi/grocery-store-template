@@ -2,7 +2,7 @@
 	// @ts-ignore
 	// import heroImage from '$assets/hero/hero-image.png?enhanced&w=2800;1400;1200;992;768;576&format=avif;webp';
 
-	import heroImage from '$assets/hero/food_basket_sketch.svg';
+	import heroImage from '$assets/hero/food_basket_sketch_2.svg';
 	import { SectionWrapper } from '$components';
 	import { social_links } from '$data';
 </script>
@@ -65,6 +65,9 @@
 </SectionWrapper>
 
 <style>
+	:global(.home) {
+		background-image: url('$assets/hero/pattern-1.webp');
+	}
 	.homeButton {
 		> .btn {
 			width: 10em;
