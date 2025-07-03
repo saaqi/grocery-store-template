@@ -20,7 +20,7 @@
 		eager: true,
 		query: {
 			enhanced: true,
-			w: '500;250',
+			w: '500;375',
 			format: 'avif;webp'
 		}
 	});
@@ -32,7 +32,7 @@
 		{#if _path.includes(img)}
 			<enhanced:img
 				src={(module as { default: string }).default}
-				sizes="(min-width: 500px) 500px, 100vw"
+				sizes="(min-width:1400px) 500px, (min-width:375px) 375px"
 				class="img-fluid border-bottom"
 				class:card-img-top={topImg}
 				class:rounded={!topImg}

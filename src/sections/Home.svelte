@@ -1,10 +1,7 @@
 <script lang="ts">
-	// @ts-ignore
-	// import heroImage from '$assets/hero/hero-image.png?enhanced&w=2800;1400;1200;992;768;576&format=avif;webp';
-
-	import heroImage from '$assets/hero/food_basket_sketch_2.svg';
-	import { SectionWrapper } from '$components';
 	import { social_links } from '$data';
+	import { SectionWrapper } from '$components';
+	import heroImage from '$assets/hero/food_basket_sketch_2.svg';
 </script>
 
 <SectionWrapper id="home" className="home bg-warning text-bg-warning">

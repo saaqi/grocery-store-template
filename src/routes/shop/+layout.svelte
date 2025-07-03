@@ -1,13 +1,10 @@
 <script lang="ts">
+	import { store } from '$data';
 	import type { Snippet } from 'svelte';
-
-	interface Props {
-		children: Snippet;
-	}
-	const { children }: Props = $props();
 	import { SectionWrapper } from '$components';
 
-	import { store } from './store.svelte';
+	const { children }: { children: Snippet } = $props();
+
 	store.shopHeading = 'Shop';
 </script>
 

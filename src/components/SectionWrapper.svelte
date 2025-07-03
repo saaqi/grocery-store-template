@@ -11,15 +11,8 @@
 	const { id, heading, copy, className, fullCenter = true, children, ...props }: Props = $props();
 </script>
 
-<!-- .section, .gap-4 .py-5, .centerContent : keeps from purging -->
-<section
-	{id}
-	class:section={true}
-	class:centerContent={!fullCenter}
-	class:py-5={true}
-	class={className}
-	{...props}
->
+<!-- .centerContent : keeps from purging -->
+<section {id} class:centerContent={!fullCenter} class={'section py-5 ' + className} {...props}>
 	<div class="container">
 		{#if heading || copy}
 			<div class="w-100">

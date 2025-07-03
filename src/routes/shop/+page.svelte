@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { PaginatedProductCards } from '$components';
 	import { dateSortedProducts } from '$data';
-	import { store } from './store.svelte';
+	import { store } from '$data';
+
 	store.shopHeading = 'Shop';
 
 	const filterLower = $derived((store.filter || '').trim().toLowerCase());

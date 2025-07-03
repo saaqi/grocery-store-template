@@ -53,11 +53,12 @@
 	});
 
 	import { page } from '$app/state';
-	import { store } from '../routes/shop/store.svelte';
+	import { store } from '$data';
 	$effect(() => {
-		page.route.id;
-		store.filter = '';
-		currentPage = 1;
+		if (page.route.id) {
+			store.filter = '';
+			currentPage = 1;
+		}
 	});
 </script>
 
@@ -88,7 +89,7 @@
 {#snippet pageCount()}
 	<div class="headerButtons btn-group border border-primary align-items-center w-100">
 		<button
-			class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
+			class="pageButton btn btn-outline-primary border-0 px-1 lh-1"
 			disabled={currentPage === 1 || productsData.length <= 12}
 			onclick={() => {
 				currentPage--;
@@ -98,9 +99,9 @@
 		>
 			<i class="bx bxs-left-arrow"></i>
 		</button>
-		<span class="mx-2 text-center">{currentPage}/{totalPages}</span>
+		<span class="mx-2 text-center">Page {currentPage}/{totalPages}</span>
 		<button
-			class="pageButton btn btn-outline-primary border-0 p-2 lh-1"
+			class="pageButton btn btn-outline-primary border-0 lh-1"
 			disabled={currentPage === totalPages || productsData.length <= 12}
 			onclick={() => {
 				currentPage++;
@@ -117,7 +118,7 @@
 	<div class="btn-group w-100">
 		<button
 			type="button"
-			class="btn btn-outline-primary dropdown-toggle py-2 px-1"
+			class="btn btn-primary dropdown-toggle"
 			data-bs-toggle="dropdown"
 			aria-expanded="false"
 		>
@@ -142,14 +143,14 @@
 
 {#snippet headerPagination()}
 	<nav class="row justify-content-between g-0 align-items-center my-3 g-3">
-		<div class="col-md-3 col-6">
-			{@render pageCount()}
+		<div class="col-md-6 col-12">
+			{@render searchBox()}
 		</div>
 		<div class="col-md-3 col-6">
 			{@render categoryDropDown()}
 		</div>
-		<div class="col-md-6 col-12">
-			{@render searchBox()}
+		<div class="col-md-3 col-6">
+			{@render pageCount()}
 		</div>
 	</nav>
 {/snippet}
@@ -231,6 +232,12 @@
 </div>
 
 <style lang="scss">
+	.pageButton {
+		padding: 9.28px 5px;
+	}
+	.dropdown-toggle {
+		padding: 10px 5px;
+	}
 	.category-menu {
 		min-width: 100%;
 

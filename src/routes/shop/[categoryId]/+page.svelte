@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { page } from '$app/state';
-	import { PaginatedProductCards } from '$components';
-	import { dateSortedProducts } from '$data';
-	import { store } from '../store.svelte';
 	import { appData } from '$lib';
+	import { PaginatedProductCards } from '$components';
+	import { dateSortedProducts, store } from '$data';
+
 	let { data }: { data: PageData } = $props();
 
 	$effect(() => {

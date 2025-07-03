@@ -16,6 +16,17 @@ export const nav_links: Navigation[] = [
 		icon: 'bxs-home-smile'
 	},
 	{
+		link: '/shop',
+		text: 'Shop',
+		icon: 'bxs-store'
+	},
+	{
+		link: '/shop/',
+		text: 'Categories',
+		icon: 'bxs-category',
+		subcategories: shop_categories
+	},
+	{
 		link: '/weekly-sale',
 		text: 'Sale',
 		icon: 'bxs-shopping-bag'
@@ -29,17 +40,6 @@ export const nav_links: Navigation[] = [
 		link: '/new-arrivals',
 		text: 'New Arrivals',
 		icon: 'bxs-shopping-bags'
-	},
-	{
-		link: '/shop',
-		text: 'Shop',
-		icon: 'bxs-store'
-	},
-	{
-		link: '/shop/',
-		text: 'Categories',
-		icon: 'bxs-category',
-		subcategories: shop_categories
 	},
 	{
 		link: '/contact-us',
