@@ -27,7 +27,7 @@
 	{id}
 	class:centerContent={!fullCenter}
 	class={'section py-5 ' + className}
-	style={bgImage ? `background-image: url(${bgImage})` : '' }
+	style={bgImage ? `background-image: url(${bgImage})` : ''}
 	{...props}
 >
 	<div class="container">

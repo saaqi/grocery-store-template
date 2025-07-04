@@ -1,5 +1,5 @@
 <script lang="ts">
-	// @ts-ignore
+	// @ts-expect-error: This Module Exists typescript doesn't recognize enhanced imports
 	import saleImageSvg from '$assets/hero/sale-image.png?enhanced&w=992;768;576&format=avif;webp';
 
 	import { ProductCards, SectionWrapper, DraggableContainer } from '$components';
