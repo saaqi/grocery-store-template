@@ -7,6 +7,7 @@
 		touchSensitivity?: number;
 		indicators?: boolean;
 		children: Snippet;
+		[key: string]: unknown;
 	}
 	const {
 		id,

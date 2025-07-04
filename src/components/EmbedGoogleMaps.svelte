@@ -1,11 +1,12 @@
 <script lang="ts">
 	interface Props {
 		mapUrl: string;
+		[key: string]: unknown;
 	}
-	const { mapUrl }: Props = $props();
+	const { mapUrl, ...props }: Props = $props();
 </script>
 
-<div class="map-container border border-2 border-primary rounded">
+<div class="map-container border border-2 border-primary rounded" {...props}>
 	<iframe
 		src={mapUrl}
 		width="600"

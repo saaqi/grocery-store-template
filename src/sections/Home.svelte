@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { social_links } from '$data';
 	import { SectionWrapper } from '$components';
+	import pattern from '$assets/hero/pattern-1.webp';
 	import heroImage from '$assets/hero/food_basket_sketch_2.svg';
 </script>
 
-<SectionWrapper id="home" className="home bg-warning text-bg-warning">
+<SectionWrapper id="home" class="home bg-warning text-bg-warning" bgImage={pattern}>
 	<div class="row flex-wrap align-items-center">
 		<div class="text-col col-lg-6 text-center text-lg-start">
 			<div class="lead fw-medium pb-1">Welcome to</div>
@@ -62,6 +63,9 @@
 </SectionWrapper>
 
 <style>
+	.hero {
+		display: none;
+	}
 	.homeButton {
 		> .btn {
 			width: 10em;

@@ -16,6 +16,7 @@
 		perPage?: number;
 		topPagination?: boolean;
 		bottomPagination?: boolean;
+		[key: string]: unknown;
 	}
 	const {
 		productsData,

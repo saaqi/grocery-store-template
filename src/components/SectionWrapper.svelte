@@ -5,14 +5,31 @@
 		fullCenter?: boolean;
 		heading?: string;
 		copy?: string;
-		className?: string;
+		class?: string;
+		bgImage?: string;
+		[key: string]: unknown;
 		children: Snippet;
 	}
-	const { id, heading, copy, className, fullCenter = true, children, ...props }: Props = $props();
+	const {
+		id,
+		heading,
+		copy,
+		class: className,
+		bgImage,
+		fullCenter = true,
+		children,
+		...props
+	}: Props = $props();
 </script>
 
 <!-- .centerContent : keeps from purging -->
-<section {id} class:centerContent={!fullCenter} class={'section py-5 ' + className} {...props}>
+<section
+	{id}
+	class:centerContent={!fullCenter}
+	class={'section py-5 ' + className}
+	style={bgImage ? `background-image: url(${bgImage})` : '' }
+	{...props}
+>
 	<div class="container">
 		{#if heading || copy}
 			<div class="w-100">

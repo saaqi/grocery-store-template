@@ -14,8 +14,9 @@
 			id: string;
 		}>;
 		element?: string;
+		[key: string]: unknown;
 	}
-	const { element = 'article', identity, productsData }: Props = $props();
+	const { element = 'article', identity, productsData, ...props }: Props = $props();
 	const productPics = import.meta.glob('$assets/products/**/*.{webp,png,jpg}', {
 		eager: true,
 		query: {
@@ -94,6 +95,7 @@
 		this={element}
 		class="col-6 col-lg-3 draggableItem hoverTransition"
 		id={identity + id + index}
+		{...props}
 	>
 		<div class="product-card card shadow-sm h-100">
 			{@render prodImage(img, title, true)}
