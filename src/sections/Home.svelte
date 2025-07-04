@@ -56,7 +56,6 @@
 				alt="Shopping basket full of groceries"
 				loading="eager"
 				draggable="false"
-				style="fill: #333"
 			/>
 		</div>
 	</div>
