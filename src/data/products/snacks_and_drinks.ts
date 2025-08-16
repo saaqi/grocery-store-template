@@ -16,6 +16,77 @@ interface Product {
 
 export const snacks_and_drinks: Product[] = [
 	{
+		title: 'Shilajit Energy Drink',
+		s_desc:
+			'Packed with natural strength and stamina-boosting benefits. Now available for just €3.80 each! Stay energized, stay sharp 💪',
+		img: 'snacks_and_drinks/shilajit_energy_drinks.webp',
+		stock: true,
+		uom: 'PC(s)',
+		price: 3.80,
+		quantity: 1,
+		added: toDate('2025-08-16T14:31:36')
+	},
+	{
+		title: 'Special Blend - Ahmad Tea',
+		s_desc:
+			'Start your day the right way or unwind in the evening with the rich aroma of Ahmad Tea. Now available in multiple delicious flavors for just €4.80 per pack!',
+		img: 'snacks_and_drinks/ahmad_tea_special_blend.webp',
+		stock: true,
+		uom: 'PC(s)',
+		sale: 4.80,
+		price: 6.0,
+		quantity: 1,
+		added: toDate('2025-08-16T14:29:49')
+	},
+	{
+		title: 'English Breakfast - Ahmad Tea',
+		s_desc:
+			'Start your day the right way or unwind in the evening with the rich aroma of Ahmad Tea. Now available in multiple delicious flavors for just €4.80 per pack!',
+		img: 'snacks_and_drinks/ahmad_tea_english_breakfast.webp',
+		stock: true,
+		uom: 'PC(s)',
+		sale: 4.80,
+		price: 6.0,
+		quantity: 1,
+		added: toDate('2025-08-16T14:29:36')
+	},
+	{
+		title: 'Earl Grey - Ahmad Tea',
+		s_desc:
+			'Start your day the right way or unwind in the evening with the rich aroma of Ahmad Tea. Now available in multiple delicious flavors for just €4.80 per pack!',
+		img: 'snacks_and_drinks/ahmad_tea_earl_grey.webp',
+		stock: true,
+		uom: 'PC(s)',
+		sale: 4.80,
+		price: 6.0,
+		quantity: 1,
+		added: toDate('2025-08-16T14:29:19')
+	},
+	{
+		title: 'Ceylon - Ahmad Tea',
+		s_desc:
+			'Start your day the right way or unwind in the evening with the rich aroma of Ahmad Tea. Now available in multiple delicious flavors for just €4.80 per pack!',
+		img: 'snacks_and_drinks/ahmad_tea_ceylon.webp',
+		stock: true,
+		uom: 'PC(s)',
+		sale: 4.80,
+		price: 6.0,
+		quantity: 1,
+		added: toDate('2025-08-16T14:28:52')
+	},
+	{
+		title: 'Cardamom - Ahmad Tea',
+		s_desc:
+			'Start your day the right way or unwind in the evening with the rich aroma of Ahmad Tea. Now available in multiple delicious flavors for just €4.80 per pack!',
+		img: 'snacks_and_drinks/ahmad_tea_cardamom.webp',
+		stock: true,
+		uom: 'PC(s)',
+		sale: 4.80,
+		price: 6.0,
+		quantity: 1,
+		added: toDate('2025-08-16T14:27:01')
+	},
+	{
 		title: 'Crown Kulfi Ice Cream',
 		s_desc:
 			'Enjoy the rich, creamy taste of traditional Crown Kulfi, made with real milk and authentic flavors. A perfect frozen treat to satisfy your sweet cravings with every bite.',
