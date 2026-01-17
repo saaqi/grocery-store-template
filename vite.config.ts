@@ -28,11 +28,11 @@ export default defineConfig({
 		port: 3000
 	},
 	css: {
-		preprocessorOptions: {
-			scss: {
-				api: 'modern'
-			}
-		},
+		// preprocessorOptions: {
+		// 	scss: {
+		// 		api: 'modern'
+		// 	}
+		// },
 		postcss: {
 			plugins: IN_PRODUCTION
 				? [

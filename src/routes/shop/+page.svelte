@@ -35,7 +35,7 @@
 
 <PaginatedProductCards
 	{productsData}
-	perPage={12}
+	perPage={16}
 	identity="shopPage"
 	topPagination={true}
 	bottomPagination={true}

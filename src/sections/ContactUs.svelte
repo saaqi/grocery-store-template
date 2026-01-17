@@ -35,7 +35,7 @@
 		const openingHours = {
 			Monday: [9, 20],
 			Tuesday: [9, 20],
-			Thursday: [9, 20], // Allow only in July-25
+			// Thursday: [9, 20],
 			Wednesday: [9, 20],
 			Saturday: [9, 20],
 			Sunday: [9, 20],
@@ -60,18 +60,20 @@
 						class:text-primary={isOpeningHours}
 						class:text-danger-emphasis={!isOpeningHours}>{isOpeningHours ? 'Open' : 'Closed'}</span
 					>
-					<!-- {isOpeningHours
+
+					{isOpeningHours
 						? ' come on down 🙂'
 						: dayOfWeek === 'Thursday'
 							? ' see you tomorrow 😴'
 							: hours < 9
 								? ' at this hour see you at 9:00 AM 😴'
-								: ' see you tomorrow 😴'} -->
-					{isOpeningHours
+								: ' see you tomorrow 😴'}
+
+					<!-- {isOpeningHours
 						? ' come on down 🙂'
 						: hours < 9
 							? ' at this hour see you at 9:00 AM 😴'
-							: ' see you tomorrow 😴'}
+							: ' see you tomorrow 😴'} -->
 				</p>
 			</div>
 			<table class="table table-info table-bordered table-striped table-hover">
@@ -96,7 +98,7 @@
 					</tr>
 					<tr>
 						<td>Thursday</td>
-						<td class="text-danger-emphasis">09:00 AM - 08:00 PM - July-25</td>
+						<td class="text-danger-emphasis">Closed</td>
 					</tr>
 					<tr>
 						<td>Friday</td>

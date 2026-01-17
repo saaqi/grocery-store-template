@@ -22,7 +22,7 @@ export const snacks_and_drinks: Product[] = [
 		img: 'snacks_and_drinks/shilajit_energy_drinks.webp',
 		stock: true,
 		uom: 'PC(s)',
-		price: 3.80,
+		price: 3.8,
 		quantity: 1,
 		added: toDate('2025-08-16T14:31:36')
 	},
@@ -33,7 +33,7 @@ export const snacks_and_drinks: Product[] = [
 		img: 'snacks_and_drinks/ahmad_tea_special_blend.webp',
 		stock: true,
 		uom: 'PC(s)',
-		sale: 4.80,
+		sale: 4.8,
 		price: 6.0,
 		quantity: 1,
 		added: toDate('2025-08-16T14:29:49')
@@ -45,7 +45,7 @@ export const snacks_and_drinks: Product[] = [
 		img: 'snacks_and_drinks/ahmad_tea_english_breakfast.webp',
 		stock: true,
 		uom: 'PC(s)',
-		sale: 4.80,
+		sale: 4.8,
 		price: 6.0,
 		quantity: 1,
 		added: toDate('2025-08-16T14:29:36')
@@ -57,7 +57,7 @@ export const snacks_and_drinks: Product[] = [
 		img: 'snacks_and_drinks/ahmad_tea_earl_grey.webp',
 		stock: true,
 		uom: 'PC(s)',
-		sale: 4.80,
+		sale: 4.8,
 		price: 6.0,
 		quantity: 1,
 		added: toDate('2025-08-16T14:29:19')
@@ -69,7 +69,7 @@ export const snacks_and_drinks: Product[] = [
 		img: 'snacks_and_drinks/ahmad_tea_ceylon.webp',
 		stock: true,
 		uom: 'PC(s)',
-		sale: 4.80,
+		sale: 4.8,
 		price: 6.0,
 		quantity: 1,
 		added: toDate('2025-08-16T14:28:52')
@@ -81,7 +81,7 @@ export const snacks_and_drinks: Product[] = [
 		img: 'snacks_and_drinks/ahmad_tea_cardamom.webp',
 		stock: true,
 		uom: 'PC(s)',
-		sale: 4.80,
+		sale: 4.8,
 		price: 6.0,
 		quantity: 1,
 		added: toDate('2025-08-16T14:27:01')

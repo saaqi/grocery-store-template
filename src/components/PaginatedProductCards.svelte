@@ -32,7 +32,7 @@
 
 	let paginatedContainer: HTMLElement;
 	let currentPage: number = $state(1);
-	let itemsPerPage: number = $state(perPage);
+	let itemsPerPage: number = $derived(perPage);
 	const totalPages = $derived(Math.ceil(productsData.length / itemsPerPage));
 	const paginatedProducts = $derived(
 		productsData.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
@@ -55,11 +55,9 @@
 
 	import { page } from '$app/state';
 	import { store } from '$data';
+	// Reset to page 1 on filter change
 	$effect(() => {
-		if (page.route.id) {
-			store.filter = '';
-			currentPage = 1;
-		}
+		if (store.filter != '') currentPage = 1;
 	});
 </script>
 
@@ -91,7 +89,7 @@
 	<div class="headerButtons btn-group border border-primary align-items-center w-100">
 		<button
 			class="pageButton btn btn-outline-primary border-0 px-1 lh-1"
-			disabled={currentPage === 1 || productsData.length <= 12}
+			disabled={currentPage === 1 || productsData.length <= perPage}
 			onclick={() => {
 				currentPage--;
 				paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
@@ -103,7 +101,7 @@
 		<span class="mx-2 text-center">Page {currentPage}/{totalPages}</span>
 		<button
 			class="pageButton btn btn-outline-primary border-0 lh-1"
-			disabled={currentPage === totalPages || productsData.length <= 12}
+			disabled={currentPage === totalPages || productsData.length <= perPage}
 			onclick={() => {
 				currentPage++;
 				paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
@@ -164,7 +162,7 @@
 					<button
 						class="page-link align-items-center d-flex h-100"
 						aria-label="Previous Page"
-						disabled={currentPage === 1 || productsData.length <= 12}
+						disabled={currentPage === 1 || productsData.length <= perPage}
 						onclick={() => {
 							currentPage--;
 							paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
@@ -193,7 +191,7 @@
 					<button
 						class="page-link align-items-center d-flex h-100"
 						aria-label="Next Page"
-						disabled={currentPage === totalPages || productsData.length <= 12}
+						disabled={currentPage === totalPages || productsData.length <= perPage}
 						onclick={() => {
 							currentPage++;
 							paginatedContainer?.scrollIntoView({ behavior: 'smooth' });
