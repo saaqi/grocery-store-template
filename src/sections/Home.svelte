@@ -3,6 +3,8 @@
 	import { SectionWrapper } from '$components';
 	import pattern from '$assets/hero/pattern-1.webp';
 	import heroImage from '$assets/hero/food_basket_sketch_2.svg';
+
+	import { resolve } from '$app/paths';
 </script>
 
 <SectionWrapper id="home" class="home bg-warning text-bg-warning" bgImage={pattern}>
@@ -44,7 +46,7 @@
 				>
 					<i class="bx bxs-map-alt"></i> Visit Us!
 				</a>
-				<a href="/shop" class="btn btn-outline-primary px-2">
+				<a href={resolve('/shop')} class="btn btn-outline-primary px-2">
 					<i class="bx bxs-store"></i> Shop Now!
 				</a>
 			</div>

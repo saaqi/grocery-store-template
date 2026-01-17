@@ -10,39 +10,39 @@ interface Navigation {
 
 export const nav_links: Navigation[] = [
 	{
-		link: '/',
+		link: '',
 		target: 'home',
 		text: 'Home',
 		icon: 'bxs-home-smile'
 	},
 	{
-		link: '/shop',
+		link: 'shop',
 		text: 'Shop',
 		icon: 'bxs-store'
 	},
 	{
-		link: '/shop/',
+		link: 'shop/',
 		text: 'Categories',
 		icon: 'bxs-category',
 		subcategories: shop_categories
 	},
 	{
-		link: '/weekly-sale',
+		link: 'weekly-sale',
 		text: 'Sale',
 		icon: 'bxs-shopping-bag'
 	},
 	{
-		link: '/featured',
+		link: 'featured',
 		text: 'Featured',
 		icon: 'bxs-shopping-bag-alt'
 	},
 	{
-		link: '/new-arrivals',
+		link: 'new-arrivals',
 		text: 'New Arrivals',
 		icon: 'bxs-shopping-bags'
 	},
 	{
-		link: '/contact-us',
+		link: 'contact-us',
 		text: 'Contact Us!',
 		icon: 'bxs-contact'
 	}

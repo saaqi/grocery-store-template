@@ -9,6 +9,7 @@
 	});
 
 	import { page } from '$app/state';
+	import { resolve } from '$app/paths';
 </script>
 
 <header id="header" class="site-header bg-warning text-bg-warning position-fixed w-100">
@@ -19,12 +20,12 @@
 		>
 			<a
 				class="d-block d-lg-none rounded navbar-toggler btn btn-outline-dark nav-shop-button"
-				href="/shop"
+				href={resolve('/shop')}
 				aria-label="Shop Page"
 			>
 				<i class="bx bxs-store display-6"></i>
 			</a>
-			<a class="navbar-brand me-0" href="/">
+			<a class="navbar-brand me-0" href={resolve('/')}>
 				<img src={logo} class="logo" alt="Logo" width="41" height="50" />
 			</a>
 			<button
@@ -70,7 +71,7 @@
 									<a
 										class="nav-link link-dark fw-semibold"
 										class:active={link === page.route.id}
-										href={link}
+										href={resolve('/') + link}
 									>
 										<i class="bx {icon}"></i>
 										{text}
@@ -103,7 +104,7 @@
 												<a
 													class="dropdown-item py-2 fw-semibold"
 													class:active={subcategory.shopLink === page.params.categoryId}
-													href={'/shop/' + subcategory.shopLink}
+													href={resolve('/shop/') + subcategory.shopLink}
 												>
 													<i class="bx bxs-purchase-tag"></i>
 													{subcategory.title}
