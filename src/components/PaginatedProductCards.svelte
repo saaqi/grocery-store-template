@@ -54,8 +54,6 @@
 	});
 
 	import { page } from '$app/state';
-	import { resolve } from '$app/paths';
-
 	import { store } from '$data';
 	// Reset to page 1 on filter change
 	$effect(() => {
@@ -131,7 +129,7 @@
 					<a
 						class="dropdown-item py-2 text-uppercase fw-semibold"
 						class:active={shopLink === page.params.categoryId}
-						href={resolve(`/shop/${shopLink}`)}
+						href={'/shop/' + shopLink}
 					>
 						<i class="bx bxs-purchase-tag"></i>
 						{title}

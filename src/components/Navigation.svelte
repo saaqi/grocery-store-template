@@ -9,7 +9,6 @@
 	});
 
 	import { page } from '$app/state';
-	import { resolve } from '$app/paths';
 </script>
 
 <header id="header" class="site-header bg-warning text-bg-warning position-fixed w-100">
@@ -20,12 +19,12 @@
 		>
 			<a
 				class="d-block d-lg-none rounded navbar-toggler btn btn-outline-dark nav-shop-button"
-				href={resolve('/shop')}
+				href="/shop"
 				aria-label="Shop Page"
 			>
 				<i class="bx bxs-store display-6"></i>
 			</a>
-			<a class="navbar-brand me-0" href={resolve('/')}>
+			<a class="navbar-brand me-0" href="/">
 				<img src={logo} class="logo" alt="Logo" width="41" height="50" />
 			</a>
 			<button
@@ -65,13 +64,13 @@
 						id="navbar"
 						class="navbar-nav text-uppercase justify-content-end gap-1 gap-lg-2 fs-6 ps-3 p-lg-0 flex-grow-1"
 					>
-						{#each nav_links as { slug, text, icon, subcategories } (slug)}
+						{#each nav_links as { link, text, icon, subcategories } (link)}
 							{#if !subcategories}
 								<li class="nav-item" data-bs-dismiss="offcanvas" data-bs-target="#bdNavbar">
 									<a
 										class="nav-link link-dark fw-semibold"
-										class:active={slug === page.route.id}
-										href={resolve(`/`) + slug}
+										class:active={link === page.route.id}
+										href={link}
 									>
 										<i class="bx {icon}"></i>
 										{text}
@@ -81,11 +80,8 @@
 								<li class="nav-item dropdown">
 									<a
 										class="nav-link link-dark dropdown-toggle fw-semibold"
-										class:active={slug === page.route.id ||
-											subcategories.some(
-												(sub: { shopLink: string | undefined }) =>
-													sub.shopLink === page.params.categoryId
-											)}
+										class:active={link === page.route.id ||
+											subcategories.some((sub) => sub.shopLink === page.params.categoryId)}
 										id="navbarDropdown"
 										role="button"
 										data-bs-toggle="dropdown"
@@ -107,7 +103,7 @@
 												<a
 													class="dropdown-item py-2 fw-semibold"
 													class:active={subcategory.shopLink === page.params.categoryId}
-													href={resolve(`/shop/${subcategory.shopLink}`)}
+													href={'/shop/' + subcategory.shopLink}
 												>
 													<i class="bx bxs-purchase-tag"></i>
 													{subcategory.title}

@@ -2,8 +2,6 @@
 	import { social_links, nav_links } from '$data';
 	import logo from '$assets/logo.svg';
 	const curr_year: number = new Date().getFullYear();
-
-	import { resolve } from '$app/paths';
 </script>
 
 <footer id="footer" class="overflow-hidden pt-5 bg-secondary-subtle text-bg-seondary">
@@ -15,15 +13,13 @@
 			<div class="col-md-4 pb-4">
 				<div class="pb-2 h4">Quick Links:</div>
 				<ul id="footer-nav" class="menu-list list-unstyled">
-					{#each nav_links as { slug, text, icon } (slug)}
-						{#if text !== 'Categories'}
-							<li class="nav-item mb-3">
-								<a class="nav-link link-dark fw-bold" href={resolve('/') + slug}>
-									<i class="bx {icon}"></i>
-									{text}
-								</a>
-							</li>
-						{/if}
+					{#each nav_links as { link, text, icon } (link)}
+						<li class="nav-item mb-3">
+							<a class="nav-link link-dark fw-bold" href={link}>
+								<i class="bx {icon}"></i>
+								{text}
+							</a>
+						</li>
 					{/each}
 				</ul>
 			</div>
@@ -52,7 +48,7 @@
 								href={link}
 								aria-label={title + '!'}
 								target="_blank"
-								rel="nofollow noopener noreferrer external"
+								rel="nofollow noopener noreferrer"
 							>
 								<i class="bx {icon}"></i>
 							</a>
