@@ -131,7 +131,7 @@
 					<a
 						class="dropdown-item py-2 text-uppercase fw-semibold"
 						class:active={shopLink === page.params.categoryId}
-						href={resolve('/shop/') + shopLink}
+						href={resolve(`/shop/${shopLink}`)}
 					>
 						<i class="bx bxs-purchase-tag"></i>
 						{title}

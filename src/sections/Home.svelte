@@ -28,7 +28,7 @@
 							href={link}
 							aria-label={title}
 							target="_blank"
-							rel="nofollow noopener noreferrer"
+							rel="nofollow noopener noreferrer external"
 						>
 							<i class="bx {icon}"></i>
 						</a>
