@@ -57,7 +57,7 @@
 		href={'https://wa.me/32465638887?text=' +
 			encodeURIComponent(title + ' €' + (sale ? sale : price))}
 		target="_blank"
-		rel="nofollow noopener noreferrer"
+		rel="nofollow noopener noreferrer external"
 		title="Contact us via WhatsApp!"
 	>
 		<i class="bx bxl-whatsapp"></i> Buy!

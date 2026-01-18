@@ -1,48 +1,46 @@
 import { shop_categories } from './shop_categories';
 
 interface Navigation {
-	link: string;
+	slug: string;
 	text: string;
-	target?: string;
 	icon: string;
 	subcategories?: { title: string; shopLink: string }[];
 }
 
 export const nav_links: Navigation[] = [
 	{
-		link: '/',
-		target: 'home',
+		slug: '',
 		text: 'Home',
 		icon: 'bxs-home-smile'
 	},
 	{
-		link: '/shop',
+		slug: 'shop',
 		text: 'Shop',
 		icon: 'bxs-store'
 	},
 	{
-		link: '/shop/',
+		slug: 'shop/',
 		text: 'Categories',
 		icon: 'bxs-category',
 		subcategories: shop_categories
 	},
 	{
-		link: '/weekly-sale',
+		slug: 'weekly-sale',
 		text: 'Sale',
 		icon: 'bxs-shopping-bag'
 	},
 	{
-		link: '/featured',
+		slug: 'featured',
 		text: 'Featured',
 		icon: 'bxs-shopping-bag-alt'
 	},
 	{
-		link: '/new-arrivals',
+		slug: 'new-arrivals',
 		text: 'New Arrivals',
 		icon: 'bxs-shopping-bags'
 	},
 	{
-		link: '/contact-us',
+		slug: 'contact-us',
 		text: 'Contact Us!',
 		icon: 'bxs-contact'
 	}
