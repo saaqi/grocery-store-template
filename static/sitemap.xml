@@ -6,22 +6,22 @@
   xmlns:news="https://www.google.com/schemas/sitemap-news/0.9"
   xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
   xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
-  <url><loc>https://sadiqsuperstore.com/</loc></url>
-<url><loc>https://sadiqsuperstore.com/contact-us</loc></url>
+  <url><loc>https://sadiqsuperstore.com/contact-us</loc></url>
 <url><loc>https://sadiqsuperstore.com/featured</loc></url>
+<url><loc>https://sadiqsuperstore.com/</loc></url>
 <url><loc>https://sadiqsuperstore.com/new-arrivals</loc></url>
-<url><loc>https://sadiqsuperstore.com/shop</loc></url>
-<url><loc>https://sadiqsuperstore.com/weekly-sale</loc></url>
-<url><loc>https://sadiqsuperstore.com/shop/foods</loc></url>
-<url><loc>https://sadiqsuperstore.com/shop/snacks_and_drinks</loc></url>
-<url><loc>https://sadiqsuperstore.com/shop/fresh_fruits</loc></url>
-<url><loc>https://sadiqsuperstore.com/shop/vegetables</loc></url>
-<url><loc>https://sadiqsuperstore.com/shop/frozen_foods</loc></url>
-<url><loc>https://sadiqsuperstore.com/shop/ready_to_cook</loc></url>
-<url><loc>https://sadiqsuperstore.com/shop/home_essentials</loc></url>
-<url><loc>https://sadiqsuperstore.com/shop/travel</loc></url>
 <url><loc>https://sadiqsuperstore.com/shop/electronics</loc></url>
+<url><loc>https://sadiqsuperstore.com/shop/foods</loc></url>
+<url><loc>https://sadiqsuperstore.com/shop/fresh_fruits</loc></url>
+<url><loc>https://sadiqsuperstore.com/shop/frozen_foods</loc></url>
+<url><loc>https://sadiqsuperstore.com/shop/home_essentials</loc></url>
+<url><loc>https://sadiqsuperstore.com/shop/miscellaneous</loc></url>
+<url><loc>https://sadiqsuperstore.com/shop/ready_to_cook</loc></url>
+<url><loc>https://sadiqsuperstore.com/shop/snacks_and_drinks</loc></url>
 <url><loc>https://sadiqsuperstore.com/shop/telecommunications</loc></url>
 <url><loc>https://sadiqsuperstore.com/shop/toys</loc></url>
-<url><loc>https://sadiqsuperstore.com/shop/miscellaneous</loc></url>
+<url><loc>https://sadiqsuperstore.com/shop/travel</loc></url>
+<url><loc>https://sadiqsuperstore.com/shop/vegetables</loc></url>
+<url><loc>https://sadiqsuperstore.com/shop</loc></url>
+<url><loc>https://sadiqsuperstore.com/weekly-sale</loc></url>
 </urlset>

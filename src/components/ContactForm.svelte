@@ -46,7 +46,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<label for="contact-form-name">
-				<i class="bx bx-user-pin"></i> Name:
+				<i class="bx bx-user-pin"></i> Name: *
 			</label>
 			<input
 				bind:value={name}
@@ -60,7 +60,7 @@
 		</div>
 		<div class="col-md-6 mt-3 mt-md-0">
 			<label for="contact-form-email">
-				<i class="bx bx-envelope"></i> Email Address:
+				<i class="bx bx-envelope"></i> Email Address: *
 			</label>
 			<input
 				bind:value={email}
@@ -95,7 +95,7 @@
 	</div>
 	<div class="mt-3">
 		<label for="contact-form-message">
-			<i class="bx bx-chat"></i> Message:
+			<i class="bx bx-chat"></i> Message: *
 		</label>
 		<textarea
 			bind:value={message}

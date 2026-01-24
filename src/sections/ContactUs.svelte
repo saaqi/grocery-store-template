@@ -62,18 +62,18 @@
 					>
 
 					{isOpeningHours
-						? ' come on down 🙂'
+						? ' come on down 🛒🙂'
 						: dayOfWeek === 'Thursday'
-							? ' see you tomorrow 😴'
+							? ' see you tomorrow 😴💤'
 							: hours < 9
-								? ' at this hour see you at 9:00 AM 😴'
-								: ' see you tomorrow 😴'}
+								? ' at this hour see you at 9:00 AM 😴💤'
+								: ' see you tomorrow 😴💤'}
 
 					<!-- {isOpeningHours
-						? ' come on down 🙂'
+						? ' come on down 🛒🙂'
 						: hours < 9
-							? ' at this hour see you at 9:00 AM 😴'
-							: ' see you tomorrow 😴'} -->
+							? ' at this hour see you at 9:00 AM 😴💤'
+							: ' see you tomorrow 😴💤'} -->
 				</p>
 			</div>
 			<table class="table table-info table-bordered table-striped table-hover">

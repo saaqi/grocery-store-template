@@ -18,6 +18,7 @@ function getStaticRoutes(dir = '.svelte-kit/output/prerendered/pages') {
 			} else if (entry.isFile() && entry.name.endsWith('.html')) {
 				let route = path
 					.relative(dir, entryPath)
+					.replace(/\\/g, '/') // 👈 Windows FIX
 					.replace(/index\.html$/, '')
 					.replace(/\.html$/, '');
 
