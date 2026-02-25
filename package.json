@@ -1,0 +1,28 @@
+{
+  "name": "grocery-store-template",
+  "description": "This project provides a flexible and customizable template for building your own online grocery store. Whether you're a developer looking to create a new e-commerce platform or a business owner aiming to establish an online presence for your grocery store, this template serves as a solid foundation.",
+  "private": true,
+  "version": "1.1.2",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir",
+    "preview": "vite preview",
+    "build-bootstrap": "sass --no-source-map ./src/scss/bs-dynamic.scss ./src/scss/bs-static.scss"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^8.0.0",
+    "autoprefixer": "^10.4.24",
+    "cssnano": "^7.1.2",
+    "postcss": "^8.5.6",
+    "sass": "^1.97.3",
+    "vite": "^7.3.1",
+    "vite-plugin-minify": "^2.1.0"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8",
+    "@fontsource-variable/lora": "^5.2.8",
+    "bootstrap": "^5.3.8",
+    "boxicons": "^2.1.4"
+  }
+}
